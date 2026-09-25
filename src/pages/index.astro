@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCategories, getQuestions, hasAnswer } from '../lib/content';
+import { url } from '../lib/url';
+
+const categories = await getCategories();
+const questions = await getQuestions();
+const stats = (id: string) => {
+  const inCategory = questions.filter((q) => q.data.category.id === id);
+  return { total: inCategory.length, answered: inCategory.filter(hasAnswer).length };
+};
+---
+
+<Base title="FuckSobes — вопросы к iOS-собеседованиям">
+  <h1>FuckSobes</h1>
+  <ul>
+    {
+      categories.map((c) => {
+        const { total, answered } = stats(c.id);
+        return (
+          <li>
+            <a href={url(`${c.id}/`)}>{c.data.title}</a>
+            <p>{c.data.description}</p>
+            <p>
+              Вопросов: {total}, с ответом: {answered}
+            </p>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Base>
