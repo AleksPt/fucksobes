@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCategories, getQuestions } from '../lib/content';
+import { url } from '../lib/url';
+
+const categories = await getCategories();
+const questions = await getQuestions();
+const countBy = (id: string) => questions.filter((q) => q.data.category.id === id).length;
+---
+
+<Base title="FuckSobes — вопросы к iOS-собеседованиям">
+  <h1>FuckSobes</h1>
+  <ul>
+    {
+      categories.map((c) => (
+        <li>
+          <a href={url(`${c.id}/`)}>{c.data.title}</a> ({countBy(c.id)})
+        </li>
+      ))
+    }
+  </ul>
+</Base>
