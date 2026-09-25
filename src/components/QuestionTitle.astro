@@ -1,0 +1,19 @@
+---
+import { splitInlineCode } from '../lib/text';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+{
+  splitInlineCode(title).map((part) =>
+    part.code ? (
+      <code class="rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.9em] dark:bg-zinc-800">{part.text}</code>
+    ) : (
+      part.text
+    ),
+  )
+}
