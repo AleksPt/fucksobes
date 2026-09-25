@@ -8,6 +8,6 @@ import Search from './Search.tsx';
 >
   <div class="mx-auto flex max-w-4xl items-center gap-4 px-4 py-3 sm:px-6">
     <a href={url()} class="shrink-0 font-semibold tracking-tight">FuckSobes</a>
-    <Search client:idle transition:persist indexUrl={url('search-index.json')} />
+    <Search client:idle transition:persist="search" indexUrl={url('search-index.json')} />
   </div>
 </header>
