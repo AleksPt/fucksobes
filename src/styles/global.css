@@ -17,6 +17,15 @@
   }
 }
 
+/* Inline-код в ответах: без кавычек typography и в стиле заголовков */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
+.prose :not(pre) > code {
+  @apply rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.9em] font-normal dark:bg-zinc-800;
+}
+
 /* Раскрытие ответа: плавно там, где браузер поддерживает ::details-content */
 details.question::details-content {
   block-size: 0;
