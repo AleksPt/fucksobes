@@ -23,7 +23,7 @@ const { id, title, href, answered } = Astro.props;
     <span class="flex-1"><QuestionTitle title={title} /></span>
     {
       !answered && (
-        <span class="mt-0.5 shrink-0 rounded-full bg-zinc-100 px-2 py-0.5 text-xs font-normal text-zinc-500 dark:bg-zinc-800">
+        <span class="mt-0.5 shrink-0 rounded-full bg-zinc-100 px-2 py-0.5 text-xs font-normal text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
           без ответа
         </span>
       )
@@ -32,14 +32,14 @@ const { id, title, href, answered } = Astro.props;
   <div class="pb-6 pl-7">
     {
       answered ? (
-        <div class="prose prose-zinc max-w-none dark:prose-invert">
+        <div class="prose prose-zinc max-w-none break-words dark:prose-invert">
           <slot />
         </div>
       ) : (
         <NoAnswer />
       )
     }
-    <a href={href} class="mt-4 inline-block text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100">
+    <a href={href} class="mt-4 inline-block text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
       Открыть отдельно →
     </a>
   </div>
