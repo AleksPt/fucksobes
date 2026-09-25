@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { cleanTitle, convertAnswer, parseNotionExport } from './parse.ts';
+import { cleanTitle, convertAnswer, normalizeBold, parseNotionExport } from './parse.ts';
 
 const lines = (...l: string[]) => l.join('\n');
 
@@ -169,5 +169,44 @@ describe('реальный экспорт', () => {
     const all = questions.map((q) => q.answer).join('\n');
     expect(all).not.toMatch(/<\/?(details|summary|callout|mention-page|span)\b/);
     expect(all).not.toMatch(/\{color="/);
+  });
+});
+
+describe('normalizeBold', () => {
+  it('переносит <br> за закрывающий маркер', () => {
+    expect(normalizeBold('1. **Наследование:<br>**Классы поддерживают наследование, структуры — нет.')).toBe(
+      '1. **Наследование:**<br>Классы поддерживают наследование, структуры — нет.',
+    );
+  });
+
+  it('выносит пробел из-под закрывающего маркера', () => {
+    expect(normalizeBold('**Dependency Injection **(внедрение зависимостей) — это паттерн')).toBe(
+      '**Dependency Injection** (внедрение зависимостей) — это паттерн',
+    );
+  });
+
+  it('склеивает соседние жирные span\'ы', () => {
+    expect(normalizeBold('- **Мьютексы (****`NSLock`****):** Для обеспечения доступа')).toBe(
+      '- **Мьютексы (`NSLock`):** Для обеспечения доступа',
+    );
+  });
+
+  it('не трогает обычный жирный и inline-код с звёздочками', () => {
+    expect(normalizeBold('Просто **жирный** текст и `a ** b` в коде')).toBe('Просто **жирный** текст и `a ** b` в коде');
+  });
+
+  it('оставляет одиночный непарный маркер как есть', () => {
+    expect(normalizeBold('a ** b')).toBe('a ** b');
+  });
+
+  it('не ломает жирный с кодом внутри', () => {
+    expect(normalizeBold('**`weak` **ссылка')).toBe('**`weak`** ссылка');
+  });
+});
+
+describe('convertAnswer и жирный', () => {
+  it('нормализует текст, но не блок кода', () => {
+    const out = convertAnswer(['**Foo **bar', '```swift', 'let a = "****" ', '```']);
+    expect(out).toBe('**Foo** bar\n\n```swift\nlet a = "****" \n```');
   });
 });

@@ -20,6 +20,21 @@ export function cleanInline(text: string): string {
     .trim();
 }
 
+/**
+ * Чинит жирный из Notion: склеивает соседние span'ы (`****`), выносит `<br>` и пробелы
+ * из-под границ `**…**`. Inline-код не меняется, непарный `**` остаётся как есть.
+ */
+export function normalizeBold(text: string): string {
+  const code: string[] = [];
+  const masked = text.replace(/`[^`]*`/g, (m) => `\u0000${code.push(m) - 1}\u0000`);
+  const fixed = masked.replace(/\*{4}/g, '').replace(/\*\*(.+?)\*\*/g, (whole, inner: string) => {
+    const m = /^(\s*)(.*?)((?:\s|<br\s*\/?>)*)$/.exec(inner)!;
+    if (m[2] === '') return whole;
+    return `${m[1]}**${m[2]}**${m[3]}`;
+  });
+  return fixed.replace(/\u0000(\d+)\u0000/g, (_, i) => code[Number(i)]);
+}
+
 /** Формулировка вопроса: одна строка без жирного и переносов, inline-код сохраняется. */
 export function cleanTitle(text: string): string {
   return cleanInline(text)
@@ -75,8 +90,8 @@ export function convertAnswer(lines: string[]): string {
     }
 
     const summary = SUMMARY_RE.exec(trimmed);
-    const text = cleanInline(summary ? `**${summary[1].trim()}**` : trimmed);
-    if (text === '' || text === '****') continue;
+    const text = normalizeBold(cleanInline(summary ? `**${summary[1].trim()}**` : trimmed)).trim();
+    if (text === ''|| text === '****') continue;
 
     const quote = inCallout ? '> ' : '';
     if (LIST_ITEM_RE.test(text)) {
