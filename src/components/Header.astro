@@ -1,5 +1,6 @@
 ---
 import { url } from '../lib/url';
+import Search from './Search.tsx';
 ---
 
 <header
@@ -7,6 +8,6 @@ import { url } from '../lib/url';
 >
   <div class="mx-auto flex max-w-4xl items-center gap-4 px-4 py-3 sm:px-6">
     <a href={url()} class="shrink-0 font-semibold tracking-tight">FuckSobes</a>
-    <slot />
+    <Search client:idle transition:persist indexUrl={url('search-index.json')} />
   </div>
 </header>
