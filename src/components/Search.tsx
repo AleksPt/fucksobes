@@ -1,6 +1,6 @@
 import { navigate } from 'astro:transitions/client';
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react';
-import { createSearch, type SearchDoc } from '../lib/search';
+import { createSearch, stepIndex, type SearchDoc } from '../lib/search';
 
 interface Props {
   indexUrl: string;
@@ -40,6 +40,16 @@ export default function Search({ indexUrl }: Props) {
     return () => window.removeEventListener('keydown', onGlobalKey);
   }, []);
 
+  const open = focused && query.trim() !== '';
+
+  // Новый список результатов — подсветка снова на первом.
+  useEffect(() => setActive(0), [hits]);
+
+  // Подсвеченный результат всегда виден в прокручиваемой панели.
+  useEffect(() => {
+    if (open) document.getElementById(`search-hit-${active}`)?.scrollIntoView({ block: 'nearest' });
+  }, [active, open]);
+
   function go(url: string) {
     setQuery('');
     inputRef.current?.blur();
@@ -49,10 +59,10 @@ export default function Search({ indexUrl }: Props) {
   function onKeyDown(event: KeyboardEvent<HTMLInputElement>) {
     if (event.key === 'ArrowDown') {
       event.preventDefault();
-      setActive((i) => Math.min(i + 1, hits.length - 1));
+      setActive((i) => stepIndex(i, 1, hits.length));
     } else if (event.key === 'ArrowUp') {
       event.preventDefault();
-      setActive((i) => Math.max(i - 1, 0));
+      setActive((i) => stepIndex(i, -1, hits.length));
     } else if (event.key === 'Enter' && hits[active]) {
       event.preventDefault();
       go(hits[active].url);
@@ -62,11 +72,10 @@ export default function Search({ indexUrl }: Props) {
     }
   }
 
-  const open = focused && query.trim() !== '';
   const status = failed ? 'Не удалось загрузить поиск' : !docs ? 'Загрузка…' : hits.length === 0 ? 'Ничего не найдено' : null;
 
   return (
-    <div className="relative ml-auto w-full max-w-sm">
+    <div className="ml-auto w-full max-w-sm sm:relative">
       <input
         ref={inputRef}
         type="search"
@@ -94,7 +103,7 @@ export default function Search({ indexUrl }: Props) {
         <ul
           id="search-results"
           role="listbox"
-          className="absolute right-0 mt-2 max-h-[70vh] w-full overflow-y-auto rounded-xl border border-zinc-200 bg-white p-1 shadow-xl shadow-zinc-900/10 sm:w-[28rem] dark:border-zinc-800 dark:bg-zinc-900"
+          className="absolute inset-x-4 top-full mt-2 max-h-[70vh] overflow-y-auto sm:inset-x-auto sm:right-0 sm:w-[28rem] rounded-xl border border-zinc-200 bg-white p-1 shadow-xl shadow-zinc-900/10 dark:border-zinc-800 dark:bg-zinc-900"
         >
           {status ? (
             <li className="px-3 py-2 text-sm text-zinc-500 dark:text-zinc-400">{status}</li>

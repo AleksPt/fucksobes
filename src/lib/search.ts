@@ -28,3 +28,8 @@ export function createSearch(docs: SearchDoc[]): (query: string, limit?: number)
       .slice(0, limit)
       .map((hit) => ({ id: String(hit.id), title: hit.title, categoryTitle: hit.categoryTitle, url: hit.url }));
 }
+
+/** Следующий индекс подсвеченного результата: не выходит за [0, count - 1], при пустом списке — 0. */
+export function stepIndex(current: number, delta: number, count: number): number {
+  return Math.max(0, Math.min(current + delta, count - 1));
+}

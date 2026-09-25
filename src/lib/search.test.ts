@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { createSearch, normalizeTerm, type SearchDoc } from './search';
+import { createSearch, normalizeTerm, stepIndex, type SearchDoc } from './search';
 
 const doc = (id: string, title: string): SearchDoc => ({ id, title, categoryTitle: 'Память', url: `/fucksobes/memory/${id}/` });
 
@@ -44,5 +44,18 @@ describe('createSearch', () => {
     expect(search('что', 1)).toEqual([
       expect.objectContaining({ categoryTitle: 'Память', url: expect.stringMatching(/^\/fucksobes\/memory\//) }),
     ]);
+  });
+});
+
+describe('stepIndex', () => {
+  it('двигает в пределах списка и не уходит за границы', () => {
+    expect(stepIndex(0, 1, 3)).toBe(1);
+    expect(stepIndex(2, 1, 3)).toBe(2);
+    expect(stepIndex(0, -1, 3)).toBe(0);
+  });
+
+  it('при пустом списке остаётся на 0, а не уходит в -1', () => {
+    expect(stepIndex(0, 1, 0)).toBe(0);
+    expect(stepIndex(0, -1, 0)).toBe(0);
   });
 });
