@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+/* Shiki: вторая тема для тёмного режима */
+@media (prefers-color-scheme: dark) {
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+}
+
+/* Inline-код в ответах: без кавычек typography и в стиле заголовков */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
+.prose :not(pre) > code {
+  @apply rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.9em] font-normal dark:bg-zinc-800;
+}
+
+/* Раскрытие ответа: плавно там, где браузер поддерживает ::details-content */
+details.question::details-content {
+  block-size: 0;
+  overflow-y: clip;
+  transition:
+    block-size 250ms ease,
+    content-visibility 250ms allow-discrete;
+}
+details.question[open]::details-content {
+  block-size: auto;
+}
+details.question > summary {
+  list-style: none;
+}
+details.question > summary::-webkit-details-marker {
+  display: none;
+}
+details.question .chevron {
+  transition: transform 200ms ease;
+}
+details.question[open] .chevron {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  details.question::details-content,
+  details.question .chevron {
+    transition: none;
+  }
+}
