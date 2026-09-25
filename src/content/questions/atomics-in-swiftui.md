@@ -1,7 +1,7 @@
 ---
 title: "атомики в SwiftUI"
 category: concurrency
-order: 68
+order: 67
 ---
 
 actor

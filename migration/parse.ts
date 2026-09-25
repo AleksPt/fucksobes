@@ -34,7 +34,8 @@ export function convertAnswer(lines: string[]): string {
   const out: string[] = [];
   let prevListItem = false;
   let prevQuote = false;
-  let depth = 0;
+  // Табы первого пункта текущей серии списка: вложенность считается от него.
+  let listBase = 0;
   let inCallout = false;
   let fence: string[] | null = null;
 
@@ -63,14 +64,7 @@ export function convertAnswer(lines: string[]): string {
       fence = [trimmed];
       continue;
     }
-    if (trimmed === '<details>') {
-      depth++;
-      continue;
-    }
-    if (trimmed === '</details>') {
-      depth--;
-      continue;
-    }
+    if (trimmed === '<details>' || trimmed === '</details>') continue;
     if (trimmed.startsWith('<callout')) {
       inCallout = true;
       continue;
@@ -87,8 +81,17 @@ export function convertAnswer(lines: string[]): string {
     const quote = inCallout ? '> ' : '';
     if (LIST_ITEM_RE.test(text)) {
       const tabs = /^\t*/.exec(raw)![0].length;
-      const base = 2 + depth + (inCallout ? 1 : 0);
-      emit(quote + '    '.repeat(Math.max(0, tabs - base)) + text, true);
+      // Новая серия начинается после любого не-пункта (или при входе/выходе из callout):
+      // в Notion пункт бывает глубже предыдущего абзаца, но в Markdown это не вложенность.
+      if (!prevListItem || prevQuote !== inCallout) {
+        listBase = tabs;
+      } else if (tabs < listBase) {
+        // Пункт мельче начала серии (например, «5.» после пунктов абзаца под «4.»):
+        // новая серия через пустую строку, иначе «5.» станет ленивым продолжением абзаца.
+        listBase = tabs;
+        prevListItem = false;
+      }
+      emit(quote + '    '.repeat(Math.max(0, tabs - listBase)) + text, true);
     } else {
       emit(quote + text, false);
     }

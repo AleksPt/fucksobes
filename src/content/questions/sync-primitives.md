@@ -1,7 +1,7 @@
 ---
 title: "Какие есть способы синхронизации доступа к переменным?"
 category: concurrency
-order: 62
+order: 61
 ---
 
 - Mutex

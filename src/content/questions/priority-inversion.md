@@ -1,7 +1,7 @@
 ---
 title: "Как может возникнуть Priority Inversion"
 category: concurrency
-order: 56
+order: 55
 ---
 
 ### **Как возникает Priority Inversion**

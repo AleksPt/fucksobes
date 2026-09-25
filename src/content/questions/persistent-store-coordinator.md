@@ -6,9 +6,9 @@ order: 18
 
 основной стек Core Data:
 
-    - NSManagedObjectModel (managed object model)
-    - NSPersistentStoreCoordinator (persistent store coordinator)
-    - NSManagedObjectContext (managed object contexts).
+- NSManagedObjectModel (managed object model)
+- NSPersistentStoreCoordinator (persistent store coordinator)
+- NSManagedObjectContext (managed object contexts).
 
 **NSManagedObjectModel** — объектная модель данных. Содержит информацию обо всех моделях: какие атрибуты содержат эти модели и как они связаны друг с другом.
 

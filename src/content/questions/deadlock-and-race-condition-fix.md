@@ -1,7 +1,7 @@
 ---
 title: "Как избавиться от Deadlock и Race Condition"
 category: concurrency
-order: 55
+order: 54
 ---
 
 **Стратегии предотвращения Race Condition**

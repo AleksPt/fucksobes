@@ -1,5 +1,5 @@
 ---
 title: "С какими архитектурами работал"
-category: architecture
-order: 28
+category: soft-skills
+order: 2
 ---

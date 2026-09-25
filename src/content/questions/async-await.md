@@ -1,5 +1,5 @@
 ---
 title: "asynk/await"
 category: concurrency
-order: 73
+order: 72
 ---

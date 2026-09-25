@@ -1725,14 +1725,6 @@
       ]
     },
     {
-      "id": "multithreading-experience",
-      "category": "concurrency",
-      "title": "Опыт работы с многопоточностью, для чего использовал",
-      "sources": [
-        168
-      ]
-    },
-    {
       "id": "race-condition",
       "category": "concurrency",
       "title": "Что такое Race condition? И как можно решить?",
@@ -3063,14 +3055,6 @@
       ]
     },
     {
-      "id": "architectures-experience",
-      "category": "architecture",
-      "title": "С какими архитектурами работал",
-      "sources": [
-        66
-      ]
-    },
-    {
       "id": "udf",
       "category": "architecture",
       "title": "UDF (Unidirectional data flow)",
@@ -3606,6 +3590,22 @@
       "title": "В каких командах работал? Сколько иос разработчиков на одном проекте? И как проходило код ревью?",
       "sources": [
         199
+      ]
+    },
+    {
+      "id": "architectures-experience",
+      "category": "soft-skills",
+      "title": "С какими архитектурами работал",
+      "sources": [
+        66
+      ]
+    },
+    {
+      "id": "multithreading-experience",
+      "category": "soft-skills",
+      "title": "Опыт работы с многопоточностью, для чего использовал",
+      "sources": [
+        168
       ]
     }
   ]

@@ -1,7 +1,7 @@
 ---
 title: "Как избавиться от Race Condition"
 category: concurrency
-order: 49
+order: 48
 ---
 
 1. Использовать синхронизацию потоков (например, с помощью **locks**).

@@ -1,7 +1,7 @@
 ---
 title: "разновидности локов"
 category: concurrency
-order: 64
+order: 63
 ---
 
 *NSRecursiveLock*
