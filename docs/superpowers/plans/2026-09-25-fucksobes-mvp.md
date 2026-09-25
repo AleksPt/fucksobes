@@ -27,7 +27,7 @@
   | PR | Ветка | Задачи | Что появляется на сайте |
   |---|---|---|---|
   | 1 | `feat/migration-content` | 1, 3, 4, 5 | все вопросы из Notion (на пока неоформленных страницах) |
-  | 2 | `feat/design-pages` | 6, 7, 8, 13 | дизайн: главная с карточками, страницы категорий и вопросов, 404; исправление «сырого» жирного из Notion |
+  | 2 | `feat/design-pages` | 6, 7, 8, 13, 14 | дизайн: главная с карточками, страницы категорий и вопросов, 404; исправление «сырого» жирного из Notion |
   | 3 | `feat/search-animations` | 9, 10 | поиск и переходы между страницами |
   | 4 | `feat/tests-docs` | 11, 12 | e2e-тесты в CI, README |
 
@@ -1670,6 +1670,43 @@ npm run build
 ```bash
 git add migration/ src/content/questions/
 git commit -m "fix(migration): normalize stray bold markers from Notion export
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
+```
+
+---
+
+### Task 14: Inline-код в ответах без декоративных обратных кавычек  (PR 2, после Task 13)
+
+Причина (найдена при визуальной проверке): плагин Tailwind Typography по умолчанию рисует обратные кавычки вокруг `code` через `::before`/`::after`, поэтому `<code>where</code>` на странице выглядит как `` `where` ``. В заголовках вопросов (`QuestionTitle.astro`) inline-код оформлен без кавычек, в ответах должно быть так же.
+
+**Files:**
+- Modify: `src/styles/global.css`
+
+**Interfaces:**
+- Consumes: обёртка ответа `div.prose` в `QuestionItem.astro` и `src/pages/[category]/[id].astro`; блоки кода Shiki (`pre.astro-code > code`).
+- Produces: inline-код внутри `.prose` без `::before/::after` кавычек и с тем же видом, что в `QuestionTitle.astro` (`rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.9em] dark:bg-zinc-800`, в CSS — через `@apply` или явные свойства); `pre > code` (блоки Shiki) не меняется.
+
+- [ ] **Step 1: Добавить правила в `src/styles/global.css`** (после блока Shiki):
+
+```css
+/* Inline-код в ответах: без кавычек typography и в стиле заголовков */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
+.prose :not(pre) > code {
+  @apply rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.9em] font-normal dark:bg-zinc-800;
+}
+```
+
+- [ ] **Step 2: Проверить** — `npm run check && npm run build`. Собранный HTML не меняется (правки только CSS). Визуально (dev-сервер `npx astro dev --background`, страница `/fucksobes/swift/generics-optimization-constraints/`): `where` без обратных кавычек, с фоном; блок кода Swift выше — как раньше; светлая и тёмная схемы; затем `astro dev stop`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add src/styles/global.css
+git commit -m "fix(ui): inline code in answers without typography backticks
 
 Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 ```
