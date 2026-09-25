@@ -27,7 +27,7 @@
   | PR | Ветка | Задачи | Что появляется на сайте |
   |---|---|---|---|
   | 1 | `feat/migration-content` | 1, 3, 4, 5 | все вопросы из Notion (на пока неоформленных страницах) |
-  | 2 | `feat/design-pages` | 6, 7, 8 | дизайн: главная с карточками, страницы категорий и вопросов, 404 |
+  | 2 | `feat/design-pages` | 6, 7, 8, 13 | дизайн: главная с карточками, страницы категорий и вопросов, 404; исправление «сырого» жирного из Notion |
   | 3 | `feat/search-animations` | 9, 10 | поиск и переходы между страницами |
   | 4 | `feat/tests-docs` | 11, 12 | e2e-тесты в CI, README |
 
@@ -1599,6 +1599,80 @@ gh run watch --exit-status $(gh run list --workflow=Deploy --branch main --limit
 git switch main && git pull --ff-only
 ```
 Expected: Deploy зелёный, оформленный сайт открывается по `https://alekspt.github.io/fucksobes/`; стили и ссылки работают под `/fucksobes/`.
+
+---
+
+### Task 13: Убрать «сырые» `**` из ответов  (PR 2, выполняется после Task 8)
+
+Причина: разметка жирного из Notion попадает в Markdown как есть и на ~18 страницах остаётся на сайте буквальными `**`. Три паттерна:
+1. Соседние span'ы: `**`x`**** текст****`, `- **Мьютексы (****`NSLock`****):** Для` (всего 13 файлов содержат `****`).
+2. `<br>` перед закрывающим маркером: `**Наследование:<br>**Классы` (закрывающий `**` сразу после `<br>` не закрывает жирный).
+3. Пробел перед закрывающим маркером: `**Dependency Injection **(внедрение`.
+
+**Files:**
+- Modify: `migration/parse.ts`, `migration/parse.test.ts`, `migration/questions.json` (перегенерируется), `src/content/questions/*.md` (перегенерируются — изменятся только файлы с этими паттернами)
+
+**Interfaces:**
+- Consumes: `convertAnswer(lines: string[]): string`, `cleanInline(text: string): string` из `migration/parse.ts` (сигнатуры не менять).
+- Produces: `normalizeBold(text: string): string` (экспорт из `migration/parse.ts`), применяется к каждой текстовой строке ответа в `convertAnswer` (не к строкам внутри блоков кода и не внутри inline-кода).
+
+- [ ] **Step 1: Ветка** — работа идёт в `feat/design-pages` (создана раньше, после Task 8).
+
+- [ ] **Step 2: Падающие тесты** в `migration/parse.test.ts`:
+
+```ts
+import { normalizeBold } from './parse.ts';
+
+describe('normalizeBold', () => {
+  it('переносит <br> за закрывающий маркер', () => {
+    expect(normalizeBold('1. **Наследование:<br>**Классы поддерживают наследование, структуры — нет.')).toBe(
+      '1. **Наследование:**<br>Классы поддерживают наследование, структуры — нет.',
+    );
+  });
+
+  it('выносит пробел из-под закрывающего маркера', () => {
+    expect(normalizeBold('**Dependency Injection **(внедрение зависимостей) — это паттерн')).toBe(
+      '**Dependency Injection** (внедрение зависимостей) — это паттерн',
+    );
+  });
+
+  it('склеивает соседние жирные span'ы', () => {
+    expect(normalizeBold('- **Мьютексы (****`NSLock`****):** Для обеспечения доступа')).toBe(
+      '- **Мьютексы (`NSLock`):** Для обеспечения доступа',
+    );
+  });
+
+  it('не трогает обычный жирный и inline-код с звёздочками', () => {
+    expect(normalizeBold('Просто **жирный** текст и `a ** b` в коде')).toBe('Просто **жирный** текст и `a ** b` в коде');
+  });
+});
+```
+Добавь также тест на `convertAnswer`: строка внутри блока кода с `****` остаётся дословной.
+
+- [ ] **Step 3: Убедиться, что тесты падают** — `npx vitest run migration/parse.test.ts` (ожидание: `normalizeBold` не экспортируется / тесты падают).
+
+- [ ] **Step 4: Реализация** `normalizeBold` в `migration/parse.ts` (правила из трёх паттернов выше: убрать `****`; закрывающий `**` после `<br>` — перенести `<br>` после маркера; пробелы внутри границ `**…**` вынести наружу; inline-код в обратных кавычках не менять) и вызвать её в `convertAnswer` для текстовых строк ответа. Реализацию выбирает исполнитель, критерий — тесты выше и Step 6.
+
+- [ ] **Step 5: Тесты зелёные** — `npm test` (все проходят, вывод без шума), `npm run check` (0 errors).
+
+- [ ] **Step 6: Перегенерировать и проверить**
+
+```bash
+npm run migrate -- parse
+npm run migrate -- generate
+git diff --stat | tail -3
+npm run build
+```
+Проверки: (а) `git diff --name-only src/content/questions` содержит только файлы, где раньше были `**`-артефакты (приложить список в отчёт); (б) в собранном `dist/**/index.html` вне `<pre>`/`<code>` нет буквальных `**` — напиши небольшой read-only скрипт в scratchpad (не в репозиторий) и приложи вывод (допустимо не более 3 оставшихся страниц с объяснением в отчёте); (в) страницы `dependency-injection`, `class-vs-struct`, `initializers` в `dist/` содержат `<strong>` там, где был жирный.
+
+- [ ] **Step 7: Commit**
+
+```bash
+git add migration/ src/content/questions/
+git commit -m "fix(migration): normalize stray bold markers from Notion export
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
+```
 
 ---
 
