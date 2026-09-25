@@ -13,16 +13,17 @@ npm run build      # сборка в dist/, валидирует контент
 
 ## Контент
 
-- `src/content/categories.yaml` — список категорий (`id`, `title`, `order`).
+- `src/content/categories.yaml` — список категорий (`id`, `title`, `description`, `order`). Значения с `: ` внутри брать в кавычки.
 - `src/content/questions/*.md` — один вопрос на файл. Имя файла — id вопроса и часть URL.
 
 ```md
 ---
 title: Текст вопроса
 category: swift   # id из categories.yaml
+order: 1          # порядок внутри категории
 ---
 
-Ответ в markdown.
+Ответ в markdown. Пустое тело — ответа пока нет.
 ```
 
 ## Git

@@ -2,7 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { getQuestions } from '../../lib/content';
+import { getQuestions, hasAnswer } from '../../lib/content';
 import { url } from '../../lib/url';
 
 export const getStaticPaths = (async () => {
@@ -21,5 +21,5 @@ const { Content } = await render(question);
 <Base title={question.data.title}>
   <a href={url(`${category.id}/`)}>← {category.data.title}</a>
   <h1>{question.data.title}</h1>
-  <Content />
+  {hasAnswer(question) ? <Content /> : <p>Ответа пока нет</p>}
 </Base>

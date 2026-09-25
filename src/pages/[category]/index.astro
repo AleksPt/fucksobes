@@ -2,7 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { getCategories, getQuestions } from '../../lib/content';
+import { getCategories, getQuestions, hasAnswer } from '../../lib/content';
 import { url } from '../../lib/url';
 
 export const getStaticPaths = (async () => {
@@ -19,11 +19,12 @@ const questions = await Promise.all(
 <Base title={category.data.title}>
   <a href={url()}>← Все категории</a>
   <h1>{category.data.title}</h1>
+  <p>{category.data.description}</p>
   {
     questions.map(({ q, Content }) => (
       <details id={q.id}>
         <summary>{q.data.title}</summary>
-        <Content />
+        {hasAnswer(q) ? <Content /> : <p>Ответа пока нет</p>}
         <a href={url(`${category.id}/${q.id}/`)}>Ссылка на вопрос</a>
       </details>
     ))

@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getCategories() {
   const categories = await getCollection('categories');
@@ -7,5 +7,11 @@ export async function getCategories() {
 
 export async function getQuestions(categoryId?: string) {
   const questions = await getCollection('questions');
-  return categoryId ? questions.filter((q) => q.data.category.id === categoryId) : questions;
+  return questions
+    .filter((q) => !categoryId || q.data.category.id === categoryId)
+    .sort((a, b) => a.data.order - b.data.order);
+}
+
+export function hasAnswer(question: CollectionEntry<'questions'>): boolean {
+  return Boolean(question.body?.trim());
 }
