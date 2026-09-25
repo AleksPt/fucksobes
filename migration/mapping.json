@@ -1,0 +1,3612 @@
+{
+  "entries": [
+    {
+      "id": "swift-overview",
+      "category": "swift",
+      "title": "рассказать про swift",
+      "sources": [
+        560
+      ]
+    },
+    {
+      "id": "let-vs-var",
+      "category": "swift",
+      "title": "Чем отличается let от var",
+      "sources": [
+        13
+      ]
+    },
+    {
+      "id": "value-vs-reference",
+      "category": "swift",
+      "title": "Отличие reference type от value type? Приведи примеры",
+      "sources": [
+        82,
+        118,
+        186,
+        311,
+        370,
+        395,
+        421,
+        445,
+        582,
+        589
+      ]
+    },
+    {
+      "id": "value-types-mistakes",
+      "category": "swift",
+      "title": "К каким ошибкам может привести не знание типов?",
+      "sources": [
+        446
+      ]
+    },
+    {
+      "id": "ways-to-pass-objects",
+      "category": "swift",
+      "title": "Какие варианты в swift есть для передачи и хранения объектов (кложуры, reference / value types)",
+      "sources": [
+        14
+      ]
+    },
+    {
+      "id": "class-vs-struct",
+      "category": "swift",
+      "title": "чем отличается структура от класса, когда что использовать",
+      "sources": [
+        120,
+        136,
+        257,
+        462,
+        499,
+        583,
+        694
+      ]
+    },
+    {
+      "id": "class-struct-type-kind",
+      "category": "swift",
+      "title": "Какой тип у класса и структуры",
+      "sources": [
+        579
+      ]
+    },
+    {
+      "id": "struct-inheritance",
+      "category": "swift",
+      "title": "Почему у классов есть наследование, а у структур нет",
+      "sources": [
+        137,
+        481
+      ]
+    },
+    {
+      "id": "system-value-types",
+      "category": "swift",
+      "title": "какие системные `value-типы` есть в Swift кроме структур",
+      "sources": [
+        545
+      ]
+    },
+    {
+      "id": "system-reference-types",
+      "category": "swift",
+      "title": "какие системные `reference-типы` есть в Swift кроме классов",
+      "sources": [
+        546
+      ]
+    },
+    {
+      "id": "string-value-type",
+      "category": "swift",
+      "title": "Является ли тип String value-типом или reference-типом?",
+      "sources": [
+        244,
+        590
+      ]
+    },
+    {
+      "id": "string-character-access",
+      "category": "swift",
+      "title": "Как получить доступ к конкретному элементу строки",
+      "sources": [
+        591
+      ]
+    },
+    {
+      "id": "compare-by-reference",
+      "category": "swift",
+      "title": "Как сравнить 2 объекта по ссылке",
+      "sources": [
+        226
+      ]
+    },
+    {
+      "id": "any-vs-anyobject",
+      "category": "swift",
+      "title": "В чём разница между Any и AnyObject",
+      "sources": [
+        236
+      ]
+    },
+    {
+      "id": "optionals",
+      "category": "swift",
+      "title": "Что такое optional? как он устроен?",
+      "sources": [
+        119,
+        189,
+        201,
+        375,
+        501,
+        688
+      ]
+    },
+    {
+      "id": "optional-implementation",
+      "category": "swift",
+      "title": "С помощью какого типа реализован Optional в Swift (структура, класс, перечисление или что-то ещё)",
+      "sources": [
+        453,
+        617
+      ]
+    },
+    {
+      "id": "optional-unwrapping",
+      "category": "swift",
+      "title": "способы разворачивания опционала (+ compactMap в массивах)",
+      "sources": [
+        18
+      ]
+    },
+    {
+      "id": "nil-vs-none",
+      "category": "swift",
+      "title": "В чём разница между nil и .none?",
+      "sources": [
+        460
+      ]
+    },
+    {
+      "id": "iboutlet-force-unwrap",
+      "category": "swift",
+      "title": "почему в IBOutlet использует force unwrap",
+      "sources": [
+        538
+      ]
+    },
+    {
+      "id": "closures",
+      "category": "swift",
+      "title": "Что такое closure",
+      "sources": [
+        142
+      ]
+    },
+    {
+      "id": "closure-vs-function",
+      "category": "swift",
+      "title": "Чем closure отличается от функции",
+      "sources": [
+        143
+      ]
+    },
+    {
+      "id": "closures-value-or-reference",
+      "category": "swift",
+      "title": "замыкания - ссылочный тип, или тип значения? может ли быть такое, чтобы он был типом значения?",
+      "sources": [
+        121,
+        126,
+        581,
+        686
+      ]
+    },
+    {
+      "id": "escaping-closures",
+      "category": "swift",
+      "title": "Что такое escaping и nonescaping замыкания. В каких случаях надо использовать escaping и почему?",
+      "sources": [
+        7,
+        19,
+        145,
+        146,
+        310
+      ]
+    },
+    {
+      "id": "closure-kinds",
+      "category": "swift",
+      "title": "Виды замыканий. Опциональное замыкание сбегающее или нет?",
+      "sources": [
+        221
+      ]
+    },
+    {
+      "id": "capture-list",
+      "category": "swift",
+      "title": "Расскажи про захват значений в замыкании. Зачем это делать, как и какие ключевые слова там могут использоваться?",
+      "sources": [
+        20,
+        147,
+        522
+      ]
+    },
+    {
+      "id": "higher-order-functions-sum",
+      "category": "swift",
+      "title": "как можно сложить все целочисленные элементы массива с помощью функций высшего порядка",
+      "sources": [
+        378,
+        387
+      ]
+    },
+    {
+      "id": "map",
+      "category": "swift",
+      "title": "map что такое",
+      "sources": [
+        524
+      ]
+    },
+    {
+      "id": "compact-map",
+      "category": "swift",
+      "title": "compact map",
+      "sources": [
+        525
+      ]
+    },
+    {
+      "id": "initializers",
+      "category": "swift",
+      "title": "Какие есть инициализаторы",
+      "sources": [
+        99,
+        203
+      ]
+    },
+    {
+      "id": "designated-initializer",
+      "category": "swift",
+      "title": "Что такое назначенный инициализатор?",
+      "sources": [
+        705
+      ]
+    },
+    {
+      "id": "access-modifiers",
+      "category": "swift",
+      "title": "Модификаторы доступа",
+      "sources": [
+        216,
+        503
+      ]
+    },
+    {
+      "id": "default-access-level",
+      "category": "swift",
+      "title": "Какой уровень доступа в swift по умолчанию",
+      "sources": [
+        452
+      ]
+    },
+    {
+      "id": "public-vs-open",
+      "category": "swift",
+      "title": "Разница между public и open",
+      "sources": [
+        70
+      ]
+    },
+    {
+      "id": "fileprivate-vs-private",
+      "category": "swift",
+      "title": "В чем разница между уровнем доступа Fileprivate и Private?",
+      "sources": [
+        687
+      ]
+    },
+    {
+      "id": "private-in-extension-same-file",
+      "category": "swift",
+      "title": "Есть класс, у него есть private переменная, потом мы создаем внутри этого файла extension и пытаемся достучаться до private переменной, получится ли это сделать?",
+      "sources": [
+        74
+      ]
+    },
+    {
+      "id": "private-in-extension-other-file",
+      "category": "swift",
+      "title": "Если сделать этот extension вне файла?",
+      "sources": [
+        75
+      ]
+    },
+    {
+      "id": "encapsulation-in-swift",
+      "category": "swift",
+      "title": "Какими средствами можно добиться инкапсуляции в swift",
+      "sources": [
+        69
+      ]
+    },
+    {
+      "id": "final",
+      "category": "swift",
+      "title": "Для чего нам нужен модификатор final",
+      "sources": [
+        156,
+        211,
+        523,
+        577
+      ]
+    },
+    {
+      "id": "prevent-class-inheritance",
+      "category": "swift",
+      "title": "можно ли запретить наследование от класса",
+      "sources": [
+        489
+      ]
+    },
+    {
+      "id": "static-and-class",
+      "category": "swift",
+      "title": "Ключевые слова `static` и `class`. Какая оптимизация для static-свойств есть из коробки?",
+      "sources": [
+        210,
+        698
+      ]
+    },
+    {
+      "id": "static-variables",
+      "category": "swift",
+      "title": "В чем особенность статических переменных?",
+      "sources": [
+        447
+      ]
+    },
+    {
+      "id": "mutating",
+      "category": "swift",
+      "title": "Зачем нужно ключевое слово mutating?",
+      "sources": [
+        213,
+        451
+      ]
+    },
+    {
+      "id": "inout",
+      "category": "swift",
+      "title": "Модификатор `inout`",
+      "sources": [
+        225
+      ]
+    },
+    {
+      "id": "inout-and-mutating",
+      "category": "swift",
+      "title": "inout mutating",
+      "sources": [
+        521
+      ]
+    },
+    {
+      "id": "lazy-properties-problems",
+      "category": "swift",
+      "title": "Какие проблемы могут быть с lazy properties?",
+      "sources": [
+        222,
+        448
+      ]
+    },
+    {
+      "id": "self-vs-self-type",
+      "category": "swift",
+      "title": "В чём разница между self и Self?",
+      "sources": [
+        458
+      ]
+    },
+    {
+      "id": "typealias",
+      "category": "swift",
+      "title": "Что такое typealias в Swift?",
+      "sources": [
+        711
+      ]
+    },
+    {
+      "id": "indirect-enum",
+      "category": "swift",
+      "title": "Зачем нужно ключевое слово indirect?",
+      "sources": [
+        339,
+        356,
+        459
+      ]
+    },
+    {
+      "id": "enum-associated-and-raw-values",
+      "category": "swift",
+      "title": "Может ли enum иметь одновременно ассоцирированное значение и rawvalue",
+      "sources": [
+        488
+      ]
+    },
+    {
+      "id": "error-handling",
+      "category": "swift",
+      "title": "как обрабатывать ошибки",
+      "sources": [
+        131
+      ]
+    },
+    {
+      "id": "error-type",
+      "category": "swift",
+      "title": "Что такое error в swift",
+      "sources": [
+        495
+      ]
+    },
+    {
+      "id": "protocols",
+      "category": "swift",
+      "title": "Протоколы",
+      "sources": [
+        218
+      ]
+    },
+    {
+      "id": "protocol-inheritance",
+      "category": "swift",
+      "title": "Может ли протокол быть унаследован от другого протокола?",
+      "sources": [
+        702
+      ]
+    },
+    {
+      "id": "protocol-optional-methods",
+      "category": "swift",
+      "title": "Могут ли быть опциональные функции в протоколах?",
+      "sources": [
+        95
+      ]
+    },
+    {
+      "id": "protocol-default-implementation",
+      "category": "swift",
+      "title": "Можем ли мы в протоколах сделать реализацию функции?",
+      "sources": [
+        97
+      ]
+    },
+    {
+      "id": "protocols-same-method-signature",
+      "category": "swift",
+      "title": "У нас есть 2 протокола, которые имеют метод полностью одинаковый по сигнатуре, входным и выходным данным, параметрам и одинаковым неймингом. Мы подписываем класс на эти 2 протокола и реализуем их методы - что скажет компилятор?",
+      "sources": [
+        72
+      ]
+    },
+    {
+      "id": "protocols-same-method-extension-impl",
+      "category": "swift",
+      "title": "Если в extension написать реализацию методов протоколов в обоих случаях, как себя поведет компилятор?",
+      "sources": [
+        73
+      ]
+    },
+    {
+      "id": "associated-type",
+      "category": "swift",
+      "title": "понятие — associated type. Где оно используется и в чем оно помогает, что позволяет сделать?",
+      "sources": [
+        102,
+        664
+      ]
+    },
+    {
+      "id": "standard-protocols",
+      "category": "swift",
+      "title": "Какие протоколы дефолтные есть в свифте кроме Hashable? И что они значат",
+      "sources": [
+        165
+      ]
+    },
+    {
+      "id": "equatable-custom-struct",
+      "category": "swift",
+      "title": "Как нам сделать так, чтобы наша кастомная структура удовлетворяла протоколу Equatable",
+      "sources": [
+        166,
+        167
+      ]
+    },
+    {
+      "id": "extensions",
+      "category": "swift",
+      "title": "Extensions. Что можем / не можем сделать внутри",
+      "sources": [
+        98,
+        219
+      ]
+    },
+    {
+      "id": "extension-stored-properties",
+      "category": "swift",
+      "title": "Можно ли добавить stored property в extension к структуре или к классу?",
+      "sources": [
+        117,
+        125,
+        455,
+        580
+      ]
+    },
+    {
+      "id": "extension-nested-struct",
+      "category": "swift",
+      "title": "Можем ли мы добавить стуктуру в extension?",
+      "sources": [
+        101
+      ]
+    },
+    {
+      "id": "extension-initializers",
+      "category": "swift",
+      "title": "Какие из инициализаторов мы можем добавить в extension?",
+      "sources": [
+        100
+      ]
+    },
+    {
+      "id": "multiple-inheritance",
+      "category": "swift",
+      "title": "Поддерживается ли в Swift множественное наследование для классов?",
+      "sources": [
+        237,
+        248
+      ]
+    },
+    {
+      "id": "multiple-inheritance-imitation",
+      "category": "swift",
+      "title": "Как можно имитировать множественное наследование в swift",
+      "sources": [
+        71
+      ]
+    },
+    {
+      "id": "generics",
+      "category": "swift",
+      "title": "Что такое Generics?",
+      "sources": [
+        220,
+        695
+      ]
+    },
+    {
+      "id": "generics-overload-resolution",
+      "category": "swift",
+      "title": "Дженерики, как компилятор понимает какой из перегруженных методов использовать",
+      "sources": [
+        260
+      ]
+    },
+    {
+      "id": "generics-optimization-constraints",
+      "category": "swift",
+      "title": "оптимизация дженериков и как их можно ограничить",
+      "sources": [
+        561
+      ]
+    },
+    {
+      "id": "any-and-some",
+      "category": "swift",
+      "title": "зачем нужны ключевые слова `any` и `some`",
+      "sources": [
+        564
+      ]
+    },
+    {
+      "id": "some-keyword",
+      "category": "swift",
+      "title": "для чего используется абривеатура some",
+      "sources": [
+        575
+      ]
+    },
+    {
+      "id": "nsinteger-vs-nsnumber",
+      "category": "swift",
+      "title": "Чем отличается NSInteger от NSNumber?",
+      "sources": [
+        689
+      ]
+    },
+    {
+      "id": "dispatch",
+      "category": "swift",
+      "title": "Что такое диспетчеризация",
+      "sources": [
+        4,
+        22,
+        157,
+        202,
+        212,
+        259,
+        599,
+        665,
+        666,
+        703
+      ]
+    },
+    {
+      "id": "dispatch-types",
+      "category": "swift",
+      "title": "Какие есть способы диспетчеризации, как бы их сравнил?",
+      "sources": [
+        159,
+        436,
+        584,
+        669
+      ]
+    },
+    {
+      "id": "dispatch-choice-time",
+      "category": "swift",
+      "title": "В какой момент происходит выбор диспетчеризации?",
+      "sources": [
+        158
+      ]
+    },
+    {
+      "id": "table-dispatch-lookup",
+      "category": "swift",
+      "title": "Когда у нас есть наследование, например, у нас есть какие-то там наследники, и когда мы вызываем какой-то метод, то есть поиск чего происходит?",
+      "sources": [
+        667
+      ]
+    },
+    {
+      "id": "table-dispatch-tables",
+      "category": "swift",
+      "title": "что хранят в себе таблицы в table dispatch?",
+      "sources": [
+        668
+      ]
+    },
+    {
+      "id": "virtual-witness-vs-message-dispatch",
+      "category": "swift",
+      "title": "чем отличаются Virtual / Witness от Message Dispatch",
+      "sources": [
+        160
+      ]
+    },
+    {
+      "id": "message-dispatch-in-practice",
+      "category": "swift",
+      "title": "Как реализовать Message dispatch на практике?",
+      "sources": [
+        161
+      ]
+    },
+    {
+      "id": "struct-dispatch",
+      "category": "swift",
+      "title": "Какая диспетчеризация у структур",
+      "sources": [
+        388
+      ]
+    },
+    {
+      "id": "struct-protocol-method-dispatch",
+      "category": "swift",
+      "title": "Если структура реализует протокол и обращается к тому методу который он реализовал то какой тип диспетчеризации будет",
+      "sources": [
+        601
+      ]
+    },
+    {
+      "id": "extension-dispatch",
+      "category": "swift",
+      "title": "Какая диспетчеризация используется для экстеншенов в Swift?",
+      "sources": [
+        456
+      ]
+    },
+    {
+      "id": "influence-dispatch",
+      "category": "swift",
+      "title": "Как можно повлиять на диспетчеризацию?",
+      "sources": [
+        437
+      ]
+    },
+    {
+      "id": "final-static-dispatch",
+      "category": "swift",
+      "title": "Что такое final и почему при его использовании диспетчеризация становится статической?",
+      "sources": [
+        602
+      ]
+    },
+    {
+      "id": "final-default-optimization",
+      "category": "swift",
+      "title": "final оптимизация будет применина по дефолту или необходимо что-то делать?",
+      "sources": [
+        603
+      ]
+    },
+    {
+      "id": "swizzling",
+      "category": "swift",
+      "title": "Что из себя представляет swizzling метод, к какому типу диспетчеризации относится",
+      "sources": [
+        415,
+        429,
+        600
+      ]
+    },
+    {
+      "id": "swizzling-risks",
+      "category": "swift",
+      "title": "Swizzling - какие риски при его использовании",
+      "sources": [
+        23
+      ]
+    },
+    {
+      "id": "intercept-closed-library-calls",
+      "category": "swift",
+      "title": "Как отловить вызовы всех классов в закрытой либе?",
+      "sources": [
+        414,
+        428
+      ]
+    },
+    {
+      "id": "memory-in-ios",
+      "category": "memory",
+      "title": "Как устроена память в ios",
+      "sources": [
+        150,
+        531
+      ]
+    },
+    {
+      "id": "stack-vs-heap",
+      "category": "memory",
+      "title": "Что такое стек и куча?",
+      "sources": [
+        139,
+        680
+      ]
+    },
+    {
+      "id": "stack-faster-than-heap",
+      "category": "memory",
+      "title": "Почему стек быстрее кучи?",
+      "sources": [
+        85
+      ]
+    },
+    {
+      "id": "stacks-and-heaps-count",
+      "category": "memory",
+      "title": "Сколько стеков и куч в приложении?",
+      "sources": [
+        86
+      ]
+    },
+    {
+      "id": "stack-shared-between-threads",
+      "category": "memory",
+      "title": "Область памяти стэк общая для разных тредов?",
+      "sources": [
+        475
+      ]
+    },
+    {
+      "id": "value-reference-in-memory",
+      "category": "memory",
+      "title": "Как хранятся value и reference type в памяти",
+      "sources": [
+        138
+      ]
+    },
+    {
+      "id": "value-types-on-heap",
+      "category": "memory",
+      "title": "Могут ли value типы храниться на куче",
+      "sources": [
+        83
+      ]
+    },
+    {
+      "id": "reference-types-on-stack",
+      "category": "memory",
+      "title": "Когда reference тип хранится на стеке",
+      "sources": [
+        84
+      ]
+    },
+    {
+      "id": "why-not-everything-on-stack",
+      "category": "memory",
+      "title": "Почему мы всё не храним в стеке? Почему не храним reference тип в стеке",
+      "sources": [
+        140
+      ]
+    },
+    {
+      "id": "type-sizes",
+      "category": "memory",
+      "title": "какой размер у value и reference типов?",
+      "sources": [
+        141
+      ]
+    },
+    {
+      "id": "memory-layout",
+      "category": "memory",
+      "title": "Что такое Memory Layout?",
+      "sources": [
+        94
+      ]
+    },
+    {
+      "id": "struct-with-class-storage",
+      "category": "memory",
+      "title": "Где будет храниться структура, если внутри нее класс",
+      "sources": [
+        483
+      ]
+    },
+    {
+      "id": "captured-struct-storage",
+      "category": "memory",
+      "title": "Если в escaping closure (эскейпинг клоуже) захватить структуру, она будет захвачена в стеке или в куче?",
+      "sources": [
+        479,
+        484
+      ]
+    },
+    {
+      "id": "inout-storage",
+      "category": "memory",
+      "title": "Inout. если мы передаём value type через inout внутри метода то где он будет храниться на куче или на стеке",
+      "sources": [
+        592
+      ]
+    },
+    {
+      "id": "arc",
+      "category": "memory",
+      "title": "Как работает управление памятью в swift (ARC)",
+      "sources": [
+        1,
+        15,
+        87,
+        223,
+        255,
+        281,
+        336,
+        373,
+        389,
+        417,
+        587,
+        628
+      ]
+    },
+    {
+      "id": "arc-compile-vs-runtime",
+      "category": "memory",
+      "title": "Что ARC делает в runtime, а что при компиляции",
+      "sources": [
+        309,
+        500,
+        619,
+        629
+      ]
+    },
+    {
+      "id": "arc-counting-time",
+      "category": "memory",
+      "title": "Когда идет подсчет ссылок в ARC?",
+      "sources": [
+        393,
+        419
+      ]
+    },
+    {
+      "id": "arc-reference-counting",
+      "category": "memory",
+      "title": "Как происходит подсчёт ссылок в ARC",
+      "sources": [
+        153
+      ]
+    },
+    {
+      "id": "retain-release",
+      "category": "memory",
+      "title": "Что такое retain/relise и когда проставляется?",
+      "sources": [
+        93
+      ]
+    },
+    {
+      "id": "arc-inserted-commands",
+      "category": "memory",
+      "title": "Какие команды ARC может вставлять в код?",
+      "sources": [
+        631
+      ]
+    },
+    {
+      "id": "arc-vs-mrc",
+      "category": "memory",
+      "title": "Что такое ARC? В чем разница между ARC и MRC?",
+      "sources": [
+        200,
+        280,
+        352,
+        391,
+        630,
+        679
+      ]
+    },
+    {
+      "id": "mrc-messages",
+      "category": "memory",
+      "title": "Какие сообщения помимо retain и release существуют для ручного управления памятью?",
+      "sources": [
+        618
+      ]
+    },
+    {
+      "id": "arc-problems",
+      "category": "memory",
+      "title": "Какие проблемы встречается при использовании ARC",
+      "sources": [
+        596
+      ]
+    },
+    {
+      "id": "reference-types",
+      "category": "memory",
+      "title": "Strong, weak и unowned в swift - определение, какой в каких случаях использовать?",
+      "sources": [
+        88,
+        190,
+        334,
+        353,
+        374
+      ]
+    },
+    {
+      "id": "strong-reference",
+      "category": "memory",
+      "title": "Что такое strong-ссылка?",
+      "sources": [
+        282
+      ]
+    },
+    {
+      "id": "weak-reference",
+      "category": "memory",
+      "title": "Что такое weak-ссылка?",
+      "sources": [
+        17,
+        283
+      ]
+    },
+    {
+      "id": "unowned-reference",
+      "category": "memory",
+      "title": "Что такое unowned ссылка?",
+      "sources": [
+        284,
+        597
+      ]
+    },
+    {
+      "id": "weak-vs-unowned",
+      "category": "memory",
+      "title": "Разница между weak и unowned",
+      "sources": [
+        89,
+        148,
+        224,
+        392,
+        418,
+        588
+      ]
+    },
+    {
+      "id": "weak-vs-unowned-performance",
+      "category": "memory",
+      "title": "Какая ссылка более производительная, weak или unowned",
+      "sources": [
+        90
+      ]
+    },
+    {
+      "id": "weak-is-optional",
+      "category": "memory",
+      "title": "weak это опционал или нет?",
+      "sources": [
+        149
+      ]
+    },
+    {
+      "id": "safe-unsafe-references",
+      "category": "memory",
+      "title": "Safe и Unsafe ссылки?",
+      "sources": [
+        394,
+        420
+      ]
+    },
+    {
+      "id": "side-table",
+      "category": "memory",
+      "title": "что такое side Table, какую проблему она решает",
+      "sources": [
+        16,
+        357,
+        520
+      ]
+    },
+    {
+      "id": "side-table-removal",
+      "category": "memory",
+      "title": "Когда удаляется side-table у слабой ссылки?",
+      "sources": [
+        285
+      ]
+    },
+    {
+      "id": "weak-references-storage",
+      "category": "memory",
+      "title": "куда сохраняются weak ссылки",
+      "sources": [
+        335
+      ]
+    },
+    {
+      "id": "object-lifecycle",
+      "category": "memory",
+      "title": "описание жизненного цикла объекта (live, deiniting, deinted, freed, dead)",
+      "sources": [
+        91,
+        155,
+        256,
+        390
+      ]
+    },
+    {
+      "id": "object-deallocation",
+      "category": "memory",
+      "title": "В какой момент объект освобождается из памяти",
+      "sources": [
+        2,
+        154,
+        289
+      ]
+    },
+    {
+      "id": "deinit-thread",
+      "category": "memory",
+      "title": "На каком потоке вызовется deinit в ARC. На том же где был создан объект или на другом?",
+      "sources": [
+        595
+      ]
+    },
+    {
+      "id": "heap-object",
+      "category": "memory",
+      "title": "Что такое HeapObject",
+      "sources": [
+        92
+      ]
+    },
+    {
+      "id": "retain-cycle",
+      "category": "memory",
+      "title": "Что такое Retain Cycle и почему это плохо?",
+      "sources": [
+        151,
+        678
+      ]
+    },
+    {
+      "id": "retain-cycle-causes",
+      "category": "memory",
+      "title": "Когда может возникнуть Retain Cycle",
+      "sources": [
+        152
+      ]
+    },
+    {
+      "id": "retain-cycle-min-objects",
+      "category": "memory",
+      "title": "retain cycle (и сколько минимум объектов нужно для его создания?)",
+      "sources": [
+        21,
+        191
+      ]
+    },
+    {
+      "id": "retain-cycle-fix",
+      "category": "memory",
+      "title": "как решается проблема циклических ссылок? пример из практики, когда разрывал цикл сильных ссылок",
+      "sources": [
+        123,
+        129
+      ]
+    },
+    {
+      "id": "weak-self-in-escaping-closures",
+      "category": "memory",
+      "title": "У нас есть Escaping замыкание. И в этом замыкании мы захватываем self. Всегда ли нужна указывать weak self в кложурах?",
+      "sources": [
+        632
+      ]
+    },
+    {
+      "id": "weak-self-global-async",
+      "category": "memory",
+      "title": "Представим, что у нас какой-то ViewController, метод viewDidLoad, и мы там ставим задачу в DispatchQueue.global().async и захватываем self. В данном случае стоит ослабить ссылку на self или нет?",
+      "sources": [
+        633
+      ]
+    },
+    {
+      "id": "long-task-captures-self",
+      "category": "memory",
+      "title": "у нас есть экран, мы на viewdidload поставили долгую задачу и захватили в эту кложуру self, и вышли с экрана. что произойдет?",
+      "sources": [
+        636
+      ]
+    },
+    {
+      "id": "array-add-reference-count",
+      "category": "memory",
+      "title": "Что происходит с ссылками при добавлении объекта в массив?",
+      "sources": [
+        634,
+        637
+      ]
+    },
+    {
+      "id": "weak-references-array",
+      "category": "memory",
+      "title": "как создать массив со слабыми ссылками",
+      "sources": [
+        312,
+        542,
+        635,
+        638
+      ]
+    },
+    {
+      "id": "memory-leaks",
+      "category": "memory",
+      "title": "Расскажи, что такое утечка памяти. Как их найти?",
+      "sources": [
+        416,
+        430
+      ]
+    },
+    {
+      "id": "zombie-objects",
+      "category": "memory",
+      "title": "Что такое зомби объекты",
+      "sources": [
+        598
+      ]
+    },
+    {
+      "id": "autoreleasepool",
+      "category": "memory",
+      "title": "Что такое autorelease pool и для чего он используется?",
+      "sources": [
+        286,
+        337,
+        354,
+        541
+      ]
+    },
+    {
+      "id": "low-memory-handling",
+      "category": "memory",
+      "title": "управление памятью при нехватке памяти, что делать если приложение схлопывается",
+      "sources": [
+        532,
+        543
+      ]
+    },
+    {
+      "id": "cow",
+      "category": "memory",
+      "title": "Что такое Copy on write. Привести пример алгоритма как это происходит. В какой момент механизм срабатывает и что произойдёт?",
+      "sources": [
+        144,
+        188,
+        217,
+        258,
+        287,
+        338,
+        355,
+        396,
+        547,
+        593,
+        659,
+        709
+      ]
+    },
+    {
+      "id": "value-type-always-copied",
+      "category": "memory",
+      "title": "Всегда ли value type передается копированием?",
+      "sources": [
+        187
+      ]
+    },
+    {
+      "id": "cow-custom-struct",
+      "category": "memory",
+      "title": "Можно ли реализовать Copy-on-Write для кастомной структуры?",
+      "sources": [
+        288,
+        594
+      ]
+    },
+    {
+      "id": "cow-types",
+      "category": "memory",
+      "title": "Какие типы поддерживают copy on write?",
+      "sources": [
+        660
+      ]
+    },
+    {
+      "id": "cow-int",
+      "category": "memory",
+      "title": "Поддерживают ли int, например, copy on write?",
+      "sources": [
+        661
+      ]
+    },
+    {
+      "id": "cow-string",
+      "category": "memory",
+      "title": "String поддерживает copy-on-write?",
+      "sources": [
+        662
+      ]
+    },
+    {
+      "id": "cow-custom-collection",
+      "category": "memory",
+      "title": "мы решили написать свою реализацию массива и реализовали протокол collection. В таком случае будет ли у нас copy on write?",
+      "sources": [
+        663
+      ]
+    },
+    {
+      "id": "multithreading",
+      "category": "concurrency",
+      "title": "Что такое многопоточность и какие инструменты вы знаете для работы с многопоточностью?",
+      "sources": [
+        53,
+        103,
+        696
+      ]
+    },
+    {
+      "id": "concurrency-tools",
+      "category": "concurrency",
+      "title": "Какие способы работы с многопоточкой ты знаешь?",
+      "sources": [
+        403,
+        604
+      ]
+    },
+    {
+      "id": "single-core-multithreading",
+      "category": "concurrency",
+      "title": "А когда были одноядерные процессоры как многопоточность работала",
+      "sources": [
+        104
+      ]
+    },
+    {
+      "id": "threads-vs-cores",
+      "category": "concurrency",
+      "title": "количество потоков всегда равно количеству ядер в процессоре?",
+      "sources": [
+        54
+      ]
+    },
+    {
+      "id": "tasks-at-once",
+      "category": "concurrency",
+      "title": "в единицу времени сколько реально задач выполняется",
+      "sources": [
+        319
+      ]
+    },
+    {
+      "id": "concurrency-vs-parallelism",
+      "category": "concurrency",
+      "title": "concurrency и параллелизм - в чем разница? каким образом можно добиться и того и другого",
+      "sources": [
+        132
+      ]
+    },
+    {
+      "id": "queues-vs-threads",
+      "category": "concurrency",
+      "title": "в чем разница очереди и потока в GCD?",
+      "sources": [
+        55,
+        551
+      ]
+    },
+    {
+      "id": "threads-gcd-operation-levels",
+      "category": "concurrency",
+      "title": "Треды, GCD, Operation что будет верхнеуровневым",
+      "sources": [
+        605
+      ]
+    },
+    {
+      "id": "gcd-over-threads",
+      "category": "concurrency",
+      "title": "Что GCD даёт поверх обычных тредов",
+      "sources": [
+        404
+      ]
+    },
+    {
+      "id": "gcd-overview",
+      "category": "concurrency",
+      "title": "Можешь подробнее рассказать про GCD какие основные парадигмы и сущности",
+      "sources": [
+        113,
+        606
+      ]
+    },
+    {
+      "id": "gcd-queue-types",
+      "category": "concurrency",
+      "title": "Какие существуют типы очередей в GCD?",
+      "sources": [
+        205,
+        227,
+        239,
+        245,
+        291,
+        313,
+        340,
+        358,
+        502
+      ]
+    },
+    {
+      "id": "system-serial-queues",
+      "category": "concurrency",
+      "title": "Какие системные серийные очереди есть?",
+      "sources": [
+        292,
+        359
+      ]
+    },
+    {
+      "id": "main-queue-serial-or-concurrent",
+      "category": "concurrency",
+      "title": "DispatchQueue.main это serial или concurrent очередь",
+      "sources": [
+        472,
+        492,
+        508
+      ]
+    },
+    {
+      "id": "ui-main-queue",
+      "category": "concurrency",
+      "title": "В какой очереди необходимо работать с элементами пользовательского интерфейса (UI)?",
+      "sources": [
+        246
+      ]
+    },
+    {
+      "id": "update-ui-off-main-thread",
+      "category": "concurrency",
+      "title": "В каком случае можно обновить UI не на главном потоке",
+      "sources": [
+        498
+      ]
+    },
+    {
+      "id": "sync-vs-async",
+      "category": "concurrency",
+      "title": "Что такое Dispatch Sync и Dispatch Async?",
+      "sources": [
+        206,
+        293,
+        314,
+        341,
+        360,
+        685
+      ]
+    },
+    {
+      "id": "dispatch-sync",
+      "category": "concurrency",
+      "title": "Что делает dispatchQueue.sync?",
+      "sources": [
+        294
+      ]
+    },
+    {
+      "id": "async-tasks-parallel",
+      "category": "concurrency",
+      "title": "Верно ли утверждение, что при добавлении задач асинхронно в очередь задачи будут выполняться параллельно?",
+      "sources": [
+        251
+      ]
+    },
+    {
+      "id": "async-tasks-order",
+      "category": "concurrency",
+      "title": "Асинхронные задачи как выполняются, какая первее",
+      "sources": [
+        607
+      ]
+    },
+    {
+      "id": "serial-queue-single-thread",
+      "category": "concurrency",
+      "title": "есть ли гарантия что на серийной очереди задачи будут выполнены на 1 потоке",
+      "sources": [
+        321
+      ]
+    },
+    {
+      "id": "main-sync-deadlock",
+      "category": "concurrency",
+      "title": "Что будет, если в GCD вызвать метод `DispatchQueue.main.sync()` внутри метода `viewDidLoad()`",
+      "sources": [
+        457,
+        623
+      ]
+    },
+    {
+      "id": "qos",
+      "category": "concurrency",
+      "title": "Какие классы обслуживания очередей (QoS) существуют в GCD?",
+      "sources": [
+        254,
+        506,
+        699
+      ]
+    },
+    {
+      "id": "qos-highest-priority",
+      "category": "concurrency",
+      "title": "Какой у нас есть самый высокий приоритет в QoS?",
+      "sources": [
+        641
+      ]
+    },
+    {
+      "id": "user-interactive-heavy-task",
+      "category": "concurrency",
+      "title": "У нас есть какая-то очень тяжелая задача. Мы ее отправляем на очередь с приоритетом userInteractive. будет ли выполнение этой задачи как-то аффектить наш главный поток? Будет ли у нас фризить UI, например?",
+      "sources": [
+        642
+      ]
+    },
+    {
+      "id": "dispatch-group",
+      "category": "concurrency",
+      "title": "Что делает DispatchGroup?",
+      "sources": [
+        110,
+        295,
+        342,
+        361
+      ]
+    },
+    {
+      "id": "dispatch-group-methods",
+      "category": "concurrency",
+      "title": "методы DispatchGroup",
+      "sources": [
+        379
+      ]
+    },
+    {
+      "id": "dispatch-group-wait",
+      "category": "concurrency",
+      "title": "Можно ли ожидать выполнение DispatchGroup синхронно?",
+      "sources": [
+        297
+      ]
+    },
+    {
+      "id": "wait-for-async-tasks",
+      "category": "concurrency",
+      "title": "как запустить несколько асинхронных задач на concurrent очереди и дождаться их выполнения",
+      "sources": [
+        318
+      ]
+    },
+    {
+      "id": "dispatch-barrier",
+      "category": "concurrency",
+      "title": "Для чего нужен Dispatch Barrier, как его установить, как сбросить, как это работает? В какой момент Barrier должен отрабатывать вообще, когда он устанавливается?",
+      "sources": [
+        169,
+        298,
+        362
+      ]
+    },
+    {
+      "id": "dispatch-barrier-queues",
+      "category": "concurrency",
+      "title": "Для каких очередей подходит Dispatch Barrier?",
+      "sources": [
+        299
+      ]
+    },
+    {
+      "id": "dispatch-barrier-serial-queue",
+      "category": "concurrency",
+      "title": "Есть ли смысл в барьерных задачах на serial очереди?",
+      "sources": [
+        300,
+        343
+      ]
+    },
+    {
+      "id": "multiple-barriers",
+      "category": "concurrency",
+      "title": "Что происходит, если накидать несколько барьерных задач подряд?",
+      "sources": [
+        301
+      ]
+    },
+    {
+      "id": "gcd-sync-methods",
+      "category": "concurrency",
+      "title": "все способы синхронизации в GCD",
+      "sources": [
+        364
+      ]
+    },
+    {
+      "id": "gcd-cancel",
+      "category": "concurrency",
+      "title": "Как отменить задачу в GCD?",
+      "sources": [
+        305,
+        614
+      ]
+    },
+    {
+      "id": "gcd-manual-cancel",
+      "category": "concurrency",
+      "title": "Как руками можно сделать чтобы в GCD можно было отменять операцию",
+      "sources": [
+        112
+      ]
+    },
+    {
+      "id": "dispatch-work-item-cancel",
+      "category": "concurrency",
+      "title": "Как отменить DispatchWorkItem?",
+      "sources": [
+        306,
+        615
+      ]
+    },
+    {
+      "id": "cancel-before-start",
+      "category": "concurrency",
+      "title": "как отменить задачу пока она не началась",
+      "sources": [
+        316
+      ]
+    },
+    {
+      "id": "cancel-sync-task",
+      "category": "concurrency",
+      "title": "У нас есть некоторая синхронная задача. мы ее запустили. Какие у нас есть варианты ее отмены? Можем ли мы это сделать?",
+      "sources": [
+        643
+      ]
+    },
+    {
+      "id": "cancel-running-task",
+      "category": "concurrency",
+      "title": "Можно ли отменить операцию на выполнении? (В GCD и NSOperation)",
+      "sources": [
+        644,
+        645,
+        717
+      ]
+    },
+    {
+      "id": "operation",
+      "category": "concurrency",
+      "title": "Operation",
+      "sources": [
+        173
+      ]
+    },
+    {
+      "id": "operation-states",
+      "category": "concurrency",
+      "title": "Перечислите состояния операции Operation",
+      "sources": [
+        712
+      ]
+    },
+    {
+      "id": "gcd-vs-operation",
+      "category": "concurrency",
+      "title": "В чем разница между OperationQueue и GCD?",
+      "sources": [
+        111,
+        302,
+        406,
+        424,
+        622,
+        701
+      ]
+    },
+    {
+      "id": "operation-queue-advantages",
+      "category": "concurrency",
+      "title": "Зачем был создан OperationQueue и чем он расширяет возможности GCD?",
+      "sources": [
+        174,
+        303,
+        320,
+        344,
+        363,
+        405
+      ]
+    },
+    {
+      "id": "operation-queue-cancel",
+      "category": "concurrency",
+      "title": "Как отменить задачу в OperationQueue?",
+      "sources": [
+        304
+      ]
+    },
+    {
+      "id": "notification-center-thread",
+      "category": "concurrency",
+      "title": "В каком треде срабатывают нотификации NotificationCenter?",
+      "sources": [
+        473,
+        620
+      ]
+    },
+    {
+      "id": "multithreading-problems",
+      "category": "concurrency",
+      "title": "Какие проблемы у нас могут возникнуть в многопоточности, с чем ты сталкивался?",
+      "sources": [
+        6,
+        56,
+        105,
+        124,
+        128,
+        170,
+        261,
+        400,
+        423,
+        609,
+        639,
+        700
+      ]
+    },
+    {
+      "id": "multithreading-experience",
+      "category": "concurrency",
+      "title": "Опыт работы с многопоточностью, для чего использовал",
+      "sources": [
+        168
+      ]
+    },
+    {
+      "id": "race-condition",
+      "category": "concurrency",
+      "title": "Что такое Race condition? И как можно решить?",
+      "sources": [
+        193,
+        496
+      ]
+    },
+    {
+      "id": "race-condition-prevention",
+      "category": "concurrency",
+      "title": "Как избавиться от Race Condition",
+      "sources": [
+        401,
+        497,
+        610
+      ]
+    },
+    {
+      "id": "critical-section",
+      "category": "concurrency",
+      "title": "Что такое критическая секция в многопоточности?",
+      "sources": [
+        171
+      ]
+    },
+    {
+      "id": "critical-section-protection",
+      "category": "concurrency",
+      "title": "как защитить критическую секцию, чтобы предотвратить race condition / data race (пример: у нас есть int свойство, и доступ к нему из разных потоков)",
+      "sources": [
+        376
+      ]
+    },
+    {
+      "id": "deadlock",
+      "category": "concurrency",
+      "title": "Что такое Deadlock",
+      "sources": [
+        240,
+        449
+      ]
+    },
+    {
+      "id": "deadlock-reproduce",
+      "category": "concurrency",
+      "title": "Как можно воспроизвести Deadlock",
+      "sources": [
+        107,
+        175
+      ]
+    },
+    {
+      "id": "deadlock-min-threads",
+      "category": "concurrency",
+      "title": "сколько минимум потоков нужно чтобы случился deadlock?",
+      "sources": [
+        550
+      ]
+    },
+    {
+      "id": "deadlock-and-race-condition-fix",
+      "category": "concurrency",
+      "title": "Как избавиться от Deadlock и Race Condition",
+      "sources": [
+        106
+      ]
+    },
+    {
+      "id": "priority-inversion",
+      "category": "concurrency",
+      "title": "Как может возникнуть Priority Inversion",
+      "sources": [
+        108
+      ]
+    },
+    {
+      "id": "thread-starvation",
+      "category": "concurrency",
+      "title": "Что такое голодание потоков?",
+      "sources": [
+        640
+      ]
+    },
+    {
+      "id": "thread-explosion",
+      "category": "concurrency",
+      "title": "Что такое тред эксплоужен",
+      "sources": [
+        608
+      ]
+    },
+    {
+      "id": "thread-safe-standard-types",
+      "category": "concurrency",
+      "title": "Являются ли стандартные типы данных в Swift потокобезопасными?",
+      "sources": [
+        250
+      ]
+    },
+    {
+      "id": "thread-safe-arrays",
+      "category": "concurrency",
+      "title": "Как работает потокобезопасность массивов?",
+      "sources": [
+        290
+      ]
+    },
+    {
+      "id": "class-variables-thread-safety",
+      "category": "concurrency",
+      "title": "можно ли безопасно читать и писать в переменные класса",
+      "sources": [
+        315
+      ]
+    },
+    {
+      "id": "sync-primitives",
+      "category": "concurrency",
+      "title": "Какие есть способы синхронизации доступа к переменным?",
+      "sources": [
+        5,
+        57,
+        307,
+        345
+      ]
+    },
+    {
+      "id": "mutex-vs-semaphore",
+      "category": "concurrency",
+      "title": "Чем отличается Мьютекс от Семафора",
+      "sources": [
+        109,
+        365,
+        407,
+        425,
+        552
+      ]
+    },
+    {
+      "id": "lock-types",
+      "category": "concurrency",
+      "title": "разновидности локов",
+      "sources": [
+        366,
+        402
+      ]
+    },
+    {
+      "id": "recursive-lock",
+      "category": "concurrency",
+      "title": "чем рекурсивные локи отличаются от обычных",
+      "sources": [
+        611
+      ]
+    },
+    {
+      "id": "spinlock",
+      "category": "concurrency",
+      "title": "Что такое спин локи",
+      "sources": [
+        612
+      ]
+    },
+    {
+      "id": "atomics",
+      "category": "concurrency",
+      "title": "что такое атомарные операции, атомики?",
+      "sources": [
+        58
+      ]
+    },
+    {
+      "id": "atomics-in-swiftui",
+      "category": "concurrency",
+      "title": "атомики в SwiftUI",
+      "sources": [
+        59
+      ]
+    },
+    {
+      "id": "runloop",
+      "category": "concurrency",
+      "title": "Что такое runloop и для чего он нужен?",
+      "sources": [
+        3,
+        192,
+        228,
+        317,
+        714
+      ]
+    },
+    {
+      "id": "runloop-count",
+      "category": "concurrency",
+      "title": "Что такое RunLoop? Сколько ранлупов запущено в приложении по-умолчанию?",
+      "sources": [
+        621
+      ]
+    },
+    {
+      "id": "runloop-other-threads",
+      "category": "concurrency",
+      "title": "На главном потоке есть ран луп, если какой-то такой аналог на других потоках?",
+      "sources": [
+        613
+      ]
+    },
+    {
+      "id": "runloop-modes",
+      "category": "concurrency",
+      "title": "какие моды (приоритеты) есть у Runloop",
+      "sources": [
+        322
+      ]
+    },
+    {
+      "id": "async-await",
+      "category": "concurrency",
+      "title": "asynk/await",
+      "sources": [
+        172
+      ]
+    },
+    {
+      "id": "await",
+      "category": "concurrency",
+      "title": "Что делает метод await?",
+      "sources": [
+        296
+      ]
+    },
+    {
+      "id": "gcd-async-await-operation",
+      "category": "concurrency",
+      "title": "GCD, async await, NSOperation - чем отличаются, что «лучше», с чем это едят.",
+      "sources": [
+        467
+      ]
+    },
+    {
+      "id": "actors-structured-concurrency",
+      "category": "concurrency",
+      "title": "Что такое actor и как работает Structured Concurrency?",
+      "sources": [
+        308
+      ]
+    },
+    {
+      "id": "task-vs-detached",
+      "category": "concurrency",
+      "title": "разница между Task и Task.detached",
+      "sources": [
+        559
+      ]
+    },
+    {
+      "id": "main-actor",
+      "category": "concurrency",
+      "title": "Как с помощью Swift Concurrency ограничить выполнение функции на главном потоке?",
+      "sources": [
+        382
+      ]
+    },
+    {
+      "id": "task-group",
+      "category": "concurrency",
+      "title": "С помощью какого инструмента в Swift Concurrency можно выполнить параллельную загрузку нескольких элементов, если заранее конкретное число этих элементов неизвестно?",
+      "sources": [
+        383
+      ]
+    },
+    {
+      "id": "swift-concurrency-deadlock",
+      "category": "concurrency",
+      "title": "В каком случае/случаях в Swift Concurrency возможны deadlock?",
+      "sources": [
+        384
+      ]
+    },
+    {
+      "id": "rx-zip-vs-merge",
+      "category": "concurrency",
+      "title": "Rx: чем отличается .zip от .merge",
+      "sources": [
+        262
+      ]
+    },
+    {
+      "id": "rest-socket-crash-case",
+      "category": "concurrency",
+      "title": "кейс: приложение работает по REST и по Socket, когда включается Socket приложение либо крашит, либо список счетов в таблице не такой какой должен быть",
+      "sources": [
+        567
+      ]
+    },
+    {
+      "id": "ui-approaches",
+      "category": "uikit",
+      "title": "Какие подходы для работы с UI существуют?",
+      "sources": [
+        624
+      ]
+    },
+    {
+      "id": "uiview",
+      "category": "uikit",
+      "title": "Что такое UIView",
+      "sources": [
+        25
+      ]
+    },
+    {
+      "id": "uiview-properties",
+      "category": "uikit",
+      "title": "основные свойства UIView",
+      "sources": [
+        26
+      ]
+    },
+    {
+      "id": "uiview-vs-calayer",
+      "category": "uikit",
+      "title": "Что такое CALayer и в чем отличие от UIView?",
+      "sources": [
+        34,
+        176,
+        438,
+        493,
+        528,
+        713
+      ]
+    },
+    {
+      "id": "why-not-layout-with-calayers",
+      "category": "uikit",
+      "title": "Почему мы не верстаем на CALayers?",
+      "sources": [
+        482
+      ]
+    },
+    {
+      "id": "calayer-touches",
+      "category": "uikit",
+      "title": "может ли CALayer обрабатывать нажатия",
+      "sources": [
+        505
+      ]
+    },
+    {
+      "id": "points-vs-pixels",
+      "category": "uikit",
+      "title": "Чем Point (pt) отличается от Pixel (px)?",
+      "sources": [
+        24,
+        329,
+        692
+      ]
+    },
+    {
+      "id": "coordinate-system-origin",
+      "category": "uikit",
+      "title": "Где находится начало системы координат в UIKit",
+      "sources": [
+        234
+      ]
+    },
+    {
+      "id": "frame-vs-bounds",
+      "category": "uikit",
+      "title": "Что такое frame и bounds? Чем они отличаются?",
+      "sources": [
+        30,
+        116,
+        235,
+        269,
+        328,
+        333,
+        367,
+        507,
+        681
+      ]
+    },
+    {
+      "id": "frame-bounds-scroll-rotation",
+      "category": "uikit",
+      "title": "Frame vs bounds, в чем разница? Когда что меняется, допустим, при скролле? Как поменяется фрейм при повороте через трансформ?",
+      "sources": [
+        198
+      ]
+    },
+    {
+      "id": "frame-bounds-differ",
+      "category": "uikit",
+      "title": "В каком случае bounds будет отличаться от frame",
+      "sources": [
+        270,
+        350,
+        486
+      ]
+    },
+    {
+      "id": "frame-bounds-size-differ",
+      "category": "uikit",
+      "title": "В каком случае size bounds'a может отличаться от size frame'a",
+      "sources": [
+        31,
+        474
+      ]
+    },
+    {
+      "id": "frame-bounds-origin",
+      "category": "uikit",
+      "title": "Когда origin у frame и bounds будет не равен 0",
+      "sources": [
+        231
+      ]
+    },
+    {
+      "id": "frame-bounds-structure",
+      "category": "uikit",
+      "title": "Какая структура хранится в frame и bounds?",
+      "sources": [
+        272
+      ]
+    },
+    {
+      "id": "rotate-view-45",
+      "category": "uikit",
+      "title": "Если повернуть view по своей оси на 45 градусов с чем мы будем работать с frame или bounds?",
+      "sources": [
+        574
+      ]
+    },
+    {
+      "id": "view-rotation",
+      "category": "uikit",
+      "title": "Как реализуется поворот view в UIKit?",
+      "sources": [
+        271
+      ]
+    },
+    {
+      "id": "squares-on-rotation",
+      "category": "uikit",
+      "title": "Что сделать чтобы при повороте экрана квадраты оставались квадратами",
+      "sources": [
+        76
+      ]
+    },
+    {
+      "id": "frame-during-animation",
+      "category": "uikit",
+      "title": "У нас есть некоторая вьюха, и мы ее анимируем. Она переходит из одного края экрана в другой. Можем ли мы каким-то образом получить текущие значения frame этой вьюхи в момент анимации?",
+      "sources": [
+        655
+      ]
+    },
+    {
+      "id": "frame-vs-intrinsic-content-size",
+      "category": "uikit",
+      "title": "Может ли frame быть больше intrinsicContentSize ?",
+      "sources": [
+        478
+      ]
+    },
+    {
+      "id": "uiviewcontroller",
+      "category": "uikit",
+      "title": "Что такое UIViewController и за что он отвечает",
+      "sources": [
+        27
+      ]
+    },
+    {
+      "id": "child-view-controllers",
+      "category": "uikit",
+      "title": "могут у нас быть вложенные контроллеры?",
+      "sources": [
+        28
+      ]
+    },
+    {
+      "id": "vc-lifecycle",
+      "category": "uikit",
+      "title": "Какие методы жизненного цикла UIViewController ты знаешь?",
+      "sources": [
+        29,
+        181,
+        273,
+        463,
+        504,
+        691
+      ]
+    },
+    {
+      "id": "vc-lifecycle-on-init",
+      "category": "uikit",
+      "title": "Запустится ли жизненный цикл VC, если его просто проинициализировать",
+      "sources": [
+        485
+      ]
+    },
+    {
+      "id": "view-did-load-vs-will-appear",
+      "category": "uikit",
+      "title": "что вызывается раньше - viewDidLoad или viewWillAppear",
+      "sources": [
+        573
+      ]
+    },
+    {
+      "id": "view-did-load-twice",
+      "category": "uikit",
+      "title": "может ли быть 2 вызова viewDidLoad",
+      "sources": [
+        586
+      ]
+    },
+    {
+      "id": "view-is-appearing",
+      "category": "uikit",
+      "title": "Зачем добавили метод viewIsAppearing в жц контроллера?",
+      "sources": [
+        274,
+        330
+      ]
+    },
+    {
+      "id": "before-view-is-appearing",
+      "category": "uikit",
+      "title": "Где раньше узнавали фрейм экрана до появления ViewIsAppearing?",
+      "sources": [
+        275
+      ]
+    },
+    {
+      "id": "load-view-view-did-appear-will-layout",
+      "category": "uikit",
+      "title": "Что такое LoadView, ViewDidAppear и ViewWillLayoutSubviews?",
+      "sources": [
+        276
+      ]
+    },
+    {
+      "id": "load-view",
+      "category": "uikit",
+      "title": "когда вызывается loadView() у ViewController. зачем он нужен",
+      "sources": [
+        327
+      ]
+    },
+    {
+      "id": "load-view-super",
+      "category": "uikit",
+      "title": "Нужно ли вызывать super в LoadView? Почему?",
+      "sources": [
+        277
+      ]
+    },
+    {
+      "id": "custom-root-view",
+      "category": "uikit",
+      "title": "В каком методе жизненного цикла UIViewController ему можно задать нестандартную корневую view в коде?",
+      "sources": [
+        450
+      ]
+    },
+    {
+      "id": "view-loaded-check",
+      "category": "uikit",
+      "title": "как узнать view загрузилась или нет",
+      "sources": [
+        553
+      ]
+    },
+    {
+      "id": "layout-in-code-method",
+      "category": "uikit",
+      "title": "Если нам нужно верстку добавить кодом, в каком методе мы это делаем? И почему?",
+      "sources": [
+        182
+      ]
+    },
+    {
+      "id": "vc-view-size-known",
+      "category": "uikit",
+      "title": "В каком методе жизненного цикла ViewController известны точные размеры view?",
+      "sources": [
+        279,
+        351,
+        490,
+        554,
+        585
+      ]
+    },
+    {
+      "id": "will-vs-did-layout-subviews",
+      "category": "uikit",
+      "title": "Чем отличается WillLayoutSubviews от DidLayoutSubviews?",
+      "sources": [
+        278
+      ]
+    },
+    {
+      "id": "open-screen-animation",
+      "category": "uikit",
+      "title": "нужно показать анимацию по открытию экрана, в каком методе жизненного цикла VC будем делать и почему в нём",
+      "sources": [
+        576
+      ]
+    },
+    {
+      "id": "layout-methods",
+      "category": "uikit",
+      "title": "Какие методы UIView участвуют в процессе лейаута?",
+      "sources": [
+        266,
+        267,
+        331,
+        349,
+        439
+      ]
+    },
+    {
+      "id": "constraints-layout-methods",
+      "category": "uikit",
+      "title": "методы для лейаута при работе с констрейнтами",
+      "sources": [
+        332
+      ]
+    },
+    {
+      "id": "set-needs-layout-vs-layout-if-needed",
+      "category": "uikit",
+      "title": "Чем отличаются setNeedsLayout, layoutIfNeeded и layoutSubviews?",
+      "sources": [
+        268,
+        440,
+        558
+      ]
+    },
+    {
+      "id": "set-needs-layout-when",
+      "category": "uikit",
+      "title": "Когда наступит layout для setNeedsLayout?",
+      "sources": [
+        441
+      ]
+    },
+    {
+      "id": "synchronous-layout-update",
+      "category": "uikit",
+      "title": "Какой метод используется для синхронного обновления UI: setNeedsLayout или layoutIfNeeded?",
+      "sources": [
+        578
+      ]
+    },
+    {
+      "id": "frame-after-constraints",
+      "category": "uikit",
+      "title": "в каком методе можно изменить фрейм после расчета констрейнтов. (UIView)",
+      "sources": [
+        476
+      ]
+    },
+    {
+      "id": "auto-layout",
+      "category": "uikit",
+      "title": "Что из себя представляют констрейнты и для чего они нужны?",
+      "sources": [
+        197,
+        697
+      ]
+    },
+    {
+      "id": "auto-layout-background-thread",
+      "category": "uikit",
+      "title": "Можем ли мы добавлять ограничения AutoLayout вне основного потока",
+      "sources": [
+        238,
+        657
+      ]
+    },
+    {
+      "id": "frames-background-thread",
+      "category": "uikit",
+      "title": "получится посчитать frames на background потоке?",
+      "sources": [
+        658
+      ]
+    },
+    {
+      "id": "safe-area",
+      "category": "uikit",
+      "title": "Верно ли утверждение, что при верстке на iPad ограничения Safe Area применяются автоматически, а на iPhone их необходимо задавать вручную?",
+      "sources": [
+        252
+      ]
+    },
+    {
+      "id": "responder-chain",
+      "category": "uikit",
+      "title": "Responder Chain что это такое и зачем оно нужно",
+      "sources": [
+        32,
+        77,
+        230,
+        464,
+        527,
+        556,
+        716
+      ]
+    },
+    {
+      "id": "responder-chain-exclude",
+      "category": "uikit",
+      "title": "как выключить участника из responder chain",
+      "sources": [
+        557
+      ]
+    },
+    {
+      "id": "uiresponder",
+      "category": "uikit",
+      "title": "UIResponder",
+      "sources": [
+        526
+      ]
+    },
+    {
+      "id": "first-responder",
+      "category": "uikit",
+      "title": "Как определяется First Responder",
+      "sources": [
+        178
+      ]
+    },
+    {
+      "id": "become-first-responder",
+      "category": "uikit",
+      "title": "У любой вьюхи есть возможность стать респондером? Какой класс позволяет стать First Responder?",
+      "sources": [
+        179
+      ]
+    },
+    {
+      "id": "uicontrol",
+      "category": "uikit",
+      "title": "Любая ли UIView наследуется от UIControl? Что это за класс?",
+      "sources": [
+        180
+      ]
+    },
+    {
+      "id": "uibutton-hierarchy",
+      "category": "uikit",
+      "title": "UIButton какие типы наследует — всё дерево наследования",
+      "sources": [
+        368,
+        461,
+        555
+      ]
+    },
+    {
+      "id": "hit-test",
+      "category": "uikit",
+      "title": "Расскажите о методе hitTest",
+      "sources": [
+        8,
+        33,
+        78,
+        369,
+        494,
+        616,
+        704
+      ]
+    },
+    {
+      "id": "touch-handling",
+      "category": "uikit",
+      "title": "Пользователь нажал на вьюшку, как она обработает нажатие?",
+      "sources": [
+        9,
+        177,
+        397,
+        422
+      ]
+    },
+    {
+      "id": "first-touch-receiver",
+      "category": "uikit",
+      "title": "когда пользователь касается экрана, кто первый получает event касания? Как оно обрабатывается?",
+      "sources": [
+        652,
+        654
+      ]
+    },
+    {
+      "id": "no-responder-found",
+      "category": "uikit",
+      "title": "Если мы не нашли ни одного ответчика, ни одного респондера, которые смогут обработать события, что происходит?",
+      "sources": [
+        653
+      ]
+    },
+    {
+      "id": "donut-view-touches",
+      "category": "uikit",
+      "title": "У нас есть некоторое кастомное view, она в форме бублика, то есть это кружок, у которого сердцевина вырезана. Как нам сделать так, чтобы нажатие по этому центру не проходило?",
+      "sources": [
+        651
+      ]
+    },
+    {
+      "id": "user-interaction-disabled",
+      "category": "uikit",
+      "title": "Если мы у вью выставляем isUserInteractionEnabled = false то она становится false для себя и для всех своих сабвью а можно ли каким-то образом перехитрить систему и научить вьюшку при отключином UserInteraction научить обрабатывать события?",
+      "sources": [
+        81
+      ]
+    },
+    {
+      "id": "target-nil",
+      "category": "uikit",
+      "title": "Берём кнопку, сетим ей селекор, таргет, там есть возможность засетить таргет self либо какую-то вьюху, либо nil что будет если мы засетим nil",
+      "sources": [
+        79
+      ]
+    },
+    {
+      "id": "last-sender-handler",
+      "category": "uikit",
+      "title": "Мы задали сендер, кто последний может обработать кнопку",
+      "sources": [
+        80
+      ]
+    },
+    {
+      "id": "gesture-recognizers",
+      "category": "uikit",
+      "title": "Как работает UIGestureRecognizer?",
+      "sources": [
+        470,
+        710
+      ]
+    },
+    {
+      "id": "gesture-recognizer-vs-view",
+      "category": "uikit",
+      "title": "А если поверх вьюшки повесим gesture recognizer? Как ты думаешь, кто из них первым получит событие?",
+      "sources": [
+        398
+      ]
+    },
+    {
+      "id": "multiple-gesture-recognizers",
+      "category": "uikit",
+      "title": "А что, если у меня там больше одного жестер-рекогнайзера? Как мне это сделать так, чтобы они не конфликтовали?",
+      "sources": [
+        399
+      ]
+    },
+    {
+      "id": "table-and-collection-view",
+      "category": "uikit",
+      "title": "TableView и CollectionView",
+      "sources": [
+        232
+      ]
+    },
+    {
+      "id": "stack-view-vs-table-view",
+      "category": "uikit",
+      "title": "чем отличается UIStackView от UITableView",
+      "sources": [
+        565
+      ]
+    },
+    {
+      "id": "table-scroll-lag",
+      "category": "uikit",
+      "title": "Если скроллим коллекцию/таблицу, она фризит, что делать/куда смотреть?",
+      "sources": [
+        233,
+        442,
+        566
+      ]
+    },
+    {
+      "id": "feed-lag-debugging",
+      "category": "uikit",
+      "title": "дано приложение с неизвестной кодовой базой. Доступ к коду у тебя есть. Ты впервые открываешь проект. Ты его билдишь, запускаешь и начинаешь скроллить. Приложение представляет из себя новостную ленту. состоит из ячеек разной высоты. В ячейке может быть картинка, может не быть картинки, может быть текст динамической высоты разной. Ты им пользуешься и понимаешь, что оно жутко тормозит. С чего бы ты начал и как бы ты подошел к процессу дебага этого приложения?",
+      "sources": [
+        656
+      ]
+    },
+    {
+      "id": "ui-lag",
+      "category": "uikit",
+      "title": "Что делать если лагает интерфейс (как отслеживать, из-за чего может быть).",
+      "sources": [
+        466
+      ]
+    },
+    {
+      "id": "app-lifecycle",
+      "category": "uikit",
+      "title": "Состояния жизненного цикла приложения. Как можем отслеживать переходы состояний",
+      "sources": [
+        209,
+        241,
+        682
+      ]
+    },
+    {
+      "id": "app-launch",
+      "category": "uikit",
+      "title": "Что происходит при нажатии на иконку приложения?",
+      "sources": [
+        431
+      ]
+    },
+    {
+      "id": "main-earliest-code",
+      "category": "uikit",
+      "title": "Является функция main самым ранним этапом, когда мы можем выполнить наш код?",
+      "sources": [
+        432
+      ]
+    },
+    {
+      "id": "app-launch-ways",
+      "category": "uikit",
+      "title": "Как можно запустить приложение?",
+      "sources": [
+        434
+      ]
+    },
+    {
+      "id": "background-execution",
+      "category": "uikit",
+      "title": "Может ли бесконечно долго работать приложение в background?",
+      "sources": [
+        435
+      ]
+    },
+    {
+      "id": "swiftui-vs-uikit",
+      "category": "swiftui",
+      "title": "преимущества SwiftUI над UIKit",
+      "sources": [
+        35
+      ]
+    },
+    {
+      "id": "swiftui-view",
+      "category": "swiftui",
+      "title": "Что такое View в SwiftUI",
+      "sources": [
+        36
+      ]
+    },
+    {
+      "id": "swiftui-structs",
+      "category": "swiftui",
+      "title": "для чего структуры в SUI",
+      "sources": [
+        519
+      ]
+    },
+    {
+      "id": "swiftui-ui-update",
+      "category": "swiftui",
+      "title": "как происходит обновление UI в SwiftUI",
+      "sources": [
+        37
+      ]
+    },
+    {
+      "id": "view-modifiers",
+      "category": "swiftui",
+      "title": "Что такое modifier и для чего нужны?",
+      "sources": [
+        195
+      ]
+    },
+    {
+      "id": "shared-styles",
+      "category": "swiftui",
+      "title": "Как задать общие настройки для визуальных элементов и какой профит от этого?",
+      "sources": [
+        196
+      ]
+    },
+    {
+      "id": "zstack-vs-background-overlay",
+      "category": "swiftui",
+      "title": "В SwiftUI чем отличается ZStack от модификатров background/overlay.",
+      "sources": [
+        380
+      ]
+    },
+    {
+      "id": "property-wrappers",
+      "category": "swiftui",
+      "title": "какие виды property wrappers есть в SwiftUI и что изменилось в 17 ios",
+      "sources": [
+        540
+      ]
+    },
+    {
+      "id": "state-and-state-object",
+      "category": "swiftui",
+      "title": "Для чего нужны property wrappers State, StateObject?",
+      "sources": [
+        194
+      ]
+    },
+    {
+      "id": "state-vs-observed-object",
+      "category": "swiftui",
+      "title": "В чем разница между State и ObservedObject",
+      "sources": [
+        38
+      ]
+    },
+    {
+      "id": "binding",
+      "category": "swiftui",
+      "title": "что такое Binding запрос в SwiftUI",
+      "sources": [
+        41
+      ]
+    },
+    {
+      "id": "observable-object-tracking",
+      "category": "swiftui",
+      "title": "как именно идет отслеживание изменений ObservableObject",
+      "sources": [
+        39
+      ]
+    },
+    {
+      "id": "observation",
+      "category": "swiftui",
+      "title": "расскажи про фреймворк Observation",
+      "sources": [
+        40
+      ]
+    },
+    {
+      "id": "environment",
+      "category": "swiftui",
+      "title": "Что такое Environment в swiftUI и как его использовать.",
+      "sources": [
+        10,
+        43
+      ]
+    },
+    {
+      "id": "pass-data-down",
+      "category": "swiftui",
+      "title": "Как средствами SUI передавать данные по иерархии view вниз (от родительской к дочерней)",
+      "sources": [
+        381
+      ]
+    },
+    {
+      "id": "navigation",
+      "category": "swiftui",
+      "title": "Как в SwiftUI обрабатываются навигации и переходы между экранами",
+      "sources": [
+        11,
+        44
+      ]
+    },
+    {
+      "id": "modal",
+      "category": "swiftui",
+      "title": "как показать модальное окно в SwiftUI",
+      "sources": [
+        45
+      ]
+    },
+    {
+      "id": "stacks-performance",
+      "category": "swiftui",
+      "title": "Как мы можем оптимизировать производительность в SwiftUI для стеков",
+      "sources": [
+        42
+      ]
+    },
+    {
+      "id": "uikit-in-swiftui",
+      "category": "swiftui",
+      "title": "Можно ли в SwiftUI использовать UIKit (UIView и UIViewController)",
+      "sources": [
+        385
+      ]
+    },
+    {
+      "id": "oop",
+      "category": "architecture",
+      "title": "Что такое ООП",
+      "sources": [
+        133,
+        509
+      ]
+    },
+    {
+      "id": "oop-principles",
+      "category": "architecture",
+      "title": "Принципы ООП и как они реализуются в IOS",
+      "sources": [
+        52,
+        68,
+        134
+      ]
+    },
+    {
+      "id": "polymorphism",
+      "category": "architecture",
+      "title": "Что такое полиморфизм?",
+      "sources": [
+        693
+      ]
+    },
+    {
+      "id": "polymorphism-example",
+      "category": "architecture",
+      "title": "Пример полиморфизма на практике",
+      "sources": [
+        135
+      ]
+    },
+    {
+      "id": "solid",
+      "category": "architecture",
+      "title": "Что такое SOLID?",
+      "sources": [
+        510,
+        627,
+        684
+      ]
+    },
+    {
+      "id": "design-principles",
+      "category": "architecture",
+      "title": "Какие дизайн принципы можешь назвать",
+      "sources": [
+        61
+      ]
+    },
+    {
+      "id": "solid-liskov",
+      "category": "architecture",
+      "title": "Принципы SOLID. буква L",
+      "sources": [
+        208
+      ]
+    },
+    {
+      "id": "hardest-principle",
+      "category": "architecture",
+      "title": "Какому принципу сложнее всего следовать",
+      "sources": [
+        62
+      ]
+    },
+    {
+      "id": "solid-uikit-violation",
+      "category": "architecture",
+      "title": "какой принцип солид нарушается в uikit",
+      "sources": [
+        511
+      ]
+    },
+    {
+      "id": "open-closed-in-uikit",
+      "category": "architecture",
+      "title": "Приведи пример open/closed (открытости / закрытости) принципа в UIKit",
+      "sources": [
+        477
+      ]
+    },
+    {
+      "id": "optional-protocol-method-solid",
+      "category": "architecture",
+      "title": "Какой из принципов SOLID нарушает опциональная функция",
+      "sources": [
+        96
+      ]
+    },
+    {
+      "id": "kiss-dry-yagni",
+      "category": "architecture",
+      "title": "Что означают принципы проектирования KISS/DRY/YAGNI?",
+      "sources": [
+        683
+      ]
+    },
+    {
+      "id": "clean-code",
+      "category": "architecture",
+      "title": "Что для тебя чистый код",
+      "sources": [
+        60
+      ]
+    },
+    {
+      "id": "separating-logic",
+      "category": "architecture",
+      "title": "Как разделять логику в коде",
+      "sources": [
+        468
+      ]
+    },
+    {
+      "id": "design-patterns",
+      "category": "architecture",
+      "title": "Какие есть паттерны проектирования",
+      "sources": [
+        65,
+        207,
+        471,
+        512,
+        535
+      ]
+    },
+    {
+      "id": "singleton",
+      "category": "architecture",
+      "title": "Что такое синглтоны? Какие у них могут быть проблемы? Когда следует использовать и как обезопаситься?",
+      "sources": [
+        12,
+        47
+      ]
+    },
+    {
+      "id": "singleton-alternatives",
+      "category": "architecture",
+      "title": "что мы можем использовать вместо синглтона",
+      "sources": [
+        48
+      ]
+    },
+    {
+      "id": "observer",
+      "category": "architecture",
+      "title": "как можно реализовать Observer",
+      "sources": [
+        513
+      ]
+    },
+    {
+      "id": "delegate-vs-kvo",
+      "category": "architecture",
+      "title": "В чем разница между делегатом и кво, если рассматривать с точки зрения типов связей",
+      "sources": [
+        487
+      ]
+    },
+    {
+      "id": "uikit-binding-types",
+      "category": "architecture",
+      "title": "какие есть типы байдинга в UIKit",
+      "sources": [
+        539
+      ]
+    },
+    {
+      "id": "dependency-injection",
+      "category": "architecture",
+      "title": "Что такое Dependency Injection",
+      "sources": [
+        49,
+        204
+      ]
+    },
+    {
+      "id": "dependency-injection-methods",
+      "category": "architecture",
+      "title": "Какие способы инъекции зависимости есть",
+      "sources": [
+        64,
+        563
+      ]
+    },
+    {
+      "id": "dependency-inversion-vs-injection",
+      "category": "architecture",
+      "title": "Отличие Dependency Inversion и Dependency Injection",
+      "sources": [
+        63
+      ]
+    },
+    {
+      "id": "service-locator",
+      "category": "architecture",
+      "title": "Что такое Сервис-локатор, какие у него есть проблемы",
+      "sources": [
+        50
+      ]
+    },
+    {
+      "id": "mvc-mvvm",
+      "category": "architecture",
+      "title": "Что такое MVC, MVVM",
+      "sources": [
+        46
+      ]
+    },
+    {
+      "id": "mvvm",
+      "category": "architecture",
+      "title": "в чем смысл паттерна MVVM?",
+      "sources": [
+        130
+      ]
+    },
+    {
+      "id": "mvvm-vs-mvp",
+      "category": "architecture",
+      "title": "Отличия MVVM от MVP",
+      "sources": [
+        67
+      ]
+    },
+    {
+      "id": "architectures-experience",
+      "category": "architecture",
+      "title": "С какими архитектурами работал",
+      "sources": [
+        66
+      ]
+    },
+    {
+      "id": "udf",
+      "category": "architecture",
+      "title": "UDF (Unidirectional data flow)",
+      "sources": [
+        51
+      ]
+    },
+    {
+      "id": "multimodularity",
+      "category": "architecture",
+      "title": "Плюсы и минусы многомодульности",
+      "sources": [
+        562
+      ]
+    },
+    {
+      "id": "similar-screen-case",
+      "category": "architecture",
+      "title": "кейс: есть готовый раздел в приложении, нужно сделать экран который похож на этот раздел",
+      "sources": [
+        568
+      ]
+    },
+    {
+      "id": "collection-types",
+      "category": "algorithms",
+      "title": "Стандартные типы коллекций. В чем разница, преимущества и недостатки",
+      "sources": [
+        214,
+        371,
+        572
+      ]
+    },
+    {
+      "id": "nsset-vs-nsarray",
+      "category": "algorithms",
+      "title": "Чем отличается NSSet от NSArray?",
+      "sources": [
+        690
+      ]
+    },
+    {
+      "id": "array-vs-set-search",
+      "category": "algorithms",
+      "title": "что работает быстрее: проверка наличия элемента в Array или в Set? какая сложность? за счет чего достигается ускорение в Set?",
+      "sources": [
+        122,
+        127
+      ]
+    },
+    {
+      "id": "dictionary-vs-array-search",
+      "category": "algorithms",
+      "title": "Что работает быстрее, поиск по словарю или поиск по массиву",
+      "sources": [
+        243
+      ]
+    },
+    {
+      "id": "array-insert-complexity",
+      "category": "algorithms",
+      "title": "временная сложность O-нотации вставки в массив",
+      "sources": [
+        548
+      ]
+    },
+    {
+      "id": "array-prepend-complexity",
+      "category": "algorithms",
+      "title": "Какова временная сложность добавления элемента в начало массива?",
+      "sources": [
+        706
+      ]
+    },
+    {
+      "id": "insert-middle-complexity",
+      "category": "algorithms",
+      "title": "какая алгоритмическая сложность вставки в середину в словарь и в массив",
+      "sources": [
+        325
+      ]
+    },
+    {
+      "id": "collection-capacity",
+      "category": "algorithms",
+      "title": "свойство `capacity` у Array и Set",
+      "sources": [
+        549
+      ]
+    },
+    {
+      "id": "dictionary",
+      "category": "algorithms",
+      "title": "Что такое словарь? Как можно написать свой словарь?",
+      "sources": [
+        162,
+        410,
+        426
+      ]
+    },
+    {
+      "id": "dictionary-internals",
+      "category": "algorithms",
+      "title": "как устроенны словари",
+      "sources": [
+        411,
+        515,
+        516
+      ]
+    },
+    {
+      "id": "dictionary-o1",
+      "category": "algorithms",
+      "title": "Можешь описать, за счет чего достигается O1 в словаре?",
+      "sources": [
+        409
+      ]
+    },
+    {
+      "id": "dictionary-lookup-complexity",
+      "category": "algorithms",
+      "title": "Какая сложность операции поиска по ключу в словаре?",
+      "sources": [
+        408
+      ]
+    },
+    {
+      "id": "dictionary-insert-complexity",
+      "category": "algorithms",
+      "title": "Сложность (big O notation) вставки в Словарь",
+      "sources": [
+        480,
+        491
+      ]
+    },
+    {
+      "id": "hashable",
+      "category": "algorithms",
+      "title": "Что такое протокол Hashable?",
+      "sources": [
+        163,
+        517
+      ]
+    },
+    {
+      "id": "hash-value",
+      "category": "algorithms",
+      "title": "Hash-значение, как оно вычисляется, что из себя представляет?",
+      "sources": [
+        164
+      ]
+    },
+    {
+      "id": "hashable-methods",
+      "category": "algorithms",
+      "title": "какие 2 метода есть в Hashable",
+      "sources": [
+        324
+      ]
+    },
+    {
+      "id": "hashable-equatable",
+      "category": "algorithms",
+      "title": "какая связь между Hashable и Equatable",
+      "sources": [
+        372
+      ]
+    },
+    {
+      "id": "custom-dictionary-key",
+      "category": "algorithms",
+      "title": "если нужно в качестве ключей для словаря использовать самописную структуру, что для этого нужно?",
+      "sources": [
+        323,
+        377,
+        386,
+        454
+      ]
+    },
+    {
+      "id": "hash-collisions",
+      "category": "algorithms",
+      "title": "Что такое коллизия хеш-функции?",
+      "sources": [
+        215,
+        518,
+        715
+      ]
+    },
+    {
+      "id": "collision-resolution",
+      "category": "algorithms",
+      "title": "Как решается проблема с коллизиями?",
+      "sources": [
+        412
+      ]
+    },
+    {
+      "id": "collisions-search-complexity",
+      "category": "algorithms",
+      "title": "Про коллизии и сложность поиска",
+      "sources": [
+        413,
+        427
+      ]
+    },
+    {
+      "id": "quicksort-complexity",
+      "category": "algorithms",
+      "title": "Какая средняя алгоритмическая сложность быстрой сортировки?",
+      "sources": [
+        263,
+        346
+      ]
+    },
+    {
+      "id": "sorted-array-search",
+      "category": "algorithms",
+      "title": "Какая алгоритмическая сложность поиска элемента в отсортированном массиве?",
+      "sources": [
+        264,
+        326,
+        347,
+        626
+      ]
+    },
+    {
+      "id": "int32-range",
+      "category": "algorithms",
+      "title": "Какое максимальное значение у 32-битного int? а минимальное?",
+      "sources": [
+        265,
+        348
+      ]
+    },
+    {
+      "id": "request-types",
+      "category": "networking-storage",
+      "title": "виды запросов",
+      "sources": [
+        530
+      ]
+    },
+    {
+      "id": "rest-alternatives",
+      "category": "networking-storage",
+      "title": "что еще кроме rest api есть",
+      "sources": [
+        529
+      ]
+    },
+    {
+      "id": "large-file-download",
+      "category": "networking-storage",
+      "title": "какие есть способы скачать большой файл в ios",
+      "sources": [
+        544
+      ]
+    },
+    {
+      "id": "caching",
+      "category": "networking-storage",
+      "title": "Как можем кешировать данные",
+      "sources": [
+        229,
+        533
+      ]
+    },
+    {
+      "id": "local-storage-options",
+      "category": "networking-storage",
+      "title": "Где можно хранить локальные данные на устройстве?",
+      "sources": [
+        183,
+        247,
+        469
+      ]
+    },
+    {
+      "id": "user-defaults-usage",
+      "category": "networking-storage",
+      "title": "Для чего можно использовать User Defaults",
+      "sources": [
+        184
+      ]
+    },
+    {
+      "id": "user-defaults-location",
+      "category": "networking-storage",
+      "title": "где хранится UserDefaults",
+      "sources": [
+        534
+      ]
+    },
+    {
+      "id": "user-defaults-large-data",
+      "category": "networking-storage",
+      "title": "Почему в user defaults не стоит хранить большие данные?",
+      "sources": [
+        444
+      ]
+    },
+    {
+      "id": "keychain-for-passwords",
+      "category": "networking-storage",
+      "title": "Почему Keychain для паролей?",
+      "sources": [
+        185
+      ]
+    },
+    {
+      "id": "secure-user-data",
+      "category": "networking-storage",
+      "title": "Где бы вы хранили защищённые данные пользователя",
+      "sources": [
+        242
+      ]
+    },
+    {
+      "id": "keychain-after-app-deletion",
+      "category": "networking-storage",
+      "title": "Верно ли, что при удалении приложения данные в Keychain остаются на устройстве?",
+      "sources": [
+        249
+      ]
+    },
+    {
+      "id": "certificate-storage",
+      "category": "networking-storage",
+      "title": "Где следует хранить сертификат на устройстве: в UserDefaults, в Keychain или в локальном файле в каталоге Documents?",
+      "sources": [
+        253
+      ]
+    },
+    {
+      "id": "fitness-app-storage",
+      "category": "networking-storage",
+      "title": "Где бы хранили в приложении для фитнеса: логин, инфу о тренировках, инфу о показе алерта, картинки?",
+      "sources": [
+        443
+      ]
+    },
+    {
+      "id": "file-system-sections",
+      "category": "networking-storage",
+      "title": "У приложения есть некоторая файловая система. Эта файловая система состоит из некоторых разделов. Можешь назвать какие разделы есть?",
+      "sources": [
+        647
+      ]
+    },
+    {
+      "id": "user-data-in-caches",
+      "category": "networking-storage",
+      "title": "Мы хотим сохранять пользовательские данные, чтобы пользователь мог к ним когда-нибудь в будущем обратиться. Валидно ли будет сохранять такие данные в папку кэшей?",
+      "sources": [
+        648
+      ]
+    },
+    {
+      "id": "cache-clearing",
+      "category": "networking-storage",
+      "title": "как очищается кеш? Мы как разработчики это должны прописывать, или это управляется системой?",
+      "sources": [
+        649
+      ]
+    },
+    {
+      "id": "core-data-entities",
+      "category": "networking-storage",
+      "title": "Назови основные сущности CoreData",
+      "sources": [
+        625
+      ]
+    },
+    {
+      "id": "persistent-store-coordinator",
+      "category": "networking-storage",
+      "title": "Что делает NSPersistentStoreCoordinator?",
+      "sources": [
+        707
+      ]
+    },
+    {
+      "id": "core-data-thread-safety",
+      "category": "networking-storage",
+      "title": "Гарантирует ли CoreData потокобезопасность?",
+      "sources": [
+        650
+      ]
+    },
+    {
+      "id": "data-migration",
+      "category": "networking-storage",
+      "title": "Что такое миграция базы данных?",
+      "sources": [
+        646,
+        708
+      ]
+    },
+    {
+      "id": "merge-vs-rebase",
+      "category": "tooling",
+      "title": "Чем отличается Merge от Rebase",
+      "sources": [
+        114,
+        571
+      ]
+    },
+    {
+      "id": "undo-commit-rebase",
+      "category": "tooling",
+      "title": "как отменить коммит, что такое rebase",
+      "sources": [
+        514
+      ]
+    },
+    {
+      "id": "cherry-pick",
+      "category": "tooling",
+      "title": "Что такое cherry-pick",
+      "sources": [
+        115
+      ]
+    },
+    {
+      "id": "git-bisect-case",
+      "category": "tooling",
+      "title": "есть 2 релиза приложения (3.62, 3.61), qa говорит что в 3.62 воспроизводится какой-то баг, а в 3.61 его не было. между этими релизами 100 коммитов, время сборки билда 10 минут. что будешь делать?",
+      "sources": [
+        570
+      ]
+    },
+    {
+      "id": "static-vs-dynamic-linking",
+      "category": "tooling",
+      "title": "В чем разница между статической и динамической линковкой внешних зависимостей?",
+      "sources": [
+        433,
+        670
+      ]
+    },
+    {
+      "id": "static-dynamic-launch-time",
+      "category": "tooling",
+      "title": "Старт приложения будет быстрее со статическими зависимостями или с динамическими?",
+      "sources": [
+        671
+      ]
+    },
+    {
+      "id": "static-dynamic-compile-time",
+      "category": "tooling",
+      "title": "Что быстрее будет компилироваться, статические зависимости или динамические?",
+      "sources": [
+        672
+      ]
+    },
+    {
+      "id": "static-dependencies-integration",
+      "category": "tooling",
+      "title": "В каком виде поставляются статические зависимости? Когда интегрируются в приложение (на этапе компиляции или в рантайме)?",
+      "sources": [
+        673
+      ]
+    },
+    {
+      "id": "static-dynamic-app-size",
+      "category": "tooling",
+      "title": "Итоговое приложение будет больше с какими зависимостями?",
+      "sources": [
+        674
+      ]
+    },
+    {
+      "id": "dynamic-dependencies-optimization",
+      "category": "tooling",
+      "title": "Когда компилятор применяет какие-нибудь свои оптимизации, может ли он дополнительно оптимизировать динамические зависимости?",
+      "sources": [
+        675
+      ]
+    },
+    {
+      "id": "static-dependencies-optimization",
+      "category": "tooling",
+      "title": "А вот со статическими, если они вшиваются в наше приложение, может ли компилятор их дополнительно каким-то образом оптимизировать?",
+      "sources": [
+        676
+      ]
+    },
+    {
+      "id": "static-dependencies-larger-size",
+      "category": "tooling",
+      "title": "Если он достаточно хорошо их оптимизирует, может ли размер приложения с статическими зависимостями быть больше, чем с динамическими?",
+      "sources": [
+        677
+      ]
+    },
+    {
+      "id": "ci-cd",
+      "category": "tooling",
+      "title": "расскажи про ci/cd (зачем нужен, какие инструменты есть)",
+      "sources": [
+        536
+      ]
+    },
+    {
+      "id": "debugger-commands",
+      "category": "tooling",
+      "title": "какие есть команды у дебаггера",
+      "sources": [
+        537
+      ]
+    },
+    {
+      "id": "bug-investigation",
+      "category": "tooling",
+      "title": "Что делать если пришел баг (смотреть логи, аналитику, воспроизводить, дебажить).",
+      "sources": [
+        465
+      ]
+    },
+    {
+      "id": "find-screen-code",
+      "category": "tooling",
+      "title": "как найти код с какого-то экрана?",
+      "sources": [
+        569
+      ]
+    },
+    {
+      "id": "team-experience",
+      "category": "soft-skills",
+      "title": "В каких командах работал? Сколько иос разработчиков на одном проекте? И как проходило код ревью?",
+      "sources": [
+        199
+      ]
+    }
+  ]
+}
