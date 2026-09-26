@@ -42,3 +42,7 @@
   title: Git
   description: "Ветки, merge и rebase, откат изменений, поиск бага по истории."
   order: 11
+- id: testing
+  title: Тестирование
+  description: "Unit, интеграционные и UI-тесты, моки, TDD, snapshot-тесты."
+  order: 12
