@@ -1,5 +1,5 @@
 ---
-title: "Что такое retain/relise и когда проставляется?"
+title: "Что такое retain/release и когда проставляется?"
 category: memory
 order: 19
 ---
