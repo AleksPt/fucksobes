@@ -1,5 +1,5 @@
 ---
-title: "как можно реализовать Observer"
+title: "Как можно реализовать Observer"
 category: architecture
 order: 18
 ---
