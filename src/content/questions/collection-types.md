@@ -4,8 +4,4 @@ category: algorithms
 order: 1
 ---
 
-*Array, Set, Dictionary*
-
----
-
-Array, Set, Dictionary, String
+Array, Set, Dictionary, String.
