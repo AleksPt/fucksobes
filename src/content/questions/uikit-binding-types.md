@@ -4,4 +4,4 @@ category: architecture
 order: 20
 ---
 
-делегат, kvo
+Делегат, KVO.

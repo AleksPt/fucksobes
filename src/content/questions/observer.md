@@ -4,4 +4,4 @@ category: architecture
 order: 18
 ---
 
-KVO, notification center
+KVO, `NotificationCenter`
