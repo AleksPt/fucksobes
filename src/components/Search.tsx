@@ -97,16 +97,16 @@ export default function Search({ indexUrl }: Props) {
           setActive(0);
         }}
         onKeyDown={onKeyDown}
-        className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-base sm:text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:focus-visible:outline-zinc-400 placeholder:text-zinc-500 focus:border-zinc-400 focus:bg-white dark:border-zinc-800 dark:bg-zinc-900 dark:placeholder:text-zinc-400 dark:focus:border-zinc-600 dark:focus:bg-zinc-950"
+        className="w-full rounded-full border border-white/10 bg-ink px-4 py-2 font-mono text-base text-paper shadow-glow-soft transition-colors placeholder:text-steel focus:border-accent/60 sm:text-sm"
       />
       {open && (
         <ul
           id="search-results"
           role="listbox"
-          className="absolute inset-x-4 top-full mt-2 max-h-[70vh] overflow-y-auto sm:inset-x-auto sm:right-0 sm:w-[28rem] rounded-xl border border-zinc-200 bg-white p-1 shadow-xl shadow-zinc-900/10 dark:border-zinc-800 dark:bg-zinc-900"
+          className="absolute inset-x-4 top-full mt-3 max-h-[70vh] overflow-y-auto rounded-panel border border-white/10 bg-carbon p-1.5 shadow-glow-soft sm:inset-x-auto sm:right-0 sm:w-[28rem]"
         >
           {status ? (
-            <li className="px-3 py-2 text-sm text-zinc-500 dark:text-zinc-400">{status}</li>
+            <li className="px-3 py-2 text-sm text-fog">{status}</li>
           ) : (
             hits.map((hit, i) => (
               <li key={hit.id} id={`search-hit-${i}`} role="option" aria-selected={i === active}>
@@ -117,10 +117,10 @@ export default function Search({ indexUrl }: Props) {
                     go(hit.url);
                   }}
                   onMouseEnter={() => setActive(i)}
-                  className={`block rounded-lg px-3 py-2 text-sm ${i === active ? 'bg-zinc-100 dark:bg-zinc-800' : ''}`}
+                  className={`block rounded-input px-3 py-2 text-sm ${i === active ? 'bg-smoke text-paper' : 'text-ash'}`}
                 >
                   <span className="block">{hit.title}</span>
-                  <span className="block text-xs text-zinc-500 dark:text-zinc-400">{hit.categoryTitle}</span>
+                  <span className="block font-mono text-xs text-fog">{hit.categoryTitle}</span>
                 </a>
               </li>
             ))

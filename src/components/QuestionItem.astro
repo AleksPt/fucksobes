@@ -14,16 +14,16 @@ const { id, title, href, answered } = Astro.props;
 
 <details id={id} class="question">
   <summary
-    class="flex cursor-pointer items-start gap-3 py-4 font-medium transition-colors hover:text-zinc-600 dark:hover:text-zinc-300"
+    class="flex cursor-pointer items-start gap-3 py-4 font-medium text-ash transition-colors hover:text-paper"
   >
-    <svg class="chevron mt-1 size-4 shrink-0 text-zinc-400" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <svg class="chevron mt-1 size-4 shrink-0 text-steel" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
       ></path>
     </svg>
     <span class="flex-1"><QuestionTitle title={title} /></span>
     {
       !answered && (
-        <span class="mt-0.5 shrink-0 rounded-full bg-zinc-100 px-2 py-0.5 text-xs font-normal text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+        <span class="mt-0.5 shrink-0 rounded-full bg-smoke px-2.5 py-1 font-mono text-xs font-normal text-fog">
           без ответа
         </span>
       )
@@ -32,14 +32,14 @@ const { id, title, href, answered } = Astro.props;
   <div class="pb-6 pl-7">
     {
       answered ? (
-        <div class="prose prose-zinc max-w-none break-words dark:prose-invert">
+        <div class="prose max-w-none break-words">
           <slot />
         </div>
       ) : (
         <NoAnswer />
       )
     }
-    <a href={href} class="mt-4 inline-block text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
+    <a href={href} class="mt-4 inline-block text-sm text-fog hover:text-accent">
       Открыть отдельно →
     </a>
   </div>
