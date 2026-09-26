@@ -1,5 +1,5 @@
 ---
-title: "как устроенны словари"
+title: "Как устроены словари"
 category: algorithms
 order: 10
 ---
