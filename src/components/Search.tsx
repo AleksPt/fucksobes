@@ -97,7 +97,7 @@ export default function Search({ indexUrl }: Props) {
           setActive(0);
         }}
         onKeyDown={onKeyDown}
-        className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-base outline-none sm:text-sm placeholder:text-zinc-500 focus:border-zinc-400 focus:bg-white dark:border-zinc-800 dark:bg-zinc-900 dark:placeholder:text-zinc-400 dark:focus:border-zinc-600 dark:focus:bg-zinc-950"
+        className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-base sm:text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:focus-visible:outline-zinc-400 placeholder:text-zinc-500 focus:border-zinc-400 focus:bg-white dark:border-zinc-800 dark:bg-zinc-900 dark:placeholder:text-zinc-400 dark:focus:border-zinc-600 dark:focus:bg-zinc-950"
       />
       {open && (
         <ul
