@@ -200,6 +200,9 @@ body {
 }
 
 /* Раскрытие ответа: плавно там, где браузер поддерживает ::details-content */
+details.question {
+  interpolate-size: allow-keywords;
+}
 details.question::details-content {
   block-size: 0;
   overflow-y: clip;
