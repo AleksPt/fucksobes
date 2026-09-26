@@ -3,6 +3,7 @@ import CategoryCard from '../components/CategoryCard.astro';
 import Base from '../layouts/Base.astro';
 import { getCategories, getQuestions } from '../lib/content';
 import { pluralize } from '../lib/text';
+import { url } from '../lib/url';
 
 const categories = await getCategories();
 const questions = await getQuestions();
@@ -13,7 +14,7 @@ const stats = categories.map((category) => ({
 ---
 
 <Base title="FuckSobes — вопросы к iOS-собеседованиям" hero>
-  <h1 class="pt-12 pb-20 text-center sm:pt-20 sm:pb-32">
+  <h1 class="pt-12 text-center sm:pt-20">
     <span class="block font-display text-[clamp(4.5rem,14vw,11.25rem)] leading-[0.85] font-semibold tracking-[-0.02em] text-balance uppercase"
       >{`${questions.length} ${pluralize(questions.length, ['вопрос', 'вопроса', 'вопросов'])}`}</span
     >
@@ -21,6 +22,13 @@ const stats = categories.map((category) => ({
       >с реальных iOS-собеседований</span
     >
   </h1>
+  <p class="pt-10 pb-16 text-center sm:pb-24">
+    <a
+      href={url('random/')}
+      class="inline-flex items-center rounded-input bg-accent px-6 py-3 text-base font-medium text-on-accent transition-opacity hover:opacity-90 motion-reduce:transition-none"
+      >Случайный вопрос</a
+    >
+  </p>
   <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:[&>li]:col-span-2 lg:[&>li:nth-child(-n+2)]:col-span-3 lg:[&>li:nth-last-child(-n+2)]:col-span-3">
     {
       stats.map(({ category, total }) => (

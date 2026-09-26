@@ -57,3 +57,17 @@ test('404 показывает страницу не найдена', async ({ p
   await page.goto('nope/');
   await expect(page.getByText('Страница не найдена')).toBeVisible();
 });
+
+test('главная → случайный вопрос → следующий вопрос', async ({ page }) => {
+  await page.goto('./');
+  await page.getByRole('link', { name: 'Случайный вопрос' }).click();
+  await expect(page).toHaveURL(/\/fucksobes\/random\/#[a-z0-9-]+$/);
+  await expect(page.locator('astro-island[component-url*="RandomQuestion"]')).not.toHaveAttribute('ssr', '');
+  const heading = page.getByRole('heading', { level: 1 });
+  await expect(heading).toBeVisible();
+
+  const before = page.url();
+  await page.getByRole('button', { name: 'Следующий вопрос' }).click();
+  await expect(page).not.toHaveURL(before);
+  await expect(heading).toBeVisible();
+});
