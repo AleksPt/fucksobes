@@ -13,24 +13,26 @@ const { category, total } = Astro.props;
 
 <a
   href={url(`${category.id}/`)}
-  class="group relative flex h-full min-h-40 flex-col justify-between gap-10 overflow-hidden rounded-card border border-white/10 bg-carbon p-8 transition duration-250 hover:border-accent/55 hover:shadow-glow focus-visible:border-accent/55 focus-visible:shadow-glow motion-reduce:transition-none"
+  class="group flex h-full flex-col gap-10 rounded-card border border-white/12 bg-white/4 p-6 backdrop-blur-md transition-colors duration-200 hover:border-white/45 hover:bg-white/7 focus-visible:border-white/45 focus-visible:bg-white/7 motion-reduce:transition-none"
 >
-  <span
-    class="pointer-events-none absolute -inset-x-1/5 -bottom-3/5 h-4/5 bg-[radial-gradient(ellipse_at_50%_100%,rgb(211_251_82/0.3),transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
-    aria-hidden="true"></span>
-  <svg
-    class="absolute top-8 right-8 size-5 text-steel transition duration-200 group-hover:translate-x-0.5 group-hover:text-paper motion-reduce:transition-none"
-    viewBox="0 0 20 20"
-    fill="none"
-    aria-hidden="true"
-  >
-    <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-    ></path>
-  </svg>
-  <h2 class="relative pr-7 text-2xl leading-tight font-medium tracking-tight text-balance" transition:name={`category-${category.id}`}>
-    {category.data.title}
-  </h2>
-  <p class="relative font-mono text-lg text-fog">
-    <b class="font-medium text-paper">{total}</b> {pluralize(total, ['вопрос', 'вопроса', 'вопросов'])}
-  </p>
+  <div class="flex items-center justify-between gap-4">
+    <span class="rounded-full border border-white/45 px-3 py-1 text-sm font-medium tracking-[-0.015em] whitespace-nowrap tabular-nums">
+      {total} {pluralize(total, ['вопрос', 'вопроса', 'вопросов'])}
+    </span>
+    <span
+      class="grid size-10 place-items-center rounded-input border border-white/12 transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent group-focus-visible:border-accent group-focus-visible:bg-accent group-focus-visible:text-on-accent motion-reduce:transition-none"
+      aria-hidden="true"
+    >
+      <svg class="size-[18px] transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none" viewBox="0 0 20 20" fill="none">
+        <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        ></path>
+      </svg>
+    </span>
+  </div>
+  <div class="mt-auto flex flex-col gap-2">
+    <h2 class="text-[1.75rem] leading-[1.1] font-medium tracking-[-0.02em] text-balance" transition:name={`category-${category.id}`}>
+      {category.data.title}
+    </h2>
+    <p class="max-w-[44ch] text-sm text-fog">{category.data.description}</p>
+  </div>
 </a>

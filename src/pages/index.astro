@@ -12,14 +12,16 @@ const stats = categories.map((category) => ({
 }));
 ---
 
-<Base title="FuckSobes — вопросы к iOS-собеседованиям">
-  <h1 class="pt-8 pb-14 text-center">
-    <span class="text-signal block pb-[0.06em] text-[clamp(3rem,12vw,8rem)] leading-none font-bold tracking-[-0.045em]"
+<Base title="FuckSobes — вопросы к iOS-собеседованиям" hero>
+  <h1 class="pt-12 pb-20 text-center sm:pt-20 sm:pb-32">
+    <span class="block font-display text-[clamp(4.5rem,14vw,11.25rem)] leading-[0.85] font-semibold tracking-[-0.02em] text-balance uppercase"
       >{`${questions.length} ${pluralize(questions.length, ['вопрос', 'вопроса', 'вопросов'])}`}</span
     >
-    <span class="mt-3 block text-[clamp(1.25rem,3.4vw,2.25rem)] leading-tight font-medium tracking-tight">с реальных собеседований</span>
+    <span class="mt-6 block text-[clamp(1.375rem,3vw,1.75rem)] leading-tight font-medium tracking-[-0.02em] text-balance text-paper/85 sm:whitespace-nowrap"
+      >с реальных iOS-собеседований</span
+    >
   </h1>
-  <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+  <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:[&>li]:col-span-2 lg:[&>li:nth-child(-n+2)]:col-span-3 lg:[&>li:nth-last-child(-n+2)]:col-span-3">
     {
       stats.map(({ category, total }) => (
         <li>

@@ -23,7 +23,7 @@ const { id, title, href, answered } = Astro.props;
     <span class="flex-1"><QuestionTitle title={title} /></span>
     {
       !answered && (
-        <span class="mt-0.5 shrink-0 rounded-full bg-smoke px-2.5 py-1 font-mono text-xs font-normal text-fog">
+        <span class="mt-0.5 shrink-0 rounded-full border border-white/20 px-2.5 py-0.5 text-xs font-normal text-fog">
           без ответа
         </span>
       )
