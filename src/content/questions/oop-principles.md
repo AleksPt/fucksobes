@@ -1,5 +1,5 @@
 ---
-title: "Принципы ООП и как они реализуются в IOS"
+title: "Принципы ООП и как они реализуются в iOS"
 category: architecture
 order: 2
 ---

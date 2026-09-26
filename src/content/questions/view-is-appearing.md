@@ -1,5 +1,5 @@
 ---
-title: "Зачем добавили метод viewIsAppearing в жц контроллера?"
+title: "Зачем добавили метод viewIsAppearing в жизненный цикл контроллера?"
 category: uikit
 order: 26
 ---

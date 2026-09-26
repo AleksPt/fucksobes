@@ -1,5 +1,5 @@
 ---
-title: "Что такое Environment в swiftUI и как его использовать."
+title: "Что такое Environment в SwiftUI и как его использовать."
 category: swiftui
 order: 14
 ---

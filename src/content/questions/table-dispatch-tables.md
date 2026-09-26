@@ -1,5 +1,5 @@
 ---
-title: "что хранят в себе таблицы в table dispatch?"
+title: "Что хранят в себе таблицы в table dispatch?"
 category: swift
 order: 77
 ---

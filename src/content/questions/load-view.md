@@ -1,5 +1,5 @@
 ---
-title: "когда вызывается loadView() у ViewController. зачем он нужен"
+title: "Когда вызывается loadView() у ViewController? Зачем он нужен?"
 category: uikit
 order: 29
 ---

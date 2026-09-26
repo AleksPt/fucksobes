@@ -1,5 +1,5 @@
 ---
-title: "виды запросов"
+title: "Виды запросов"
 category: networking
 order: 1
 ---

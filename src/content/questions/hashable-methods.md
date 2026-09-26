@@ -1,5 +1,5 @@
 ---
-title: "какие 2 метода есть в Hashable"
+title: "Какие 2 метода есть в Hashable"
 category: algorithms
 order: 16
 ---

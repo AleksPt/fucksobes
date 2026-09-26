@@ -1,5 +1,5 @@
 ---
-title: "Что такое optional? как он устроен?"
+title: "Что такое optional? Как он устроен?"
 category: swift
 order: 15
 ---

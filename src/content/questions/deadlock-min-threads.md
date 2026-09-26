@@ -1,5 +1,5 @@
 ---
-title: "сколько минимум потоков нужно чтобы случился deadlock?"
+title: "Сколько минимум потоков нужно, чтобы случился deadlock?"
 category: concurrency
 order: 53
 ---

@@ -1,5 +1,5 @@
 ---
-title: "в чем разница очереди и потока в GCD?"
+title: "В чем разница очереди и потока в GCD?"
 category: concurrency
 order: 7
 ---

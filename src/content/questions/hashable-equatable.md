@@ -1,5 +1,5 @@
 ---
-title: "какая связь между Hashable и Equatable"
+title: "Какая связь между Hashable и Equatable"
 category: algorithms
 order: 17
 ---

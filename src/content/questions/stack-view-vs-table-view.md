@@ -1,5 +1,5 @@
 ---
-title: "чем отличается UIStackView от UITableView"
+title: "Чем отличается UIStackView от UITableView"
 category: uikit
 order: 66
 ---

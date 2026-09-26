@@ -1,5 +1,5 @@
 ---
-title: "Что такое тред эксплоужен"
+title: "Что такое thread explosion"
 category: concurrency
 order: 57
 ---

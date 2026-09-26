@@ -1,5 +1,5 @@
 ---
-title: "методы DispatchGroup"
+title: "Методы DispatchGroup"
 category: concurrency
 order: 26
 ---

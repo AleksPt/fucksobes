@@ -1,5 +1,5 @@
 ---
-title: "все способы синхронизации в GCD"
+title: "Все способы синхронизации в GCD"
 category: concurrency
 order: 33
 ---

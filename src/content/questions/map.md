@@ -1,5 +1,5 @@
 ---
-title: "map что такое"
+title: "Что такое map?"
 category: swift
 order: 27
 ---

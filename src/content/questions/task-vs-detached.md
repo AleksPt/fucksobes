@@ -1,5 +1,5 @@
 ---
-title: "разница между Task и Task.detached"
+title: "Разница между Task и Task.detached"
 category: concurrency
 order: 76
 ---

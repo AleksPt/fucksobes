@@ -1,5 +1,5 @@
 ---
-title: "Поддерживают ли int, например, copy on write?"
+title: "Поддерживают ли Int, например, copy on write?"
 category: memory
 order: 56
 ---

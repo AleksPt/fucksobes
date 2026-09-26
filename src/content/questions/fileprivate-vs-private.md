@@ -1,5 +1,5 @@
 ---
-title: "В чем разница между уровнем доступа Fileprivate и Private?"
+title: "В чем разница между уровнем доступа fileprivate и private?"
 category: swift
 order: 34
 ---

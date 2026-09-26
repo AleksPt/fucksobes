@@ -1,5 +1,5 @@
 ---
-title: "свойство `capacity` у Array и Set"
+title: "Свойство `capacity` у Array и Set"
 category: algorithms
 order: 8
 ---

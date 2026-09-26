@@ -1,5 +1,5 @@
 ---
-title: "Как работает управление памятью в swift (ARC)"
+title: "Как работает управление памятью в Swift (ARC)"
 category: memory
 order: 15
 ---

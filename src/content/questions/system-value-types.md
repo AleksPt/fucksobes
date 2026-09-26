@@ -1,5 +1,5 @@
 ---
-title: "какие системные `value-типы` есть в Swift кроме структур"
+title: "Какие системные `value-типы` есть в Swift кроме структур"
 category: swift
 order: 9
 ---

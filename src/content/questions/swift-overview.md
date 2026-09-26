@@ -1,5 +1,5 @@
 ---
-title: "рассказать про swift"
+title: "Рассказать про Swift"
 category: swift
 order: 1
 ---
