@@ -4,4 +4,4 @@ category: architecture
 order: 9
 ---
 
-single responsibility
+Single Responsibility.

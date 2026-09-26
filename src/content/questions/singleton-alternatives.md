@@ -4,4 +4,4 @@ category: architecture
 order: 17
 ---
 
-Dependency Injection
+Dependency Injection.
