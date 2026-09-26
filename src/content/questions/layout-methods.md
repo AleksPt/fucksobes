@@ -12,7 +12,7 @@ setNeedsLayout и layoutIfNeeded.
 
 ---
 
-`setNeedsLayout()`*, *`layoutIfNeeded()`*, *`layoutSubviews()`
+`setNeedsLayout()`, `layoutIfNeeded()`, `layoutSubviews()`
 
 ---
 
