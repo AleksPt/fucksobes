@@ -4,4 +4,4 @@ category: concurrency
 order: 28
 ---
 
-*диспатч группа*
+`DispatchGroup`

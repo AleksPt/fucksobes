@@ -4,4 +4,4 @@ category: concurrency
 order: 37
 ---
 
-через dispatchWorkItem и свойство cancel
+Через `DispatchWorkItem` и его метод `cancel()`.
