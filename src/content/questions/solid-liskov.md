@@ -1,5 +1,5 @@
 ---
-title: "Принципы SOLID. буква L"
+title: "Принципы SOLID. Буква L"
 category: architecture
 order: 7
 ---
