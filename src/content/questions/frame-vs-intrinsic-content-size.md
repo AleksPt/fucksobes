@@ -1,5 +1,5 @@
 ---
-title: "Может ли frame быть больше intrinsicContentSize ?"
+title: "Может ли frame быть больше intrinsicContentSize?"
 category: uikit
 order: 19
 ---

@@ -1,5 +1,5 @@
 ---
-title: "как узнать view загрузилась или нет"
+title: "Как узнать view загрузилась или нет"
 category: uikit
 order: 32
 ---

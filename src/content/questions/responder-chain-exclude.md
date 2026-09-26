@@ -1,5 +1,5 @@
 ---
-title: "как выключить участника из responder chain"
+title: "Как выключить участника из responder chain"
 category: uikit
 order: 48
 ---

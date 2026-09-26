@@ -1,5 +1,5 @@
 ---
-title: "получится посчитать frames на background потоке?"
+title: "Получится посчитать frames на background потоке?"
 category: uikit
 order: 45
 ---

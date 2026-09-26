@@ -1,5 +1,5 @@
 ---
-title: "основные свойства UIView"
+title: "Основные свойства UIView"
 category: uikit
 order: 3
 ---
