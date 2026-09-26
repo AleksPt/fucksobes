@@ -4,4 +4,4 @@ category: swift
 order: 26
 ---
 
-*reduce(0, +)*
+`reduce(0, +)`

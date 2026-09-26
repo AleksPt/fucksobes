@@ -7,9 +7,9 @@ order: 69
 - Протоколы:
 
 ```swift
-   func compare<T: Comparable>(a: T, b: T) -> Bool {
-       return a == b
-   }
+func compare<T: Comparable>(a: T, b: T) -> Bool {
+    return a == b
+}
 ```
 
 - **`where`**

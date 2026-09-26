@@ -4,4 +4,4 @@ category: swift
 order: 55
 ---
 
-Да, через **расширения протоколов (protocol extensions)**
+Да, через **расширения протоколов (protocol extensions)**.

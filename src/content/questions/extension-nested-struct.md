@@ -4,4 +4,4 @@ category: swift
 order: 63
 ---
 
-да
+Да.

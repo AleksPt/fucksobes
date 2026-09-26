@@ -4,4 +4,4 @@ category: swift
 order: 9
 ---
 
-Int, Double, String, Character, Array, Set, Dictionary, Enum
+`Int`, `Double`, `String`, `Character`, `Array`, `Set`, `Dictionary`, `enum`.

@@ -4,8 +4,4 @@ category: swift
 order: 66
 ---
 
-**Протоколы**
-
-**Extensions**
-
-**Дженерики**
+С помощью протоколов, extensions и дженериков.
