@@ -4,28 +4,27 @@ category: swiftui
 order: 6
 ---
 
-общие модификаторы
+Общие модификаторы:
 
 ```swift
-   struct CommonStyle: ViewModifier {
-       func body(content: Content) -> some View {
-           content
-               .padding()
-               .background(Color.blue)
-               .cornerRadius(10)
-       }
-   }
+struct CommonStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(Color.blue)
+            .cornerRadius(10)
+    }
+}
 
-   extension View {
-       func commonStyle() -> some View {
-           self.modifier(CommonStyle())
-       }
-   }
-   
+extension View {
+    func commonStyle() -> some View {
+        self.modifier(CommonStyle())
+    }
+}
 ```
 
-Польза от этих подходов:
+Польза:
 
-- **`Единообразие`**: <br>Обеспечивает консистентное визуальное представление по всему приложению.
-- **`Повторное использование`**: <br>Облегчает повторное использование одинаковых конфигураций в разных местах.
-- **`Упрощение обслуживания`**: <br>Изменения в одном месте (в модификаторе) влияют на все элементы, использующие его, что упрощает обслуживание и обновление интерфейса.
+- **Единообразие** — одинаковый визуальный стиль по всему приложению.
+- **Повторное использование** — одну конфигурацию легко применять в разных местах.
+- **Простота поддержки** — изменение в одном месте (в модификаторе) затрагивает все элементы, которые его используют.

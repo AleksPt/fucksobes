@@ -4,4 +4,4 @@ category: tooling
 order: 16
 ---
 
-*зайду на этот экран и открою дебаг вью иерархию*
+Зайду на этот экран и открою Debug View Hierarchy.

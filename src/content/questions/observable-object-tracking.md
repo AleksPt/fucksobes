@@ -4,4 +4,4 @@ category: swiftui
 order: 12
 ---
 
-Published → objectWillChange.send()
+`@Published` → `objectWillChange.send()`

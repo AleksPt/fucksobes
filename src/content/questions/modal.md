@@ -4,4 +4,4 @@ category: swiftui
 order: 17
 ---
 
-sheet, fullScreenCover
+`sheet`, `fullScreenCover`
