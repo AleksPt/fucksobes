@@ -4,4 +4,4 @@ category: memory
 order: 51
 ---
 
-didReceiveMemoriwarning()
+`didReceiveMemoryWarning()`
