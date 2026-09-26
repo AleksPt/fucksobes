@@ -4,4 +4,4 @@ category: swiftui
 order: 8
 ---
 
-Bindable
+`@Bindable`

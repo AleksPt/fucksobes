@@ -4,4 +4,4 @@ category: swiftui
 order: 16
 ---
 
-NavigationView, NavigationStack
+`NavigationView`, `NavigationStack`
