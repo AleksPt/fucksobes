@@ -1,5 +1,5 @@
 ---
 title: "Почему Keychain для паролей?"
-category: networking-storage
-order: 9
+category: data-storage
+order: 5
 ---

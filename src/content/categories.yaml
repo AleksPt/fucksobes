@@ -26,15 +26,15 @@
   title: Алгоритмы и структуры данных
   description: "Сложность, коллекции, сортировки, типовые задачи."
   order: 7
-- id: networking-storage
-  title: Сеть и хранение данных
-  description: "URLSession, HTTP, кэширование, Core Data, UserDefaults, Keychain."
+- id: networking
+  title: Сеть
+  description: "URLSession, HTTP, REST, загрузка файлов, кэширование."
   order: 8
+- id: data-storage
+  title: Хранение данных
+  description: "Core Data, UserDefaults, Keychain, файловая система."
+  order: 9
 - id: tooling
   title: Инструменты и сборка
   description: "Xcode, Instruments, SPM, CI, подпись и публикация."
-  order: 9
-- id: soft-skills
-  title: Soft skills
-  description: "Командная работа, процессы, вопросы о себе и опыте."
   order: 10

@@ -1,5 +1,5 @@
 ---
 title: "Верно ли, что при удалении приложения данные в Keychain остаются на устройстве?"
-category: networking-storage
-order: 11
+category: data-storage
+order: 7
 ---

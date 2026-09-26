@@ -1,5 +1,5 @@
 ---
 title: "Где бы хранили в приложении для фитнеса: логин, инфу о тренировках, инфу о показе алерта, картинки?"
-category: networking-storage
-order: 13
+category: data-storage
+order: 9
 ---

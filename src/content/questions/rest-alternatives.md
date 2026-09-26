@@ -1,6 +1,6 @@
 ---
 title: "что еще кроме rest api есть"
-category: networking-storage
+category: networking
 order: 2
 ---
 

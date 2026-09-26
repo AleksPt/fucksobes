@@ -1,7 +1,7 @@
 ---
 title: "Что такое миграция базы данных?"
-category: networking-storage
-order: 20
+category: data-storage
+order: 16
 ---
 
 Миграция — это перенос старой базы данных в новую с добавлением новых значений.
