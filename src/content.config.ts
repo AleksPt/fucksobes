@@ -6,8 +6,6 @@ const categories = defineCollection({
   loader: file('src/content/categories.yaml'),
   schema: z.object({
     title: z.string(),
-    // Моноширинный тег на карточке: идентификатор, по которому тему узнают с первого взгляда.
-    tag: z.string(),
     description: z.string(),
     order: z.number().int(),
   }),

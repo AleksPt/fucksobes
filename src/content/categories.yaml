@@ -1,50 +1,40 @@
 - id: swift
-  tag: struct
   title: Swift
   description: "Язык: типы, протоколы, дженерики, замыкания, опционалы."
   order: 1
 - id: memory
-  tag: weak
   title: Память
   description: "ARC, retain cycles, weak и unowned, стек и куча."
   order: 2
 - id: concurrency
-  tag: async
   title: Многопоточность
   description: "GCD, OperationQueue, async/await, акторы, гонки данных."
   order: 3
 - id: uikit
-  tag: UIView
   title: UIKit
   description: "Жизненный цикл, вёрстка, таблицы и коллекции, рендеринг."
   order: 4
 - id: swiftui
-  tag: "@State"
   title: SwiftUI
   description: "Состояние, обновление view, модификаторы, навигация."
   order: 5
 - id: architecture
-  tag: MVVM
   title: Архитектура и паттерны
   description: "MVC, MVVM, VIPER, DI, SOLID, паттерны проектирования."
   order: 6
 - id: algorithms
-  tag: O(n)
   title: Алгоритмы и структуры данных
   description: "Сложность, коллекции, сортировки, типовые задачи."
   order: 7
 - id: networking-storage
-  tag: URLSession
   title: Сеть и хранение данных
   description: "URLSession, HTTP, кэширование, Core Data, UserDefaults, Keychain."
   order: 8
 - id: tooling
-  tag: xcodebuild
   title: Инструменты и сборка
   description: "Xcode, Instruments, SPM, CI, подпись и публикация."
   order: 9
 - id: soft-skills
-  tag: STAR
   title: Soft skills
   description: "Командная работа, процессы, вопросы о себе и опыте."
   order: 10
