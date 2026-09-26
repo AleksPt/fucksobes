@@ -1,5 +1,5 @@
 ---
-title: "Что такое modifier и для чего нужны?"
+title: "Что такое modifier и для чего он нужен?"
 category: swiftui
 order: 5
 ---

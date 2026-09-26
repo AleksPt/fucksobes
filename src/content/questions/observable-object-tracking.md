@@ -1,5 +1,5 @@
 ---
-title: "как именно идет отслеживание изменений ObservableObject"
+title: "Как именно идет отслеживание изменений ObservableObject"
 category: swiftui
 order: 12
 ---
