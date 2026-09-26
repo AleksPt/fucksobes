@@ -193,7 +193,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
   - `convertAnswer(lines: string[]): string`
   - `cleanInline(text: string): string`, `cleanTitle(text: string): string`
 
-**Формат экспорта** (то, что возвращает Notion MCP `notion-fetch` для страницы `17f5016f8db780f1af4bd7f9121018ea`, поле `text`):
+**Формат экспорта** (то, что возвращает Notion MCP `notion-fetch` для страницы `<id страницы Notion>`, поле `text`):
 - Вопрос — строка с колонки 0: `N. Формулировка`.
 - Ответ (если есть) — сразу следом: `\t<details>`, `\t<summary>ответ</summary>`, строки ответа с отступом `\t\t`, закрывает `\t</details>`.
 - Внутри ответа: списки `- ` / `1. ` (вложенность — дополнительные `\t`); блоки кода ```` ``` ```` (строки кода могут начинаться с колонки 0); вложенные toggle `<details><summary>X</summary>…</details>` (контент на +1 `\t`); `<callout …>…</callout>` (контент на +1 `\t`); `<mention-page url="…"/>` и `{color="…"}` — мусор; `<span underline="true">x</span>`; `<br>`; неразрывные пробелы ` `.
@@ -202,14 +202,14 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 - [ ] **Step 1: Положить экспорт в репозиторий**
 
 Декодированный экспорт уже сохранён в scratchpad-сессии планирования:
-`/private/tmp/claude-501/-Users-alex-Library-Mobile-Documents-com-apple-CloudDocs-Developer-FuckSobes/9c38dd9d-fd70-419c-b56b-2edd0114318c/scratchpad/notion.md`
+`<локальный путь к декодированному экспорту>`
 
 ```bash
 mkdir -p migration
-cp "/private/tmp/claude-501/-Users-alex-Library-Mobile-Documents-com-apple-CloudDocs-Developer-FuckSobes/9c38dd9d-fd70-419c-b56b-2edd0114318c/scratchpad/notion.md" migration/notion-export.md
+cp "<локальный путь к декодированному экспорту>" migration/notion-export.md
 grep -cE '^[0-9]+\. ' migration/notion-export.md
 ```
-Expected: `717`. Если файла нет — вызвать Notion MCP `notion-fetch` с `id: 17f5016f8db780f1af4bd7f9121018ea`; результат большой и сохраняется в файл как JSON `{"text": "..."}` — записать значение поля `text` в `migration/notion-export.md` (например, `node -e 'const fs=require("fs");fs.writeFileSync("migration/notion-export.md", JSON.parse(fs.readFileSync(process.argv[1],"utf8")).text)' <путь>`), затем снова проверить `717`.
+Expected: `717`. Если файла нет — вызвать Notion MCP `notion-fetch` с `id: <id страницы Notion>`; результат большой и сохраняется в файл как JSON `{"text": "..."}` — записать значение поля `text` в `migration/notion-export.md` (например, `node -e 'const fs=require("fs");fs.writeFileSync("migration/notion-export.md", JSON.parse(fs.readFileSync(process.argv[1],"utf8")).text)' <путь>`), затем снова проверить `717`.
 
 - [ ] **Step 2: Написать падающие тесты**
 
