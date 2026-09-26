@@ -38,6 +38,7 @@ GitHub Flow, solo project. `main` is production: every merge deploys to GitHub P
 - Never commit or push to `main` directly, not even for typos. Branch protection enforces it, admin included; do not try to bypass it.
 - Work in short-lived branches off `main` named `feat/`, `fix/`, `content/`, `chore/` or `docs/` plus a kebab-case slug.
 - Open a PR for every change. Merge only when the required check `check` (workflow `CI`) is green. No approvals needed.
+- Right after `gh pr create`, enable auto-merge: `gh pr merge <number> --auto --squash` (the owner authorised this for every PR). GitHub then merges as soon as `check` passes; do not wait for it or merge by hand. If CI fails, fix it on the same branch: auto-merge stays armed. Do not arm auto-merge on PRs from forks or on PRs you did not open.
 - Squash merge only (merge commits and rebase merges are disabled). The PR title becomes the commit title and the PR body becomes the commit body, so write both as final. Merged branches are deleted automatically.
 - PR titles use Conventional Commits (`feat:`, `fix:`, `content:`, `chore:`, `docs:`, `test:`) and are written in Russian. Keep the body short: what and why.
 - Large content changes (e.g. bulk edits of questions) go in separate PRs per category, not one huge PR.
