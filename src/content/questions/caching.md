@@ -1,6 +1,6 @@
 ---
 title: "Как можем кешировать данные"
-category: networking-storage
+category: networking
 order: 4
 ---
 

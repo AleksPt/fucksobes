@@ -1,5 +1,5 @@
 ---
 title: "Для чего можно использовать User Defaults"
-category: networking-storage
-order: 6
+category: data-storage
+order: 2
 ---

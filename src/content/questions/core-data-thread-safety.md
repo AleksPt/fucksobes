@@ -1,7 +1,7 @@
 ---
 title: "Гарантирует ли CoreData потокобезопасность?"
-category: networking-storage
-order: 19
+category: data-storage
+order: 15
 ---
 
 Да (?)

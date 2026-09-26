@@ -1,7 +1,7 @@
 ---
 title: "Что делает NSPersistentStoreCoordinator?"
-category: networking-storage
-order: 18
+category: data-storage
+order: 14
 ---
 
 основной стек Core Data:

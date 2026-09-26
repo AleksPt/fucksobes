@@ -1,6 +1,6 @@
 ---
 title: "Виды запросов"
-category: networking-storage
+category: networking
 order: 1
 ---
 

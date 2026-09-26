@@ -1,7 +1,7 @@
 ---
 title: "Где бы вы хранили защищённые данные пользователя"
-category: networking-storage
-order: 10
+category: data-storage
+order: 6
 ---
 
 **Keychain**
