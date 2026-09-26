@@ -1,5 +1,5 @@
 ---
-title: "как показать модальное окно в SwiftUI"
+title: "Как показать модальное окно в SwiftUI"
 category: swiftui
 order: 17
 ---

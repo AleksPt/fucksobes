@@ -1,5 +1,5 @@
 ---
-title: "преимущества SwiftUI над UIKit"
+title: "Преимущества SwiftUI над UIKit"
 category: swiftui
 order: 1
 ---

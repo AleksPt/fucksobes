@@ -1,5 +1,5 @@
 ---
-title: "как происходит обновление UI в SwiftUI"
+title: "Как происходит обновление UI в SwiftUI"
 category: swiftui
 order: 4
 ---

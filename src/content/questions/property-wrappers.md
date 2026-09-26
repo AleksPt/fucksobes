@@ -1,5 +1,5 @@
 ---
-title: "какие виды property wrappers есть в SwiftUI и что изменилось в 17 ios"
+title: "Какие виды property wrappers есть в SwiftUI и что изменилось в iOS 17"
 category: swiftui
 order: 8
 ---
