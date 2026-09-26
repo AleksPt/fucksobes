@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { createSearch, normalizeTerm, stepIndex, type SearchDoc } from './search';
+import { createSearch, normalizeTerm, stepIndex, tokenize, type SearchDoc } from './search';
 
 const doc = (id: string, title: string): SearchDoc => ({ id, title, categoryTitle: 'Память', url: `/fucksobes/memory/${id}/` });
 
@@ -8,6 +8,7 @@ const search = createSearch([
   doc('retain-cycle', 'Что такое retain cycle'),
   doc('main-thread', 'Почему UI обновляется в главном потоке'),
   doc('capacity', 'Что такое ёмкость массива'),
+  doc('view-did-appear', 'Когда вызывается ViewDidAppear'),
 ]);
 const ids = (query: string) => search(query).map((h) => h.id);
 
@@ -18,7 +19,27 @@ describe('normalizeTerm', () => {
   });
 });
 
+describe('tokenize', () => {
+  it('режет camelCase на части и хвосты, сохраняя целое слово', () => {
+    expect(tokenize('ViewDidAppear').sort()).toEqual(['Appear', 'Did', 'DidAppear', 'View', 'ViewDidAppear']);
+  });
+
+  it('аббревиатуры не разваливаются на буквы', () => {
+    expect(tokenize('URLSession')).toEqual(expect.arrayContaining(['URLSession', 'URL', 'Session']));
+  });
+
+  it('обычные слова не меняются', () => {
+    expect(tokenize('retain cycle')).toEqual(['retain', 'cycle']);
+  });
+});
+
 describe('createSearch', () => {
+  it('находит по части camelCase-слова', () => {
+    expect(ids('didappear')).toEqual(['view-did-appear']);
+    expect(ids('appear')).toEqual(['view-did-appear']);
+    expect(ids('viewdid')).toEqual(['view-did-appear']);
+  });
+
   it('находит по слову без учёта регистра', () => {
     expect(ids('arc')).toEqual(['arc']);
   });
