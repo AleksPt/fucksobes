@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
 import RandomQuestion from '../../components/RandomQuestion.tsx';
-import QuestionItem from '../../components/QuestionItem.astro';
+import QuestionTitle from '../../components/QuestionTitle.astro';
 import Base from '../../layouts/Base.astro';
 import { getQuestions, hasAnswer } from '../../lib/content';
 import { url } from '../../lib/url';
@@ -28,9 +28,20 @@ const items = await Promise.all(
         items.map(({ question, category, Content }) => (
           <article data-id={question.id} hidden>
             <a href={url(`${category.id}/`)} class="mt-4 inline-block text-sm text-fog hover:text-accent">{category.data.title}</a>
-            <QuestionItem id={question.id} title={question.data.title} href={url(`${category.id}/${question.id}/`)} answered>
-              <Content />
-            </QuestionItem>
+            <h1 class="mt-2 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]">
+              <QuestionTitle title={question.data.title} />
+            </h1>
+            <details class="question mt-6">
+              <summary class="flex cursor-pointer items-center gap-3 py-3 font-medium text-ash transition-colors hover:text-paper">
+                <svg class="chevron size-4 shrink-0 text-steel" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Ответ
+              </summary>
+              <div class="prose max-w-none pt-2 pb-6 pl-7 break-words">
+                <Content />
+              </div>
+            </details>
           </article>
         ))
       }
