@@ -4,4 +4,4 @@ category: memory
 order: 42
 ---
 
-weak, unowned
+`weak`, `unowned`

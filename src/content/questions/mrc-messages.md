@@ -4,4 +4,4 @@ category: memory
 order: 22
 ---
 
-copy, autorelease
+`copy`, `autorelease`
