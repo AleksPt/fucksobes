@@ -27,6 +27,7 @@ Consult these guides before working on related tasks:
 - Always build internal links with `url()` from `src/lib/url.ts` (site is served under `/fucksobes/`).
 - Interactive UI only as React islands (`.tsx`); keep logic in `src/lib/*.ts` with unit tests.
 - Search indexes question titles only (`src/lib/search.ts`, `src/pages/search-index.json.ts`).
+- Design system: `docs/design-system.md`, tokens in `@theme` in `src/styles/global.css`. Dark only, one lime accent; use token utilities (`bg-carbon`, `text-fog`, `rounded-card`), no `dark:` classes and no color literals.
 - Do not run `npm run migrate -- generate` — it overwrites all question files.
 - Tests: `npm test` (Vitest), `npm run test:e2e` (Playwright; run `npx astro preview stop` first if a stale preview holds port 4321), `npm run check`.
 

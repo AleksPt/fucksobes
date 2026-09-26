@@ -3,11 +3,17 @@ import { url } from '../lib/url';
 import Search from './Search.tsx';
 ---
 
-<header
-  class="sticky top-0 z-10 border-b border-zinc-200/70 bg-white/80 backdrop-blur dark:border-zinc-800/70 dark:bg-zinc-950/80"
->
-  <div class="mx-auto flex max-w-4xl items-center gap-4 px-4 py-3 sm:px-6">
-    <a href={url()} class="shrink-0 font-semibold tracking-tight">FuckSobes</a>
+<header class="sticky top-0 z-20 px-4 pt-4 sm:px-6">
+  <div
+    class="mx-auto flex max-w-4xl items-center gap-3 rounded-nav border border-white/8 bg-carbon py-2 pr-2 pl-4 shadow-nav sm:gap-6 sm:pl-6"
+  >
+    <a href={url()} class="flex shrink-0 items-center gap-2 font-semibold tracking-tight" aria-label="FuckSobes, на главную">
+      <svg class="size-5 text-accent" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        ></path>
+      </svg>
+      <span class="hidden sm:inline">FuckSobes</span>
+    </a>
     <Search client:idle transition:persist="search" indexUrl={url('search-index.json')} />
   </div>
 </header>

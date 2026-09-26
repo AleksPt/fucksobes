@@ -11,7 +11,7 @@ const { title } = Astro.props;
 {
   splitInlineCode(title).map((part) =>
     part.code ? (
-      <code class="rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.9em] dark:bg-zinc-800">{part.text}</code>
+      <code class="rounded-md bg-smoke px-1.5 py-0.5 font-mono text-[0.9em]">{part.text}</code>
     ) : (
       part.text
     ),

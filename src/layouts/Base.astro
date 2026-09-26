@@ -18,15 +18,16 @@ const { title, description = 'Вопросы и ответы для подгот
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="icon" href={url('favicon.ico')} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0e0e0e" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
     <ClientRouter />
   </head>
-  <body class="min-h-dvh bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
+  <body class="min-h-dvh bg-ink font-sans text-paper antialiased">
     <Header />
-    <main class="mx-auto max-w-4xl px-4 pt-8 pb-24 sm:px-6">
+    <main class="mx-auto max-w-page px-4 pt-16 pb-24 sm:px-6">
       <slot />
     </main>
   </body>

@@ -1,29 +1,124 @@
 @import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
 @plugin '@tailwindcss/typography';
 
+/*
+ * Дизайн-система FuckSobes: тёмный «пульт управления» с одним лаймовым акцентом.
+ * Токены живут здесь, правила использования описаны в docs/design-system.md.
+ */
+@theme {
+  /* Поверхности: от самого глубокого слоя к самому высокому */
+  --color-ink: #0e0e0e;
+  --color-carbon: #191919;
+  --color-smoke: #2c2c2c;
+  --color-graphite: #414042;
+
+  /* Текст и линии: от приглушённого к основному */
+  --color-steel: #58595b;
+  --color-slate: #6d6e71;
+  --color-fog: #a7a9ac;
+  --color-ash: #d1d3d4;
+  --color-paper: #ffffff;
+
+  /* Единственный акцент. accent-soft и accent-dim нужны только для градиентов. */
+  --color-accent: #d3fb52;
+  --color-accent-soft: #eeffac;
+  --color-accent-dim: #b9e13a;
+  --color-on-accent: #0e0e0e;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --radius-input: 10px;
+  --radius-panel: 16px;
+  --radius-card: 30px;
+  --radius-nav: 60px;
+
+  /* Возвышение передаётся свечением, а не тенью */
+  --shadow-nav: 0 4px 20px rgb(0 0 0 / 0.45);
+  --shadow-glow: 0 0 32px rgb(211 251 82 / 0.22);
+  --shadow-glow-soft: 0 0 32px rgb(211 251 82 / 0.16);
+
+  --container-page: 75rem;
+}
+
 :root {
+  color-scheme: dark;
   interpolate-size: allow-keywords;
 }
 
-/* Shiki: вторая тема для тёмного режима */
-@media (prefers-color-scheme: dark) {
-  .astro-code,
-  .astro-code span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-    font-style: var(--shiki-dark-font-style) !important;
-    font-weight: var(--shiki-dark-font-weight) !important;
-    text-decoration: var(--shiki-dark-text-decoration) !important;
-  }
+body {
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Inline-код в ответах: без кавычек typography и в стиле заголовков */
+/* Атмосфера: лаймовое свечение под шапкой */
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 560px;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 55% 70% at 50% 0%, rgb(211 251 82 / 0.16), transparent 70%);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Акцентный градиентный текст: одно-два слова заголовка */
+.text-signal {
+  background: linear-gradient(179deg, var(--color-accent) 1%, var(--color-accent-soft) 123%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: transparent;
+}
+
+/* Ответы: цвета typography-плагина берём из токенов */
+.prose {
+  --tw-prose-body: var(--color-ash);
+  --tw-prose-headings: var(--color-paper);
+  --tw-prose-lead: var(--color-ash);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-paper);
+  --tw-prose-counters: var(--color-fog);
+  --tw-prose-bullets: var(--color-steel);
+  --tw-prose-hr: var(--color-smoke);
+  --tw-prose-quotes: var(--color-paper);
+  --tw-prose-quote-borders: var(--color-graphite);
+  --tw-prose-captions: var(--color-fog);
+  --tw-prose-code: var(--color-paper);
+  --tw-prose-pre-code: var(--color-ash);
+  --tw-prose-pre-bg: var(--color-carbon);
+  --tw-prose-th-borders: var(--color-graphite);
+  --tw-prose-td-borders: var(--color-smoke);
+}
+
+/* Inline-код: без кавычек typography, тем же видом, что в заголовках */
 .prose :not(pre) > code::before,
 .prose :not(pre) > code::after {
   content: none;
 }
 .prose :not(pre) > code {
-  @apply rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.9em] font-normal dark:bg-zinc-800;
+  @apply rounded-md bg-smoke px-1.5 py-0.5 font-mono text-[0.9em] font-normal;
+}
+
+/* Блоки кода: панель Carbon с тонкой рамкой; тема Shiki задаёт только цвета токенов */
+.astro-code {
+  background-color: var(--color-carbon) !important;
+  border: 1px solid var(--color-smoke);
+  border-radius: var(--radius-panel);
+  font-family: var(--font-mono);
 }
 
 /* Раскрытие ответа: плавно там, где браузер поддерживает ::details-content */
