@@ -1,5 +1,5 @@
 ---
-title: "DispatchQueue.main это serial или concurrent очередь"
+title: "Является ли DispatchQueue.main serial или concurrent очередью?"
 category: concurrency
 order: 13
 ---

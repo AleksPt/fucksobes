@@ -1,5 +1,5 @@
 ---
-title: "Что такое спин локи"
+title: "Что такое спинлоки"
 category: concurrency
 order: 65
 ---

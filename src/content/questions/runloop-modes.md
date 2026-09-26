@@ -1,5 +1,5 @@
 ---
-title: "какие моды (приоритеты) есть у Runloop"
+title: "Какие моды (приоритеты) есть у Runloop"
 category: concurrency
 order: 71
 ---
