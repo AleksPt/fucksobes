@@ -36,6 +36,7 @@ test('search-index.json отдаёт корректный индекс', async (
   for (const entry of data) {
     for (const key of ['id', 'title', 'categoryTitle', 'url']) {
       expect(typeof entry[key]).toBe('string');
+      expect(entry[key].length).toBeGreaterThan(0);
     }
     expect(entry.url.startsWith('/fucksobes/')).toBe(true);
   }
