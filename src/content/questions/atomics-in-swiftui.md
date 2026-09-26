@@ -1,5 +1,5 @@
 ---
-title: "атомики в SwiftUI"
+title: "Атомики в SwiftUI"
 category: concurrency
 order: 67
 ---

@@ -1,5 +1,5 @@
 ---
-title: "разновидности локов"
+title: "Разновидности локов"
 category: concurrency
 order: 63
 ---
