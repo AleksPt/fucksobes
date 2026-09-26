@@ -4,4 +4,4 @@ category: uikit
 order: 21
 ---
 
-да (UINavigationController, UITabBarController)
+Да (например, `UINavigationController`, `UITabBarController`).

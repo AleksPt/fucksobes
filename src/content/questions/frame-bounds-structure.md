@@ -4,4 +4,4 @@ category: uikit
 order: 14
 ---
 
-CGRect, содержащий x, y, width, height.
+`CGRect`, содержащий `x`, `y`, `width`, `height`.

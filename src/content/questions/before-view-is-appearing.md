@@ -4,4 +4,4 @@ category: uikit
 order: 27
 ---
 
-В ViewWillAppear или ViewDidLayoutSubviews.
+В `viewWillAppear` или `viewDidLayoutSubviews`.

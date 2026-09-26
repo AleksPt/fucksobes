@@ -4,16 +4,16 @@ category: uikit
 order: 48
 ---
 
-resignFirstResponder (?)
+`resignFirstResponder` (?)
 
 ```swift
 override var canBecomeFirstResponder: Bool {
-       return false
-   }
+    return false
+}
 ```
 
 ```swift
 override var next: UIResponder? {
-       return someOtherResponder
-   }
+    return someOtherResponder
+}
 ```

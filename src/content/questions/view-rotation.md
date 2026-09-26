@@ -4,9 +4,8 @@ category: uikit
 order: 16
 ---
 
-Через афинные преобразования (CGAffineTransform).
+Через аффинные преобразования (`CGAffineTransform`):
 
 ```swift
 view.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
-
 ```

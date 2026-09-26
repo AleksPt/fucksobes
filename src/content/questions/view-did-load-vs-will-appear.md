@@ -4,4 +4,4 @@ category: uikit
 order: 24
 ---
 
-**viewDidLoad**
+`viewDidLoad`

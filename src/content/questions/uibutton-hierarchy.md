@@ -4,8 +4,4 @@ category: uikit
 order: 53
 ---
 
-*(NSObject → UIResponder → UIView → UIControl → UIButton)*
-
----
-
-UIResponder → UIView → **`UIControl`** → UIButton
+`NSObject` → `UIResponder` → `UIView` → `UIControl` → `UIButton`

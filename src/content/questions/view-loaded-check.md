@@ -4,4 +4,4 @@ category: uikit
 order: 32
 ---
 
-**`isViewLoaded`**
+`isViewLoaded`

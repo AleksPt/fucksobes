@@ -4,50 +4,15 @@ category: uikit
 order: 22
 ---
 
-Init,
-
-LoadView,
-
-ViewDidLoad,
-
-ViewWillAppear,
-
-ViewIsAppearing, **лучше не называть**
-
-ViewWillLayoutSubviews,
-
-ViewDidLayoutSubviews,
-
-ViewDidAppear,
-
-ViewWillDisappear,
-
-ViewDidDisappear
-
-Did receive memory warning (может вызываться в любой момент),
-
-deinit
-
----
-
-init / loadView
-
-viewDidLoad
-
-viewWillAppear
-
-viewIsAppearing
-
-viewWillLayoutSubviews
-
-viewDidLayoutSubviews
-
-viewDidAppear
-
-viewWillDisappear
-
-viewDidDisappear
-
-viewWillTransition
-
-didReceiveMemoryWarning
+1. `init` / `loadView`
+2. `viewDidLoad`
+3. `viewWillAppear`
+4. `viewIsAppearing` (лучше не называть)
+5. `viewWillLayoutSubviews`
+6. `viewDidLayoutSubviews`
+7. `viewDidAppear`
+8. `viewWillDisappear`
+9. `viewDidDisappear`
+10. `viewWillTransition`
+11. `didReceiveMemoryWarning` — может вызываться в любой момент
+12. `deinit`
