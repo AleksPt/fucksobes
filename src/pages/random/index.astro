@@ -1,0 +1,45 @@
+---
+import { getEntry, render } from 'astro:content';
+import RandomQuestion from '../../components/RandomQuestion.tsx';
+import QuestionTitle from '../../components/QuestionTitle.astro';
+import Base from '../../layouts/Base.astro';
+import { getQuestions, hasAnswer } from '../../lib/content';
+import { url } from '../../lib/url';
+
+const questions = (await getQuestions()).filter(hasAnswer);
+const items = await Promise.all(
+  questions.map(async (question) => ({
+    question,
+    category: await getEntry(question.data.category),
+    Content: (await render(question)).Content,
+  })),
+);
+---
+
+<Base title="Случайный вопрос — FuckSobes">
+  <div class="mx-auto max-w-3xl">
+    <nav class="text-sm text-fog">
+      <a href={url()} class="hover:text-accent">Категории</a>
+      <span class="mx-1 text-steel">/</span>
+      <span>Случайный вопрос</span>
+    </nav>
+    <div aria-live="polite">
+      {
+        items.map(({ question, category, Content }) => (
+          <article data-id={question.id} hidden>
+            <a href={url(`${category.id}/${question.id}/`)} class="mt-4 inline-block text-sm text-fog hover:text-accent">{category.data.title}</a>
+            <h1 class="mt-2 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]">
+              <QuestionTitle title={question.data.title} />
+            </h1>
+            <div class="prose mt-6 max-w-none break-words">
+              <Content />
+            </div>
+          </article>
+        ))
+      }
+    </div>
+    <div class="mt-10">
+      <RandomQuestion client:load ids={items.map(({ question }) => question.id)} />
+    </div>
+  </div>
+</Base>
