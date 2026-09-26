@@ -4,4 +4,4 @@ category: uikit
 order: 30
 ---
 
-Нет, это вызовет рекурсию, так как LoadView — lazy метод.
+Нет, это вызовет рекурсию, так как `loadView` — lazy-метод.

@@ -4,4 +4,8 @@ category: uikit
 order: 1
 ---
 
-Вёрстка в коде (простановка фреймов вручную)<br>nib/xib/storyboards<br>autoresizing masks<br>AutoLayout<br>SwiftUI
+- Вёрстка в коде (ручная простановка фреймов)
+- nib/xib/storyboard
+- Autoresizing masks
+- Auto Layout
+- SwiftUI

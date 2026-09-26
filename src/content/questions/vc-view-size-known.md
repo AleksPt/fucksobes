@@ -4,12 +4,4 @@ category: uikit
 order: 34
 ---
 
-viewDidLayoutSubviews
-
----
-
-*viewWillLayoutSubviews()*
-
----
-
-**`viewDidLayoutSubviews()`**
+`viewDidLayoutSubviews()`

@@ -4,9 +4,13 @@ category: uikit
 order: 18
 ---
 
-1. Используйте presentation() для доступа к состоянию CALayer в реальном времени. (Presentation layer обновляется на каждом кадре.)
-2. Для постоянного отслеживания используйте CADisplayLink.
+Да:
 
-CADisplayLink позволяет выполнять код на каждом кадре анимации. Это можно использовать для получения presentationLayer в реальном времени.
+1. Использовать `presentation()` — доступ к состоянию `CALayer` в реальном времени (presentation layer обновляется на каждом кадре).
+2. Для постоянного отслеживания использовать `CADisplayLink`: он позволяет выполнять код на каждом кадре анимации, в том числе получать presentation layer в реальном времени.
 
-print("Текущий frame: \\(currentFrame)")
+```swift
+if let currentFrame = view.layer.presentation()?.frame {
+    print("Текущий frame: \(currentFrame)")
+}
+```

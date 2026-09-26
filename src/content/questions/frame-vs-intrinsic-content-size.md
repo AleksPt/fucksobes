@@ -4,4 +4,4 @@ category: uikit
 order: 19
 ---
 
-Можно добиться этого, задав frame вручную и переопределив intrinsicContentSize.
+Можно добиться этого, задав `frame` вручную и переопределив `intrinsicContentSize`.

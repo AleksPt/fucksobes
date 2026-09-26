@@ -4,4 +4,4 @@ category: uikit
 order: 35
 ---
 
-В WillLayoutSubviews еще не определены размеры дочерних view, а в DidLayoutSubviews размеры уже известны.
+В `viewWillLayoutSubviews` размеры дочерних view ещё не определены, а в `viewDidLayoutSubviews` уже известны.
