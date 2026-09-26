@@ -1,5 +1,5 @@
 ---
-title: "описание жизненного цикла объекта (live, deiniting, deinted, freed, dead)"
+title: "Описание жизненного цикла объекта (live, deiniting, deinited, freed, dead)"
 category: memory
 order: 35
 ---

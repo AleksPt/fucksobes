@@ -1,5 +1,5 @@
 ---
-title: "Strong, weak и unowned в swift - определение, какой в каких случаях использовать?"
+title: "Strong, weak и unowned в Swift - определение, какой в каких случаях использовать?"
 category: memory
 order: 24
 ---
