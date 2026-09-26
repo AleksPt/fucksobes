@@ -4,4 +4,4 @@ category: networking
 order: 2
 ---
 
-socket'ы?
+Например, сокеты.

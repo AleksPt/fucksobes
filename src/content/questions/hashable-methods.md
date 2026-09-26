@@ -4,4 +4,5 @@ category: algorithms
 order: 16
 ---
 
-*func == (lhs: Value, rhs: Value) -\> Bool<br>func hash(into hasher: inout Hasher)*
+- `func == (lhs: Value, rhs: Value) -> Bool`
+- `func hash(into hasher: inout Hasher)`

@@ -4,4 +4,4 @@ category: networking
 order: 4
 ---
 
-либы kingfisher / sdwebimage, NSCashe
+Библиотеки Kingfisher / SDWebImage, `NSCache`.
