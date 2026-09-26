@@ -14,4 +14,3 @@ order: 25
 
 View связывается со свойствами ViewModel через binding.
 
-Источники: https://martinfowler.com/eaaDev/uiArchs.html, https://en.wikipedia.org/wiki/Model–view–viewmodel

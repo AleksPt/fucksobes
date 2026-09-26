@@ -10,4 +10,3 @@ order: 26
 
 Родственная идея у Фаулера — Presentation Model: модель, спроектированная для слоя представления. Она хранит состояние view (например, выбранный элемент или доступность кнопки) и не загрязняет доменную модель.
 
-Источники: https://en.wikipedia.org/wiki/Model–view–viewmodel, https://martinfowler.com/eaaDev/uiArchs.html
