@@ -25,3 +25,6 @@ npm-debug.log*
 # playwright
 test-results/
 playwright-report/
+
+# raw Notion export contains Notion page ids — keep it local, never commit
+migration/notion-export.md

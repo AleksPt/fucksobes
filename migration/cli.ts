@@ -1,4 +1,4 @@
-import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildQuestionFiles, buildReview } from './generate.ts';
@@ -34,6 +34,12 @@ const command = process.argv[2];
 
 switch (command) {
   case 'parse': {
+    if (!existsSync(paths.export)) {
+      console.error(
+        'Экспорт Notion не найден: migration/notion-export.md. Файл не хранится в репозитории (в нём id страниц Notion); сделайте экспорт заново и положите его сюда.',
+      );
+      process.exit(1);
+    }
     const questions = parseNotionExport(readFileSync(paths.export, 'utf8'));
     writeFileSync(paths.questions, JSON.stringify(questions, null, 2) + '\n');
     console.log(`Вопросов: ${questions.length}, с ответом: ${questions.filter((q) => q.answer).length}`);

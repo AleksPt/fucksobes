@@ -1,5 +1,5 @@
-import { readFileSync } from 'node:fs';
-import { describe, expect, it } from 'vitest';
+import { existsSync, readFileSync } from 'node:fs';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { cleanTitle, convertAnswer, normalizeBold, parseNotionExport } from './parse.ts';
 
 const lines = (...l: string[]) => l.join('\n');
@@ -136,8 +136,14 @@ describe('convertAnswer', () => {
   });
 });
 
-describe('реальный экспорт', () => {
-  const questions = parseNotionExport(readFileSync('migration/notion-export.md', 'utf8'));
+// Сырой экспорт Notion намеренно не хранится в репозитории (в нём id страниц Notion, файл в .gitignore).
+// Если положить его в migration/notion-export.md локально, эти тесты выполнятся; иначе — пропускаются.
+describe.skipIf(!existsSync('migration/notion-export.md'))('реальный экспорт', () => {
+  // describe-callback выполняется и при skip, поэтому читаем файл лениво, в beforeAll.
+  let questions: ReturnType<typeof parseNotionExport>;
+  beforeAll(() => {
+    questions = parseNotionExport(readFileSync('migration/notion-export.md', 'utf8'));
+  });
 
   it('717 вопросов, номера 1..717 подряд', () => {
     expect(questions).toHaveLength(717);

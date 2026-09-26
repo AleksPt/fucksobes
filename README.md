@@ -51,7 +51,7 @@ order: 12         # порядок внутри категории
 
 `migration/` — разовый инструмент переноса из Notion в Markdown: `npm run migrate -- parse|check|review|generate`.
 
-- `parse` разбирает `migration/notion-export.md` в `migration/questions.json`;
+- `parse` разбирает локальный `migration/notion-export.md` в `migration/questions.json`. Этого файла нет в репозитории (он в `.gitignore`: в экспорте были id страниц Notion), а результат разбора — `migration/questions.json` — закоммичен;
 - `check` валидирует `migration/mapping.json`;
 - `review` пишет `migration/review.md`;
 - `generate` создаёт файлы вопросов в `src/content/questions/`.
