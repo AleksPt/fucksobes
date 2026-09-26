@@ -2,46 +2,35 @@
 import type { CollectionEntry } from 'astro:content';
 import { pluralize } from '../lib/text';
 import { url } from '../lib/url';
-import ProgressBar from './ProgressBar.astro';
-import Tag from './Tag.astro';
 
 interface Props {
   category: CollectionEntry<'categories'>;
   total: number;
-  answered: number;
 }
 
-const { category, total, answered } = Astro.props;
+const { category, total } = Astro.props;
 ---
 
 <a
   href={url(`${category.id}/`)}
-  class="group relative flex h-full min-h-60 flex-col gap-3 overflow-hidden rounded-card border border-white/10 bg-carbon p-8 transition duration-250 hover:border-accent/55 hover:shadow-glow focus-visible:border-accent/55 focus-visible:shadow-glow motion-reduce:transition-none"
+  class="group relative flex h-full min-h-40 flex-col justify-between gap-10 overflow-hidden rounded-card border border-white/10 bg-carbon p-8 transition duration-250 hover:border-accent/55 hover:shadow-glow focus-visible:border-accent/55 focus-visible:shadow-glow motion-reduce:transition-none"
 >
   <span
     class="pointer-events-none absolute -inset-x-1/5 -bottom-3/5 h-4/5 bg-[radial-gradient(ellipse_at_50%_100%,rgb(211_251_82/0.3),transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
     aria-hidden="true"></span>
-  <div class="relative flex items-center justify-between">
-    <Tag>{category.data.tag}</Tag>
-    <svg
-      class="size-5 text-steel transition duration-200 group-hover:translate-x-0.5 group-hover:text-paper motion-reduce:transition-none"
-      viewBox="0 0 20 20"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      ></path>
-    </svg>
-  </div>
-  <h2 class="relative mt-3 text-[22px] leading-tight font-medium tracking-tight text-balance" transition:name={`category-${category.id}`}>
+  <svg
+    class="absolute top-8 right-8 size-5 text-steel transition duration-200 group-hover:translate-x-0.5 group-hover:text-paper motion-reduce:transition-none"
+    viewBox="0 0 20 20"
+    fill="none"
+    aria-hidden="true"
+  >
+    <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    ></path>
+  </svg>
+  <h2 class="relative pr-7 text-2xl leading-tight font-medium tracking-tight text-balance" transition:name={`category-${category.id}`}>
     {category.data.title}
   </h2>
-  <p class="relative text-sm text-fog">{category.data.description}</p>
-  <div class="relative mt-auto pt-3">
-    <ProgressBar value={answered} max={total} label="С ответом" />
-    <p class="mt-2.5 flex justify-between font-mono text-xs text-fog">
-      <span><b class="font-medium text-paper">{total}</b> {pluralize(total, ['вопрос', 'вопроса', 'вопросов'])}</span>
-      <span>с ответом: <b class="font-medium text-paper">{answered}</b></span>
-    </p>
-  </div>
+  <p class="relative font-mono text-lg text-fog">
+    <b class="font-medium text-paper">{total}</b> {pluralize(total, ['вопрос', 'вопроса', 'вопросов'])}
+  </p>
 </a>

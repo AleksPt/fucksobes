@@ -85,7 +85,7 @@ export default function Search({ indexUrl }: Props) {
         aria-controls="search-results"
         aria-autocomplete="list"
         aria-activedescendant={open && hits[active] ? `search-hit-${active}` : undefined}
-        placeholder="Поиск по вопросам  ⌘K"
+        placeholder="Поиск по вопросам"
         value={query}
         onFocus={() => {
           setFocused(true);
