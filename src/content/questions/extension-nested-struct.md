@@ -1,5 +1,5 @@
 ---
-title: "Можем ли мы добавить стуктуру в extension?"
+title: "Можем ли мы добавить структуру в extension?"
 category: swift
 order: 63
 ---

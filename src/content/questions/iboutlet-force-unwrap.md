@@ -1,5 +1,5 @@
 ---
-title: "почему в IBOutlet использует force unwrap"
+title: "Почему в IBOutlet используется force unwrap"
 category: swift
 order: 19
 ---
