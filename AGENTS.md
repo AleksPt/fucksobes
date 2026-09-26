@@ -20,3 +20,13 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## Project
+
+- Content: one Markdown file per question in `src/content/questions/<id>.md` (frontmatter `title`, `category`, `order`; empty body = no answer). `<id>` is kebab-case latin, unique, and becomes the URL `/<category>/<id>/`. Categories: `src/content/categories.yaml`.
+- Always build internal links with `url()` from `src/lib/url.ts` (site is served under `/fucksobes/`).
+- Interactive UI only as React islands (`.tsx`); keep logic in `src/lib/*.ts` with unit tests.
+- Search indexes question titles only (`src/lib/search.ts`, `src/pages/search-index.json.ts`).
+- Do not run `npm run migrate -- generate` — it overwrites all question files.
+- Tests: `npm test` (Vitest), `npm run test:e2e` (Playwright; run `npx astro preview stop` first if a stale preview holds port 4321), `npm run check`.
+- Changes go through PRs (squash merge) with green CI; branches `feat/ fix/ content/ chore/`, Conventional Commits titles.
