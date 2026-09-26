@@ -29,4 +29,16 @@ Consult these guides before working on related tasks:
 - Search indexes question titles only (`src/lib/search.ts`, `src/pages/search-index.json.ts`).
 - Do not run `npm run migrate -- generate` — it overwrites all question files.
 - Tests: `npm test` (Vitest), `npm run test:e2e` (Playwright; run `npx astro preview stop` first if a stale preview holds port 4321), `npm run check`.
-- Changes go through PRs (squash merge) with green CI; branches `feat/ fix/ content/ chore/`, Conventional Commits titles.
+
+## Git workflow
+
+GitHub Flow, solo project. `main` is production: every merge deploys to GitHub Pages via Actions.
+
+- Never commit or push to `main` directly, not even for typos. Branch protection enforces it, admin included; do not try to bypass it.
+- Work in short-lived branches off `main` named `feat/`, `fix/`, `content/`, `chore/` or `docs/` plus a kebab-case slug.
+- Open a PR for every change. Merge only when the required check `check` (workflow `CI`) is green. No approvals needed.
+- Squash merge only (merge commits and rebase merges are disabled). The PR title becomes the commit title and the PR body becomes the commit body, so write both as final. Merged branches are deleted automatically.
+- PR titles use Conventional Commits (`feat:`, `fix:`, `content:`, `chore:`, `docs:`, `test:`) and are written in Russian. Keep the body short: what and why.
+- Large content changes (e.g. bulk edits of questions) go in separate PRs per category, not one huge PR.
+- No `develop` or `release` branches. Tags only for milestones.
+- The repository is public: never commit secrets, local paths, Notion page ids or raw exports.

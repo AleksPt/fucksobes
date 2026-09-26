@@ -67,4 +67,4 @@ order: 12         # порядок внутри категории
 
 ## Git
 
-GitHub Flow: `main` = прод (автодеплой), изменения только через PR с зелёным CI, squash merge. Ветки `feat/`, `fix/`, `content/`, `chore/`; заголовок PR — в формате Conventional Commits.
+GitHub Flow: `main` = прод (автодеплой), изменения только через PR с зелёным CI, squash merge, заголовки PR — Conventional Commits на русском. Полные правила — в разделе «Git workflow» в [AGENTS.md](AGENTS.md).
