@@ -22,6 +22,7 @@ export default function RandomQuestion({ ids }: Props) {
     if (!current) return;
     for (const article of document.querySelectorAll<HTMLElement>('article[data-id]')) {
       article.hidden = article.dataset.id !== current;
+      article.querySelector('details')?.removeAttribute('open');
     }
     window.history.replaceState(null, '', `#${current}`);
   }, [current]);
