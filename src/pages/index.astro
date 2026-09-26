@@ -29,7 +29,7 @@ const stats = categories.map((category) => ({
       >Случайный вопрос</a
     >
   </p>
-  <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:[&>li]:col-span-2 lg:[&>li:nth-child(-n+2)]:col-span-3 lg:[&>li:nth-last-child(-n+2)]:col-span-3">
+  <ul class="flex flex-wrap gap-4 [&>li]:grow [&>li]:basis-[20rem]">
     {
       stats.map(({ category, total }) => (
         <li>
