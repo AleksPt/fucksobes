@@ -24,5 +24,10 @@ jobs:
       # Типы и .astro-файлы
       - run: npx astro check
 
-      # Сборка; frontmatter вопросов валидируется схемой Content Collections
-      - run: npm run build
+      # Юнит-тесты (миграция, поиск, хелперы)
+      - run: npm test
+
+      - run: npx playwright install --with-deps chromium
+
+      # Сборка + e2e smoke (Playwright сам запускает build и preview)
+      - run: npm run test:e2e
