@@ -4,4 +4,4 @@ category: swift
 order: 7
 ---
 
-структура - value<br>класс - reference
+Структура — value-тип, класс — reference-тип.

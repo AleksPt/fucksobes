@@ -4,7 +4,7 @@ category: swift
 order: 47
 ---
 
-псевдонимом для существующего типа данных
+Псевдоним для существующего типа данных.
 
 ```swift
 typealias Dollar = Double

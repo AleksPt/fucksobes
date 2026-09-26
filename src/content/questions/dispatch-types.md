@@ -4,4 +4,4 @@ category: swift
 order: 74
 ---
 
-Статическая диспетчеризация (например, для структур и финальных классов), динамическая диспетчеризация через virtual table, и message dispatch в Objective-C.
+Статическая диспетчеризация (например, для структур и final-классов), динамическая диспетчеризация через virtual table и message dispatch в Objective-C.

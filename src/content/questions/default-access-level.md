@@ -4,4 +4,4 @@ category: swift
 order: 32
 ---
 
-**internal**
+`internal`

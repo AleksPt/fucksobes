@@ -4,4 +4,4 @@ category: swift
 order: 10
 ---
 
-кложуры, функции, акторы, inderect enum
+Замыкания (closures), функции, акторы, `indirect enum`.
