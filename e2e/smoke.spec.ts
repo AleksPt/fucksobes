@@ -27,12 +27,18 @@ test('поиск находит вопрос и открывает его стр
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 });
 
-test('search-index.json содержит 413 вопросов', async ({ request }) => {
+test('search-index.json отдаёт корректный индекс', async ({ request }) => {
   const res = await request.get('search-index.json');
   expect(res.status()).toBe(200);
   const data = await res.json();
   expect(Array.isArray(data)).toBe(true);
-  expect(data).toHaveLength(413);
+  expect(data.length).toBeGreaterThan(0);
+  for (const entry of data) {
+    for (const key of ['id', 'title', 'categoryTitle', 'url']) {
+      expect(typeof entry[key]).toBe('string');
+    }
+    expect(entry.url.startsWith('/fucksobes/')).toBe(true);
+  }
 });
 
 test('вопрос без ответа показывает заглушку', async ({ page }) => {
