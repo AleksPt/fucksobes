@@ -4,4 +4,4 @@ category: concurrency
 order: 5
 ---
 
-*сколько ядер*
+Столько, сколько ядер.

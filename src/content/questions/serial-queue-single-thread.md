@@ -4,4 +4,4 @@ category: concurrency
 order: 20
 ---
 
-*нет*
+Нет.

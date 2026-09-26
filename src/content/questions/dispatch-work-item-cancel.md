@@ -4,4 +4,4 @@ category: concurrency
 order: 36
 ---
 
-Создать переменную для WorkItem и использовать метод cancel.
+Сохранить `DispatchWorkItem` в переменную и вызвать метод `cancel()`.

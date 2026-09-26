@@ -4,4 +4,4 @@ category: concurrency
 order: 34
 ---
 
-с использованием DispatchWorkItem и проверки флага isCancelled.
+С помощью `DispatchWorkItem` и проверки флага `isCancelled`.

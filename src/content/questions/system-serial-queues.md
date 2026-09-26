@@ -4,8 +4,4 @@ category: concurrency
 order: 12
 ---
 
-Главная очередь (DispatchQueue.main).
-
----
-
-*DispatchQueue.main*
+Главная очередь — `DispatchQueue.main`.

@@ -4,4 +4,4 @@ category: concurrency
 order: 13
 ---
 
-Serial
+Serial.

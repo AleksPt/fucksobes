@@ -4,4 +4,4 @@ category: concurrency
 order: 67
 ---
 
-actor
+`actor`
