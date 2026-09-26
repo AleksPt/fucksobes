@@ -97,16 +97,16 @@ export default function Search({ indexUrl }: Props) {
           setActive(0);
         }}
         onKeyDown={onKeyDown}
-        className="w-full rounded-full border border-white/10 bg-ink px-4 py-2 font-mono text-base text-paper shadow-glow-soft transition-colors placeholder:text-steel focus:border-accent/60 sm:text-sm"
+        className="w-full rounded-input border border-transparent bg-mist px-4 py-2 text-base text-on-accent transition-colors outline-none placeholder:text-dim focus:border-on-accent focus:bg-paper sm:text-sm"
       />
       {open && (
         <ul
           id="search-results"
           role="listbox"
-          className="absolute inset-x-4 top-full mt-3 max-h-[70vh] overflow-y-auto rounded-panel border border-white/10 bg-carbon p-1.5 shadow-glow-soft sm:inset-x-auto sm:right-0 sm:w-[28rem]"
+          className="absolute inset-x-4 top-full mt-3 max-h-[70vh] overflow-y-auto rounded-panel border border-rule bg-paper p-1.5 text-on-accent sm:inset-x-auto sm:right-0 sm:w-[28rem]"
         >
           {status ? (
-            <li className="px-3 py-2 text-sm text-fog">{status}</li>
+            <li className="px-3 py-2 text-sm text-dim">{status}</li>
           ) : (
             hits.map((hit, i) => (
               <li key={hit.id} id={`search-hit-${i}`} role="option" aria-selected={i === active}>
@@ -117,10 +117,10 @@ export default function Search({ indexUrl }: Props) {
                     go(hit.url);
                   }}
                   onMouseEnter={() => setActive(i)}
-                  className={`block rounded-input px-3 py-2 text-sm ${i === active ? 'bg-smoke text-paper' : 'text-ash'}`}
+                  className={`block rounded-input px-3 py-2 text-sm ${i === active ? 'bg-mist' : ''}`}
                 >
                   <span className="block">{hit.title}</span>
-                  <span className="block font-mono text-xs text-fog">{hit.categoryTitle}</span>
+                  <span className="block text-xs text-dim">{hit.categoryTitle}</span>
                 </a>
               </li>
             ))

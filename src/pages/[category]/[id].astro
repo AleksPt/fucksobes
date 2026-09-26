@@ -28,7 +28,7 @@ const { Content } = await render(question);
     <span class="mx-1 text-steel">/</span>
     <a href={url(`${category.id}/`)} class="hover:text-accent">{category.data.title}</a>
   </nav>
-  <h1 class="mt-4 text-3xl font-medium tracking-tight text-balance sm:text-4xl"><QuestionTitle title={question.data.title} /></h1>
+  <h1 class="mt-4 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]"><QuestionTitle title={question.data.title} /></h1>
   <div class="mt-6">
     {
       hasAnswer(question) ? (

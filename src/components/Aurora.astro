@@ -1,0 +1,18 @@
+---
+// Фоновое свечение в духе Handshake. Стили — классы .aurora* в global.css.
+interface Props {
+  variant?: 'hero' | 'page';
+}
+
+const { variant = 'page' } = Astro.props;
+---
+
+<div class="aurora" data-variant={variant} aria-hidden="true">
+  <div class="aurora-blobs">
+    <div class="aurora-blob"></div>
+    <div class="aurora-blob"></div>
+    <div class="aurora-blob"></div>
+    <div class="aurora-blob"></div>
+    <div class="aurora-blob"></div>
+  </div>
+</div>

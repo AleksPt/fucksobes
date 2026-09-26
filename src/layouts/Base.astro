@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import Aurora from '../components/Aurora.astro';
 import Header from '../components/Header.astro';
 import { url } from '../lib/url';
 import '../styles/global.css';
@@ -7,9 +8,11 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  /** Полное свечение героя — только на главной */
+  hero?: boolean;
 }
 
-const { title, description = 'Вопросы и ответы для подготовки к iOS-собеседованиям' } = Astro.props;
+const { title, description = 'Вопросы и ответы для подготовки к iOS-собеседованиям', hero = false } = Astro.props;
 ---
 
 <html lang="ru">
@@ -20,13 +23,14 @@ const { title, description = 'Вопросы и ответы для подгот
     <link rel="apple-touch-icon" href={url('apple-touch-icon.png')} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#0e0e0e" />
+    <meta name="theme-color" content="#14151c" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
     <ClientRouter />
   </head>
   <body class="min-h-dvh bg-ink font-sans text-paper antialiased">
+    <Aurora variant={hero ? 'hero' : 'page'} />
     <Header />
     <main class="mx-auto max-w-page px-4 pt-16 pb-24 sm:px-6">
       <slot />
