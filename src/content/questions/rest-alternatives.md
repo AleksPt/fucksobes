@@ -1,5 +1,5 @@
 ---
-title: "что еще кроме rest api есть"
+title: "Что еще кроме REST API есть"
 category: networking-storage
 order: 2
 ---
