@@ -63,6 +63,7 @@ test('главная → случайный вопрос → следующий 
   await page.getByRole('link', { name: 'Случайный вопрос' }).click();
   await expect(page).toHaveURL(/\/fucksobes\/random\/#[a-z0-9-]+$/);
   await expect(page.locator('astro-island[component-url*="RandomQuestion"]')).not.toHaveAttribute('ssr', '');
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   const item = page.locator('article:not([hidden]) details.question');
   await expect(item).toBeVisible();
   await expect(item).not.toHaveAttribute('open', '');
