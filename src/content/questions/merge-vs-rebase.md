@@ -1,6 +1,6 @@
 ---
 title: "Чем отличается Merge от Rebase"
-category: tooling
+category: git
 order: 1
 ---
 

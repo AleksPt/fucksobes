@@ -1,6 +1,6 @@
 ---
 title: "Что такое cherry-pick"
-category: tooling
+category: git
 order: 3
 ---
 

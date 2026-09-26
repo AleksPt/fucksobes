@@ -38,3 +38,7 @@
   title: Инструменты и сборка
   description: "Xcode, Instruments, SPM, CI, подпись и публикация."
   order: 10
+- id: git
+  title: Git
+  description: "Ветки, merge и rebase, откат изменений, поиск бага по истории."
+  order: 11

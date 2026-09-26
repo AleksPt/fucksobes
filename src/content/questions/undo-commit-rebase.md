@@ -1,6 +1,6 @@
 ---
 title: "Как отменить коммит, что такое rebase"
-category: tooling
+category: git
 order: 2
 ---
 

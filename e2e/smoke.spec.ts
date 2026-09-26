@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('главная → категория → раскрытие ответа', async ({ page }) => {
   await page.goto('./');
-  await expect(page.getByRole('heading', { level: 2 })).toHaveCount(10);
+  await expect(page.getByRole('heading', { level: 2 })).toHaveCount(11);
 
   await page.getByRole('link').filter({ has: page.getByRole('heading', { level: 2, name: 'Память', exact: true }) }).click();
   await expect(page).toHaveURL(/\/fucksobes\/[a-z-]+\/$/);
