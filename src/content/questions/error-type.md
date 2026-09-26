@@ -1,5 +1,5 @@
 ---
-title: "Что такое error в swift"
+title: "Что такое error в Swift"
 category: swift
 order: 51
 ---
