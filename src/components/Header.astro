@@ -1,5 +1,6 @@
 ---
 import { url } from '../lib/url';
+import Logo from './Logo.astro';
 import Search from './Search.tsx';
 ---
 
@@ -7,12 +8,8 @@ import Search from './Search.tsx';
   <div
     class="mx-auto flex max-w-4xl items-center gap-3 rounded-nav border border-white/8 bg-carbon py-2 pr-2 pl-4 shadow-nav sm:gap-6 sm:pl-6"
   >
-    <a href={url()} class="flex shrink-0 items-center gap-2 font-semibold tracking-tight" aria-label="FuckSobes, на главную">
-      <svg class="size-5 text-accent" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-        <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        ></path>
-      </svg>
-      <span class="hidden sm:inline">FuckSobes</span>
+    <a href={url()} class="shrink-0 text-accent" aria-label="FuckSobes, на главную">
+      <Logo class="h-4 w-auto sm:h-5" />
     </a>
     <Search client:idle transition:persist="search" indexUrl={url('search-index.json')} />
   </div>
