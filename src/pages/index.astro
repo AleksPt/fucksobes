@@ -1,5 +1,6 @@
 ---
 import CategoryCard from '../components/CategoryCard.astro';
+import Search from '../components/Search.tsx';
 import Base from '../layouts/Base.astro';
 import { getCategories, getQuestions } from '../lib/content';
 import { pluralize } from '../lib/text';
@@ -22,7 +23,10 @@ const stats = categories.map((category) => ({
       >с реальных iOS-собеседований</span
     >
   </h1>
-  <p class="pt-10 pb-16 text-center sm:pb-24">
+  <div class="relative z-30 pt-10">
+    <Search client:idle indexUrl={url('search-index.json')} />
+  </div>
+  <p class="pt-6 pb-16 text-center sm:pb-24">
     <a
       href={url('random/')}
       class="inline-flex items-center rounded-input bg-accent px-6 py-3 text-base font-medium text-on-accent transition-opacity hover:opacity-90 motion-reduce:transition-none"

@@ -1,16 +1,12 @@
 ---
 import { url } from '../lib/url';
 import Logo from './Logo.astro';
-import Search from './Search.tsx';
 ---
 
 <header class="relative z-20 px-4 pt-4 sm:px-6">
-  <div
-    class="mx-auto flex max-w-page items-center gap-3 rounded-nav bg-paper py-2 pr-2 pl-4 text-on-accent sm:gap-6 sm:pl-5"
-  >
-    <a href={url()} class="shrink-0 rounded-input text-on-accent" aria-label="FuckSobes, на главную">
-      <Logo class="h-4 w-auto sm:h-5" />
+  <div class="mx-auto flex max-w-page justify-center py-2">
+    <a href={url()} class="rounded-input text-accent" aria-label="FuckSobes, на главную">
+      <Logo class="h-6 w-auto sm:h-8" />
     </a>
-    <Search client:idle transition:persist="search" indexUrl={url('search-index.json')} />
   </div>
 </header>
