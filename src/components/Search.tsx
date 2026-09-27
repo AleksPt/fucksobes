@@ -75,7 +75,7 @@ export default function Search({ indexUrl }: Props) {
   const status = failed ? 'Не удалось загрузить поиск' : !docs ? 'Загрузка…' : hits.length === 0 ? 'Ничего не найдено' : null;
 
   return (
-    <div className="ml-auto w-full max-w-sm sm:relative">
+    <div className="relative mx-auto w-full max-w-xl text-left">
       <input
         ref={inputRef}
         type="search"
@@ -97,13 +97,13 @@ export default function Search({ indexUrl }: Props) {
           setActive(0);
         }}
         onKeyDown={onKeyDown}
-        className="w-full rounded-input border border-transparent bg-mist px-4 py-2 text-base text-on-accent transition-colors outline-none placeholder:text-dim focus:border-on-accent focus:bg-paper sm:text-sm"
+        className="w-full rounded-input border border-transparent bg-mist px-4 py-3 text-base text-on-accent transition-colors outline-none placeholder:text-dim focus:border-on-accent focus:bg-paper"
       />
       {open && (
         <ul
           id="search-results"
           role="listbox"
-          className="absolute inset-x-4 top-full mt-3 max-h-[70vh] overflow-y-auto rounded-panel border border-rule bg-paper p-1.5 text-on-accent sm:inset-x-auto sm:right-0 sm:w-[28rem]"
+          className="absolute inset-x-0 top-full z-30 mt-3 max-h-[70vh] overflow-y-auto rounded-panel border border-rule bg-paper p-1.5 text-on-accent"
         >
           {status ? (
             <li className="px-3 py-2 text-sm text-dim">{status}</li>
