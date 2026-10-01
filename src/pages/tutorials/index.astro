@@ -1,0 +1,29 @@
+---
+import TutorialCard from '../../components/TutorialCard.astro';
+import Base from '../../layouts/Base.astro';
+import { url } from '../../lib/url';
+
+// Ссылки на страницы туториалов добавим позже (поле `href`)
+const tutorials: { title: string; href?: string }[] = [
+  { title: 'Swift' },
+  { title: 'Память' },
+  { title: 'Многопоточность' },
+  { title: 'Архитектура и паттерны' },
+  { title: 'UIKit' },
+  { title: 'SwiftUI' },
+];
+---
+
+<Base title="Туториалы — FuckSobes">
+  <a href={url()} class="text-sm text-fog hover:text-accent">← Все категории</a>
+  <h1 class="mt-6 mb-10 font-display text-5xl leading-[0.9] font-semibold tracking-[-0.02em] text-balance uppercase sm:text-7xl">Туториалы</h1>
+  <ul class="flex flex-wrap gap-4 [&>li]:grow [&>li]:basis-[20rem]">
+    {
+      tutorials.map(({ title, href }) => (
+        <li>
+          <TutorialCard title={title} href={href} />
+        </li>
+      ))
+    }
+  </ul>
+</Base>
