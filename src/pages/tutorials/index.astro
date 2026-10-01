@@ -1,15 +1,12 @@
 ---
 import TutorialCard from '../../components/TutorialCard.astro';
 import Base from '../../layouts/Base.astro';
+import { tutorialHref, tutorials } from '../../lib/tutorials';
 import { url } from '../../lib/url';
 
-// Ссылки на страницы туториалов добавим позже (поле `href`)
-const tutorials: { title: string; href?: string }[] = [
-  { title: 'Swift', href: url('tutorials/swift/') },
-  { title: 'Память' },
-  { title: 'Многопоточность' },
-  { title: 'Архитектура и паттерны' },
-  { title: 'UIKit' },
+// Ссылки на остальные туториалы добавим позже (поле `href`)
+const cards: { title: string; href?: string }[] = [
+  ...tutorials.map(({ slug, title }) => ({ title, href: url(tutorialHref(slug)) })),
   { title: 'SwiftUI' },
 ];
 ---
@@ -19,7 +16,7 @@ const tutorials: { title: string; href?: string }[] = [
   <h1 class="mt-6 mb-10 font-display text-5xl leading-[0.9] font-semibold tracking-[-0.02em] text-balance uppercase sm:text-7xl">Туториалы</h1>
   <ul class="flex flex-wrap gap-4 [&>li]:grow [&>li]:basis-[20rem]">
     {
-      tutorials.map(({ title, href }) => (
+      cards.map(({ title, href }) => (
         <li>
           <TutorialCard title={title} href={href} />
         </li>
