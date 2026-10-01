@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  /** Пока ссылки нет — карточка рендерится без перехода */
+  href?: string;
+}
+
+const { title, href } = Astro.props;
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag
+  href={href}
+  class="group flex h-full flex-col gap-10 rounded-card border border-white/12 bg-white/4 p-6 backdrop-blur-md transition-colors duration-200 hover:border-white/45 hover:bg-white/7 focus-visible:border-white/45 focus-visible:bg-white/7 motion-reduce:transition-none"
+>
+  <div class="flex justify-end">
+    <span
+      class="grid size-10 place-items-center rounded-input border border-white/12 transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent group-focus-visible:border-accent group-focus-visible:bg-accent group-focus-visible:text-on-accent motion-reduce:transition-none"
+      aria-hidden="true"
+    >
+      <svg class="size-[18px] transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none" viewBox="0 0 20 20" fill="none">
+        <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        ></path>
+      </svg>
+    </span>
+  </div>
+  <h2 class="mt-auto text-[1.75rem] leading-[1.1] font-medium tracking-[-0.02em] text-balance">{title}</h2>
+</Tag>

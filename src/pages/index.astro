@@ -22,11 +22,16 @@ const stats = categories.map((category) => ({
       >с реальных iOS-собеседований</span
     >
   </h1>
-  <p class="pt-10 pb-16 text-center sm:pb-24">
+  <p class="flex flex-wrap items-center justify-center gap-3 pt-10 pb-16 sm:pb-24">
     <a
       href={url('random/')}
       class="inline-flex items-center rounded-input bg-accent px-6 py-3 text-base font-medium text-on-accent transition-opacity hover:opacity-90 motion-reduce:transition-none"
       >Случайный вопрос</a
+    >
+    <a
+      href={url('tutorials/')}
+      class="inline-flex items-center rounded-input border border-white/45 px-6 py-3 text-base font-medium transition-colors hover:border-accent hover:text-accent motion-reduce:transition-none"
+      >Туториалы</a
     >
   </p>
   <ul class="flex flex-wrap gap-4 [&>li]:grow [&>li]:basis-[20rem]">
