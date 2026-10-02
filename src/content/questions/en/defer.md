@@ -14,4 +14,19 @@ func read() throws {
 }
 ```
 
-If a scope has several `defer` blocks, they run in reverse order (LIFO): the last one declared runs first. The example from the article, where `defer` blocks print 1, 2, 3, 4, 5, 6, produces the output `6 5 4 3 2 1`, and a `defer` in a nested `if` block fires when that block is exited, so it runs earlier than the others. Inside a `defer` you cannot exit the block (`return`, `break`, `throw`).
+If a scope has several `defer` blocks, they run in reverse order (LIFO): the last one declared runs first. A `defer` in a nested `if` block fires when that block is exited, so it runs earlier than the others:
+
+```swift
+func demo(flag: Bool) {
+    defer { print("1") }
+    defer { print("2") }
+    if flag {
+        defer { print("inner") }
+        print("body")
+    }
+    print("end")
+}
+// demo(flag: true) prints: body, inner, end, 2, 1
+```
+
+Inside a `defer` you cannot exit the block (`return`, `break`, `throw`).

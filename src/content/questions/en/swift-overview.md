@@ -10,7 +10,7 @@ Key features:
 
 1. **Syntax.** Clean and concise, the code is easier to read and understand, which simplifies learning and development.
 2. **Safety.** Mechanisms that prevent potential errors: using uninitialized variables, working with null pointers, and so on.
-3. **Performance.** The language is optimized for high speed, comparable to C++.
+3. **Performance.** The language is optimized for high speed, comparable to C-based compiled languages (C, C++) for typical tasks.
 4. **Interoperability.** It can be used in the same project as Objective-C, which allows apps to be migrated gradually from one language to the other.
 5. **Memory management.** Automatic, through reference counting, which reduces the likelihood of memory leaks.
 6. **Open source.** The language has been open since 2015: the community takes part in its development, and it can be used on other platforms, including Linux.

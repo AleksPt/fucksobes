@@ -19,4 +19,4 @@ Dispatch is the process of determining **which specific implementation of a meth
 - **`Table Dispatch` (dynamic)** — a common kind. The function address is determined at runtime. Each subclass has its own table with a function pointer for each method; new subclass methods are appended to the end of the table. At runtime the table is consulted to determine the method. Swift has two subtypes:
     - **`Virtual Table`** — used with class inheritance, which brings extra overhead;
     - **`Witness Table`** — used to implement protocols, with no inheritance.
-- **`Message Dispatch`** — the slowest. It powers mechanisms such as KVC/KVO or Core Data (?). Its main feature is the ability to change dispatch behavior at runtime using swizzling.
+- **`Message Dispatch`** — the slowest. It powers mechanisms such as KVC/KVO and Core Data (`@NSManaged` properties, whose implementation Core Data provides at runtime). Its main feature is the ability to change dispatch behavior at runtime using swizzling.

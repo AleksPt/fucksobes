@@ -13,13 +13,16 @@ The simplest implementation is a wrapper with closures or an internal box:
 ```swift
 protocol Shape { associatedtype Unit; func area() -> Double }
 
-struct AnyShape: Shape {
+struct Circle: Shape { typealias Unit = Double; func area() -> Double { 3.14 } }
+struct Square: Shape { typealias Unit = Double; func area() -> Double { 1 } }
+
+struct AnyShape<Unit>: Shape {
     private let _area: () -> Double
-    init<S: Shape>(_ shape: S) { _area = shape.area }
+    init<S: Shape>(_ shape: S) where S.Unit == Unit { _area = shape.area }
     func area() -> Double { _area() }
 }
 
-let shapes: [AnyShape] = [AnyShape(Circle()), AnyShape(Square())]
+let shapes: [AnyShape<Double>] = [AnyShape(Circle()), AnyShape(Square())]
 ```
 
 The cost: extra indirection and allocations, and the loss of type information. Starting with Swift 5.7, many cases are solved by the `any` keyword (existential types, including with primary associated types) and `some` (opaque types), so a hand-written erasing wrapper is needed less often.
