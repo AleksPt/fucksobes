@@ -162,7 +162,7 @@ queue.async(execute: workItem)
 // Task completed
 ```
 
-A harder task (an example from notes). What will be printed?
+A harder task. What will be printed?
 
 ```swift
 func run() {

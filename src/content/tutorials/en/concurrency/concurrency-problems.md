@@ -148,7 +148,7 @@ func retrieveToken(completion: @escaping (Result<AccessToken, Error>) -> Void) {
 // The fix is to keep a queue of waiting completions and make a single request.
 ```
 
-**Example 3** (from notes): two accounts with 100 dollars each; 50 and 70 are transferred from account A to B. With a race condition it is unknown which transaction goes through first, and the second fails for lack of funds.
+**Example 3**: two accounts with 100 dollars each; 50 and 70 are transferred from account A to B. With a race condition it is unknown which transaction goes through first, and the second fails for lack of funds.
 
 > **A race condition is NOT solved by protecting the critical section alone.** It is a logic error. You can protect every read and every write of the balance with a lock — and still go negative if "check" and "withdraw" are not combined into one atomic operation. Another example from notes: if correctness doesn't depend on order, you can use a `Set` instead of an array; if you need an ordered array, the order has to be spelled out explicitly in the logic.
 

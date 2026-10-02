@@ -267,7 +267,7 @@ show(photos)
 
 ![Две диаграммы времени. await подряд: photo1 с 0 до 3, photo2 с 3 до 6, photo3 с 6 до 9. async let: photo1 с 0 до 3, photo2 с 0 до 2, photo3 с 0 до 3, все параллельно.](../../../../assets/tutorials/concurrency/06-await-vs-async-let.svg)
 
-Время параллельного варианта равно времени **самой длинной** задачи. Пример из заметок — загрузка 3 изображений по id:
+Время параллельного варианта равно времени **самой длинной** задачи. Пример — загрузка 3 изображений по id:
 
 ```swift
 func downloadImageWithImageId(imageId: Int) async throws -> UIImage {
