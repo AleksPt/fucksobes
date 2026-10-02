@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="264" viewBox="0 0 720 264" role="img">
+<title>Mediator: without and with a mediator</title>
+<desc>Left, without a mediator: objects A, B and C are connected to each other directly. Right, with a mediator: A, B and C communicate only through the Mediator.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAQkAA0AAAAABxgAAAPVAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGiIbIBwqBmAAbAqIBIZhATYCJAM4Cx4ABCAFBgcgG3AFQB6DbevxMg6vx1zMV4E0T6NW8ERzn29mk7vbnZ8cogJ2gCVUBKSa7wqkbBWwqyaUpOqA87868wfIugKTHUBbUpidA6SphDAijMxTu/V1vv4HAC57cE39+7akfwuwB10iRgXgLFIH+IADHGAWz6qABjbcAGW22SazVxEyLj3dClo1AhSw1ygOIUYopQwhUEAQINBCGzLXFUiAmgggFwAMtZNutLvBB0raG2EsD1gc6RrJdYhBL0rXALAEjZZNwAoGUPCYtTBx8WwAHjGLdvd34DlcGUk/S9RO/ch1EPdXwAE1OKRzEWt2q6IChzKHICVUUEMTrbTnglleppxfdDeddNwRB+yzN8EkIeXzLUA1yBwAuQFQ+KYFQU9NLkGRw5f5aq/paJ2ExqTjA1OVjq7OQ5vRRmYVsyKHVh1/W7fzdQdS2KU3ZM+fu+TxGziKWYUuvZPi2xAEtm5d//alxBXfvWLnX0Bwll18jWZvbr8lzUCxrdx3bdyBE1PSKApS+m5Khll36A0/pyvXZ9u0j5kUX4aLr1uYOluhQUJ99nrVpXci4eJzsidbmbbDGS7ptZTEIg7R55oTwbkWUgoUWEbuWTvSSI4WSywbcZ0SNfh62fN6VRYbtmLWNCES0yTvCuKCmBhG0AwZ+y/ekRTvoku3IbvH3v5w9t6H9UP3Pyy5Pyu5ZfieV66cOHG8+gAFb5+VHynLsvO8gTmRIdcTixYnLTyXK1pqXxXpFzzUbPX4hP5Qp5nadDpiM3fBEk+Ll2kLiY9qC+A2lBaxXAEReUwtFkp4P0+h7fGv8SLmCotYWPq2c8nfK5OX4oHr7j+dbzO+P27SnGD2GTrqizrrXZpdqmOKo8s08MevLssEgmXp5HkD92R0GZlLRfX8tni6qKEk0ZupGfLVmu/Uu3BUYENnFy1bsPg35peVNxQeKypriDuiXn7kSEn/UfGjuHf4SCHqmRU0Ck5+Ny84jSZix7sxscMCT4o5baHQFG1BMUf2XIBLUjpCHDbt/3JRPbc9MofOItjJ24iTTFLAymUPl5+PyZ9fj8GCUlr04rAdiuxik9gO4rPB3iRsIQRvx4RYzBS+LSXQ1JmpGTURZwNiIF1ZXzBNHEd4h9mEnbgQqheE/E77gdiBA+KBz8ve22dYd8dgwflp0UmTY9OmxSZPioKyEw+UkJRDBqwEtM9pzvWDBNDh6MTTTqZoyOQ3tXNfAHj39PR+LX/7/B9s/p3vrBHRjcO1ScR0TZz+v6n971tMdQ2IYh+hADIQAGIoCU3fZAA+IkBKN446tLLHI5TgZPLB6gkGAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAScAA0AAAAAB9wAAARNAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgV4cMAZgAHQKiACGQgE2AiQDPAsgAAQgBQYHIBsbBiCOxDgW8g9NGgjBA/+d9ufemSpTMp1CzL6k4oLZLmQV7/kPYPofoB3iweX0f+vY2eFhYmliAY5ti8a0sX1jFoYBF1C2Jk2EOJDAYJkbqwm6gsCrvUwBRAjAmQRLJAL7siPOCPejBuLJRSkpq+mId78pY4fjPbzP+JF4owIcHy3DBowdiSMYTFQkSAykgisqiL7oIBG4YMX2RS62+yEhPF2SjwqU0RkFBzBs+0Tlfy8bEagz7YRhE6RwNtaQ1lAHVgAgbYf9Bu0TSaaNvLEH61UZI37NDuRS2RWoFicRTaTzd2QrOK+hW/sO3EZngvL0/1ehXhd1hAHSTd5L6DjpMVim6I3iFmWV3ve4o6Ci04U+DGAIIxjFWCbYhEPtz2Bi/GtwR+2xyw7bbLXZpgSwCNzYbATcQZhAbAKcH5KkQA4QNltCloijQbhEuvl4GJ0C1SR3d08fb2etSevZq19gNTRZOy1tfXlWzLn3qk3T5px9aVh6/rC/YZdl4bKWFqSh8+HH9zsva7snhNfZC8w+caVPVr5VzGkLanrwJE5oKlPPC21iTmsrO3rdzOw9d54EW3C/Pnuzt/OOlhfaskfXgrTdzc09dt59aVj6/HawZqdx7NWzgiVlzt6zT13xZuCQ+suHHbv2KGAk6ditOGHnyaupy8d368ROd90BeY8xu7l5VWSz09yo2Wmdjr169CaXaVAUl6RmxSA0oUFWzL6hafRZmtDk7AXHXrVpjc12S2+KObdM824w+/qDK3cnrbOutm5aZZUaxly+u3VV+8//yOd2kWbP7K9jU+veNrgmzomZqscHPP2i3/ABG++VuUfVNBUkjKoN6aaYR/7wgVPnJIuxe6zvEo9+ST0Dg868xsuufmBZ+pSa2oypQ8oajS9qYn4cdK+fUh5otq1HhjktrDE1Ta8zJ2dm/xjcmBb5vz6VaLsOoyy5k+sb8qeMLm0o6paYXx1k9dC8DDNiwt/7PSXQefjEwffNJU2hjQX2wWfjkx84R2C6N+j/qn4/6TWd2kWMKA0fbNBXjHWNi+nj6GYO+weT2yA3TG59egY8LwrKKkmIiv91TVhBRbreKbfT4ER/U3y8Hrps5YEg4+AkP9PfVaFJ0qMiLIQ4u/ZjzPlTGhoLJo8pad+e5+dNaazPnzLa3L5HtjkltCE19Wo0p2ZnWVKNainNWG9JqfMx1OrijM/Cndwd+ul5VUnhjVn/E1hcHR5RXeTQwdph86DNC6wL/k4JyY6zotuNGj9+cuyg8JRAy7j4pPF+luTwwbFTJ46lk7EkJKRjSND8kJD+qNE4APa4jkUCpAAX5Qcz/kYAEvOvBx8be7kV/uaoKF8CfL41QhfPzbDd8LfyTn4A2CMBEHAcRJRPA4jr7sR+FNxkJN5tJppMIUn2I0EWT9wRE5+TEjYpJtL0JgliOiYxhgBpoUh4AthuJAA3MpC4IxHAT7I9ylTYLpQOAQ==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="264" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="320" height="216" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="48" y="44" width="136" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="116.0" y="58.0" text-anchor="middle" dominant-baseline="central">Without a mediator</text>
+<rect x="156" y="88" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="184.0" y="110.0" text-anchor="middle" dominant-baseline="central">A</text>
+<rect x="72" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="100.0" y="192.0" text-anchor="middle" dominant-baseline="central">B</text>
+<rect x="240" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="268.0" y="192.0" text-anchor="middle" dominant-baseline="central">C</text>
+<path d="M172 136 L120 166" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M196 136 L248 166" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M132 192 H236" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<rect x="376" y="24" width="320" height="216" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="400" y="44" width="128" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="464.0" y="58.0" text-anchor="middle" dominant-baseline="central">With a mediator</text>
+<rect x="508" y="88" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="536.0" y="110.0" text-anchor="middle" dominant-baseline="central">A</text>
+<rect x="392" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="420.0" y="192.0" text-anchor="middle" dominant-baseline="central">B</text>
+<rect x="624" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="652.0" y="192.0" text-anchor="middle" dominant-baseline="central">C</text>
+<rect x="492" y="170" width="88" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="536.0" y="192.0" text-anchor="middle" dominant-baseline="central">Mediator</text>
+<path d="M536 136 V166" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M452 192 H488" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M584 192 H620" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+</svg>

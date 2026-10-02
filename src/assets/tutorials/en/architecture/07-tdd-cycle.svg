@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="148" viewBox="0 0 720 148" role="img">
+<title>TDD: the Red, Green, Refactor cycle</title>
+<desc>First we write a failing test (Red), then the minimum code to make the test pass (Green), then we improve the code while the tests are green (Refactor) and return to a new test.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="148" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="192" height="64" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="120" y="44" text-anchor="middle" dominant-baseline="central">Red:</text>
+<text class="s" x="120" y="63" text-anchor="middle" dominant-baseline="central">write a failing</text>
+<text class="s" x="120" y="79" text-anchor="middle" dominant-baseline="central">test</text>
+<rect x="264" y="24" width="192" height="64" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360" y="44" text-anchor="middle" dominant-baseline="central">Green:</text>
+<text class="s" x="360" y="63" text-anchor="middle" dominant-baseline="central">minimal code</text>
+<text class="s" x="360" y="79" text-anchor="middle" dominant-baseline="central">to make it pass</text>
+<path d="M216 56 H260" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="504" y="24" width="192" height="64" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="600" y="44" text-anchor="middle" dominant-baseline="central">Refactor:</text>
+<text class="s" x="600" y="63" text-anchor="middle" dominant-baseline="central">improve,</text>
+<text class="s" x="600" y="79" text-anchor="middle" dominant-baseline="central">tests stay green</text>
+<path d="M456 56 H500" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M600 88 V120 H120 V92" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="268" viewBox="0 0 720 268" role="img">
+<title>Factory Method: creators and products</title>
+<desc>The Creator protocol is implemented by EmailCreator and PushCreator, the Product protocol by EmailNotification and PushNotification. Each creator makes its own product.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAVEAA0AAAAACYwAAATzAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGi4bIBwqBmAAdAqMNIoDATYCJANYCy4ABCAFBgcgG0YHUZRFzsoQXydwU6QmZ6CnZT3rwVFeUCQts9oWt8g18LBaHrzF72/ZuMFT8PQ//XVnUg7MJJTehC3Vtq7BiDzoQShwCqFL29VrxKr/Y539W9nlNEnl1Clm/SGcRJ91hvshnETMuO/C1CYsS2tfllZYmKY2bo5RKSV4ZCSxS0iI9z+Ab9nk2t3/n8vp/dp47+iwNmGIN1qLto0xreg4TDDwvTDNNkmbjNNNhm9RQJSk//TGoXwEyNA7QEkQUoQqqhAcR8jJEWppIghgdOkhSysGO0QTA1QEgCIZMUbbS7w8nzgasonA+Fj3ZAWIAC2hG2DT7C4ntAYBCtWoqtB34wB4tWhS//wblyMkGq4jGkT7JNUKRECTmOTAYs5+WSciZpGSiUWPQcOMMellQLnPUCONfw3uZWgCx1C4ENQrtAhMIe0C+Z+jdwDIHi2NvkC1BioV2iGrtGP3Zal5TLcXtibmWnprbNJYS2pi5nRaanxP6SskCvc77ml/goVj5UKL7U9XvFgfcUlOxoEo4Xr8+CVC5LGdPHvVk0iS6os1je6VwjHbLkm47hKGlauL/NWoibUW7/DyxcpG0afniHc7dhfY2AcFSSBBoRMTc0pcbGKTKayBXvf4P4Esg7D2Wr28vNwjE6+pFis9gGO1J8HHQnHmiO5Rlz2Wq5PnptycuHjj4gjxeVsIhoVQXohiSpuk1mdmj0aFNivWh9CBnC05JuEovRW6MXtNlfB1OhGSF+lnU4xF3gNzQ4djCbyWlxV7XfwTBQUynvdafDkpe/51seiQeX/c4hfmPs9siiHdLe0BrCPtfnsRQvjWNj9mHCJiMcGcniM24R+AY6gtwLdCf3AP1T+vtlaH6Smw4NTHY7PDNaGW8k0u4I/GZoX1q9gEgh8Ufe2dPMGd3eaJKVbWz1opVmmknEotXgnHuPrcBmOfy3Goq+2qoAVXExatmmBz8aN67NPdw5I+S3zKThWyylpNBxpa6hpfQlMM6W3pCOB1pMO/nQLhJwyEulg5EgjESsKt55RysQAJy1ioa8IAxMXQ/lGBnXzfKJvCquXS00Nm7mBBNiw1XWbVVBgFMiW3jruVBUIsR+tQJdTF4O629oDMt7f7bSOWv5Yf9Tg7MFZI23/2s2jFREsVqcBIyUmxEhdEwMOtO+gOHlt1mp10Z1F8Af+MPtsKguzMsLRybFQpbT0D7vFsqJhDnQKkRAFw0EvzD9HwWxcpTGlWV1Qpmz5dpGmyUmfxcQqk0kxS7zZG1Da2yLm9tVWNFbXtAiPaZdtdeiU/72XpHs3uspf5+WdK94BKNovhM0Duq4si/ErCKuDJTcmPV+P2QAU2izFGq9DbIxYRm5CVYUyle1hGPvIYmME1ONJfwnIwpxAJ690vN0pAS5P0zIfraztE5WVv72jjLAkmjUrntwRwdF67jXn+1VS2vaosnbNPG+dOsOg1hm5nLwxVm/RK+Wa6eTPb/JA+lMsk6yjUxvDjxvYEWICTKboESMF519MzYSzULSixFhTSkhJaWGCFyEqIByCFjCSAOgC2AbQuLGbOlz9CANDO8J/t+80nSX5Fh4W9BYC/N/ZtOnOD174r/P87gs5iCf0rmuF/blc3QfBvaQsIATW0DBpYM7hfln4XfICZDgEJ09cFhUC03TAGGHQ9EmOAfwRoMU1poVNrG5YSiahMazNBAQAAAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAREAA0AAAAABxgAAAP1AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgVYcMAZgAFwKhnyFbgE2AiQDKAsWAAQgBQYHIBuNBQAeB7kp6zpf06c5smhz5PP/btZ9LwmStJ6KBbVQFahJoKYMIyYwM2tw9s9Uxv1rRS0BQP/jZeKa+lH4GmlP+DrgiXwWLsqTMpA2ex5VAe18BAP32bZ8hDj6dKk7QxntiyAAUgAAAAUBgRYEBAAPJ6rBtLb3DkGMblm7HOLyyPqVEMECwJ9jatmCtSuhARYFFlSi4BEIsvhFFhJWzfByigxUvIBoQK269v9vPPC3wJ6bWY1mUKgAKscaTQkEqhM9TgO1VtUgGGk7ApkiwFoR11muG15YwqUEnGepjfwCDqAJOgagx96FzKAUfwElwZvKeHgQ7yCC9czR/04B+wbpB3gUTaf7LumhBUABMADEWveJYNEJIA2a7m9FEMUCLMdqrP9/YuQqrP35ffd3fcs3fSMCVAXzoOilzh4LQHaiuwRf3dx11fET5nS9pGUzMsSMrPqc4cTFk8+R+L5TlwQh/txJPvHCI/n83aGDyQsXQPmRRw7vH0le2kfIa1WGEHvy1Uji4sWs4BKraODvymucP4+YLxOSl3TCPSuc4Qv62C1iyp0XTjylQ68XSXHyrveyth1/p1jgBJaeIjbSkaSfknjcPrY7zAnDTzOy+cTB15yYTJ7jgULh8VOHpJwUEL8fkcTFk+9Jwq2vHhCSL7/8OIk/9pD1oYPWl0Rv1qrdv20NP/AIYo++aHnxwjb25rOIvXP8fGpVDYYnwgTwL+MRe1MQ8BlnDmRVfmWX+88qae64baveWXD08+jyBTfta8+w9M7UuVb1lYwzgZXfX9GOeILShD33usyoZ7qw6NnT0HOhFcHKzQP91VtXtw/WT1hruq9ZdHi/o6q5rCTk9kmhZrnCHjTeuvS6lu6ICVZucFWwevOAUrtldZvSMO6u7SmayhSy+R02Y8tvhSnLNy7eH2id0YXqVMXPOb0HUkxo2rdoHxxceE2gdosSqtu8pjUcXtNasyU0ULtldSA8WRnw6RRZ1ikBubIiKEuK7JcGgj40vn1qHtv9yri9YmBBu39rb3/plsVtivX778T/bsmp/KFowOcvVprlSn9QNoZkv15p9aApPcL2NJa9b9RmqKP6mm6PMVTxHxjO0pX68xtTSzZd7ylID5ZM5GXlfhd9aPOLNT8scWhv6Mp0VAwbqlpaIhNxV7r532ox2zGwPrc/7RrNh3ss8tTHvakobOwxmnoa1INTg7csuuWqqav+Kql0TAEAdr0DAoAicEf4nnmz6fW/ahjmCwD47DaT3r5YhoL/m2k13QdABYp7a97RlEYZBNL1zFV4lKdmiNQHD3XDRRvhwmdookO+GEUT2T5N/oOJrEEB/i9J/ekbgVGBQb7/X1QK) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="268" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="170" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="109.0" y="40.0" text-anchor="middle" dominant-baseline="central">Creator</text>
+<text class="s" x="109.0" y="61.0" text-anchor="middle" dominant-baseline="central">protocol</text>
+<rect x="526" y="24" width="170" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="611.0" y="40.0" text-anchor="middle" dominant-baseline="central">Product</text>
+<text class="s" x="611.0" y="61.0" text-anchor="middle" dominant-baseline="central">protocol</text>
+<rect x="64" y="130" width="130" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="129.0" y="152.0" text-anchor="middle" dominant-baseline="central">EmailCreator</text>
+<rect x="500" y="130" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="585.0" y="152.0" text-anchor="middle" dominant-baseline="central">EmailNotification</text>
+<path d="M194 152 H500" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="347" y="140" text-anchor="middle" dominant-baseline="central">creates</text>
+<rect x="64" y="200" width="130" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="129.0" y="222.0" text-anchor="middle" dominant-baseline="central">PushCreator</text>
+<rect x="500" y="200" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="585.0" y="222.0" text-anchor="middle" dominant-baseline="central">PushNotification</text>
+<path d="M194 222 H500" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="347" y="210" text-anchor="middle" dominant-baseline="central">creates</text>
+<path d="M64 152 H40 V80" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<path d="M64 222 H40 V152" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M670 152 H690 V80" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<path d="M670 222 H690 V152" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+</svg>

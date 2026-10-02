@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="396" viewBox="0 0 720 396" role="img">
+<title>Dependency inversion: before and after</title>
+<desc>Left, before: LoginViewController depends directly on LoginInteractor. Right, after: LoginViewController depends on the LoginInteractorProtocol protocol and LoginInteractor implements it, so the dependency arrow is reversed.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAASsAA0AAAAACHQAAARbAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbIBwqBmAAgSQKihSIFQE2AiQDTAsoAAQgBQYHIBtqBiCeg02ZH3VFckgW42F9SwaJdwRPufa+3eRT9lJkRaA6Hgg9Cd87VyAhq2SN/tXkO1X4f3nVT4+TEZDWtKqqMXBamTQ0WANn+crGSjf4uG/fHIbSzVEUfzY4NgYrZf0P4Fv2fy7H/27jvaOiskUS4liTxrK1KEyPegkGuIdt7EWLLC4wydyR4cOHX2HHUH0dAiTAsxRFCAgJ1Yh4z0AbHcikodsE0XiAf5EKIkU3vWhn8eeeGZMgEwjM97pLbYEI0GsRD8BCc7gcQ7MgAIUSLCuMnR8H4BkmmO3+/fdH9lK1MJ5260umi1y1Ag6oI5OEkOcRIA/gv90EHXTTjwUPPoYZZSwTmMw0ZjD7H4iY9DvddSytpOCMEoxgFMwXaqG66d4A8gCgBiRJB1Nmm9pW/TcM8jLSlUTGUmy3/Ba6oIKubKiJT68tiPWsCwYpl4VCzE0gACEL0td+0DTA3IQoS/1+RiwXJBK8YTnzsSjRCnGEDuqqYt6BwY6ZwaOBrP2hEhtjN68LUlmIMcme0tf+XFpBNWiQ0Jj6LTVfwvVjSL9+TEJm+phHsZcwvgEQDQCJkH5UELZRS+Gz4hbF3NyiqB26IvXT10mpTdBtlHknvf/YsqW7iLkgUY2YlN2oT28wZ4tjvdlGTW7jHKBbUJ652bKiaiK26SGIQhqvF3eYxFyCpgzD9VB7j1LHc3TtK9hpYd+x9B1HMvnx625SS28x62/AktcQQ9xNrBN3EtZhNiHE1dziwIIaEYWCYHWXmphMRNQCanFK6+BkfadkJ7eq/kuYXhbWdHJgL3/R+ViJi2CJ28fqttYu3KowtKvUhjbFVvh+7YVj/o97SbxEksjfm/fDdv0FfMdYfXx3j89qPidteShrwpVEiDZMN1pdEz2mefzYhO9Ku15iQAOa5t4zdU019Z9hpES8TWIn3kXEDm8TcU0fFlmFUiSTKfREvVut1ypkSF4iiKzTh6GmhN0trFOzC7EOdwvu386BPBYxxjoV+3cIonUz+itIGUZ6tQrrcV4EPA13uXq40kD5kuOVK3qt2TPJOcPpmWjWmjWU8Ukng62dgnmgtFSm0avHql9RmVytRWPRXcG8fm/ZOS7cf4WD2aNtZRX6hm9XuBRNsaXwMgf2bmFsSinuMeiNnmF+mjBG8V0iQ1rkhJoCcd07bENcVBNr344H5a4C9ykwRtuQCypaSVtODwCTu/mxablosFvoto5McBQJWVita5UjPXLCmJneLr12P7d/v7D/Nfdaq1Hu4mD+Tlm/ZGWZNzFxWZlypUVZkGVvKlvZbSvztc5X7C4omN2lmg81l0UDeflcURGXnzcAkd0YkKemEugCtgAdcDEX796DADrmiz7nbFeC8is6zH0A8PL01L64/8vHv8v/7xaJXQyQRwEQ+CPadRdA/W1sg8DpWuVBIAP/wViYDnZoBoybgcfNkG+xZ5gM0k8oAV5BgFqGUBpQdbohNo8T8j9o5hIYAAA=) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="396" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="320" height="348" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="48" y="44" width="64" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="80.0" y="58.0" text-anchor="middle" dominant-baseline="central">Before</text>
+<rect x="56" y="96" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="184.0" y="112.0" text-anchor="middle" dominant-baseline="central">LoginViewController</text>
+<text class="s" x="184.0" y="133.0" text-anchor="middle" dominant-baseline="central">high level</text>
+<path d="M184 152 V272" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="196" y="212" text-anchor="start" dominant-baseline="central">depends on a class</text>
+<rect x="56" y="276" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="184.0" y="292.0" text-anchor="middle" dominant-baseline="central">LoginInteractor</text>
+<text class="s" x="184.0" y="313.0" text-anchor="middle" dominant-baseline="central">low level</text>
+<text class="b" x="48" y="348" text-anchor="start" dominant-baseline="central">High level knows low level</text>
+<rect x="376" y="24" width="320" height="348" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="400" y="44" width="80" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="440.0" y="58.0" text-anchor="middle" dominant-baseline="central">After</text>
+<rect x="408" y="96" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="536.0" y="112.0" text-anchor="middle" dominant-baseline="central">LoginViewController</text>
+<text class="s" x="536.0" y="133.0" text-anchor="middle" dominant-baseline="central">high level</text>
+<path d="M536 152 V182" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="548" y="167" text-anchor="start" dominant-baseline="central">uses</text>
+<rect x="408" y="186" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="536.0" y="202.0" text-anchor="middle" dominant-baseline="central">LoginInteractorProtocol</text>
+<text class="s" x="536.0" y="223.0" text-anchor="middle" dominant-baseline="central">abstraction</text>
+<path d="M536 272 V242" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="548" y="257" text-anchor="start" dominant-baseline="central">implements</text>
+<rect x="408" y="276" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="536.0" y="292.0" text-anchor="middle" dominant-baseline="central">LoginInteractor</text>
+<text class="s" x="536.0" y="313.0" text-anchor="middle" dominant-baseline="central">low level</text>
+<text class="b" x="400" y="348" text-anchor="start" dominant-baseline="central">Low level adapts to the protocol</text>
+</svg>

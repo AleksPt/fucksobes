@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="188" viewBox="0 0 720 188" role="img">
+<title>The four pillars of OOP</title>
+<desc>Four arrows lead from the OOP block: encapsulation, abstraction, inheritance and polymorphism.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="188" rx="16" fill="#14151c"/>
+<rect x="300" y="24" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360.0" y="46.0" text-anchor="middle" dominant-baseline="central">OOP</text>
+<rect x="36" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="111.0" y="142.0" text-anchor="middle" dominant-baseline="central">Encapsulation</text>
+<path d="M360 68 V94 H111 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="204" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="279.0" y="142.0" text-anchor="middle" dominant-baseline="central">Abstraction</text>
+<path d="M360 68 V94 H279 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="372" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="447.0" y="142.0" text-anchor="middle" dominant-baseline="central">Inheritance</text>
+<path d="M360 68 V94 H447 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="540" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="615.0" y="142.0" text-anchor="middle" dominant-baseline="central">Polymorphism</text>
+<path d="M360 68 V94 H615 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>
