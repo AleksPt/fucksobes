@@ -9,7 +9,7 @@ order: 3
 > - How two-phase initialization works and the 4 safety checks
 > - The rules of initializer delegation and inheritance
 > - `override`, `super`, `final`, `required`
-> - Five (and one new) access levels: `open`, `public`, `package`, `internal`, `fileprivate`, `private`
+> - 6 access levels: `open`, `public`, `package`, `internal`, `fileprivate`, `private`
 
 > **Prerequisites:** [tutorial 01](../structs-classes-enums/) — struct, class, `deinit`; [tutorial 02](../properties-wrappers/) — properties.
 

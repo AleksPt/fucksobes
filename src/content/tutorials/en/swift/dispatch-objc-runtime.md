@@ -360,4 +360,3 @@ Replacing method implementations through the Objective-C runtime. It works for `
 - [Key-Value Coding Programming Guide — Apple Developer Archive](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/KeyValueCoding/)
 - [Swift Intermediate Language (SIL) — swiftlang/swift, docs/SIL](https://github.com/swiftlang/swift/blob/main/docs/SIL/SIL.md)
 - [Type Layout — swiftlang/swift, docs/ABI](https://github.com/swiftlang/swift/blob/main/docs/ABI/TypeLayout.rst)
-- [Optimization Options — swift.org](https://github.com/swiftlang/swift/blob/main/docs/OptimizationTips.rst)
