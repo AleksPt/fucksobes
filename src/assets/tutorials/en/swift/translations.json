@@ -1,0 +1,65 @@
+{
+  "strings": {
+    "да": "yes",
+    "нет": "no",
+    "класс": "class",
+    "протокол": "protocol",
+
+    "struct и class: копии и общий объект": "struct and class: copies versus a shared object",
+    "Слева struct: две независимые копии a и b. Справа class: две ссылки c1 и c2 указывают на один объект Counter.": "Left, struct: two independent copies a and b. Right, class: two references c1 and c2 point to the same Counter object.",
+    "Две независимые копии": "Two independent copies",
+    "Присваивание копирует значение": "Assignment copies the value",
+    "Один объект": "One object",
+    "Обе ссылки видят один объект": "Both references see the same object",
+
+    "Делегирование инициализаторов": "Initializer delegation",
+    "Convenience подкласса вызывает self.init своего designated. Designated подкласса вызывает super.init designated суперкласса. Convenience суперкласса вызывает self.init своего designated.": "The subclass's convenience initializer calls self.init on its own designated initializer. The subclass's designated initializer calls super.init on the superclass's designated initializer. The superclass's convenience initializer calls self.init on its own designated initializer.",
+    "Суперкласс": "Superclass",
+    "Подкласс": "Subclass",
+    "делегирует вбок": "delegates across",
+    "полная инициализация": "full initialization",
+
+    "Existential container для any Shape": "Existential container for any Shape",
+    "Контейнер из пяти слов, 40 байт: три слова буфера, указатель на метаданные типа и указатель на protocol witness table.": "A container of five words, 40 bytes: three words of buffer, a pointer to the type metadata and a pointer to the protocol witness table.",
+    "экзистенциальный контейнер, 64-бит, один протокол": "existential container, 64-bit, one protocol",
+    "значение или указатель на кучу": "value or pointer to the heap",
+    "слово 1": "word 1",
+    "слово 2": "word 2",
+    "слово 3": "word 3",
+    "слово 4": "word 4",
+    "слово 5": "word 5",
+    "40 байт": "40 bytes",
+    "5 слов по 8 байт": "5 words of 8 bytes",
+    "Метаданные типа": "Type metadata",
+    "реализации требований P": "implements P's requirements",
+
+    "Как выбирается вид диспетчеризации": "How the dispatch kind is chosen",
+    "Если метод dynamic или @objc в наследнике NSObject, используется message dispatch. Иначе, если переопределять нечего, static. Для классов vtable, для протоколов witness table.": "If the method is dynamic or @objc in an NSObject subclass, message dispatch is used. Otherwise, if there is nothing to override, static dispatch. Classes use a vtable, protocols use a witness table.",
+    "Вызов метода": "Method call",
+    "@objc dynamic в NSObject?": "@objc dynamic in NSObject?",
+    "через Objective-C runtime": "via the Objective-C runtime",
+    "Есть что переопределять?": "Anything to override?",
+    "класс или протокол": "class or protocol",
+    "методы класса": "class methods",
+    "вызов через протокол": "call through a protocol",
+
+    "vtable класса и подкласса": "Class and subclass vtables",
+    "У Base две записи. У Derived запись doSomething унаследована, doSomething2 переопределена, doSomething3 добавлена.": "Base has two entries. In Derived, doSomething is inherited, doSomething2 is overridden and doSomething3 is added.",
+    "Яркая рамка — override, пунктир — новая запись, остальное унаследовано": "Bright border: override; dashed: new entry; the rest is inherited",
+
+    "Поиск в хеш-таблице": "Hash table lookup",
+    "Ключ превращается в хеш, хеш в номер ячейки. Если ячейка свободна, элемент записывается или находится. Иначе значения сравниваются через == и поиск идёт дальше.": "The key is turned into a hash, and the hash into a bucket index. If the bucket is free, the element is written or found. Otherwise the values are compared with == and the search continues.",
+    "Ключ": "Key",
+    "Номер ячейки": "Bucket index",
+    "хеш mod размер": "hash mod size",
+    "Ячейка свободна?": "Bucket free?",
+    "Записать или найти": "Insert or find",
+    "Сравнить через ==": "Compare with ==",
+    "и искать дальше": "and keep searching",
+
+    "Иерархия протоколов коллекций": "Collection protocol hierarchy",
+    "Sequence, от него Collection. От Collection наследуются BidirectionalCollection, MutableCollection и RangeReplaceableCollection. От BidirectionalCollection наследуется RandomAccessCollection, его принимает Array.": "Sequence, and Collection inherits from it. BidirectionalCollection, MutableCollection and RangeReplaceableCollection inherit from Collection. RandomAccessCollection inherits from BidirectionalCollection, and Array conforms to it.",
+    "String — Bidirectional, но не RandomAccess": "String is Bidirectional but not RandomAccess"
+  },
+  "files": {}
+}
