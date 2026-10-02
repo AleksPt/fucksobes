@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="440" viewBox="0 0 740 440" role="img">
+<title>Where a value type ends up</title>
+<desc>A value type goes on the stack if all conditions hold; behind a protocol or Any, in an escaping closure, in a class field, in collection data, String and indirect enum it is on the heap. A class is usually on the heap; on the stack only as an optimization.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAWwAA0AAAAACYAAAAVgAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgjIcMAZgAIEMCoo0iDoBNgIkA0ALIgAEIAUGByAbfQdRVGx+IfiRGBuzenzDrYu0jegkDR2GC99wzYdo2/dmdgHdBTOJKCPXCrDrYwZeyWUW/zKSAvg/3NaNyCoWyhYalVCavprc/c/9fF0mRtoeTmw64Im8c5d3b2vK9Cy0gUX/bvUPqK1WWxNETxp814s8IYAAkNKB9B8nSPi+HuBghB9MTV1LF9Imw2sLSFsY31hCGlgAeD165qfXlhAHQAEW1EDB4XTMaelAK8ndGPmIELZwOBDEgYABCzEk4MAjEQRs7AscSIkMm7KgEMWeJ6ZLqlzsW/ycLosmxm42YrBlcGC+KP2Mrcp/R8CF0iuq+lEDWk4UIgmQAPQ5GzrxMRcEQikoMMWsI0uIuU/0cJZmWJkF3IIRcTxLdeRXIoAeq/QBaJ7PQkbgxN9gTnCrQH9HJx4GOcLM0/8/gb2ftZkqaCKNpuWIVxsH0jTLgTTTHQA5SAJzWTkENKATPRjHJKaxgBVsIozJJvR5xvpnHPvh4mRrY252Znxk0EUglARJ4MnRnwyQGwHUAR879xHy0dbZAt4NCmmFRJ0oL4iXsWlJpelpuvFjEUmEiD/u/1dwl6J67O+HvTUj/jj6FvKLX+VFPJUxPMsxUmqV6+EvuBu1LkmkMZFXInLtZNFhEXp6q3RzFy4u9Tl2o+thrz4Wd/ztK87zW2DvJ1pkc/zwKB/qBj4sadu5PB/pPNRjeyWLu2gZ/MwH5XquPu16jqMtIUfIGvxNUGt+4YOsaBePmbW+Jt8LNOkF/ztix2nuJzp44cYxdlvlXamd7+W7+rkeDotBtpsj3Tc5Q6ak6bbDxIjB475EIvggzxg/Fh+PFvDnjPf8uOGwyiKVgrzyIO98bK5iy81z7r81V4K9cl/c8Zdwcd7qBvoyDEd4osHN7RHmnMf4sTGe7imNPGkJThJzeu+5FoGRq287znYgl26fuS4POUzin2FTcs7iqYONl8zNNV126tBi+6azYeih0MeDJQ2BsUbTVm29JTzZ2GZvzEmJLEsr24fDDnRG53wTvrnonGnChG5JbVjX2S9rXHzqwpZknaYy9QJNXufMlV/VyWqS3zvm26x6tb1AsFTnNPKqynldXQ+t2+e5/md1jv/KI/Ky3A2hiyaTHvzrwJ0edYmho94xnIEU8aMb74beCa2xj+Jzkbo6xfu13t72ciDBHNHtyo3ZT38xuTB9ZrQuSdMyUmJabs3vZ6qXfngrvsciFAzoM45JnrQM5+Te8iLkouCi4N1pb/PvrtR1lg5oi5qO2vfkfoOv0pUfNNsKgpV2j15QnjN3TFXTuApaUeey4N9pDxSHV2oDZf3m4ubcoWQ+lTtIp6z63ZYjXdgK7a+uGSkMlojzbjVaH5OqUBHdd1L3aW9vXP/3fanhM94cfmvn6xdF+UMvTLBNd/frPe3TdY7dljZnOFQb0P7wfdr/Z6d7f8xttznyApV2r0OwK4N2hzxQYwEjEo2yX2ZDs9snWLIThfyBzJSM7yev3Lmj6MdZmyH+9MZkg6db4auqGh+ImBLV//nTUg3tGxltCUfFfXSYxj70SYsMOeXNSlVzmaRzqPPsfWcfMXTE37Z8r2EIctHyxsaOfp/SliOsGy0bmYJVGdLvbq1B+V3xivxLfbC0V+EOCr31rqzA94rWgXLtYoMyxCkOPjXf6P00u8f1777fy/PGS4VhJRYAHPI/AoCiOvRDJDCaWPpbHMN8CQCfR1Ty+XVd4GMp9FrlGQBiUAAAAd7IIH3XiAcGnMfFQ5OoGmk0CjN9F530JPDQO4GnNlioGSZa3uvTUYHPeXTyAeR/KrKKbCqgjA6ikqQAIACSTJ2JpwqVGAysxfqcAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="740" height="440" rx="16" fill="#14151c"/>
+<rect x="40" y="150" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="100.0" y="172.0" text-anchor="middle" dominant-baseline="central">Value type</text>
+<rect x="40" y="330" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="100.0" y="352.0" text-anchor="middle" dominant-baseline="central">Class</text>
+<rect x="600" y="24" width="100" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="650.0" y="42.0" text-anchor="middle" dominant-baseline="central">Stack</text>
+<rect x="600" y="384" width="100" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="650.0" y="402.0" text-anchor="middle" dominant-baseline="central">Stack</text>
+<rect x="600" y="90" width="100" height="256" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="650" y="218" text-anchor="middle" dominant-baseline="central">Heap</text>
+<rect x="210" y="24" width="320" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="b" x="370.0" y="42" text-anchor="middle" dominant-baseline="central">all conditions met</text>
+<path d="M530 42 H592" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="210" y="96" width="320" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="b" x="370.0" y="114" text-anchor="middle" dominant-baseline="central">hidden behind a protocol / Any</text>
+<path d="M530 114 H592" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="210" y="144" width="320" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="b" x="370.0" y="162" text-anchor="middle" dominant-baseline="central">captured by an escaping closure</text>
+<path d="M530 162 H592" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="210" y="192" width="320" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="b" x="370.0" y="210" text-anchor="middle" dominant-baseline="central">a class field</text>
+<path d="M530 210 H592" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="210" y="240" width="320" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="b" x="370.0" y="258" text-anchor="middle" dominant-baseline="central">collections / String / indirect enum</text>
+<path d="M530 258 H592" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="210" y="306" width="320" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="b" x="370.0" y="324" text-anchor="middle" dominant-baseline="central">usually</text>
+<path d="M530 324 H592" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="210" y="384" width="320" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45" stroke-dasharray="4 4"/>
+<text class="b" x="370.0" y="402" text-anchor="middle" dominant-baseline="central">never leaves the function (optimization)</text>
+<path d="M530 402 H592" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M164 172 H186 V42 H206" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M164 172 H186 V114 H206" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M164 172 H186 V162 H206" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M164 172 H186 V210 H206" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M164 172 H186 V258 H206" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M164 352 H186 V324 H206" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M164 352 H186 V402 H206" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

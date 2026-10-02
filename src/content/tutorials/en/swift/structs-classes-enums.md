@@ -192,7 +192,7 @@ Rules:
 - a class has at most one `deinit`, with no parameters and no return value;
 - you cannot call it directly;
 - in a hierarchy, the subclass's `deinit` is called before the parent's `deinit`, and the parent's is called automatically;
-- if the object is held by a strong reference cycle, `deinit` will never be called — that is a leak (more in the chapter on ARC in the «Memory» topic).
+- if the object is held by a strong reference cycle, `deinit` will never be called — that is a leak (more in the [chapter on ARC](../../memory/mrc-to-arc/) in the «Memory» topic).
 
 ## Step 6. Enum
 

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="764" height="370" viewBox="0 0 764 370" role="img">
+<title>Object lifecycle</title>
+<desc>Live, Deiniting, Deinited, Freed, Dead. Transitions: strong = 0 calls deinit; Deiniting goes straight to Dead if there are no unowned references and no side table; otherwise to Deinited; then Dead or Freed; Freed goes to Dead when weak = 0.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAASIAA0AAAAACBQAAAQ2AAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGiIbIBwqBmAAgQwKiUSHWgE2AiQDTAsoAAQgBQYHIBsdBlGURc60ED8PY2PZY89G8tQUpyE6lk5T6GEMi/HhfOliC/77n8Pum58UZpIiq3aJNaEERpnYZEmT8is8oN6zxhSO+tOfig744KTeeiN8gDjzBOlEaxuK1RLCAGFgSGKwrBAX9//9D9Bd1ue5nN6/u5YtumwsDTQKPKK9fUxc29MwoV5gc1pgbQ80jQOkdJO9vBRUKX86fwuoGAEF+iKMhMgQHXQhnAIhwJliBu3df/QYXWQAKwIAIptnFTZcz73Lzx4wBgTbMzul9yoHa/Qp4Eh3vi6wRTvBoBvVFUsP7wa+sJkXaXEZcEZVDmNs3v4I5shzBiSSDpEQQ8ary0zQR8LZxl72c5TLXOcmt3nAE57xYkWw2a3l2i9209AVWRIFnmMTKhaDfD4PjIBegf4rKD465LZDz4p0g8K9YzpGeyZ8tsdHRgbLmJwrisijpe9YhW9+IlpRqtk98pKCzWGQ07KS4w2rlgjV3xtM+U8J1MRcPlrhRJ28uVTvMtTARn/emjihyECstYGao+0IyMRGjn2HwtoR7ZmNbzhLauVxRbsHnPSFCj5uYD6qwdh95jZIfXKVFkTeRFbVCbpSwiHMQR+L4KE5KxtW5YVyuFVGllyI05/r+Lo2a4pzoTV3TCcju1I6+VWWiP/MvajCsWMl75OKiiKpWtfJQiXHhAL130oVuhnXoDPsbrNU72gn1X/Om+9fEL1ylYPNY1XO/gjR2exijAYmj27fygW2BwdR5w8d0nAw7D6ebUTwO+Skq7uh0dXVsVdZd1NVQxczOFgY1tZlG+BoH9vdJ+qzzswrBKqVrG3aXVFTVvkSohu5B1i32FwD2rhWAxEf7zN+M76P+8TGk61SQaOK5ImVRFFXqWmWWknVQlkIba+TWclnqcxir6OzFsrRKd/vzullP904mBveUsQU0BRP6GmezgiAzcfQoVJPseDjio3UNfNsh2OgdbjVMaCDbeZ1kTF9ejRG3NGanz8d1Ycg+H0o4o/uQNem7kX+984gMBfiPnH5dKPAtzk83UNxb+1nhYpiKSsMKuzuk5BO9TTghi5vf0sOTqEJTqOmeMoKvcWmep5dh9atw+seoocsqVuJ4MupAvOYIZvTq6n0xSOHmE4VwBl0U39jmXv72HGztyIwmx9/nF9nLdczvIaSRBL70Cq7u45l7LV1Fpqgxxgbj51pRJAdwjhlcguJ9RynJ1hRIyNYlqjHxw8Vo2n46vkw94ghdhmpsLhk8GGzcUH2fmfxpeKvR/F2WDs7pzUjE+XkoMyMVgich26ADmKjACqA4wC21i9k0qSnIADb4X/+fzlvi9L9Ck5+bwH4e2fnWgD+3r/1HeX/hgjTKK2+ACDg9+W3UwDuvwV9QKhj0JnDvt1gFtgwDDSrA92sDpgxiKUEhgThm1oY8A8Bg6zHGMGms5pEHSQJK2NLL6EAAAA=) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="764" height="370" rx="16" fill="#14151c"/>
+<rect x="24" y="90" width="116" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="82.0" y="112.0" text-anchor="middle" dominant-baseline="central">Live</text>
+<rect x="174" y="90" width="116" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="232.0" y="112.0" text-anchor="middle" dominant-baseline="central">Deiniting</text>
+<rect x="324" y="90" width="116" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="382.0" y="112.0" text-anchor="middle" dominant-baseline="central">Deinited</text>
+<rect x="474" y="90" width="116" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="532.0" y="112.0" text-anchor="middle" dominant-baseline="central">Freed</text>
+<rect x="624" y="90" width="116" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="682.0" y="112.0" text-anchor="middle" dominant-baseline="central">Dead</text>
+<path d="M144 112 H170" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="159" y="96" text-anchor="middle" dominant-baseline="central">1</text>
+<path d="M294 112 H320" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="309" y="96" text-anchor="middle" dominant-baseline="central">2</text>
+<path d="M444 112 H470" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="459" y="96" text-anchor="middle" dominant-baseline="central">3</text>
+<path d="M594 112 H620" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="609" y="96" text-anchor="middle" dominant-baseline="central">4</text>
+<path d="M232 90 V52 H682 V86" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="457" y="38" text-anchor="middle" dominant-baseline="central">no unowned, no Side Table</text>
+<path d="M382 134 V176 H682 V138" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="532" y="192" text-anchor="middle" dominant-baseline="central">unowned = 0, no Side Table</text>
+<text class="b" x="40" y="240" text-anchor="start" dominant-baseline="central">1  strong = 0, deinit is called</text>
+<text class="b" x="40" y="268" text-anchor="start" dominant-baseline="central">2  has unowned or a Side Table</text>
+<text class="b" x="40" y="296" text-anchor="start" dominant-baseline="central">3  unowned = 0, has a Side Table</text>
+<text class="b" x="40" y="324" text-anchor="start" dominant-baseline="central">4  weak = 0</text>
+</svg>

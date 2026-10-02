@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="280" viewBox="0 0 740 280" role="img">
+<title>An array: the header on the stack, the elements on the heap</title>
+<desc>numbers points to a buffer with count=3 and the elements 1, 2, 3. people points to a buffer with count=2 and two references to the Person objects Alice and Bob.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAW0AA0AAAAACjwAAAVmAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGjQbIBwqBmAAfAqNSIsGATYCJANkCzQABCAFBgcgG+MHo6J8bCoQf3FgGzsK/URyqRF9QjMK9rKCU3B4VF1+KXITjFfBE819vplNPszcFRk3KRDrS2yRJBpdV0moSZM7GMyrsoAPQAdKk7QdIesMfAD1Ffi7638A+7LqNrolVTF7+W9IIui+ZcIB4tXS2d+kuy8qsjQZI+Nk5M1lk8nep7TuQqnqUWgcEmER6hWlSySDRdKNZbBtSOhqY1AQaV69+sAOIUADjHWlghBITxWqNUUw1pUGGpX2dIoWwOhDv1uXLFsTqZEAtAlCiH8YI9DztTu57+JpegCBuxPdKjdJQS/rVmC1eLHsZpIsAIU6I1a4ctUi4CUDuBSaWwGtJmNgHh2m35QBpKQNAnVhXR4l4eh6NzoQqABvn8xcFrGBAxzmGGe55OT6ACYyl4UmZT+H5JOc/6/cCw+cc9AG6621xuqEwTr0VGCS6O/aGPR1yg1ppzCpirja4I3LRhK0t63VO9frjfXu7fphe1kXaz+iW6d2Pdp1G9u5k/cekCQNvsd3WW5xh+dP2O0uBnjqV4oCH5bJq5ILltNOSUkzIY5L2num4dmz7zJlpGG0RvQRpWAA5czr2mVAUTj6tCIE6GX2xJL268xg/wAef4QGo/v2z+04Za3Rg4mXfe7Y5QlSS10Mq0Z1Gpmr+5Ii3PF0avUovzudST5CjqsWymGXO4ei24iQngSjRzyco2o+24gA3ZJwOmML0OL2qJsJj494188fHT90pcxpORkXwy0G2uNlZZNT2NQs021rvHy1XTziVdGcfatl1+wlZAJgbxpliyeOt+p7/VjVPofAyjjGRsLK+E78YxdbGqSRngyDdui0d3riicsp5fYrQWFR73T6/vBT993tzz8uJjjj2PRn/3OyOnXoR/0D3gdXI/3CtZ1amqzNnVnzYtt2lRrY2e3vIEx2juKNRK01mvlR9iFqopPJsE49FHgefBTDnNxPsDwQ5sT5bUbP1+iNOqg3aOYDS4roMvL5ud3ZA7YuZlR+PqQmoTzc27/eV6P62VRYQEtQpEqBJLgEmoP2SKijzIeXEJlXfg7xD4zGVrMmSKnUSAQuhZKgUSJVYxZbbTMHreFAZ87HL0GclwTWf7AXBatkGIs67leEJYuDnM1JU4wkqMMSrpsAHq1eR9f5sctsXE/X10+v639On68GlfTihB00/pZRMLSDoWlzqf3n4zSPb1TVYC8FpJmD5N5tl9CqXUcBbm7VvF3TVpzShjaUb2x0uU7Zq0abjBsbv6pT5xC9FPA0Y93zmmCbXioPRmsGsG6aL3IlEpAPtI74O3I+vIBwXlkQjvDihZjz7cEODcZoAZpbGjVhRq8C3AcfsO65+Tw1iuWhXv71fBu3s6NSKDfB/PyYUeuG/VWh1AGyYAn/5r7NaroX1EG1Vmat7tLL25CVYCiqVUhCPlCakjbKsjAPbtNKpm7S+N0dU5ozw27Um71OXzOH37SG1f5r2azz62aNxm4xpdVkOC1Ga6AqBLoZ7BZJWElXrmQrH9FHAq9dQkEr/v79gj7mg7yoUCIRar8rOLAfYPSK7vLCyKYRI6dtoMDjefJpVmdfGx2R1Mho4FkMVgYinQUS6NTZiyEebrYdPG6joAES4mRenulEUQcFg5qDggAt7NDeFnQiu3AqLTK4f4Dj5d4wB+Jy5x7n7q/8XkDrG7rq1qMNG9KNfnVdVIZRByr0aA8FkIGODvWmppYCAXRa8nyqZZS//Zz/tRB+A3x/92LFu/7tzR/6tVm34DE5/dzgp6WgWwGu1mu8Gwf1NNL2CSbBLvtOe3Z8jgr98osgKMIZ2G6fzhlWwDLgL2XADwToyVgC3VA3UktaheClbUw6SRg=) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAANYAA0AAAAABegAAAMIAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgWQcMAZgAGQKhECDWwE2AiQDJAsUAAQgBQYHIBuMBAAehU1Ze7ieUlfO/Ib1nAwj6OXXcl7yl3KA6q7oAGUVWkQha0RXqgqNSoOt5aU6LIVmK8AvSSeAiLptN0H2KgknYYEGEnKQWGbd5C3d1utZSCE+L8ZRi7r4+xELsOjDzgNNeDTSADzO9EI1wq/DlYqEn4FAEwAYkZIIhAXrfNU3tQXaPSk6FGhPr9hwoJUA///hAB1+0eFADAQkMSUTNkhXAm5kzgpxuULJqUdMKAQp+82k6DexJoENZ+BLIOtH4P+j0SMAEID/I3MkIyZTKO8AaYMBcI9kBGE0DWHJyj0ZdoF9IM5TpnAqgQB24zoCsGvP0QbSvoCU8tqOrq1tYAW2sfW9/xjpwTEHQAAb9gJmVMCAgyEnMJQcAXR1OdhGBz0MMcES2/+iwIZM3y53qQud61Qn4CBZKnT7IMADAO8AAOktAJmzOxefJSVttapNYuwOC0L2pLYOZM5exVdXOFnX11jJ5SUX6r5CxRcXUHcVi67PObDOkcAIWjRptSw0rOWNFN60VGrcYo5OyBllPUYJ6osLhPD9MU7WFULxQ3us7TSgu44GQ3P8U3VFuX9uqBsn63p5/1xsh9qX2tbGzABkDs7yzV4a9e0ujkbTT98KdYg58ueLYG1TaFBPsH3GW1UBsUVYpat+d1CgQXele7h5pKSe3a7jY281E1t/c4l0Y3OprCBTa2lzFp0qj5em9nEScPly2yL3nZul2/NcCwA7aKZosi+TIkMb+oHP9Hz/uv/fA+6KRYqjn/XVPEJaOcDSXDc4Qc689KVioZWvqYOplYl1M9gVOvG8Nrbk+i53HlpRCwnp068LcQYUTpvYUFjScQqJ5j9kF2PR+vvbkJRPLZhX3wpXz87ovg4NP2vRizkuZgGk+DmWmusmmwA3p7KApZ6UMx18xj62YLN4HAsA3NeAA8zOazfTFw8K1a/EeP4BeGvm4bSvykD0R+px90HOAAgP07NvhSj0nSNRosoEDNPuLz9aizc42DXDKBhPsRSUogRtApVN5guMiVDOAfA/SZoAAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="740" height="280" rx="16" fill="#14151c"/>
+<text class="s" x="40" y="28" text-anchor="start" dominant-baseline="central">STACK</text>
+<text class="s" x="300" y="28" text-anchor="start" dominant-baseline="central">HEAP</text>
+<rect x="40" y="50" width="150" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="115.0" y="70.0" text-anchor="middle" dominant-baseline="central">numbers</text>
+<path d="M194 70 H296" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="300" y="50" width="90" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="345.0" y="70.0" text-anchor="middle" dominant-baseline="central">count=3</text>
+<rect x="390" y="50" width="50" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="415.0" y="70.0" text-anchor="middle" dominant-baseline="central">1</text>
+<rect x="440" y="50" width="50" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="465.0" y="70.0" text-anchor="middle" dominant-baseline="central">2</text>
+<rect x="490" y="50" width="50" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="515.0" y="70.0" text-anchor="middle" dominant-baseline="central">3</text>
+<rect x="40" y="130" width="150" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="115.0" y="150.0" text-anchor="middle" dominant-baseline="central">people</text>
+<path d="M194 150 H296" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="300" y="130" width="90" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="345.0" y="150.0" text-anchor="middle" dominant-baseline="central">count=2</text>
+<rect x="390" y="130" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="455.0" y="150.0" text-anchor="middle" dominant-baseline="central">ref</text>
+<rect x="520" y="130" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="585.0" y="150.0" text-anchor="middle" dominant-baseline="central">ref</text>
+<rect x="395" y="220" width="120" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="455.0" y="240.0" text-anchor="middle" dominant-baseline="central">Person Alice</text>
+<rect x="525" y="220" width="120" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="585.0" y="240.0" text-anchor="middle" dominant-baseline="central">Person Bob</text>
+<path d="M455 172 V216" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M585 172 V216" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>
