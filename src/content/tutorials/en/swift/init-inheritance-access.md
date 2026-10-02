@@ -188,7 +188,7 @@ print(Derived().greet())   // base + derived
 | --- | --- | --- |
 | `open` | from any module | anywhere, including other modules |
 | `public` | from any module | only within its own module |
-| `package` | within one package (SwiftPM) — **(supplemented)** | within the package |
+| `package` | within one package (SwiftPM) | within the package |
 | `internal` (default) | within its own module | within the module |
 | `fileprivate` | within its own file | — |
 | `private` | within the declaration and its extensions in the same file | — |

@@ -213,7 +213,7 @@ Task(priority: .medium) { let result3 = await asyncFunction3() }
 
 **Приоритеты (`TaskPriority`):** `high`, `medium`, `low`, `userInitiated`, `utility`, `background`.
 
-**(дополнено)** Их соответствие QoS: `high` = `userInitiated`, `medium` ≈ `default`, `low` = `utility`, `background` = `background`. Task, созданная без приоритета, наследует приоритет (и актор) текущего контекста.
+Их соответствие QoS: `high` = `userInitiated`, `medium` ≈ `default`, `low` = `utility`, `background` = `background`. Task, созданная без приоритета, наследует приоритет (и актор) текущего контекста.
 
 ### Структурированная и неструктурированная конкурентность
 
@@ -398,7 +398,7 @@ func getMessages() async -> [Message] {
     }
 }
 
-// С ошибками (дополнено)
+// С ошибками
 func loadUser(id: String) async throws -> User {
     try await withCheckedThrowingContinuation { continuation in
         api.loadUser(id: id) { result in

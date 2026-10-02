@@ -111,7 +111,7 @@ print(Circle.name)   // circle
 - `class` is allowed only for computed properties and methods. A stored type property can only be `static`.
 - Stored type properties are lazy: they are initialized on first access.
 
-**(supplemented)** **Swift 6.** In the Swift 6 language mode, a mutable global or `static var` variable without isolation is a compile error (strict concurrency, SE-0412). Ways to fix it: make it `let`, isolate it with `@MainActor`, wrap it in an actor, or explicitly mark it `nonisolated(unsafe)` if you provide the synchronization yourself.
+**Swift 6.** In the Swift 6 language mode, a mutable global or `static var` variable without isolation is a compile error (strict concurrency, SE-0412). Ways to fix it: make it `let`, isolate it with `@MainActor`, wrap it in an actor, or explicitly mark it `nonisolated(unsafe)` if you provide the synchronization yourself.
 
 ```swift
 struct AppConfig {

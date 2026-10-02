@@ -104,7 +104,7 @@ func countDown(_ n: Int) {
 countDown(10)          // 💥 EXC_BAD_ACCESS — stack overflow
 ```
 
-**(added)** The stack size is set when the thread is created. On iOS the main thread has 1 MB and secondary threads have 512 KB by default (for a `Thread` you can change it with the `stackSize` property before starting it).
+The stack size is set when the thread is created. On iOS the main thread has 1 MB and secondary threads have 512 KB by default (for a `Thread` you can change it with the `stackSize` property before starting it).
 
 ## Step 7. Nuances
 

@@ -146,7 +146,7 @@ With `CFRunLoopObserver` you can subscribe to the loop's stages:
 | `beforeSources` | Before processing Input Sources |
 | `beforeWaiting` | Before sleeping |
 | `afterWaiting` | After waking up |
-| `exit` (supplemented) | Exiting the RunLoop |
+| `exit` | Exiting the RunLoop |
 
 Useful for performance tracking and logging. For example, if more than 16 ms passed between `afterWaiting` and the next `beforeWaiting`, the main thread did too much work — and a frame was dropped (many freeze detectors work this way).
 
