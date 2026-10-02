@@ -7,7 +7,7 @@ order: 29
 **Pros**
 
 1. **Readability and code structure.** Logic is split across independent modules, which makes maintenance easier.
-2. **Faster builds.** Modules can be built in parallel.
+2. **Faster builds.** Independent modules can be built in parallel.
 3. **Code reuse.** Modules are easy to use in other projects.
 4. **Localized changes.** A change in one module affects others minimally.
 5. **Clear separation of responsibility.** Teamwork is easier to organize: each team works on its own module.

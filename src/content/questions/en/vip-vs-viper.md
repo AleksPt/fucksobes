@@ -15,6 +15,6 @@ VIP is the Clean Swift architecture (Raymond Law): a module (a scene) consists o
 
 Differences from VIPER:
 
-- in VIPER, the Presenter sits in the middle and communicates with the View, the Interactor, and the Router in both directions, while in VIP the connections form a closed one-way cycle and the Interactor does not depend on the Presenter directly;
+- in VIPER, the Presenter sits in the middle and communicates with the View, the Interactor, and the Router in both directions, while in VIP the connections form a closed one-way cycle: the Interactor passes its result to the Presenter through a protocol (`output`), and the Presenter never calls the Interactor;
 - VIP has no separate Entity layer (models are passed as `Request/Response/ViewModel` for each scenario), and the data-handling logic is moved into Workers;
 - VIP separates data between layers more strictly but requires even more boilerplate.

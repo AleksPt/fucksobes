@@ -21,6 +21,6 @@ The classic **GoF patterns** (the "Gang of Four") fall into three groups:
 
 - **Creational:** Singleton, Factory Method, Abstract Factory, Builder, Prototype.
 - **Structural:** Adapter, Decorator, Facade, Composite, Proxy, Bridge, Flyweight.
-- **Behavioral:** Observer, Strategy, Command, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor, Iterator.
+- **Behavioral:** Observer, Strategy, Command, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor, Iterator, Interpreter.
 
-In iOS, many of them are hidden behind architectural approaches: MVC/MVVM use Observer and Delegate, DI containers use Factory, and a Coordinator is essentially a Mediator for navigation.
+In iOS, many of them are hidden behind architectural approaches: MVC/MVVM use Observer and Delegate, DI containers use Factory, and a Coordinator takes over navigation between screens (similar in spirit to a Mediator, but not a separate GoF pattern).

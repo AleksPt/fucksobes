@@ -40,7 +40,8 @@ When it is used:
 - **protection proxy**: check access rights before letting a call through to the service;
 - **remote proxy**: represent locally an object that actually lives on a remote server, translating calls into network requests;
 - **logging proxy**: keep a history of requests to the service object;
-- **caching proxy** (a "smart" reference): cache request results and manage their lifecycle, for example by counting references to the service object.
+- **caching proxy**: cache the results of repeated requests and manage the cache's lifecycle;
+- **smart reference**: keep track of the clients that use the service object (for example, by counting references) and release a "heavy" object when no clients are left.
 
 Pros: you can manage the lifecycle of the service object without the client noticing, and add logic before or after a call without touching the service itself.
 

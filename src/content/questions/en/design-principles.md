@@ -14,7 +14,7 @@ An entity should have one area of responsibility. This is usually understood as:
 
 **O: Open/Closed Principle**
 
-Modules should be open for extension but closed for modification: new functionality is added without changing existing code, for example through `extension`. Abstraction (a protocol) helps here: thanks to polymorphism, new implementations can be added and used without changing existing code.
+Modules should be open for extension but closed for modification: new functionality is added without changing existing code. Abstraction (a protocol) helps here: thanks to polymorphism, new implementations can be added and used without changing existing code (Meyer used inheritance for extension, Martin uses abstractions and polymorphism).
 
 *Example.* An app shows notifications to the user. We start with text ones, but the system should also support other kinds (with images, with action buttons, and so on) without changing the source code of the class that sends the notifications.
 
