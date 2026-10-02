@@ -12,13 +12,13 @@ How it works:
 - tasks not tied to a particular actor run on **global concurrent queues**, depending on priority, the same mechanism that underlies `DispatchQueue.global(qos:)`;
 - each created `Task` goes to an **executor** associated with the cooperative thread pool: unlike plain GCD, the number of threads in this pool is limited by the number of cores on the device, so the system does not spawn threads uncontrollably.
 
-An important practical rule follows from this: **mixing `DispatchQueue` directly inside a `Task` is dangerous**, because GCD knows nothing about the `Task` context (actor, priority, cancellation) and can "break" asynchrony:
+An important practical rule follows from this: **mixing `DispatchQueue` directly inside a `Task` is not recommended**: it is allowed and works, but GCD knows nothing about the `Task` context (actor, priority, cancellation), which makes the code harder to maintain:
 
 ```swift
 Task {
     await doWork()
     DispatchQueue.main.async {
-        self.label.text = "Done" // ❌ architectural failure: GCD and Concurrency mixed
+        self.label.text = "Done" // ❌ works, but GCD and Concurrency are mixed
     }
 }
 ```

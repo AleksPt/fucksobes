@@ -43,7 +43,7 @@ How it works:
 Cancellation caveats:
 
 - cancellation in `withTimeout` requires the inner operation to **respond to** `Task.isCancelled`: if it does not check for cancellation, `group.cancelAll()` only sets a flag and the work does not actually stop;
-- if the inner operation is "stuck" inside a never-cancelling `await` (one that does not check for cancellation and does not support it natively), `withTimeout` still returns control when the timeout expires (the timeout itself fires), but the background task keeps running and does not release its resources until it finishes on its own.
+- if the inner operation is "stuck" inside an `await` that does not respond to cancellation, `withTimeout` **does not return on timeout**: `withThrowingTaskGroup` does not finish until all child tasks have finished, even after `cancelAll()`. `TimeoutError.timedOut` is thrown only after the operation finishes on its own; for the timeout to really work, the operation must support cancellation (for example, via `withTaskCancellationHandler`).
 
 Use with caution:
 

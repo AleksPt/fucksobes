@@ -4,7 +4,7 @@ category: concurrency
 order: 62
 ---
 
-A mutex is a semaphore with a value of **1**: it lets only one thread at a time access the critical section. If the mutex is taken, the other threads wait for it to be released. A semaphore with a value greater than 1 lets several threads access the resource at the same time, as many as the value specifies.
+A mutex is similar to a semaphore with a value of **1**: it lets only one thread at a time access the critical section, and the other threads wait for it to be released. But this is a simplification: a mutex has an **owner**, and it must be released by the same thread that acquired it (`pthread_mutex_unlock` from another thread fails with `EPERM`, and `os_unfair_lock` aborts the process). A semaphore has no owner: `signal` can be called from any thread, so a semaphore also works for signaling between threads. A semaphore with a value greater than 1 lets several threads access the resource at the same time, as many as the value specifies.
 
 A **semaphore** controls access through a **permit counter**.
 

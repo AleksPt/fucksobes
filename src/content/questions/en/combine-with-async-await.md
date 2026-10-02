@@ -42,7 +42,7 @@ Pitfalls:
 - **Unnecessary wrapping.** A `Future → Task → await → Future` chain may be redundant if you can simply rewrite the calling code to use `async/await` entirely.
 - **Errors and cancellation are handled differently.** `Combine` can end a stream through a subscription's `.cancel()`, while `Task.cancel()` follows different logic that needs separate cancellation handling inside the `Future`.
 - **Retain cycles.** If `self` is used inside `Combine`/`Task`, it is easy to forget `weak self` and get a leak.
-- **Mismatched consumption models.** `Combine` is a pull/push hybrid with a subscription (pull-based in terms of backpressure), while `async/await` is push-based by nature (a value arrives and is processed right away); moving between them requires care about exactly when the computation starts.
+- **Mismatched consumption models.** `Combine` is a push model: the publisher sends values, and the subscriber limits their number through `Subscribers.Demand` (backpressure; `sink` and `assign` request unlimited demand). `AsyncSequence` is a pull model: the consumer requests the next value itself through `next()`. Moving between them requires care about exactly when the computation starts.
 
 Best practices:
 

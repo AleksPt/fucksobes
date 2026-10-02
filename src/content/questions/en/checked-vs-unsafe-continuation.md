@@ -24,7 +24,7 @@ func loadData() async throws -> Data {
 
 The difference between them:
 
-- **`CheckedContinuation`** performs runtime checks: it calls `preconditionFailure` if the `continuation` was never called (the task would hang forever), and it tracks repeated calls, crashing the app if `resume` is called more than once.
+- **`CheckedContinuation`** performs runtime checks: if the `continuation` is destroyed without `resume` being called (the task would hang forever), it logs a `leaked its continuation without resuming it` warning, and if `resume` is called more than once, it crashes the app.
 - **`UnsafeContinuation`** has no such checks. It is faster but more dangerous: a forgotten `resume()` call silently hangs the task forever, and a double call leads to undefined behavior with no clear error message.
 
 When to use them: `CheckedContinuation` is the main choice for integrating with callback-based APIs and for debugging while you are not sure the wrapping is correct. `UnsafeContinuation` is justified only on a hot path where maximum performance is needed and it is already **definitively proven** that `resume()` is called exactly once.

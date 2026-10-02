@@ -36,7 +36,7 @@ Here `FirstActor` makes an actor hop to `SecondActor`.
 Why it matters:
 
 - every hop is a potential suspend-resume, even if the code itself is short;
-- it is more expensive than a regular function call (even `await sleep()` is faster than a single hop because of the constant context-switching overhead);
+- it is more expensive than a regular function call: the task has to be suspended and resumed instead of a simple jump;
 - many actor hops on a hot path (for example, during scroll-view updates, ML inference, or in a dependency graph) lead to a noticeable slowdown.
 
 How to optimize:
