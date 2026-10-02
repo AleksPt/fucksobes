@@ -9,7 +9,7 @@ The most direct way is simply to try building the project: Xcode and SPM **refus
 To find and check for cycles earlier and deliberately, rather than after the fact:
 
 - **`swift package show-dependencies`** prints an SPM package's dependency tree as text, as JSON (`--format json`) or in `dot` format (`--format dot`) for visualization as a graph with Graphviz. The graph shows if some branch unexpectedly points back to the root.
-- **Modular-architecture tools** (for example, `tuist graph` in Tuist) build a visual graph of the dependencies of all of the project's modules and explicitly highlight cycles, if such a check is built into the tool.
+- **Modular-architecture tools.** Tuist validates the graph when generating the project (`tuist generate`) and refuses to generate a project with cycles, and `tuist graph` draws a visual graph of the dependencies of all the modules, in which a cycle is also visible by eye.
 - **Manual audit of import rules.** In modular projects the allowed direction of dependencies between layers is defined in advance (for example, `Core` must not import anything from `Features`), and import linters or CI scripts that compare the actual `import`s in the code with a list of allowed ones catch a potential cycle before it gets into the target graph.
 - **Code review of module boundaries.** When a new `import` is added to a module, explicitly check whether it creates a dependency in the opposite direction to an existing one.
 
