@@ -21,5 +21,3 @@ post.author = user       // to-one
 user.posts.insert(post)  // to-many; if an inverse is set, Core Data
                           // keeps post.author in sync when inserting into user.posts
 ```
-
-Adding the new entity that a relationship refers to is usually the first step before the relationship itself can be created in the data model editor: without a second entity there is nothing to relate to.
