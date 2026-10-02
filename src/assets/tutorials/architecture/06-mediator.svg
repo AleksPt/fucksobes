@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="264" viewBox="0 0 720 264" role="img">
+<title>Mediator: без посредника и с посредником</title>
+<desc>Слева без посредника объекты A, B и C связаны друг с другом напрямую. Справа с посредником A, B и C общаются только через Mediator.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAS4AAsAAAAAB2wAAARtAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAABmAAZBEIColkh30BNgIkAzwLIAAEIAUGByAbpAUAjtRO9YelypYP4ab/7hIqCVRUQ9Wd7QtM1LT3AcLP/vzl9H+6scrGxAhLOJG5XnP4XDZELsEDK+yoMVETC4i3bkPUfNKh96z5IuAngKUd5FMigI6geQASqzQpgQd+VK0oDk/Lz8jEPlaTDWdO/Dkb2F0kBQALtFKdHlRaQNUZipm6DhgQUbJIu1YDGmAAVpO1ZAXWm/VjA9jwv39HlV6sLwp6rHfuonPOOuN0BE2egMTW1QGQXhEwW0sBMh5Rt7As6hQEVAkSpvk2TYmljbouZ6bqqyGRiDU0VHQ0LHiRBGLwIy+zAvJLwOX4Bxw9uZYo1uw4wnHlI65cIYqrVzEdltyCK9yIDJD7ZvzIqxfNebiUXeDMBoaDZ7XGKzacsf5Nywy4uQfPRk2AcjnLjh3KCcgfJGTars8A+ert2WTkzrULjedeJTMVREJ5cESMSoaTXzKZNm+ew7KTly0mTdMRz7582kxHdxrz82YL5xw4w404tc8E2nXAjJ++/bBM7CWKFVs4jlBx69KVft+IQ9sMuIVfuu/0fsjX+W2+DPm+U5d4EU+nrtQv5FmOmbRMJ29sA/hcPiufy+FgiezcWW0eV0AD5F4hHPblPCnIGemLiOLKkcRFksgcR7OvbPZapB0hfWSHEwpHXsQvOFbLOWfsCc371zMPvikftHeaT5l6oqNTSmiIc1aitFLXb3zZaItn+mfs7XZ+2mw5Ad3KzRMK4+c3NCQsnFDUnNrtEVe0t+5BYWBcWlm8c090rKusMj5FiDfSUrSKw1KLZVI8F9lFavm8cBBCDqSpuSjsGwVn/R3PKptqplyI07BLLAp0ak02zWfCmtbc4HNcw80CHHVl+heDi42M19+D1qxvJqahKwKTaJG5iqfR0E1R36pnN862/pq3z54UO+oX/jSAnSizNdKvLzUtQNYWnRaY5xSUYFzMcAz3r71V+Bd3I3FTT92hiKgS8/RAJZMNTm6HxdYQieyT1SKsZ7pW+60eZWBUEGZusvO6SUlWkrbPGSNdw1M3DfUNA/2q/MMiSo0Fm2jJOHtHqyd4axvh6lL0JFkToeq13Y1Fee8iyhxV5z8GMufwlpt5E270rPq+Radv3LWK60lu0Pyfc34OUK+dsErbbLXORFztzsc7K7tc+XglR1FGe0SALC09oK89KjPjXfOXpaeW9W0RGUU+Ee7mqYJgntbv8PGOdDdL88EslWoIVT8Y/zo2ft6IkL1nK9jE7YUOXinVsVJZcrKHrC463f7uHc2f03R93hmnuktN0sIEH2mkYJUuSC3SolxhLcpsifTpS03x69cRkx2Qb+eXMLT22EFH33BPk3RXd7PUMMHbIdJqesPw8IQyawDA/39AAFBEvMsLtyxVD/qswjDPAODJDGsLkn/kWA/tv2F0Nj0JQAm0Os39CwN6HEFC2cnzzbQ6tYEOnYJM1L4u1B2utBDaNATOVAWWNB+h1ODBh3FoIGsuEN4PlFLRBc47E6nDd8VljVYJDGz93ZwHAAA=) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAP8AAsAAAAABpAAAAOwAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAbBEICogEhmEBNgIkAzgLHgAEIAUGByAbDAVRVG1yAB8JuYnV78VCtNhQ/M+H3s16M4Fuk6m4AhULmdQczaboiildOaEnrl8uX4qc+5cJ+Q8M8PPX1P8ukw4/6EAbMSoAZ9E4wAMcYaSVzdbGG6CdzilE9VqIBNaiO+YVMFCNXAIjQMNUAzBt24kPJqIAFBBhgQR7p1QAz4Njn/Dv/xHgqZMWnEXr6Ad6BYyrKQABQA4EkKYboN2WhQwIoBjGLIJYj83YiT3YlxDA8+o6/IM95g63udn1rnVNBEtQMUko3SRIS5V4nA2QYfSojBTALIUAAgI6XRIioCCPnydZzBbFitJSlp9WJElZaXnZKczPvJJLciwx122xvCsiFczIVqIIRSJj5LVosE1ysZU4WY5JEpHpYDgWI8JyPI5vRSGle8IR0FDUUox2hBmZ89pHC6+/vdzNDJJ2x8s1Sb8xymhSZ5gf7CsYI8vvSOFIiVTpJFCJSPmhiGslTogUfguht4PY4IgAupqYizADim6O7ooQOQ1D2kjBQZpvlrOeXwIWUxkfCYtSKQPDLhSpOMCMDMyxbw3SuyJNZX6BCBJhhIFBoiHGsDX8LFl+jq08g9DTpmfeP/z0+0vtL3zc/gJPfbzns0Sms6TEf/1/eD94c92utatNjZMz9Qvplzha25wDsnnJ3zF8duGYdULtH5yYsh6bO9CvDnV18aH+g2gX1UCnxcenVIs3OEVV/Sazl+uyog4MqFyellUJJpxQ1hWzz2/CzAcHpn98uKxD+f+S8R8OfKCJLcad4j5pS8/+bf4D28bEDav2GHd3ivhHdK/VZmbXup339Zhf7e3kDaqePLbX7vZvDzqOaJvTfxn0jHaPKYtW09w9rZ3NbV+BibZ12323+tdut48sTso5OeTYLfoH+uasHOviRO1sr3VUvkq2jvb28WHlKoUPo1nkAbPFZ71KsXgDZi539ipBVxfnI0OWX9fpySP7FurVWq6MykN8lJca4bS9dOo+myHyhA3Nq1T/p8Nl4A9pUIuX82wwWM7nBzhXLlM4H+hXxRFUjp112ubcEmX1jD7j3rDNW6kXcnmkv08ZVXwIbBqfmx4dvt52/fX69R/ZPhq2Dl5lQ/N5lYulZbbKSltZ6SKS6iACSEJqOhAKcAK0WRBPHgMBQLsNf2z47w1/+uBvyYLwXQA+fOeu6wDgm68aN8OU+J0RqZKnV0j0uihSDcH9f+H8H7mTRjXoGvLgBQ1mgLtzws5f6gHwNQiANDRAQB5o7XjOTIKAkVifyY5gAQAA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="264" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="320" height="216" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="48" y="44" width="136" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="116.0" y="58.0" text-anchor="middle" dominant-baseline="central">Без посредника</text>
+<rect x="156" y="88" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="184.0" y="110.0" text-anchor="middle" dominant-baseline="central">A</text>
+<rect x="72" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="100.0" y="192.0" text-anchor="middle" dominant-baseline="central">B</text>
+<rect x="240" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="268.0" y="192.0" text-anchor="middle" dominant-baseline="central">C</text>
+<path d="M172 136 L120 166" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M196 136 L248 166" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M132 192 H236" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<rect x="376" y="24" width="320" height="216" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="400" y="44" width="128" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="464.0" y="58.0" text-anchor="middle" dominant-baseline="central">С посредником</text>
+<rect x="508" y="88" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="536.0" y="110.0" text-anchor="middle" dominant-baseline="central">A</text>
+<rect x="392" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="420.0" y="192.0" text-anchor="middle" dominant-baseline="central">B</text>
+<rect x="624" y="170" width="56" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="652.0" y="192.0" text-anchor="middle" dominant-baseline="central">C</text>
+<rect x="492" y="170" width="88" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="536.0" y="192.0" text-anchor="middle" dominant-baseline="central">Mediator</text>
+<path d="M536 136 V166" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M452 192 H488" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<path d="M584 192 H620" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+</svg>

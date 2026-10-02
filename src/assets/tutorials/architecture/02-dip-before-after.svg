@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="396" viewBox="0 0 720 396" role="img">
+<title>Инверсия зависимостей: до и после</title>
+<desc>Слева до: LoginViewController напрямую зависит от LoginInteractor. Справа после: LoginViewController зависит от протокола LoginInteractorProtocol, а LoginInteractor его реализует, поэтому стрелка зависимости развёрнута.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAR0AAsAAAAAB/QAAAQoAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAgSQRCAqKFIgVATYCJANMCygABCAFBgcgGwwGUVROToB8URgb06NupsqD2RKlbIvlSmz9h/5lfJFTq06JafDUr5Wve2bp9wInfMQyUUAO1CEYEZ0Zl5oNWWLjDoQLLQTJojsYshOvIh5OTq+QF/ErcVihWZuGqZ67wfnvC/AtaVl2kX82UNJdvkjtG3Eqf7IxF4olFsIgpmMNWr4WBauhGu9hBRnUK1eo3IJJ1Q1VDp1DO+Gl1gPsAnydlmvEQCOdBnCWZ8sivJwAKKRgrbDwzCkAG5xmr7e5XY+UlGEpSXv1jdBOzKMJnqdc+4RyPtdwneB/u9MEiZAgR4MWHXp4bGIrO9jF3h3EbPk9dtYoKTijBCMIEorFKrKjnCiU0CtXQa7yaoH0BwRBWB3WHaO29Crt6XgmlTlgB/eObMu6XLU4tlqaN3olajbFC1stqzUauLDpojoaNKzWEgvqdROLOcngfMNi5mdqq7AFLTinHlumXels0WbuN/bcbHXNjZqfiJoStswkfOGi+n6nvxt14nYF9UmuFxc9I3i+PCW5CffAk4S7zBvwYgPSGP+0LT8nofS6zIRYbV1kyvUFdRdF62Jyr4n5UTcbQqHmEWKek4wamWjtFf1g1Y5WxvrDffq8fZugO7AeeXBSoW0eNZ7AITnNRLojJk8tTgMzboe7fp97uM/VvNe8m73xoHrr3u7CxmhNwnWrrRKc+kbQOidWSYiKlTpHaY0XKoRBTA2DEhiG1FRiChkWqmAf8FK35dupM/wvwc4v7FwoBcpfvlktUa5RItdbonV99eHrhhPwQ8c1roOf7/PCwV+vJhRkeXzh1YFfpZefOTXVKkSirXz2gSK8VTmynLLhzs50vra5kTlQ8Mb99JVt2cFJxMfureFWrf0KpGiTk6rkDpUqTY7WdnYG5tlirKqGTeFdaJuGirVFbGB+ZwesSpG6IFbRHSxW6gLp3q6CGzmJEMsv/m+z4dauxDK6hGAb+olN5gwB0j1d2VnuDGhNHOuL22a2saW6q9rYnDXNAb6xE7yiHmLZ5OLFKrKhB1+1qkETe/ihIJt6deJBg989S4G9690ly+x1P56lJqGFuflPU6C8lHmTFpOoY6cbncIO1jd+yio2cRWsStDateMGUeM4MXyTjOmug8QNQvAN7LKGTpu6fQKwdWnBmzIbFyMsku9uqixgMwi0dA3buAr6bixsm+Sbozdvzt58N/ru9HHfnVEOTvUk5NM9zfHjT/T4Tk8eycSJt1RPn5vraekHjbtt8/aGjx4Eqy52JOfMTS1YkJo7JwmG9mJAnGIO2oEJgA55qQsfPyGAHvbPX534Xcsd+T/c834FvH3x5AbAj2+9M2DuTkQPeSkgjgIg8GMM6zTObV+2ZmPpLuk0TKcpRHjYiTJ4EDqLAp0NzJVCFluhfMIi4DsClBhBqaKruUbEOJ7CTgfeTCgA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="396" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="320" height="348" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="48" y="44" width="64" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="80.0" y="58.0" text-anchor="middle" dominant-baseline="central">До</text>
+<rect x="56" y="96" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="184.0" y="112.0" text-anchor="middle" dominant-baseline="central">LoginViewController</text>
+<text class="s" x="184.0" y="133.0" text-anchor="middle" dominant-baseline="central">верхний уровень</text>
+<path d="M184 152 V272" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="196" y="212" text-anchor="start" dominant-baseline="central">зависит от класса</text>
+<rect x="56" y="276" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="184.0" y="292.0" text-anchor="middle" dominant-baseline="central">LoginInteractor</text>
+<text class="s" x="184.0" y="313.0" text-anchor="middle" dominant-baseline="central">нижний уровень</text>
+<text class="b" x="48" y="348" text-anchor="start" dominant-baseline="central">Верхний модуль знает нижний</text>
+<rect x="376" y="24" width="320" height="348" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="400" y="44" width="80" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="440.0" y="58.0" text-anchor="middle" dominant-baseline="central">После</text>
+<rect x="408" y="96" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="536.0" y="112.0" text-anchor="middle" dominant-baseline="central">LoginViewController</text>
+<text class="s" x="536.0" y="133.0" text-anchor="middle" dominant-baseline="central">верхний уровень</text>
+<path d="M536 152 V182" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="548" y="167" text-anchor="start" dominant-baseline="central">использует</text>
+<rect x="408" y="186" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="536.0" y="202.0" text-anchor="middle" dominant-baseline="central">LoginInteractorProtocol</text>
+<text class="s" x="536.0" y="223.0" text-anchor="middle" dominant-baseline="central">абстракция</text>
+<path d="M536 272 V242" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="548" y="257" text-anchor="start" dominant-baseline="central">реализует</text>
+<rect x="408" y="276" width="256" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="536.0" y="292.0" text-anchor="middle" dominant-baseline="central">LoginInteractor</text>
+<text class="s" x="536.0" y="313.0" text-anchor="middle" dominant-baseline="central">нижний уровень</text>
+<text class="b" x="400" y="348" text-anchor="start" dominant-baseline="central">Нижний подстраивается под протокол</text>
+</svg>

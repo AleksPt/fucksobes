@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="252" viewBox="0 0 720 252" role="img">
+<title>Наследование и композиция</title>
+<desc>Слева наследование: Animal порождает Dog и Cat. Справа композиция: Car состоит из Engine и Wheels.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAT8AAsAAAAAB/QAAASyAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAABmAAfBEICopIiCMBNgIkA0QLJAAEIAUGByAb6gUojsQ4FvIPTRrl09Omvf93yaS7xAyPqEEqCjGTtnDnUHOnqekmZyL0PsCZ1vm/d8+NsWlMwoQTeb3mjZZFe1FZJwowwcDGtrGGaYBYfzgVF7qrc/cJwNIe8msigBppEYDZQXVSgSj8XaBBcSVdcU4urrESVsvc+/9xYC+ReQAIAFA7agagwpTWCCbmDAZEGCya9nWFPRhYsRJWzkawUWwsm8Cms5nsNFZrsYRKRQwbzya/uy985rlnnnrikYfuuh5BpIOYWCzZsQgcEF4t3ACyH6CuAJkFILqYggHFEjPpRW3EPnbOYrELp5gSby8xR7K3t1aJ7W14EU/5Ur6omCvhqLaiDcOzHCOm+cbJRyeIwfz4DZ43nHjEGU/tc+e2mn1NExOgXMG+OzcLTG+YCakB6WrQHz7Pi5a6ex36Tft8xiegP/ZA4Ap409mDxHDgzBmOIwTWwQWcKZ+YLh7dKd36BtloIDaUB0fEqGU4vSBbt21bQLVxcpIY3hhzlQnVqnXO4s0TD3nT7YtSfpsglG658YgzPrgmq51xQ8GvPz/ewHp1NIOG2KsjOcab59y5nUM1fngd+mMJpyegv/ZA2Kx37UG3UrNg1T7nokLT1ZMLgnRgw+tymwTZOkE45r5P4Jo78gstVxFXsksM8KSCcJhnBvSCUGAawmKosHFGYoMeTl7UYxltHPLktjxqBHWyKlfkqibiawBMygu+8FYH+NjhiRx5pTuM3Dfc6XE+19yS3DiZNPxr6W8NYw/9OvzB3fE18S3pf2lwTTC+EvlpHOO+DohIu6GzDTH4t0YEu134sratYc2zGfZ+s8uSgzrnyouZjLYjb/MFoZmKpECXYbfnqeUS6fEPkW73vleWtcknWPLXo8lC1GFB/+RrHHzWFr8i+/qhRDpWesKlc57OUTh8wF0V8KtbGxw3/SmTpx9InkPLlNbRkldPZf1Zv7l1s/cfRdf8SXmgW+k/7vAT5XZqEoa0uqThrqm65KKglFnScoZjuPn+Xpm/h0vEbQNNN9VZFcrsZCvZiaCwcbE3RCL/ubZq742h9QmHF7lLSjKUsotvySry5jjFPZK4eDx4x8PNIzmhLjFDXSmN8Jlqs8w/0Otz/OCrDg0p+3yuA9LtGvtby4p+VFfZ/N4x9+GXwL5EGe06yKbRUloYON+u8eQpUI2jmMmwzpD8PlcjS0a63Uvb/9nyzwt2jSsOOSkOO6/szf3+L+9fBpn8ZbJAUU63OmlYl5001J2Vm2O4E4eztbR2lzqnLE4drtRGRCh1ubS4WE24QkdsCi3cSLczD/AxTv52Et6i3A5N3JB2XsJIz7T8pGK/hFmvNt4xB8ZnRsuyQ8MV2oyI2ACN1/qW1zNnVXnjjU2b19s1nvrmVPOprD+hMN7vzJidHCXPHJhjH/6hXePF1uELnzrsbJfu/tBWIr/2wUsyAMBCiz4CgEKdrabnK+1SfrNmmC8B4PMN3ipM8qmfAAdLLX2dmgFYgQJ/nuEPtNF3m+AhhrsWR/kO1AfO1IDcZlC4XDhCaSDSaSmcaBqCqTU8aTHSaSwc6HgOpAPkVYJMQYQgstt7QwECwAHxYKYuGYmswECb5XRRAA==) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAT0AAsAAAAACKAAAASoAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAbBEICotwiUUBNgIkA1ALKgAEIAUGByAbiAYgngNua3yVnORVJVvw0icFfSt4wrW3N5OPSQFwi+CJwIhmXVHXVska/av4TphTeNWWNXfOxExWWWZYUxLIhojJmTzVtP7i8rRxc4xKDIzQiljjnu4hIZ7/wABXa6u/qCYatE+RGO8fXUSseYLpfPqSCZGQRKN5p3vphFgZxk1ziy2I6Dq1CERB7+A6AFOWJruQJ2xLIYm1FhZODgLwAgMMmj//boNOSGszkwb6UF9FFDUCg3nQK0wfYf3WHLIwKAPoKKOOJtroYfC/YACu2NxCJ/2/YBfNDEngaIInAGUAb2bGmwexMaKKZPIm0xM1aYBBEYYKle3uFxDQzCMlklVpdFp9OQqz0RnB1ruxwM8rqM3fA+2hKlqkSyuQuOVu0LLbMXVz7t6lTDjuoft2B2zY6bsK6hu6H5Tz9TaK1qGqCL1ajqaV26pyOmlElI53u6hq9fr18MQ2htfkRIEXVdLVazZsCFq2bl1IpTDnLhUO5CTM9F2NoKfcBNSKLfS3xbn3KLF3EXxakUQypLGYVIhGOFZBLa9E+gpFxvyUrNHJ/jZ914Mdrxo4ykUKcVM5mzMDdEYduMZwSr/Z4ygnzlhJV0e6YbOke+VFji4VVxTewtjdVXKLmvk2zTTtHlmYuXbQ09fb4oIIFi3rsOLsSLsZhVY71B6o8CsS757XEvctll5z0fbuAX8WCnfuAM7S6XcrdruA4iirHjmu7i5Q4Y/uX/BP3vkHk849qMi+/IQMwJ6n8PP/vkJEBFnwj44kqc0tqMZmUlCVXoWQmrz8KiwxLFEqCWYsDHlIfjlGYvOra/JgO3Xe0Fwoq+PiOVk9GGKodzQQs4nE4/irG6AxtY23vExxpYy08NC19EAsCg9kUr0im+yJXHiVOjzRbvL0bJoNlIXzwoM+dWKQpRChEWUSSYTfybUGt9XWUCbsKc6/IcvFKUQapx8oKavpqiud7G7z/qqq1BXpWZcmz74rMzc96zW0JHFtfkG1ZgVbUAU8GN2viq0TCzHWqgt+H0vjtIPOZJKIWR2jxjocORqeD/5gWlOKnmrw81LN6Tihrrt6sLquS+CeJVRevhflCrMkuBISZBod08ZAukzOcGwb+wVQmZKOtfknYJteV1LX5O6XWpUMWyRjdWw1CItXZ+/hR90+zcOETkNisi77y2neXxMnxhzkgQQO4ncva3Raey7HbE9LzkpMK5DZ2C0lW+OuR4S/jttm3Br/OiLiGOwF24E0C37FwFXS46TmmmAJ1DB5AkJLcSGBo7FDiTG7hMVYqSBpEm8MPYG7LTCCLbdK1rLmzqpYKRQzWoV8vceFxWWLcd4WqRJnpBUqEuLf3zUhp6fdqDdXOavxH6oxbZDK/zUF+W+S4mbsMCG3p9NitNaK9dA6ZrfouLX82rXS2sf8Y06jWsFD+k2sKzKKj43loyJdMCbAATFyM4EqYAXQFjP++tl3BND+yDay4UGNt+pXwpifALze3LEGgO/XSbeh+L9VNWY8EEMBEPgjh3S9gezfI/e/EvMqUYKYF4EbKqERQgHzhSq/ACAKiLPY3zNMsxj4+q/314ZSgE7pLDLGMBb+N5HH/QcHAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="252" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="320" height="204" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="48" y="44" width="128" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="112.0" y="58.0" text-anchor="middle" dominant-baseline="central">Наследование</text>
+<rect x="124" y="96" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="184.0" y="118.0" text-anchor="middle" dominant-baseline="central">Animal</text>
+<rect x="68" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="120.0" y="194.0" text-anchor="middle" dominant-baseline="central">Dog</text>
+<path d="M184 140 V156 H120 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="196" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="248.0" y="194.0" text-anchor="middle" dominant-baseline="central">Cat</text>
+<path d="M184 140 V156 H248 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="376" y="24" width="320" height="204" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="400" y="44" width="112" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="456.0" y="58.0" text-anchor="middle" dominant-baseline="central">Композиция</text>
+<rect x="476" y="96" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="536.0" y="118.0" text-anchor="middle" dominant-baseline="central">Car</text>
+<rect x="420" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="472.0" y="194.0" text-anchor="middle" dominant-baseline="central">Engine</text>
+<path d="M536 140 V156 H472 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="548" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="600.0" y="194.0" text-anchor="middle" dominant-baseline="central">Wheels</text>
+<path d="M536 140 V156 H600 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

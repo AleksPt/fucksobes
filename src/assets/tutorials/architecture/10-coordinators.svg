@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="272" viewBox="0 0 720 272" role="img">
+<title>Дерево координаторов</title>
+<desc>AppCoordinator управляет AuthorizationCoordinator и MainCoordinator. AuthorizationCoordinator показывает LoginVC и RegistrationVC. MainCoordinator управляет EditorCoordinator и ManagerCoordinator.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAVoAAsAAAAACbgAAAUcAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAgQwRCAqNUIp0ATYCJANgCzIABCAFBgcgG2cHUZQNTgfgiwPzPFM3cKKL0U3dSlmsMExNx8cHQv6+k9t44P/Ye9/7uYigCiqssErhAe6MBjjwYeu0ykJwzw/n3rvk472mIyBlPvOEmktta0ds9GYMD+ZVWQkHD9ukGjiz6Ga87gHS4yMp/4EB4D9v60qJQhLZISSDvfs3/3eoej9zUjB2L0RBvJGxF83VZdWI1QoY7Fwg26IVLJcKRl1kdzlNQQ+QjaLfXAoinioRAKsDC0egY4DtSIlhHZy4MgOAO8jwzN//BFrCb5vOFHv8b+u7hWcjMqjX3hD1Icev0aqfVmoai2eC1fBpIulrkOFJhBcbLRu16K3/b2hnnHbUQftssclG66y1Mj8zos0hqc8YNMMY6vTECd2r7XaA8oo4eJXmmkvhcB6ddjtj8XknMtMXNzMYcydlzh2T0UF33B3dGRoUB2UUJSWJPFLvGr1kvurrj7UX/wj8l8ST+JCyjiAYlh+EDTkUkaoijFCcSt6ViYc8lwa5hZ3MsLmM5J68SgphWfOWRFZyorTb4EkEJWTfnHE6lvIoJH1xDAErA098puUAZkkJy5glxTXD4h+yt0pLPCfo2USKEaISb9kOFhE/CQnTiR1/as/BBfKEmEkygnlMWtYsIji8Ckehh3NjBWEQYd07ML++LJS+XwsbBSLa54TvoGNZZznWYJKTU3B7dEOSlKYUQJzwC47Jx75mcbcwvNkbp6m/i0gIWwty38QNGNl6krz402J8sRbGHFG/KJtAVbAfd5ZtvBxw22FDDUPn/mBvIuhk7fDzX3z8vJ3bnftebJiOOnr2MMUlMzP9Cf+1K2G8HTq7kZ7p7DK3YRhPx04uRCjIKJUMogwUowjg/0ER2Mnt6QgaHxux4XGprTTAgMGADzJVj4HxY7DhzZ7s9vD/meb14NtiWGVQn7CB4d27DerpGdxTCGsO6R/Ur0MYOPh4jHydu7hovVFCCUvp7jO6DOo6ZaqMFRRKlpdNBe8vb7lGfLgQJ3btGiteGP7BcfIW+BNPN4hGU0Nt9fZunS5PdkClDAkVBthrPb18VcNFKea9ysl3FaCN7mje2qZDRdunIkpwYy/3Ok9DLztn01GJiX4j15LbRIpPpG3aIpOM5qnF1AoukyMWLobToKIEeTt1dtM61NllPUi3XNBX0yV9Oafu/LWRhHIDrSVMEYI8pUY8ygoC5wfwnvKmUsGvIT5aZeHZal9v90C3r1c1a+FV0XFSnUJPqm2FhfsTSojSSZD6w5wf5KCUUIhMAm/3NYn9SauSgl1lkIduUL12Yfx2HHj1GAbOHkLpfu+ArVQUGM89g/ngoQCiQwsQlJgpZFEiBOfDlYxSwWwQnQOOi7O/FGs5e31Pzzq60mHtIGPt16Yy9McUvBLEZuTdkCH63qBPjyglZcI6IzHWNvd05ZE0RHEK+WFue3pBhvNjDMSJKsu7KAoLXr7oIqxRZq2gd1ndxRaPbjWp+99f3OlZT/6YzboIMcpq0Bq9NfWgddFs4NkVeMUKsuIuvsvSqsUYlJd4+vX1uYmborluMshRm9/AN6AvIHudhlXieUQ+jMeg4iTPlpWN8/JwdpYNBPcAF3lNVUAWm0AcDAgb8yfFiOOBa/NXkjwxqm+hOuAlAHw+bF4OAH8/bZXgMBlZuJhA/OvY/jChuEMh+5918Dfe3Yz1EEOXIEIjDACj34kD5K/WflH7qzVyOtehDxBxt59AAL/80GyH0kgdgxNmzMuYpaY6rgtmAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="272" rx="16" fill="#14151c"/>
+<rect x="265" y="24" width="190" height="48" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="mm" x="360.0" y="48.0" text-anchor="middle" dominant-baseline="central">AppCoordinator</text>
+<rect x="83" y="112" width="210" height="48" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="188.0" y="136.0" text-anchor="middle" dominant-baseline="central">AuthorizationCoordinator</text>
+<rect x="427" y="112" width="210" height="48" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="532.0" y="136.0" text-anchor="middle" dominant-baseline="central">MainCoordinator</text>
+<rect x="24" y="200" width="156" height="48" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="102.0" y="224.0" text-anchor="middle" dominant-baseline="central">LoginVC</text>
+<rect x="196" y="200" width="156" height="48" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="274.0" y="224.0" text-anchor="middle" dominant-baseline="central">RegistrationVC</text>
+<rect x="368" y="200" width="156" height="48" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="446.0" y="224.0" text-anchor="middle" dominant-baseline="central">EditorCoordinator</text>
+<rect x="540" y="200" width="156" height="48" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="618.0" y="224.0" text-anchor="middle" dominant-baseline="central">ManagerCoordinator</text>
+<path d="M360 72 V92 H188 V108" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M360 72 V92 H532 V108" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M188 160 V180 H102 V196" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M188 160 V180 H274 V196" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M532 160 V180 H446 V196" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M532 160 V180 H618 V196" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

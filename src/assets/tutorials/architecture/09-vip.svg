@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="256" viewBox="0 0 720 256" role="img">
+<title>Clean Swift: кольцо Request, Response, ViewModel</title>
+<desc>ViewController отправляет Request в Interactor. Interactor отдаёт Response в Presenter. Presenter возвращает ViewModel во ViewController. ViewController вызывает Router, а Interactor работает с Worker.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAATcAAsAAAAAB7wAAASQAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAABmAAdBEICooQiAcBNgIkA0gLJgAEIAUGByAbygWjonRtGgR/LFS3d4h5SZzNUhMifp/B0+k37+1Wu6WSEklKhK2D2l9MT8mdk28gONihmNwtsgS8eWw/dDn9NWxMoRd8xDladFbRGvhUqEVZOm1s4YDjgALTV6jdkXkJv04ASxPIr5wAaqItgOq0DOmSgb8lI8FF6latDpdQiznMnf8fAnuO1KEq9aJXt0fCDQAFwADwBwPZnGfR8443GLCohRZNGMQoJmIaZmGOIxhFB7jJmPGbXYfa36bWt661rWk1gkJHQBzxgkbgi+OxAAIB8gpA3QC4Wxg8Ae1TR4hCKUG2ePi4uwT4CN1YNsTb2598dFGAP9LDnXfiW9t5lnNq4dpY3snDbLVaYbBYslq5No4yvPnm2aNk4xUbx3mM8Z3d/EivyWYjRrudN1+/nUR4lmvade9ak9luJ0abjTM9ssCw+fJt2N62EGlY5e++3nrfnBHGb7JY2jdcecCZ7l0K5514tm437n14d9EXoBxj3HLkDGeyWIDt7PPN7QhbTB41rlA5CK3nTDfOJKPd/BQFvcw+oGJbcZwWw7NtIr3HTeyZB1eE/OrT13nzyZN7iXHPjvgdN+JPPLhCjFcf7qREcWsebDi2bRcMu4/HHbePtSycPwzDpXsWj6s2GY7wDsIMB8N5nr9BjzA8NTy+8dDeBSx815fbNuygpb/FyXSBGC/y5vMwnNNdXXlv5q2ZS6+OKt9fnv7BciV0V73zOwMVGXGNpfkJGkX2+RX+s8zMdrZ/UezX/25J9FCqAjM3wtf5ysx3R94Zmc5egZ9T/ZAyQ19Tmzk+qtQI79ck/Dh8tZ9RhUod3u2ZUkmURiyJrJOmZ+X8GK6RxP4fOY54J90UWd7cenWBfqpCXdyaWlAd1uHD+3HPJUSX/y4KdZ84e+SaVN4VoSl0Dj+SnH7dPQalXsNeKL06fBWlXn1sZdH0H4U1TWWxExUxI56RzxneTRCXZ0Y15/6BJCftNGmBXq0pnDtNrtVOk+frNfUF+qlSbXuOVBShFosj1FJxTrZMLFSLJcJ6mQglFx/2sVWnWhOz6weVkvGaugz9iEId/8P3/v+vCsj5MaxeJAlXl4lzJDJx9KNKrFqehnMXXc+0R0uKmhPzVGG9+bVZz4wq1WmtkVdrex/+FyCWiaI1koyoOml6ZrZDoBZnCNTl6WCc4io9fjnXMTpnflqIl0zQFuQb+H3/jrnH838cFSW5Lav0ScpujMotL+9tM6Z4xf6X5++XVD8zsM7zNdePXooTd3xS44HQkuromOpiF12HbtXwqlc6XvlbJMhJ6kCk05SZM+cmDkeLQmUzktNmBsnSo0cSx2dPx/6tnjNmbNFvMeq3TNsyY6vnS/olc5egUSgXCBoEYS8LBHMDYOPhAsAZPtNBAUAE4AR967keAUAhfdfet91eRb+5MsyXAPD5mphIAPj807Qcx/nKmKp5C2vZpg8Q4IcDYIYg6Jy9eLHo+NJY+LMWHV2X9SfA034ptETF5xAhpSxt6KXQfqXxP8j/Ysg0IVSmmNFxAxznEQC+KAKFNygIuN/PO4NZCY7jMkABAAA=) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAU0AAsAAAAACRgAAATpAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAgRQRCAqMNIllATYCJANYCy4ABCAFBgcgG9gGUZRNznAAPw9sY2rD77Eluigao2ART4Z8zoYF03DNh97NepNAZaYsdYOaZ8EzQSoeLA22ogJ7Tk9cflW/zTz/fQEut3GrlIC3RqYH06ppGxIS/lIHCT7P5fT+3cZ7UVh0wlEIYy5bOtbzAgwssj1tW7poiPU2phbL0FKkVtbQATAIGrnQMAJCTmgApkVCUhgmckEACiHqBBOnFABPwoeD4j//QSgx0usnF6zCW9lmGDGNANFZTm7CogGZ+9SjGCKK4MMkFqAihtVYi/XYjG3Yif04+L/gwUWVW7EDe7YwaTEb9DqtqtZsKZdFAIJk/5e5564k9BI1PPm0TjgGoKgFnKSGAGL6ROF/fqKz07s0F5kKzYUmSwNrrKXUZK4sXVHZV1baVLQ6R68RMcuvs2V8FTRLNAcQMsiWmbAMvMIIM1JiAjUwMKOj0ZKhVBDFOMRPqS28RHXummJLN2HNNdwWZwlFn+RV2XW4orihLv3QFUclaOrq/PrKS9NrqxORHJEsM0ayH81BPQ1sHwiU0KoMRJeZEJp7kHnjpkk6Qm/OFAJtLDd4ZF8FiqzC3RSJky32gYkRJlJiEvbVS2Axpi3RKIVpuMmYNWQ29ubBOrORuMXIWkFYI5KB8PzZUEwj6XAE1OYCSl5qZFedzHGn7C5FX9uv0bF/C71aUZpbkZFjkcNMU1MuOVhNoJIKGZNhtdrLfo6p44Iz5q+q+KbOjjdIUP3quvLSslrbmttJ9mDLGzJvWQcKlVVDoyk+pYwmYRtFSQ+PJLnukRWnU+GeaY8CBsU8jy6PpNLD2KxeJl2mnimdkXjra//aUSmtcGkVP7T/ot7jFzmDE25PcNx5ERJvfcRXj44lvVMzm3nZld4ty2P7pbPOtvmCDqcvYDsb3+k3k0e/f6ZEk6Ri7Zkj38cffRPbQ29GpboKT9eKhq45i68u6a6zzE2aTPSIFbY6NfLmbrelcnqMsYDTqljw99habWZ2bSxy98qR521DvFPRC4J7Q7H09tXhI9pm83euREAKyove4bk7+4Z6+j/BQGXN0FiKX66MJTs3VNJ71wsxvV222ZwBxXOFJ+Bz2mR7my7E9q5HT75qZDTlvVweTYKL41cl5dXRMc797tFf1ukF/n0LHYqFywGPmwd4gxER9ZlTd6uGVx5SkX5Lv2LLDR9tfNCorc03/LL1VxwcHLd0BAa+fUgt87ZGmx9QkbDqm8va+WwwEFq9Xtujb3J+J9lkn5xCDyX9Y3Ax0kaUJPklfDTVm887OZcvljl3OpTOhyscO63a5op6eWlGn4lt2JZs0Wu4x++wywE5hVo2tdU8rSd4b/eYo73ti9cm2YJpbiI4lVxIWefTk9frS/91WUc+tbaevH2SaaaF6YmZVdE12DQ+Nx3wXaNec41+zTvqOz6v63IV3dO7d61O6SmP17/SJvs9vNHqvbtwNGZZkIhnBGuKi08FrjMiF5CnfsR2Rhi3rHUcdV5hNR2cdh9Fz9nOYkOj2tKiNjYsIs8KBiAPFWagGUAEEHrEwpPv/xMBIEiGF2+dedrs+rVAFL8AgLdfuj0GgM8+6ZNQ8/9vwisWTuMVLj43rnaDODQP/r/zml+rzkqrUyen1mIzk8AwasBVRZBGozdRsBM6VkL/hzYAn4IAqEQfBFRCWNuuk+VBVOD/9Q03v/QB) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="256" rx="16" fill="#14151c"/>
+<rect x="24" y="64" width="140" height="72" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="94.0" y="100.0" text-anchor="middle" dominant-baseline="central">ViewController</text>
+<rect x="300" y="64" width="120" height="72" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="360.0" y="100.0" text-anchor="middle" dominant-baseline="central">Interactor</text>
+<rect x="576" y="64" width="120" height="72" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="636.0" y="100.0" text-anchor="middle" dominant-baseline="central">Presenter</text>
+<path d="M168 100 H296" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="232" y="88" text-anchor="middle" dominant-baseline="central">Request</text>
+<path d="M424 100 H572" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="498" y="88" text-anchor="middle" dominant-baseline="central">Response</text>
+<path d="M636 60 V32 H94 V60" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="360" y="20" text-anchor="middle" dominant-baseline="central">ViewModel</text>
+<path d="M94 140 V180" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="24" y="184" width="140" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="94.0" y="212.0" text-anchor="middle" dominant-baseline="central">Router</text>
+<path d="M360 140 V180" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="300" y="184" width="120" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="360.0" y="212.0" text-anchor="middle" dominant-baseline="central">Worker</text>
+</svg>

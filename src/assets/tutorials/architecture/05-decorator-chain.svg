@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="92" viewBox="0 0 720 92" role="img">
+<title>Decorator: цепочка обёрток</title>
+<desc>Клиент вызывает Logging, тот передаёт вызов в Retrying, а Retrying обращается к URLSession.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAJMAAsAAAAAA9wAAAH/AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAABmAAXBEICoMMgkEBNgIkAxwLEAAEIAUGByAbwAIgHoVxs1Mgqmh84S7LCtoi+H6s7X/3TyWRSN4IRb16CUy3SiNVqrd0RJLJz8+1t+30b4i51buKqCYxTZA04hFy/wxg3YEe/EgXTuxA3bqFXbCFlFjzoCUXSSjDADCQk42AZARzxYQchdg3OnGFhwOb2U8nMONLkvAse/uBQfBEk8yOxNHfefId5gskiDa+jVFVBAoYKEgYyNbQUhFKWTKbZPNslW2y4/9/Rjc8O3Xs0IGdEtEkQf42kjJooYxTXAOADEgQbqtN2Sr/CMUi6SRORpHhESgS4Qmcuzus4f6e5N7WhnxjqzDVdXtKcveXpcjem5uo7q0zxDnZkMZSy4SYD2iIaBwVDg/jri8MSPW4YDzDgjpvpFsBmxUfvUHLCvVkf8AQ1AsI44FaBG1nWqXdWVZ8R/2kVp+q5qrBWDEoz8m83M/fsiLfxd8qXNPaUyqGQASqUVN0+NWTpLJL03ccnWPlAqwY0jeauruUktl2WklWdPi7YzxfWlG1eMW7I3QO5IxEy2i2EYWHadTwpS0sAr4oSBH2LHvJXx8naSsuP349Hkfdfd11uzAffRw9vwCAMwlh4eX4bzWOz/qVRRBvMGxXkgcMn9Qzofr/FSX4NkoCJL4f43IBVBmsy8qhbKC+oLA1HREwGya6YWc2PahKKBs/2FQsKQj9LzEEAAAA) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAQsAAsAAAAABwQAAAPiAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAdBEICohkhxoBNgIkA0ALIgAEIAUGByAbVQVRVC++AH4cxm6TeyrN0GGI9VuL63zQn+aTvkNSANCXAzbBlynAP/cdW4eME/F0XBgBDaWpPHVqt0D+1wLkQcLsz19O79XWsfDsE4Z4Y/3fmgOzwpAO04VLw4gLkNLMHbXD60vibdvxVa6AgUbIGaQA9BiNAOjoCJmFKUQdUCAD3ZPgaLsPwCfoxFZlcDgWWoKM83NTI/2Z1HJzNGYouDB5SbUaMOfZXCgwoBP90LEQi7EUq7EBW0cEdEKzWFZh3XfZc8/ccdst1111MYKBFZqMKMdKkAu1OP/dnAGQrwFkzgFEYCpczdMRqwAZT07NyRibX85qsllxfnbx+ILsTJ7CDVnAbcfjceyJTYsyyajCjyfJ3gRjc48lEvV8T1wXsoQfF9mbTKbjOnOZPhbDnrhZD8Yx9xpJ4YbCLThtPEFiSPyQnH32mxoei00nDKrI0gk//pGQATYqUYzNXK7AyAmLm8njSb5xDBuEK4xkUX7mHHgzOpQpe7/32kM35Q62G+bgI3XT4mA2TpDvq/nVr3j9G7L3w48Cb9Wxa29Yod7pX5tZ1i9UGOGEg4PRPZxDH5jFo1dvFl2+XTGdL1l+7APZ+5Eff4897+7W/yyPtGuY8fNvYq7JPNPb3rlUFFzxLjtu3mg5fMTmDzmc/qDtCCbWumiiNZolre1evzfkto6bIN7Nq24v7l3e5jSFZ08Sc9YvQ0RaVJfToVqnjJ8ovppf01rcs7LdZY0umIyxLVq+Zm6+zHc5gm6XM+hapuctW21TEXOmmmZ5L6mmmY0IxXvNVOeGzUIE3Kb/Fsj0wIbeUb4moQY9bhEUVSm4s/ZszMLmEJmfn+3qCfr1uatmbZg1d6Xu7wm6svOWRh3tUu9rbLR5g56lng/UZvf41aXqC6Brn+97qBlirzXMMMqlBY2iKxTsn7swsk4ucf5rsal+dRbG8s2ebJolzvlMM0F8QGaK88I0a0X0OIVQz6nIOB0+MPJ3YLUxsrSoUo12ys6BRStm1sky4Qk47GpQnYVyNq0+p0POEOPGmB2NDf8QEm28N6u7NdQ+s3eWsWd22y0ZHR5tnPqnsX733TYeyertaO2cE56HJS3dHUH/de36dXn9V+1Xv9d1ScOLV73xL5QFu/vnfPB6P/Ru7p+b/RPGHqnrq6rW6uq06qo+pBqRDiAVOTkgAKADdKySsWskAoBaDGu+OHx2do7r/3RF+QcAfvn+7jUA+OuP5mWwjnRG8CwBegdx900p0IiHafjk9jsA51qxBF4/wwx/qw50iPh1gRmgw2qQGusHAfgTBEAuxoOiGHQPCdZUKDRGFjblEMEA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="92" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="90.0" y="46.0" text-anchor="middle" dominant-baseline="central">Клиент</text>
+<rect x="204" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="270.0" y="46.0" text-anchor="middle" dominant-baseline="central">Logging</text>
+<path d="M156 46 H200" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="384" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="450.0" y="46.0" text-anchor="middle" dominant-baseline="central">Retrying</text>
+<path d="M336 46 H380" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="564" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="630.0" y="46.0" text-anchor="middle" dominant-baseline="central">URLSession</text>
+<path d="M516 46 H560" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>
