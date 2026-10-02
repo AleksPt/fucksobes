@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="100" viewBox="0 0 720 100" role="img">
+<title>Цепочка зависимостей операций</title>
+<desc>Три операции подряд: DownloadOperation, затем SaveOperation, затем PDFGeneratorOperation; стрелки показывают порядок запуска.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAXMAA8AAAAACtAAAAVzAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGi4bIBxaBmA/U1RBVF4AgQwRCAqMPIoWATYCJANYCy4ABCAFcgcgG3MIo6J2MEr5BH91wAnciy0SGgTH0aARFDVnGni7YfDFeMqwiIQJbb61IH4rx9scTyP4fizd945/AFGCiro5lThqqypUfIFspyrOlUDI2kpgWxf4yc7+nahcvMnuzCrw5pj4IH+VZidV6tT9juzo/gfoLTvt8jyUfIqnGXVe/9unNQDHBHwL5/z/Dv8aO0bdKbVkwMqlNhVqZB3VQcL/f69q7svEaDA2tlgQ7xsZLz9zUezFxgRbFoxYAEfnOr6mFbRAxVqBrGbqNGCAdfKHcOzeLyzQDUg1oSG0FKFbnzBgUBg2LASKabOiwxubIFwVrgUEih1tgdjq2DP/1Aikw/Y4EQz5jCbhcDbaOQThwhVV+9C016W4SVHNWwHnauSzvAXgUOwdt0EUCCBpaYSGAw/aAD7omK1cXFWKUlSjtlzNx9r89dnG10sMq2BZ3untmwrAnzT5gL5D1Sdt6mpGVbJDKIhPYGKUy+cbGmKy/1CQycomWvQfuuouMKlfRdGhYWXn163fkDETpsxeiw6eBdF3kRGLmUOc8XmcdkvrG84mmiqYjwlxrT6EUbCNKeIfyHOMYxiQQkhNMn9tmSib1Dqgu5TlwdiY1tZMVFpv5mCmb5S8UHpv6hBgTDdGHln7kvj6URfWD47Sroq8oZjaSm6h/7j8+KdLTcqGOinegmJl0AxRNDqn5lx0itiKmZpK5JlikzMDQILOrJxL8FxJuxmaQmLH52xAMkBH5irf0vRuEmWt+i3HWEMkn245Wp7UtoBj5EDjUixNLT+0iWsU014GQhefekjOGCyhi1pGQGYSo8Zy3gKEfLs4S4+hRcdaRDL3Il/XnrSTGYTZ6s5ztdQKExjXSeXrYsIxsuCgSMWD/sYzdu+rfvDpOsFx0HJfLFszOnAbR90/1squudYmguPUI7PkzfHxWU8C/WiIIBdrGDfW0knrdXQR7ly8E7xPzgkt31SCkoW6tK9B7MF6WuyW90jTXlGjGztIRBMEjUkDSTMEgRjSsUv4eAY1erwiqEp7GkQTrSK3hw2izBgwg2oEWwmSJvVkp0YoqQGU/zW4Hr9jO8VSL42lvk4xu716eTvBa9UkryG2Q11tT52sPcYh01MMxatl1bX4ekeuPtU6qCPELd567JscgDaHFKkIJZKJaurwnc48baplWK+StXc1wL+tnW1GU2dr8ylZ4215Ay6nHeH8pL3VO+xvWmjrj/uocnFSHtkokflETUNV7VtAoWvYc9zbOWxnbToyOTlg6ZjjsaM/MZmyaUtMcooj95DCUa7ADNqDRqEq9jWKPZTOiN0qjuUruJG/RYIxqxZ/73KEs1PWMroEI45UYw7nhIAVbqw/JQTfvSLAbL2mpIyr++DuKYkqbMk/L4Cr1NGfVIxNPGf3d7dNOPqIj1I5YpAHqtDeL4EdxIsKZWYnZlCNYAuBMdqBOjVCSQ+gbIDz8uFPFbSsvWPIe5yqdlob5Iz9as25Xwp0EdQ1hQwrlK8Po6Vt/SnZqN3oMLb2DLkLHBmYZJUKxCEP9GnMBo7peFA4eNBx8KnwlKFUewT49LzENT9+LLseZW+bGXeSB8ODmyVW6aaSjvj49SWqTS2qQNb/Yfkmo7OkU7lI7M3LmzWoF6HqaYEtJ1coKBByc2wQuqoLdSN9dk/rOAW5VYnof+6TB/8Fcq/6t7w45I3b/x8eVPkF+PL5PAD48fWXMHttzN1KBOoSBD+ZTN6CLFeblwgNOQpIh5KuNniNbYwGLeB5zTKZiyab+zCalKmfVITvAqO2pFG5vaCDa9qCRLUFvZzyCrr1TlZ56DNOXq5fsepIt17ThvhNaCVlv1Z9puja0q9R/apOglHD/EYEAdcjQmgAAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="100" rx="16" fill="#14151c"/>
+<rect x="30" y="28" width="190" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="125.0" y="50.0" text-anchor="middle" dominant-baseline="central">DownloadOperation</text>
+<rect x="280" y="28" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="355.0" y="50.0" text-anchor="middle" dominant-baseline="central">SaveOperation</text>
+<rect x="490" y="28" width="200" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="590.0" y="50.0" text-anchor="middle" dominant-baseline="central">PDFGeneratorOperation</text>
+<path d="M220 50 H276" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M430 50 H486" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>
