@@ -178,7 +178,7 @@ func withdraw(amount: Int) -> Bool {
 
 A deadlock is possible only with **nested (dependent) access** to resources. The app hangs, and the system may kill it (watchdog).
 
-**A scenario from notes:** tasks A (low priority) and B (high), resources X and Y.
+**A scenario:** tasks A (low priority) and B (high), resources X and Y.
 
 ![A sequence diagram: task A (low) acquires resource X, then task B (high) preempts A, acquires Y, tries to take X and waits, A tries to take Y and waits. A waits for B, B waits for A: deadlock. Below is the wait-for graph: A holds X and waits for Y, B holds Y and waits for X, a wait cycle.](../../../../assets/tutorials/en/concurrency/03-deadlock.svg)
 
@@ -283,7 +283,7 @@ func politeWorker(first: NSLock, second: NSLock) {
 
 ![A timeline diagram. Low acquires the resource (0-2). High preempts Low and runs (2-3). At T3 High tries to take the busy resource and waits (3-6) while Low finishes up and releases it. At T4 (6) High gets the resource and runs (6-8). The gap T3-T4 is the inversion.](../../../../assets/tutorials/en/concurrency/03-priority-inversion.svg)
 
-Step by step (a diagram from notes): **T1** — Low locks the resource; **T2** — High preempts Low; **T3** — High tries to take the resource, it is busy → High waits, Low continues; **T4** — Low releases the resource, High runs right away. The gap T3–T4 is the inversion. Worst of all is when a **medium**-priority task arrives at that moment and preempts Low: then High waits for Medium as well.
+Step by step: **T1** — Low locks the resource; **T2** — High preempts Low; **T3** — High tries to take the resource, it is busy → High waits, Low continues; **T4** — Low releases the resource, High runs right away. The gap T3–T4 is the inversion. Worst of all is when a **medium**-priority task arrives at that moment and preempts Low: then High waits for Medium as well.
 
 ```swift
 let highPriority = DispatchQueue.global(qos: .userInitiated)
