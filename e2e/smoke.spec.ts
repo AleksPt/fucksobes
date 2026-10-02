@@ -136,10 +136,22 @@ test('английская версия: главная → вопрос → п�
   await expect(page).toHaveURL(enUrl);
 });
 
-test('переключатель на непереведённой странице ведёт на главную английской версии', async ({ page }) => {
-  await page.goto('memory/');
-  const link = page.getByRole('navigation', { name: 'Язык' }).getByRole('link', { name: 'en' });
-  await expect(link).toHaveAttribute('href', '/fucksobes/en/');
+test('переключатель ведёт на английскую страницу, если она есть, иначе на главную /en/', async ({ page }) => {
+  await page.goto('./');
+  const hrefs = await page
+    .getByRole('link')
+    .filter({ has: page.getByRole('heading', { level: 2 }) })
+    .evaluateAll((links) => links.map((link) => new URL((link as HTMLAnchorElement).href).pathname));
+  expect(hrefs.length).toBeGreaterThan(0);
+
+  // Не зависит от того, какие категории уже переведены
+  for (const href of hrefs) {
+    const enPath = href.replace('/fucksobes/', '/fucksobes/en/');
+    const translated = (await page.request.get(enPath)).ok();
+    await page.goto(href);
+    const link = page.getByRole('navigation', { name: 'Язык' }).getByRole('link', { name: 'en' });
+    await expect(link).toHaveAttribute('href', translated ? enPath : '/fucksobes/en/');
+  }
 });
 
 test('английская версия: поиск и случайный вопрос', async ({ page }) => {
