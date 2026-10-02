@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="917" height="528" viewBox="0 0 917 528" role="img">
+<title>Иерархия классов UIKit</title>
+<desc>Дерево наследования: NSObject, UIResponder, затем UIView, UIViewController и UIApplication, ниже UIWindow, UIControl, UIScrollView и их потомки.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="917" height="528" rx="16" fill="#14151c"/>
+<rect x="24.0" y="329.75" width="90.4" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="mm" x="69.2" y="344.75" text-anchor="middle" dominant-baseline="central">NSObject</text>
+<path d="M114.4 344.75 H154.4" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="154.4" y="329.75" width="113.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="211.3" y="344.75" text-anchor="middle" dominant-baseline="central">UIResponder</text>
+<path d="M268.2 344.75 H288.20000000000005 V197.5 H308.20000000000005" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="308.20000000000005" y="182.5" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="384.6" y="197.5" text-anchor="middle" dominant-baseline="central">UIView</text>
+<path d="M461.00000000000006 197.5 H481.00000000000006 V36 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="21.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="36" text-anchor="middle" dominant-baseline="central">UIWindow</text>
+<path d="M461.00000000000006 197.5 H481.00000000000006 V74 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="59.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="74" text-anchor="middle" dominant-baseline="central">UILabel</text>
+<path d="M461.00000000000006 197.5 H481.00000000000006 V112 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="97.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="112" text-anchor="middle" dominant-baseline="central">UIImageView</text>
+<path d="M461.00000000000006 197.5 H481.00000000000006 V150 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="135.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="150" text-anchor="middle" dominant-baseline="central">UIStackView</text>
+<path d="M461.00000000000006 197.5 H481.00000000000006 V245.0 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="230.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="245.0" text-anchor="middle" dominant-baseline="central">UIControl</text>
+<path d="M700.6 245.0 H720.6 V188 H740.6" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="740.6" y="173.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="817.0" y="188" text-anchor="middle" dominant-baseline="central">UIButton</text>
+<path d="M700.6 245.0 H720.6 V226 H740.6" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="740.6" y="211.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="817.0" y="226" text-anchor="middle" dominant-baseline="central">UISwitch</text>
+<path d="M700.6 245.0 H720.6 V264 H740.6" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="740.6" y="249.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="817.0" y="264" text-anchor="middle" dominant-baseline="central">UISlider</text>
+<path d="M700.6 245.0 H720.6 V302 H740.6" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="740.6" y="287.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="817.0" y="302" text-anchor="middle" dominant-baseline="central">UITextField</text>
+<path d="M461.00000000000006 197.5 H481.00000000000006 V359.0 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="344.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="359.0" text-anchor="middle" dominant-baseline="central">UIScrollView</text>
+<path d="M700.6 359.0 H720.6 V340 H740.6" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="740.6" y="325.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="817.0" y="340" text-anchor="middle" dominant-baseline="central">UITableView</text>
+<path d="M700.6 359.0 H720.6 V378 H740.6" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="740.6" y="363.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="817.0" y="378" text-anchor="middle" dominant-baseline="central">UICollectionView</text>
+<path d="M268.2 344.75 H288.20000000000005 V435.0 H308.20000000000005" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="308.20000000000005" y="420.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="384.6" y="435.0" text-anchor="middle" dominant-baseline="central">UIViewController</text>
+<path d="M461.00000000000006 435.0 H481.00000000000006 V416 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="401.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="416" text-anchor="middle" dominant-baseline="central">UINavigationController</text>
+<path d="M461.00000000000006 435.0 H481.00000000000006 V454 H501.00000000000006" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="501.00000000000006" y="439.0" width="199.6" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="600.8000000000001" y="454" text-anchor="middle" dominant-baseline="central">UITabBarController</text>
+<path d="M268.2 344.75 H288.20000000000005 V492 H308.20000000000005" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="308.20000000000005" y="477.0" width="152.8" height="30" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="384.6" y="492" text-anchor="middle" dominant-baseline="central">UIApplication</text>
+</svg>

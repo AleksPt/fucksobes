@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="240" viewBox="0 0 780 240" role="img">
+<title>Points и pixels</title>
+<desc>Один point на разных экранах: при scale 1.0 это один пиксель, при 2.0 сетка 2 на 2, при 3.0 сетка 3 на 3 пикселя.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAFcAA4AAAAAAvAAAAEKAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcMAZgP1NUQVQuADQRCAoBLAE2AiQDCAsGAAQgBTgHIBsfAqCeB3asbJAWFuycGA/P7486974/RITqOE+iVkComyZvqVuhlKBQhHJQrofV/H+u9YCLCbMrxVlTakUt6Iw1+RPHyqwCjXr0ibmFtT3qVfAfINBoxJgy97pPP7x1Rd+Vk3eu6TvVoMqLsaOGfJQHsGrX4pgpvwAAAQBbB3ft9tKAgfLfVE9jAwHZlm8woEEI9QLdAj3y/vkLdwJSQcrYIZ+CREG3ItCtMoBKJTDwn4b9fytAiP+0gQQVAFDlAmlm35Obj5v+Wl/KF/j0eHgAPn2YeAOAWgmCVxvZA5QvEDJ7dAcEEoDAUp8iqgaplbgtaNZql7POu+uKk27Z76yLzrvgjgL8zxQA) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAOEAA8AAAAABhwAAAMqAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgSIcMAZgP1NUQVQuAFwRCAqENINhATYCJAMkCxQABCAFOAcgG7AEIJ6DcZscDqFSadT9f3q3Ys5CBMUa2ztckiY8kUWkmTU80RgyrZGlVTwTeR/Ke3uTpItMyXyyMNOleBNcgMc1+h/gvHYCaJJP3jrf62PZDDd6eoGfHwPqQkp8IAH9lGBiXWDQBWqZu7plycvVJruI1xGoBaQQSoRAtUER2NmUrCK4ni2ZOx2ul2Pmz4QrDgoF4mLC3JkYhBRI5RYxKqVqPYheHEKtlMVvbPEnNQLaeSNSCCGZbaoUCGolTDNYKAsaDikOMwOBCBG6S1Mgu1FGPjGlgJVwPA4R4B/wwo/Y3CkoxFNSi0sq/+ug9JXkAAKygXkBegwWQqVAK4IOzP2kyfMJkEqQMnZDvgISJWjFCrTiLIJ6lVK5HoGizTbf4kL08F+62DWpssdO24oLmCi6QQNCFWgGVXgGPwBKPTuKs2ero5stL0RxXLENLb7SRre1tGB1czO/tfKxnhm2ra2NrGlt5bc2N2N1S4vd1tZWwvKEEooa1bn6GaWo2RtKi0VaOoQvKaI2PLlTVmegHCXihaYmAdlKX/5Em/qUqCI7nDy1tjYK9FBNC91WVnWDrLle+ZrnSU4fXImfV5Z1yh968kdedFPjydWHQbdC3cx6GLHD+fhK0281+WzO2eGGkLwJKdYl2dn+SyYl52u/fHHDcSYiMUgQg0MEMTkwIigtSFUaHKoQ0/3hNZqmkGZGeJdklhwqPrQjc4dTyJgoTSbsX2yvk4kbytaUjbvGPR48YU/5rnKci90dObcblrEqCEv9j8ati5ImqeIyk+MCM/V3RhxMSRmvCEkYbwkbmhBvHZOT8+r6wcm5kFfoixzTVJaZQ68tSLKXeoi6b3ptvWeZJClHp+j+f0nuv+arwvdo80px2KM4TY6TzpTjfF+eHKBa8dFcVickGRIthZlG0RFpLzn7c/YxfjyAh0cE0vRdhNPJUQ5RPwex7BvgPYUU4H3rC9gX02liqkC5BMFfjnN/A1WvCvusq9IXrjZPYsyFX7Koj2nwyhAIKUIW9pC9SEdQZVR4wFypCytKByPVkz4bgVr1tk0wyQLTjTGXaIIpJplsPhYo1ggAAAAA) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAFoAA4AAAAAAwQAAAEVAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcMAZgP1NUQVQqADQRCAoBLAE2AiQDCAsGAAQgBVAHIBszAqAeh3EssYrJw0YjHp72x3fuzPtEEhKYfzIXdKgb4qYMpQRVIiWU6fu/8rm2GxyHEFGiOga2LhTpOIgOnbEmf+JYWatApTYdYnp2eVu5Av4DBCoNGpbnXPOJe9cv6rh47OZlHaceFOl6fFFCup/2YsneisPG/QIABACs79vc8lSXrty/UzyMVQSkuvQCXSqEUC7QLNAm3Tlz9mZAEhBNMUjIaJYFmhW6UCgEuv7TYv9fChDiP3UggQIAqOYCyeTqxwsdqZv4Wp7zB3j3oLcL3r0ZfQGAUgkEbyZSH5A/wEipT3NAIAERqqxfFkWFpJZIQbVaNJ3UYtMpZ9xy0THX7XHKOWecddOKU04655ZLMvB/xgEA) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAUkAA8AAAAACGwAAATLAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgXYcMAZgP1NUQVQqAGwRCAqHeIZaATYCJAMwCxoABCAFUAcgG60GQK4GbCJjge/YRjJTJOxI1CNy8fvl3WOsdmTB02OH/ZkFA+P1ORkVwBauCFYsXV52+v7MF0v7k5ULCEf61OkJ0sA4HeQEoAGqws2I9vT0Z5hpyi/lDRhQIzNfIGqxlGtelIc0kfufy/FdE5fIFsjSgBO5/5s3lrWGjbGFsoADHZu39bwMAtZ0k3FIH0Bk4v2WP0QfRIAQAFAEwUIQwKcSP4jWbYu1gDJqzND+gDK5y/CBgAIS4L/RNGnM0IEAwcdLbzM96qLviMKIZ0QNMh8aFtPqsQ5iaFUC5LNRAs/zZosGiEfFWKFLBoKxZq1FwVWjEnPOxiXA1ES/BNHPWEscYMMo7AzteNrFN+MAP/q8b9dqzAqemjdV/6KWyVcW6BpQFgCdolVkKFp+M2fhqu4DqmvAA/kMM+43PoF5ERhGbdU4vQHkg0P2dgmSgQHZwGeO6z389uILkiRfZaJgYHkE5zUk/QGQCBUESj5mHHShQIkehneCWQfrL/R96nW72mi9tVaFhQXhM/jY9+1cSAcQA9ITgJwDmNGEiCI+0HUC7yiOk+bikA3JTLy4gVi3pvP4uCw+P3kTBIuPbvlrTnZz/U2Jo2vbr1C/796Pm33Xdm+ITFKyDtg902W581oWdzHhAtRGVqr1kkUjk2BtNw+9eQrR+Sp/YRMz3NB+dEbeL2RJeNCOJ071z9VsNCowwZWPr+ei11xe7BfOT+2DLW7tVO++XXr2+PqiPDWYtXfn9t3A5gnVqVeu7tIR4OFhIRSfhFjUMrnv2gSVhSlcFgrIUcuXM+9PqtDIQPodaL44gQCNZaO2cfHINiRJvDFXiF7z+2q1w0dgi3tnL/m+DKW7a6zCx8V0f1NF4lHh4Lzy1KPKoT5r7vTve09YuQVunlvFLenu1+XqqnvdY6sXl82R6nnXvo+a3GPlc9t4VbE9YBhUEjUhWk798M7rW5MQN2vZcxJGmdr4giNPybcqUxLu0VCVd+zgdE2wWe3Lz6p83KwwRR2iitEirkStLm1Cvmbiks3fRQHUVs20hHc0VPaPGZwqh5qM/oKglUZg+BPK5LHvWMT+M3pfaNm6XVIJoIXHK2svhkVEboy7gWGVdCD9ucG1UQsUGZRETjOHzn4/avfEqeVnjQ633EfUuepknlisS/MUWZzyv5nC0EHD2VXklYi/pSX1rU86x9DJ6TzBHesqnto5KJraMt/XUyj3DUR78qe0cQmmNBvTL1DV6UlYFRBxUJWe2FoExW0eb9KmgAiDqgyElkIoaQXbVBs6Df5LVbhOVv/H53pGuR8KrMlIwJ7U75g8kyn1VvvivSyB1kTE0qUKerhtCZQDQsfUj5HX2VNd+h3iN6cUpGouXyouWrungZttNUnHz57g6YNLCrM7lzWq7cZ43FChG01l+qNit0PR70bj3p3C1vq4paZoaqKDaUjeGIlkpEjUUyLpAQDAwqcIoLR8Gftx7DBKwz8E2PgB8G1LUT4A8O1L/TMp0f8K+gCwUQAE/ieSbpzXokDetH0v1GKYasGkRgwaxsBzmsl/RboKcBkOVZ0ItBWu0AHi0AwYENJQY45dMqgEgZgeSiyM7ARCYomk45lUU6LCKD3kGCLT6VrvrDJCiBLFBrPZXsCYu2gDAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="780" height="240" rx="16" fill="#14151c"/>
+<text class="t" x="150" y="32" text-anchor="middle" dominant-baseline="central">scale 1.0</text>
+<text class="s" x="150" y="56" text-anchor="middle" dominant-baseline="central">1 pt = 1 px</text>
+<rect x="102.0" y="100.0" width="96.0" height="96.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="102.0" y="100" width="96" height="96" rx="2" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="402" y="32" text-anchor="middle" dominant-baseline="central">scale 2.0</text>
+<text class="s" x="402" y="56" text-anchor="middle" dominant-baseline="central">1 pt = 2x2 px</text>
+<rect x="354.0" y="100.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="402.0" y="100.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="354.0" y="148.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="402.0" y="148.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="354.0" y="100" width="96" height="96" rx="2" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="654" y="32" text-anchor="middle" dominant-baseline="central">scale 3.0</text>
+<text class="s" x="654" y="56" text-anchor="middle" dominant-baseline="central">1 pt = 3x3 px</text>
+<rect x="606.0" y="100.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="638.0" y="100.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="670.0" y="100.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="606.0" y="132.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="638.0" y="132.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="670.0" y="132.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="606.0" y="164.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="638.0" y="164.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="670.0" y="164.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="606.0" y="100" width="96" height="96" rx="2" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+</svg>

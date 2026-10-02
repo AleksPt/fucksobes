@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="296" viewBox="0 0 760 296" role="img">
+<title>Слой внутри view</title>
+<desc>Дерево view (UIView, UILabel, UIImageView) и дерево слоёв (три CALayer); пунктирные стрелки layer ведут от каждой view к её слою.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAARoAA8AAAAAB3wAAAQRAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgTgcMAZgP1NUQVQqAGwRCAqGUIVJATYCJAMsCxgABCAFUAcgG9oFUZQvzkMovjrgTVqnJtgK1iFVVeNUxSruMkbgj8ECwpNsxkP8XNWr+r8pyXB29wAQ5dlpe0QS0DPZEebQE3QDAIJMnH+96i/AZEQnsxIrvx5NAfuu3uuvkjTaFJBo3NjWIyXIzjXynFEVurkP8I8MOaSErt6WaX9/qiYbNMF3HvLE7F1sTF6zpanbrBqwDi3+CnVbRXsV6hVECqzVTSWBtlepjwRxbjDfwa4o0AFCkUIINHZxkHLcCaedp7/24Xtu09929X136FX4O6Zuvf6eO4w5siohNc7Yv17F0A72cwjgEGGYFZXrj4wVwj4GeuRkGMzIdcxYIy2C9TYRSscwATsKk/Z8anezB7uFuMWSHa55T/xqQK4KF+FU1x1X2MffoM7wJ5518Tnn+sDr2eWr/5+p7/BnICAX8mNsZSKEsUAvsJl88Mab7gtIAbESv4JEQa8I9KqLsGxRkbaqfd2n7l8PrUfUo+vZsxkBc9Q7zH7x8/JwcXLUFYCAmG0BQgvheiwQQ+IKzKODfiqyFIds/mDZT/qu22KyyeJiv7hV151fplP5mSzpa3ThXG2zic6Ng+6iJ1PARu2gnbLzh4qVnE+ZWjc0F7TTYZV/pDIYiE0IfRgTZFevBsEMiGpon7jVoyGpe47d2+lxCrUvApc+v3k0q7fVZhdOl92s/AJRzNWmNM9CeRJ4K/0l3DMk4IKpQIkBXkbhi4PzB+35b2Zwdx8mTJdOv8mVh5qtm+cfYdFOaSXuNUNlM0exY64fGj/oxE9fPsRRy6YmXx9JCCkO3gQFHytzcI1HH4+KDQgJA6EJM8dan4Au7p1oDp8lszL/PhXCbCOX+T9HAnmuYAL+/JgJDRetpbR5kcSPi98IT/+R1gx2CMlqM8n7fYhyoN2CqPKZaidUEhQZFDlCIxp+8TKjm3vrL4zmUhyqCoXXmNzLaBKIL8SJUvuCtYFFgXmMkbi69Q2BEqOD9OH6zF8esAowQvwdRuUAgir7O8xZomdWDKA+ubnd6C+WGnk4H5+PQ9yQVGLiYRH6WB+eDGiPnyuDXbtFdLG3xiYY8HiEA/UWlPbpPeH/fIr0C+TjCWBEz5cKTHwiyhfgETMHkEKyWk3Sfp9XPthpzVEWUOXOybqbc4bMIIJRDg/r0/MldBNxoXHa4Cwnga48yIDBGCHIPyU0CEItP09oYKg7KBhpYkvGsOvs7+xz7cEXuUA6ZtO3Pd+NO+y3cSk/w49Pk7Yi+fdXv/4/dXZUvi2sYShB8IWD/C5DnapXV63X5nZ67rHc2ZF5hF1Pf39LeZ4zrgyo3V4XyzBzCbR2UxypCkaWAsUuiqgTaR6hCDrz9MpX2sQ5rnej+93mave40PVudqOb3Od017vOze53uwLMNu0D) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAALQAA8AAAAABVAAAAJ6AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbbhx8BmA/U1RBVCoATBEICoJIgh0BNgIkAyQLFAAEIAVQByAbDgQgngVO2XS6Ca+JpuLLXD6asRAP36/1du7rnvlEHSBUTKiiogh9eHcVgtFYnmD+/5t/izTRgOMpMia+k22OA4r3+GuS7ZIUzf9agKmb+mPSKOEQnrRLpz1gzgksD/CxsXQap95w4jItO91OFxaoByRJSEKuLARqDTZGNmPWghWK7WePHVAc2HrikEIOFQKxf+exQ6oRCLmkWqiWNIP2OguZEELCEIRUBgmyrbIDd+e9oR4oTV03s6fe05etgJk/dV2wYuoKuWx+bjj7wOHtB8IgDeNhIcnTgPhViXQTpzFf1olNRvsbVfDJkrXLlvtUT6ez6f8t+YcYhYDUlL5ATzWCqaE4EV2l07v3nAhAEhBt8StIyFDIBAq5MahVLUl62mmv0xUowamPlZ89FPCLYVcVFZoQakArypiPPeiIApAqRIUQiO41eVVD/dabl0ug67XOPoefnlfuFvWPzmud3cdd6p6eTusfV5taaym61pXq8rpNdcz6Ol7Fub5adk3JygLldXbqStK/tPzw9DFnFi8Zd/bIzCUT1w4dN7/Lhpa6ttqLA3pP/X1E5/oDp/Z8OW3Gph5Lx5e7vh08/Kt6wuSm3U3w/ZeN0p3o9psTy8GLENXx50Z0O6G0u0yDDlZ2n9Gt24puXW6c7zvk/WUoqz4WjQNhBD7A7xh11RUIJNNuPa+fbm4if6vOsl/gp/t9esJPP2x98U+9snnpjrIEgj8vs+UPQJI05tijJvVVpEmG+MmILCeTHamHUrZcTbRC8wgFagyQNEsCACSBzGCZyGskjZSRoF4jbPulzpbZabeTDtjqmNV22mu3PU5YaKcd9jrpoAyo3GgE) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAVgAA8AAAAACcwAAAUHAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGigbIBxaBmA/U1RBVF4AgRQRCAqKRIgoATYCJANQCyoABCAFcgcgG38Ho6J2L0pJAH91YBvTGv4GtZhYILlBAgWEomgMEYy+4pVlqE/ZyvTbgeKekd0NeznxN1Q8PNz7O/e+15rTF5W16QPlYXHIbdF4gaS9ozZtaGo0NRUCu0QqvnGi1GlPROXn8hP/KapwYZ3BQfxshWe5X0lpp1XKqhDivjzA+vbb7sdnENPWzV6nlNt6FxI0iNl64apK8dKa2qas6tBVAhtXJwlSuhLAAIV5OzvjKtwAHaCsGzqWdjZNljJnjTGRcXBQ5qM/P6VAKyCVQoPQpEVo0y506hYCzUaNi2NNgw48lVAFCDTbdciFs9j3Vhw2AMKZkrgg9fHoo4fU7cD2fuDpfmIHQLdRqJfiLi3KvKEWQR356GICcGqfHTUoDASQNFH64cKTQwBvMKOLP//gk6GyeeKcz2fDSXVi1dslehWYlXfdPcMo4O8zScqvo+KwZclnlONsUQOIDxT4k/nkg6B2CmS4WCEY9nOWHjCqU6HVAaVaDQzadOom6W+IkUZXweDriex+1+iTznSqQ+1oW1vboi27oTWtFtCiWaUDBXsFFmn9eCfQUB4kOiWFZmajSkyeuEpjE+kwmyznemzk2xjkUVjW5wtneaMNBuhODG+rL2Mo3n5UzPwvD/qFZjN4JJ0yuNLxkSsT0JwgTkFcxp1ZRAHScFwGrzS/tLXWJxbWDeVYc1Ltg6frVX27JBQNxzZtpcI/8vCWOm4FQYKylm7MMBZ2whXYIVsLvGXlDXcg/2AhSvlsVB6kt0Oaw4spzkdD5ml/e3Es6gzsiEFzESVX3oWbcbd5fwNh0/700rYlMJiI2cCchtzwuuWwV/FA/grcR+bWjg8caYXwLPVlqWlaHHGorYxX7bn/6GTh3C2TzF2F55+OPvfUknf55eUA7HOq7M3/AH109HnBP3k07ywotuM6vtgGrsPzjsIiGxZYxFdV8ZitZ3ngcPRYARXZw7tAIstLl5MZ1vVh6DNhVh2BLLqrb5AYKAQylWoFU6Vm4B9p6x0IX84+tY39ejXAVFrqb7o65qvl3FP4TdduamhsN+r3lBXdKC/A6bzgqRmqNTr6i7oxJsnvC2NVl2pQK1fYtCunICv3A9TTqtYaLjhQEp4Jm6hxwcEsqVVq2/s7NtvfWoMaK7ASrUDSFWVIza5gt0IWjZ1FxXYuEiu2gQB29GxINJS8LlEpin91CJ6qYS1pfArOeboCq3GMG6RJDmZ2pmuo9kBfplmt1IsD7MPsYn+9Ui5gfAMkc2WdoG9NTi7nvjGJNaTLK1glktCVQE+uTtlDXB+cJjAyvzolTZ33GS49iEs0xB8kwKc284GPc90ycwuU7PbMtNyUzOLyRrRFuzXxenTUh8RtNVuTPkRHHwPLhYGpJikkGpkbhAZjVz9bghCBWVVlBVIjO4w1prSUTk9p8/efksJMNzCDPuW/l09vsKS0V46tWhkXN7JeMRYOz5aHd2UdE7XOCxx3oWWkVvR9ClmzElpjYklCAomNaY3gPq8V9Xo6zjP14hLkSkHbH3v/8RsKuV/u2Nrb4/Bj/jxlxS983tuxBvD9QezGqwaXkoJGvQTB3hvLGwb3f/4+giK9USIIKbyCCSTqUD9gsIb1HKpeIBZ4GAhJ4zJ87bGL16R+uWaYT7fOIZkom6AdsUrQqp1axqCDNby6U7N5ZzsxDCfiJEYPkeb1egxTaxhRP5J2xED9R2kA2SGuDgrZEaYAAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="760" height="296" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="232" height="248" rx="16" fill="none" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="40" y="46" text-anchor="start" dominant-baseline="central">Дерево view</text>
+<rect x="504" y="24" width="232" height="248" rx="16" fill="none" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="520" y="46" text-anchor="start" dominant-baseline="central">Дерево слоёв</text>
+<rect x="56" y="72" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="mm" x="121" y="92" text-anchor="middle" dominant-baseline="central">UIView</text>
+<rect x="550" y="72" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="mm" x="615" y="92" text-anchor="middle" dominant-baseline="central">CALayer</text>
+<path d="M186 92 H546" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="ms" x="368.0" y="80" text-anchor="middle" dominant-baseline="central">layer</text>
+<rect x="88" y="140" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="153" y="160" text-anchor="middle" dominant-baseline="central">UILabel</text>
+<rect x="518" y="140" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="583" y="160" text-anchor="middle" dominant-baseline="central">CALayer</text>
+<path d="M218 160 H514" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="ms" x="368.0" y="148" text-anchor="middle" dominant-baseline="central">layer</text>
+<rect x="88" y="208" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="153" y="228" text-anchor="middle" dominant-baseline="central">UIImageView</text>
+<rect x="518" y="208" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="583" y="228" text-anchor="middle" dominant-baseline="central">CALayer</text>
+<path d="M218 228 H514" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="ms" x="368.0" y="216" text-anchor="middle" dominant-baseline="central">layer</text>
+<path d="M72 112 V160 H88" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M72 160 V228 H88" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M680 92 H696 V160 H652" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M696 160 V228 H652" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>
