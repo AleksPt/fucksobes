@@ -201,7 +201,7 @@ In Swift, a `static let` is initialized **lazily and exactly once, even when acc
 
 ### How to use it more safely
 
-- Make the `init` `private` so a second instance can't be created by accident.
+- Use a `private init` so a second instance can't be created by accident.
 - **Don't keep mutable state in a singleton**, or protect it.
 - **Inject it as a dependency** through a protocol, and then tests can substitute a fake:
 
