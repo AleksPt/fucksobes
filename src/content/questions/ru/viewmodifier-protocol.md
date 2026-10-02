@@ -16,9 +16,9 @@ struct BorderedCaption: ViewModifier {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(lineWidth: 1)
             )
-            .foregroundColor(.blue)
+            .foregroundStyle(.blue)
     }
 }
 ```
 
-Модификатор вычисляется лениво, когда это нужно, а не при добавлении к view.
+Применять его можно напрямую через `modifier(_:)`, но чаще для удобства добавляют расширение `View`, например `func borderedCaption() -> some View { modifier(BorderedCaption()) }`.

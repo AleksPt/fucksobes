@@ -12,7 +12,7 @@ struct CommonStyle: ViewModifier {
         content
             .padding()
             .background(Color.blue)
-            .cornerRadius(10)
+            .clipShape(.rect(cornerRadius: 10))
     }
 }
 

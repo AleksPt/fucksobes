@@ -31,21 +31,23 @@ struct RootView: View {
             switch router.stack.last {
             case .home:
                 HomeView(router: router)
+                    .transition(.move(edge: .trailing)) // переход задаём у самих экранов
             case .details(let id):
                 DetailsView(id: id, router: router)
+                    .transition(.move(edge: .trailing))
             case .settings:
                 SettingsView(router: router)
+                    .transition(.move(edge: .trailing))
             case nil:
                 EmptyView()
             }
         }
-        .transition(.move(edge: .trailing)) // анимация переходов вручную
-        .animation(.default, value: router.stack)
+        .animation(.default, value: router.stack) // анимация смены экранов
     }
 }
 ```
 
-Переходы между экранами при этом делают вручную — через `.transition` и `withAnimation` при изменении верхушки стека, вместо системной push/pop-анимации `UINavigationController`.
+Переходы между экранами при этом делают вручную — через `.transition` на самих экранах (на `ZStack` он не сработает: контейнер не вставляется и не удаляется) и анимацию при изменении верхушки стека (`withAnimation` или `.animation(_:value:)`), вместо системной push/pop-анимации `UINavigationController`.
 
 Такой подход даёт:
 

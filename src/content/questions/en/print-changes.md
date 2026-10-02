@@ -13,6 +13,6 @@ var body: some View {
 }
 ```
 
-`let _ =` is needed because inside `body` only expressions that return views are allowed. The method is for debugging only: it is private (prefixed with `_`) and should be removed from release builds, for example with `#if DEBUG`.
+`let _ =` is needed because `ViewBuilder` doesn't accept a bare call that returns `Void`: `()` is not a `View`, so without `let _ =` you get a compile error. The method is for debugging only: it is private (prefixed with `_`) and should be removed from release builds, for example with `#if DEBUG`.
 
 For deeper analysis, use the **SwiftUI** template in Instruments (View Body, View Properties, Update Groups). That is how you find unnecessary updates and optimize state dependencies.
