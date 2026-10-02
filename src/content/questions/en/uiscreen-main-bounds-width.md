@@ -25,4 +25,5 @@ It is used to:
 **Drawbacks and why to be careful:**
 
 - `UIScreen.main` doesn't take size classes or the real container size into account — on an iPad in Split View, or in multitasking mode on a Mac, the screen width and the view width may differ.
+- `UIScreen.main` is deprecated: Apple discourages its use and recommends getting a `UIScreen` from context, for example through the `screen` property of the window scene that manages the window containing the view.
 - The API belongs to UIKit, not SwiftUI, so in declarative code `GeometryReader` or the `.containerRelativeFrame` modifier is usually preferable, since they take the size from the parent container rather than from the whole screen.

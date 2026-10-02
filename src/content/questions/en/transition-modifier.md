@@ -17,7 +17,7 @@ For the transition to actually play as an animation, several conditions must be 
 
 1. **The appearance/disappearance of the view itself** must result from a change in the hierarchy's structure — a conditional `if`/`switch` in a `@ViewBuilder`, or inserting/removing an element in a `ForEach` — rather than merely changing a property of an already existing view (that calls for `.animation`, not `.transition`).
 2. The state change that causes the appearance/disappearance must happen **inside `withAnimation`** (or the view must have an active `.animation` modifier in effect at that moment) — without an animation context, SwiftUI applies the transition instantly, with no animation.
-3. `.transition` must be attached to the view that appears/disappears itself (or to its parent, if a whole container is removed), not "from the outside" after the condition has already fired.
+3. `.transition` must be attached to the view that is inserted or removed (the root of an `if`/`switch` branch or of a `ForEach` element), not to a container that stays in the hierarchy: it is never inserted or removed, so the transition won't play.
 
 ```swift
 withAnimation {

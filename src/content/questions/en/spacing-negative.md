@@ -9,8 +9,6 @@ Yes, the `spacing` of `VStack`/`HStack` (and of `LazyVStack`/`LazyHStack`) can b
 By default, `spacing` sets the distance between neighboring child views along the stack's axis. With a negative value, neighboring elements don't move apart; they **move closer and overlap** — the more negative the value, the greater the overlap.
 
 ```swift
-ZStack {} // for comparison — full overlap via ZStack
-
 HStack(spacing: -20) {
     Circle().fill(.red)
     Circle().fill(.blue)

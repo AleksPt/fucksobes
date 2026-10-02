@@ -4,7 +4,7 @@ category: swiftui
 order: 47
 ---
 
-The crash doesn't always happen — SwiftUI really does require the `id` of each `ForEach` element to be unique (otherwise it can't correctly match old and new elements on update and build a diff). `id: \.self` uses the string value itself as the identifier, so as soon as the array contains two equal values, the identifiers collide and everything breaks.
+SwiftUI requires the `id` of each `ForEach` element to be unique (otherwise it can't correctly match old and new elements on update and build a diff). `id: \.self` uses the string value itself as the identifier, so as soon as the array contains two equal values, the identifiers collide. Usually this is not a crash: SwiftUI logs a warning to the console (`the ID ... occurs multiple times within the collection, this will give undefined results!`) and behaves unpredictably, for example it reuses the state and animations of the wrong rows.
 
 Since repeated values are expected behavior rather than a bug, the id must distinguish elements **not by content** but by their **position/origin**, instead of being equal to the value itself.
 
@@ -33,5 +33,7 @@ ForEach(Array(array.enumerated()), id: \.offset) { index, title in
 }
 ```
 This approach is simpler but less safe for animations and reordering — when an element is removed from the middle, SwiftUI may "rebind" state to the wrong element because the indices of the remaining rows shift.
+
+Keep the `rows` array in a model or `@State` rather than creating it in `body`: otherwise `UUID()` is regenerated on every re-evaluation and the identity is lost.
 
 The first option (a wrapper with a `UUID`) is preferable: it gives a stable identity that depends neither on the content nor on the position in the array, and it works correctly with insertion/removal animations.
