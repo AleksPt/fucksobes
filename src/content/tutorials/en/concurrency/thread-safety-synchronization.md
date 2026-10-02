@@ -193,12 +193,12 @@ func synchronize(action: () -> Void) {
 > - A second `lock()` on the same thread → **deadlock**.
 > - Use `defer { lock.unlock() }` or `withLock` so you don't forget to release the lock on `return` or `throw`.
 
-An example from the "no data race" slide:
+Example:
 
 ```swift
 var result = 0
 let lock = NSLock()
-let group = DispatchGroup()             // (added)
+let group = DispatchGroup()
 
 for _ in 0..<1000 {
     DispatchQueue.global().async(group: group) {
@@ -207,7 +207,7 @@ for _ in 0..<1000 {
         lock.unlock()
     }
 }
-group.wait()                            // (added) wait for all the tasks
+group.wait()                            // wait for all the tasks
 print(result)                           // 1000
 ```
 

@@ -193,12 +193,12 @@ func synchronize(action: () -> Void) {
 > - Повторный `lock()` на том же потоке → **deadlock**.
 > - Берите `defer { lock.unlock() }` или `withLock`, чтобы не забыть отпустить замок при `return` или `throw`.
 
-Пример со слайда «без data race»:
+Пример:
 
 ```swift
 var result = 0
 let lock = NSLock()
-let group = DispatchGroup()             // (добавлено)
+let group = DispatchGroup()
 
 for _ in 0..<1000 {
     DispatchQueue.global().async(group: group) {
@@ -207,7 +207,7 @@ for _ in 0..<1000 {
         lock.unlock()
     }
 }
-group.wait()                            // (добавлено) дождаться всех задач
+group.wait()                            // дождаться всех задач
 print(result)                           // 1000
 ```
 
