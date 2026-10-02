@@ -4,11 +4,11 @@ category: uikit
 order: 62
 ---
 
-When the user touches the screen, a unique `UITouch` object associated with that touch is created. A touch is a chain of events: the finger touches the screen, moves across it and lifts off.
+`UIGestureRecognizer` separates recognizing a gesture (tap, pan, pinch, swipe, long press and so on) from the code that reacts to it. It is attached to a view with `addGestureRecognizer(_:)`, and when it recognizes the gesture it sends an action to its target. A gesture recognizer does not participate in the responder chain.
 
-Then `hitTest` is used to find the deepest `UIView` in the hierarchy whose coordinates contain the touch. The `UIView` that is found becomes the `firstResponder` and starts receiving `UITouch` notifications:
+How it works:
 
-- `touchesBegan`: the touch begins;
-- `touchesMoved`: the touch parameters change;
-- `touchesEnded`: the touch ends;
-- `touchesCancelled`: the touch is cancelled.
+- when the user touches the screen, a `UITouch` is created and `hitTest` finds the deepest view under the finger; the touches go to the recognizers attached to that view and its superviews, before they reach the view itself;
+- a recognizer works as a state machine: a discrete gesture goes from `possible` to `recognized` or `failed`, a continuous one goes `possible → began → changed → ended` (or `cancelled`/`failed`);
+- until the gesture is recognized, the view receives touches as usual (`touchesBegan`, `touchesMoved`, `touchesEnded`); once it is recognized, the remaining touches for the view are cancelled and it receives `touchesCancelled` (with `cancelsTouchesInView = true`, the default);
+- conflicts between several recognizers are resolved through `UIGestureRecognizerDelegate` and `require(toFail:)`.

@@ -4,7 +4,7 @@ category: uikit
 order: 55
 ---
 
-UIKit сначала определяет, какой view получит касание: `hitTest(_:with:)` обходит иерархию и ищет самый глубокий subview, содержащий точку касания (пропуская скрытые view, view с отключённым `isUserInteractionEnabled` и с `alpha` меньше `0.01`). Этот view становится first responder для касания.
+UIKit сначала определяет, какой view получит касание: `hitTest(_:with:)` обходит иерархию и ищет самый глубокий subview, содержащий точку касания (пропуская скрытые view, view с отключённым `isUserInteractionEnabled` и с `alpha` меньше `0.01`). Этот view получает касание (first responder при этом не назначается: это отдельное понятие).
 
 Дальше:
 

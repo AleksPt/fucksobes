@@ -4,13 +4,18 @@ category: uikit
 order: 61
 ---
 
-The last object that can handle the event is **`UIApplication`** or its delegate (**`AppDelegate`**).
+The last object that can handle the tap is **`UIApplication`** or its delegate (**`AppDelegate`**), but only when the button's `target` is `nil`.
 
-**The responder chain for a button event**
+A button tap is not a touch travelling along the responder chain but an action: `UIControl` sends it through `UIApplication.sendAction(_:to:from:for:)`. If the button has a `target`, the method is called directly on it and no chain is involved.
 
-1. **`UIButton`**: the button itself handles the event first, if it has an action method (`action`) implemented.
-2. **The button's superview (`UIView`)**: if the button did not handle the event, it is passed to its superview.
-3. **`UIViewController`**: if the superview did not handle the event, it is passed to the controller, if the button is part of its hierarchy.
-4. **`UIWindow`**: if the controller did not handle the event, it is passed to the window that the button belongs to.
-5. **`UIApplication`**: if the window did not handle the event, it is passed to `UIApplication`.
-6. **`AppDelegate`**: if `UIApplication` did not handle the event, it may be handled by the app delegate.
+**The responder chain when `target = nil`**
+
+The search starts at the first responder (or at the button itself if there is none) and goes up the chain to the first object that implements the method:
+
+1. **A view**: the view itself and its superview, then further up the view hierarchy.
+2. **`UIViewController`**: if the view is the controller's root view.
+3. **`UIWindow`**: the window that the hierarchy belongs to.
+4. **`UIApplication`**.
+5. **`AppDelegate`**: only if it inherits from `UIResponder`.
+
+If the method is not found anywhere, the tap does nothing.

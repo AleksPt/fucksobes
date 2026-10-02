@@ -12,4 +12,4 @@ For an outlet to a subview, Xcode creates `weak` by default: `@IBOutlet weak var
 - an outlet to a constraint (`NSLayoutConstraint`) that you activate and deactivate: when deactivated, nobody else holds it;
 - an outlet to top-level xib objects and to objects that are not part of the hierarchy.
 
-A weak outlet is an optional, and it is declared as an `Optional` or an implicitly unwrapped optional (`!`), because it is populated after the view is loaded. In Objective-C, `strong` is sometimes slightly faster, but the difference is usually insignificant.
+A weak outlet is an optional, and it is declared as an `Optional` or an implicitly unwrapped optional (`!`), because it is populated after the view is loaded. This is also Apple's recommendation: `weak` for outlets to subviews, `strong` for a nib's top-level objects.

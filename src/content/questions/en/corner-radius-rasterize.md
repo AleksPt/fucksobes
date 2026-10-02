@@ -4,7 +4,7 @@ category: uikit
 order: 144
 ---
 
-**cornerRadius.** The `layer.cornerRadius` property itself is cheap: you can round the layer's background and border without any problems. The problem appears with `layer.masksToBounds = true` (or `clipsToBounds`) on a view that has content (sublayers, images, many subviews): to clip to the rounded shape, the system renders the layer offscreen (offscreen rendering) and then applies a mask, which is expensive while scrolling, especially in cells.
+**cornerRadius.** The `layer.cornerRadius` property itself is cheap: you can round the layer's background and border without any problems. The problem appears with `layer.masksToBounds = true` (or `clipsToBounds`) on a view that has content (sublayers, images, many subviews): to clip to the rounded shape, the system may render the layer offscreen (offscreen rendering) and then apply a mask, which is expensive while scrolling, especially in cells. This does not always happen and depends on the iOS version and the layer's content, so it has to be checked in practice.
 
 How to optimize:
 

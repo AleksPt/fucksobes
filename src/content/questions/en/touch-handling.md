@@ -4,7 +4,7 @@ category: uikit
 order: 55
 ---
 
-UIKit first determines which view will receive the touch: `hitTest(_:with:)` walks the hierarchy and looks for the deepest subview that contains the touch point (skipping hidden views, views with `isUserInteractionEnabled` turned off and those with `alpha` below `0.01`). This view becomes the first responder for the touch.
+UIKit first determines which view will receive the touch: `hitTest(_:with:)` walks the hierarchy and looks for the deepest subview that contains the touch point (skipping hidden views, views with `isUserInteractionEnabled` turned off and those with `alpha` below `0.01`). This view receives the touch (this does not designate a first responder: that is a separate concept).
 
 Then:
 
