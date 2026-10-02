@@ -60,7 +60,7 @@ export default function ImageZoom() {
       role="dialog"
       aria-modal="true"
       aria-label={zoomed.alt || 'Увеличенное изображение'}
-      className="image-zoom fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-ink/90 p-4 backdrop-blur-sm sm:p-8"
+      className="image-zoom fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-ink/95 p-4 backdrop-blur-md sm:p-8"
       onClick={() => setZoomed(undefined)}
     >
       <img src={zoomed.src} alt={zoomed.alt} className="h-full w-full rounded-panel object-contain" />
