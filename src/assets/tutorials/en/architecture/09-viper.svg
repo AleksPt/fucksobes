@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="240" viewBox="0 0 720 240" role="img">
+<title>VIPER: links between the components of a module</title>
+<desc>The View and the Presenter exchange events and display. The Presenter sends a request to the Interactor and gets a result. The Presenter hands a transition to the Router. The Interactor works with Entities.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAATUAA0AAAAACLgAAASEAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbIBwqBmAAgRQKimCIOgE2AiQDUAsqAAQgBQYHIBuDBgCeA+5qahTGJoXNZeVbORXLc4XB87V07/+9S+Z276hdpVSHbs2lK7pEePZcivAojdGgm8KhEuD4PPtZKFkBaTZ1XrVw61d4hU/yBOtknKhzY1RLiyYVNSSHsgOb/Q/AW/biUDWfbBzbxjoPSCyIaw9aQNFgLBgN4Biz59Vqr8SlAll1G6Yc6uC777qyAupAgBjUJkURIgTHHOK/0rLBFnKkqFeDPwHAv0iF4eYooKMFP9qH9EIsEtgeaM9jAYWgQ+4BcNmeL1dQLiyAQoSSFpZeHADwQseMNH//AOKRCo6pOX1K3CHUq4DRL7BRMjHA/00bzGCIOaaGZpRosePETQd9DGU4I/8FgtLLoN/BHXHYIftttcVmG6y12iorExRLWGB3AVgGeSZ0C4hvQFwQFEXc/6xdIq/FcRJNR8mmS14jiKW54OhqRHhKcKALE2IYoZ/gxIVWEmzgcKEb+QPwuE9YNW6UHmkQ1jOgNhA4v3hFGjY+iFv9KMNImjSzHnqkSTpJjRgikXj0qGMrqBW77O9rS5PY4QX/7FjbQ4+shMQ1xKZ4GYD3ocwg799HJB8AsZegKSGjx0R8Z+LEGSuJTjmNK6TRjCZ6L9BxXB5TsKbhFD3RLSfWpyKRu8nkykPq1J5atPbhmjaNPI1Y1Qk7FPCNo9mLZiIZhoex4jSCRqu+OG7NTqerUf4YsEX4lRvxmxO0NNZE4FWbopdsiNVrdBjm2qjl6z/e3jXrpEe6ydEEL66nW5R1L3Jbcr3qlNDRWEovVU6rr4Hp9aPMSdFWCaJtTkq2sHDsQr6iWihSVPEX1v/vBbJTHLO4tr4DRawQd87mDKWnz2CkCh5fKmdmwPd4Yh799VyYnqZD9edGfTUefwLjqOvU1zc4dZpdlRUXmTKUK8H+isEqnbXHrh6l7wj5IjDJaQXbIi5v3FFUVlD8CuqRxFHGsaBlEo7ZUSaxDnZ76nAmyzB8uUS0XCSX8hmWm4E9dYPdUBAhWwVlES9jKbOtAhlyZtau5ZSvIxNSv1zYXzakOUeShVi5SIjkKMkH2o1zk3Ypve8fUYIphzsiMlGDQq6yu/WDcDv/C82wUtYCBVmJtYyyoEUSynwZJCxiRosRZWlCTXyE2EVsI8DnSVhG3xr6cvqOqETWUI/rda3d5jQch0QyHpeVsxaIzzKN9JA6bEKF+RxeZsa7hzVkc1BjtaLW3GzJbrLWrMOG/8Vcxevs9PHbakh9UHNddb1N64D208Y6uXS1cvVqvPq58rlULFimhPzIOtBvt2CLSCyrZFiZ6DnKPrgfRnezmumpWY7Q0ElZgqlaQUJO+knM1HpjlpM3mr88JWV4nXA0HKzND655PYxX2U6KxSebh6vswU+g3E9rSUpWpqUpk5NawDeHBTLMTwN7AG1Ayybg6dQ3PADdDfpW3Pt9HSL48TfmC4A327aqNP/bP8j4r1dOF+UwbuXsVJ2TNu0h8H9z+yAo/YJXj1nv+kIHxgTlgCQ1KgEN9AGGSsCQUa4E3k/bUaooS2hMrY2cwbD5H+W9BAUA) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAWoAA0AAAAACaAAAAVZAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgWocMAZgAGwKiyCJBwE2AiQDUAsqAAQgBQYHIBt4B1FUcNohvjqwTc0F/RMKxWgjVEI5LUgsMj0vjsfqn3RYCfrn19jPPbsPEdMIiUaoJJpYI1QSfE9ZrIruD3n6bxBSMimRlGMyqrPaD/Fw+mcYN9i1cEz/W861DgCcJzSuvMUmQg0QHbGi/geI/xqAlm0WLGc8DmERwiAMFlxp5WuZ3Zv/e/faGBMwCzBMEwtwjHl77U1jgwZUoEVhOBatZVEEXz+o/PN1G16o9w6C5WtZxbEFA6JAviGE4WOEEIdhQAQVdOANuYoqIP3QP9oP6cet44OQjg/gPlqOOkYHIRqM0EGC54gwlK/CiBlSLVLIwlR6OFFQdPD2zn9PlIGgFnoMDAor+F5jDobDI4yNkSkYiRVQNFIBADLCkOEPgstolYzpPiATDAnkDmSblayiBknD0qzIel/8kK840JlqAJhUJ7EdUPAbEjcOmlsvK4fj5HHqXfx/DfwnK4HxFRt6qi2PcEBshJaEp1TpPmv3JBCHh8ijln066KGfSfxBMJqR7YjB3+ieWHbvxrUrFxkiY2QSvOwHUsFegCYBiOL3oCkIKgukRI0GNrcoKSOFFhMenpOcnH5dmGrKSI/ih8cXFBW/Tlnu739AZt+qKrZ9YqlloSYigyhtXw4lLXfmXlmcR+FNVzGzlKCq4zXPMCXEIyNZMidpH9C0fXfVkdwZm7ZcjgV6Qp/7IJaB+uL2EuqxhGCGKSeLe+/7xBmjdE5vIWMAkakRmgbmggMQFcdajwCzhTp1BarrPwx0jfudVrZV1pMw1QLyoVoD7Bw2QZPv97qPYKZ9Erq+2mPpbWY2T9plu5vlGfnjYvbU6te3yb1IX1DZNJ7Q8vhxLjxiFIwXRjWCpkfAZk4xwjB9FM63/GqAaKFaR6M3YpRv6JGFGG8/DutVQmL2yZvYj4HhMvrXF4fomdXEcoYeadD7eQQHT9W8FqAlN8lEyTx+gCHKufjC19+x+ZQrmVvUZBQPFSO1Yfjgh1sxVVKCVifIXJbikzbm5u24DomutNOl8BcVKwM9Lop2pYj/seuUL8ydiweTN5U4xqRQjFGCy1Saj/kUxvnPCADPlQ8RuulS0uAfdpLmWomhMK8hJS4tdhafZf8uz43vn+w+jTua6JQxMn+nSHYmng29sV1J0Pu26xT0xraFe02jH2lFVTZOv5PdnciYNfcuH7UrmdXaH1DuykZwg5+kjNMjjrKyEYfeT5Ua/MN4Wb0Gl9NJFKWTOKpREyiNRDFaKSGHnpfX2sIL9tcK1KUdLixQVKLwdztJ3of36f+3Zmg+5pXKsXzShmowAmXFPwbpkMLTy+iDmyzMVC3QufNa9cWqGT0uUlrLOFXceu1fBkrIWRSmYJbgMqU6iMyhCoS0y6A3tjW80KJ8wIpJjvIx9AVSFqX+D57jehO+PDX0TK2S5iQRSF1WauZ737bpPfqPPXJhzMbxFKG6kqm121vr5omTOP906WnC0vHMksQlYY8WcNGGJ0UJkNFTyGIXmqPKG8q3dm1d1LDotxzRCBuA4YbGx6cFXSx5LjEmko5nETJWtyAwOQoX3yWObdmxece4Wg8F3wzDjJcCit7NVFFEtVuZTb5nFtdZeAMeVncsc/Z6RKR5mlOl/Nv13ZLfaiIaWVDwkLbgVF/1CVjOcSBIBZK3EEHaIbwEHBBC4glEA9QCj7o1FdyeAWLg+83PjUsyfYs2hr0E4P01m6G2KoNHJEgXhlhxC/+q9KUAHQLgT0NegoAkcbKwHKrlA7EsfN5Ti+glqgKI5VNhPpzNvNv+U2gjkCMCzKKDUz3YLBWwT1AIwRGPPFkXIg55VU0TMwRvKoI9NSA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="240" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="100" height="88" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="74.0" y="68.0" text-anchor="middle" dominant-baseline="central">View</text>
+<rect x="264" y="24" width="120" height="88" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="324.0" y="68.0" text-anchor="middle" dominant-baseline="central">Presenter</text>
+<rect x="520" y="24" width="120" height="88" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="580.0" y="68.0" text-anchor="middle" dominant-baseline="central">Interactor</text>
+<path d="M128 68 H260" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#a)" marker-end="url(#a)"/>
+<text class="s" x="194" y="52" text-anchor="middle" dominant-baseline="central">events / display</text>
+<path d="M388 56 H516" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="452" y="44" text-anchor="middle" dominant-baseline="central">request</text>
+<path d="M516 84 H388" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="452" y="72" text-anchor="middle" dominant-baseline="central">result</text>
+<path d="M324 116 V156" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="334" y="136" text-anchor="start" dominant-baseline="central">transition</text>
+<rect x="264" y="160" width="120" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="324.0" y="188.0" text-anchor="middle" dominant-baseline="central">Router</text>
+<path d="M580 116 V156" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="520" y="160" width="120" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="580.0" y="188.0" text-anchor="middle" dominant-baseline="central">Entity</text>
+</svg>

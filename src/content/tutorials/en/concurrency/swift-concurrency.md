@@ -213,7 +213,7 @@ Task(priority: .medium) { let result3 = await asyncFunction3() }
 
 **Priorities (`TaskPriority`):** `high`, `medium`, `low`, `userInitiated`, `utility`, `background`.
 
-**(supplemented)** How they map to QoS: `high` = `userInitiated`, `medium` ≈ `default`, `low` = `utility`, `background` = `background`. A Task created without a priority inherits the priority (and the actor) of the current context.
+How they map to QoS: `high` = `userInitiated`, `medium` ≈ `default`, `low` = `utility`, `background` = `background`. A Task created without a priority inherits the priority (and the actor) of the current context.
 
 ### Structured and unstructured concurrency
 
@@ -398,7 +398,7 @@ func getMessages() async -> [Message] {
     }
 }
 
-// With errors (supplemented)
+// With errors
 func loadUser(id: String) async throws -> User {
     try await withCheckedThrowingContinuation { continuation in
         api.loadUser(id: id) { result in

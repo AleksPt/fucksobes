@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="284" viewBox="0 0 720 284" role="img">
+<title>DIP, IoC and DI: how the terms are related</title>
+<desc>DIP is a principle: depend on abstractions. It leads to the idea of IoC: an object doesn't create its dependencies itself but receives them. IoC is implemented by DI, Service Locator and Factory Method.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="284" rx="16" fill="#14151c"/>
+<rect x="230" y="24" width="260" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="360.0" y="40.0" text-anchor="middle" dominant-baseline="central">DIP is a principle:</text>
+<text class="s" x="360.0" y="61.0" text-anchor="middle" dominant-baseline="central">depend on abstractions</text>
+<rect x="230" y="116" width="260" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="360.0" y="132.0" text-anchor="middle" dominant-baseline="central">IoC is an idea:</text>
+<text class="s" x="360.0" y="153.0" text-anchor="middle" dominant-baseline="central">receive, don't create</text>
+<path d="M360 76 V112" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="24" y="208" width="232" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="140.0" y="224.0" text-anchor="middle" dominant-baseline="central">DI is a technique:</text>
+<text class="s" x="140.0" y="245.0" text-anchor="middle" dominant-baseline="central">dependencies passed in</text>
+<rect x="280" y="208" width="160" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="360.0" y="234.0" text-anchor="middle" dominant-baseline="central">Service Locator</text>
+<rect x="536" y="208" width="160" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="616.0" y="234.0" text-anchor="middle" dominant-baseline="central">Factory Method</text>
+<path d="M360 168 V188 H140 V204" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M360 168 V204" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M360 168 V188 H616 V204" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

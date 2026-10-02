@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="252" viewBox="0 0 720 252" role="img">
+<title>Inheritance and composition</title>
+<desc>Left, inheritance: Animal gives rise to Dog and Cat. Right, composition: Car consists of Engine and Wheels.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAU4AA0AAAAACSwAAATpAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGigbIBwqBmAAbAqLcIlFATYCJANQCyoABCAFBgcgG/IGI1JvohD/TIjHnBoPeGWi2doUNs9MmF1q+ZOxEhf6fCq3+tcdtBsYd2DcQjoZ0+DBVtRPW8x+FT2L+2mtAf6BA5o5p3s1wnZADkiVhRp/kgQMvDy6NL1Jx1aoVMIg3m3qpJTmsaoJhQMYwACVUv8f5L2LP6D+21i2ElBwp6XpD9WCAHCgj6IwgcAGAkYiAoclgQvZyOUAGEqVIyNjMwHYYAKA8wGHit7Niw7m2rR81xYUKgK2m2iEXAwzQNM0AmCanU+S6JgCUMCObk2wdEoF8DKBXdKZc4CWIE1qKuqmn4gqmZE2kDA3e0kRmRC5NFsmCRQCowhjOVZjPbZiV4D0NEezwFpswo6/2MvNDbU11ZUIupogF3qBKhSQr+voagCOGyChIKSQZiTnQ6QU5CPZ7JUO5qgr48WswlXAMrz52a785hyHz1M8wUIsEOOhWzn/clQuT/MHRDouH/Ileh/sOLM0QI8RXxLCj+E9bl5DKkVYaB4lLTerZSccGCg6mSd54priBlzdVJKSOHlvirPkteWN+Zeb6wvjwTST48I5Of6xNEqZy0tAGWEFEFoSQlj6wbE3Ih7JwIFgUncFx1iMhFeCM0ioNRMSZh5gJgTJfho3J9wUYQY51JkN6s0c4N5c+qV3ZK6SxIiTjcDplIi0eSVyDpMKL+xH7DDl/dTcPfKMavvO7K/TG/Q9hvdCAdHICQjBiNPQ4p1yfs3Ja29yPPWEPvheRyxRFbvWMZYOYLuD7xMwy5zpiN38QeEpRo9pjo3pRI5nvhQhFO144eP9z38ca33lcxoinE/3fnU+K1haSkvOodWuLmvvSooptSvBn6KqqY7OhDBkRR0cVIU8LavpWEWVDaUzmepA/JMXxtd09y3XarS+FWnE+Ir5lerUpFoj6q9eiVWf3K5Pf+Nd9ErTOjb7Pw71lOTJ9a6y+rk6rSQxXFI3N+l01s/l9ZXowY+3D9flT3dzPjroVutwWoVXRmZmV4aD9/Z2vtnXLryqYRvb6Q+nNi8PHIisz/hjKD7aM6Ys+jrm7m5ub2z5Do12sayzK+m7UulKgEfI75dQloe6hRgZ7vpvlWEb2bXgUeuEMioPi1FRZsbNh/5Qw2rvGFmZ7RqaH9WCy7ckdyWXbw5q6YghV9b66MCUEVysre3zjcrr5WzZ1y9rynrlFyD+ifH4+pxaMTs26l++OrLDWDcoKz19yqiSRFB/7cS9uum9Z3TsbRuv84y2/v6MnuOrDlU+pEN1z6vZH7aYG1raNfmOBk9LXUNX36xyq/+26jdKS76rvn3itprvSksfz/0Qdxte8A8ErdJoVVO/CS6FFCNbJMRloivZIuYHhVAuVcbM4IDK03Axtroj6/NKleiMMRNesylRZRQJeWSgP97niq19enXGtBEXTQ3dA7U1P30wyReccxNjU4mFJP5Dqckbjei5enfn9+7qo3dO8ohzYXpiZlloBdaNz02Patfp111nXPeZ/pnmG7pSR+PJqsWycr2qSi8vW4TFDQ7AgpwMoBJAEKCNkv3ol38hAGiPaWHzKxemMob+t0nSTwDw6Tt3XgsAn37y1j+Kzs9Qn2QHYAEFABDgJA7RiILg3AWdz0jMXUQjY8cAEYjDKigC0R1c8gcBykF1TsNWMKq9AL4/zwdrBkU+qEvnlMQCSYvzq9HRi6ADAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAWEAA0AAAAACVgAAAUzAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgX4cMAZgAGwKiliIWwE2AiQDRAskAAQgBQYHIBtUB6Oidg9OpRB/dZCNYZCzvzO32mpSe+yGI16a+wLVkPqrVK4dU/nwdOv/3DuTtHATNS1RLVwLtuyhJdr31QelGuDfF3ACCgBUbe/S2rb60lBvtIiXTEmEQjL33V0XPPwOH7qm3i2TflRF8jqz/2VgpEYUbkDjgQXwqIpHMxmuwWG6DYk/eoeTv9o0E7gGCAA5hCYFBYHodhKoQEAASOFEOZhQU0cfMmKJ1XlkzE+tLyIDLAD8Ptrmdq8uQgwMBCyohEKKgDMN3sqCAwczvJBSFgLIoSwhKSgTU6W+FeDvd6gEC6ADUTAQgfrVuImF3Nw2DItUyiCHAsrNQYIp3ApRVwUKgPGyDiQEgMAtTIC+G14iR+X6aDVLbeRXAoAeTYcAtLOzkHEU4m+EJrgoPNzTiwcRxDrz9P8vAHsv6YIhVEUfyeghAUIOAhmBG1k+i6FvpkENBhRBtGIKMezGDJaxngq1OI4FrD5i764u7qIu7PzO7RwEJCLQYL0RQDpAbgeoH4C8Q8gJCCgtlTKr3FS4IiE0sGaVnpPksZ5ctTpDnVadKZ86+nWOSSHkYxhzSi/m0tFEoKnJx4i/XZZHskDG9uPyXj2S3L9bXJbsvWDJQcUgvUCDG9bB0oErnzwEbQJ7JLNYnQCaU9fo81/YCS4cgNQzx0FJjfw89ryC53l+DcTOf9howWNjkQlkuOZ9XyrJJHO921SQoNDwT8JwzfwMGPNfs8bxUq1ZeNLIyDBl+9jAR/R7c87iGiqaPEAUPOaJYZJnwx6w9d4AwI7pp5kTo8e8AjP5B+dYQobj/NfOJjtremxLxuM6Jmsl3+Un3+2vXS5NqXGcPeoLFVAdem9j76ZlF2wepAYVZ6REdgP8c0hx0FKWQXD0CpNr+ZglWMRFblg4ebT1otnZtktOji50bxS2RB+Ifzxa1RKebHVtNjZ7ErHWLr41Ly25JK/vHkv40fvZR/A5cyCt9Gs73/VyWOlO2nb0ztynv4jN7z79kSa1pWO8yrXUqR1mAos/vCUZ8AS5EXvWUZqYZywv/6YXoRdZCJZud3eV7yw39VaPWCvajtj75KOOsvoibcTt4yL1fIk9aDxr9qiGtikTrHqXguXb3eHKxHJjuGbYXdmeH9XI0qX724wNv/vy5POb8UcDoXFdpEpYcLPT+5jchLrv/b8t9pO+o7/etNBojEv1x60qHbYpsSpg+Ad17VWhrqmx3Gdr8ktCLovz15MMVS2F+v7y/rg7p87p1OuOOf6yfC7uya77u03noZoWgxZ1TbOt1as/ch0D9eb5RlNcqd//oHdtfEORYbDsDzj0rAQqE+FI1fZKqKdnJVSRiHRXJpYDPaOlAZ8uzPO6cIAvLQnyXJj3c91BH2r3wjTbduewvaR7d5N/p6OrMBFvDFt/+D7j/zMzS3/M7/b5C8L1fKk/yBsjvF8fDnlQ1xTbXlv0gVGiFsX0FW0eY6TkfzAsrYpf7o3ObB3nyVUFtSPZaVnfxy7fvq3ixxmfQ3Jqq8ZR0m8oa2iYGkm6VOb/yjPSHd3rWV2ZyiPEHx1i4aOfdCiQV9tuNLXXiHqjvWfuPfOw6GF/+7Sljij6uZBW26fNP1Sr3QXWCjEAIdSrIADgA3D7bx2QGgKAIsBPLuVNqKp/EzPMlwDw+dkmPdtalFo9w9K3vCQpAHTT/9HP1ALAvQbDQdpXQ83IoI/ATdTopT54qBsuWts1+1CHz+Hj1TG1TNqHTYGYn+xXfvI/E1lBLpCKANCgGhRqUBCQRSUUgpkLKQpBAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="252" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="320" height="204" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="48" y="44" width="128" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="112.0" y="58.0" text-anchor="middle" dominant-baseline="central">Inheritance</text>
+<rect x="124" y="96" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="184.0" y="118.0" text-anchor="middle" dominant-baseline="central">Animal</text>
+<rect x="68" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="120.0" y="194.0" text-anchor="middle" dominant-baseline="central">Dog</text>
+<path d="M184 140 V156 H120 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="196" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="248.0" y="194.0" text-anchor="middle" dominant-baseline="central">Cat</text>
+<path d="M184 140 V156 H248 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="376" y="24" width="320" height="204" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="400" y="44" width="112" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="456.0" y="58.0" text-anchor="middle" dominant-baseline="central">Composition</text>
+<rect x="476" y="96" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="536.0" y="118.0" text-anchor="middle" dominant-baseline="central">Car</text>
+<rect x="420" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="472.0" y="194.0" text-anchor="middle" dominant-baseline="central">Engine</text>
+<path d="M536 140 V156 H472 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="548" y="172" width="104" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="600.0" y="194.0" text-anchor="middle" dominant-baseline="central">Wheels</text>
+<path d="M536 140 V156 H600 V168" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

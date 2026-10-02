@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="92" viewBox="0 0 720 92" role="img">
+<title>Decorator: a chain of wrappers</title>
+<desc>The client calls Logging, which passes the call to Retrying, and Retrying goes to URLSession.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAARUAA0AAAAAB4QAAAQFAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbIBwqBmAAdAqIZIcaATYCJANACyIABCAFBgcgG7MFKI7DOIb8Z7KUJoKS/3yd9ee+SqteA6zpgSPUixpOXENzxQ+thCUYjFbfK2jX6H+A2rL/czm9f9fEsS1bJCHONTArjDCguX1pGHEvQElT1C3rVFF5CY0gALlIWsa9hCzcnIN8EAiAjFrUg7z+3hCyoQOAMUG+SAQK2sHGy1+9YPNaVC4FHNaxGJ1HBsBOshiAng4fzcUMUksMyEESJ2zsdgP4BL3YIQ2PJoJz0aSFHKaw55RGZMxnACQApZBAlKbD/GcLIUGHXgQRxhIswwqsw2bsGBPQi8AUdS02fgf3pjfcd89dt9xwJULiEgpxvBFAMUCzAfoaQK4GUAhMJoNsTNdE+erMgpyJxdVyQ75cXpxfPrkkP5dncF0ecNupZBL7E6G4rMlM4qfSdCAlywtOplLNfH9y0GKMCDYdSKe9ybA8q/5kAvuThvB6bWJFgjK4jsta2bAzRZtySSAXCxq/aeCJxCw6YiLywsRPfUwUlccBkaVMxmJQOB3DkbVTabmTHdFDXJIpj/FHB8DbkWOydOD7ZUPYubK7DUYOkW/FhZyQJ2WE7/t6fuMrnvyGDnz0VuCZJvnmezJHPsC/S5bzfqEkEycODpnt5xzh6Fwev3Gn7Nq9mll8+aqTH9GBj/mpD7H/g03PtePdAcx+/qNYoDfMcXX3rhAl110rTxm2GI8dN3v8VpvHZz6OqTmdS6ea4nmaqdvlcfkdpklTxAcL67vLB1d12fSRedPE/E0rEdOMqt1mVU0zJk8VXy1q6CwfWNNtN8UXT8fEnKWr1i8o1ortVp/DbvPZe7wLV66bnCDmz9TPdV1V9XOcTvS91xx1QcQghNeh/2+xlu3dPDjO3SZUn9MhfKIuA/ffCbwxYUm7nxYV59sHfJ7wgrVzN89dsCbsGfDZ84tWxK3dWniotdXs8jlXOEt+s8XpUVeoL0A48PnBJwFd4t0AZivaipJW0ef3BRcsiW3Ultv+MJpVjzoXE7Pc86br54qLbv0c6NzgmyMuCf3cDjFgE0K9qMJns7ohIX8H1imxFWW1arxX640uXT2nSasSTq/VovrUuajOMgeaC3q02WLSBIO1teX3VBcfzOvv9HfPGZyrDMzruqvFR8crM39Rmvc96OKxvMGezt75kYVY3tHf4/PcCty6pd16GXjpcdmvBvDWO4PJL6TF+4LzP3K5PhrcFlyQ/wwTjzcN1dUHmpoC9XVDyFSQDSATBQUgAAgDbKKUs3csAsCMujrD66F5Bfb/syXpdwB48f2DmwDw4vm3/2Qa690iP8bEfh/ZTxMJLLaENHqm/+fXFk5rNWg3VTDb2DkIYYgZwwRmQxjWgYaaPgjALyAAhZgMhnKwS1SgZULiYWzNGEVIAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAALwAA0AAAAABSgAAAKgAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgQwcMAZgAFwKg1yDFgE2AiQDJAsUAAQgBQYHIBvtA1FUDJ4BfibYdGoLPjDoxMv1BUJJLsQwbKZAwY/yGEG132fPvD0CDpAmBqPO6VQUkPLfiGADBMjU//n9veeD9/2BYqPjmoS0tEhhKde8CM5grDd1U//bHkjYeQJppmNTAXVRgGNjpgU8pk3kLNEAA/D01NDHt84axLHvIdAKSClUQp0GIdBs2R7V/oPHz+u9l/v2ud7noe9f6lXg/78Qzx68fakRgVCkRqFRmlWwaodUh9INIKSRYTVoaahQ9hGuWkfHyXEVWygp3QsSuYn3wbG8Tty0zS/EDxtPXzl7zjfm3lfbfwegfMI5gVfJDvwKgElNSFToVQn0Kg6jXaNUb58Hnnjupff/Q7u9r7uO2murUWyFNq13oxGb+IDWG+KG/J/ExVFRIRqRyMuJhdadn+NKLy5Q/dmZKH3gnF53egolbxaqvzgRRpXTouCZSEkbB9Z9thfMxgw/6mv371nep9ftLgogEiLC8xw62OmIAZ5OKB0Ynh7rAGOWS6DjEAP4d3QomUMISHXzuNIFVD8HJbOZlMQGf9v+uDi7wYaAROdMNZuAhZg7f30blxBb+SxLa8XccFsnFVs+ttJkzMQ5MFcVpEjuyeY6Oc4uerkpli6Gvgp69vwBrIidXigtZvqmzIclZMWsmlkECbvqkwWG5ZTWMHEwZo5mBuOV6BUwZg4j2hqkPQg5eJlIJFiKxzCJFJbcSquYqot6a7/jM7IXE7c3pLgHuLdFt1UGVH4pC2rJBoCnkIWgoIcgf4WgYAQXyryCeo1vdcIGPu4quURIew93HPIEMxucSiDcA1A7cZF8q3pzfeC78VcA6iUI/pKdPyvArNhZJr8pJfT6BCikkRU1ymqMD5Uez0WqIf7PCU0WpE4puKrR9apG/o8ZAgA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="92" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="90.0" y="46.0" text-anchor="middle" dominant-baseline="central">Client</text>
+<rect x="204" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="270.0" y="46.0" text-anchor="middle" dominant-baseline="central">Logging</text>
+<path d="M156 46 H200" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="384" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="450.0" y="46.0" text-anchor="middle" dominant-baseline="central">Retrying</text>
+<path d="M336 46 H380" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="564" y="24" width="132" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="630.0" y="46.0" text-anchor="middle" dominant-baseline="central">URLSession</text>
+<path d="M516 46 H560" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

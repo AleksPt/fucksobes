@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="208" viewBox="0 0 720 208" role="img">
+<title>Adapter: client, protocol, adapter and old library</title>
+<desc>The client works with the Analytics protocol. The AnalyticsAdapter adapter implements this protocol and calls the old LegacyLogger.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAUUAA0AAAAACSgAAATFAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGigbIBwqBmAAgQQKi1SJSQE2AiQDUAsqAAQgBQYHIBsOBxGVnOYQXxVkAvey8Ni5nfYqUnxiYqfslsLiI0ih0v7t0bSRevDUr2Wv/8xCukPAOkcgA4xuxu4esbqKUic0sD7jAoPv+eXJHtukXSdkzoQD9Hn3SeBbVDlM/L/LXhqwBbaGQN0Guv1H/gMDtNaQ4PKDy2lX235QcwiGId43xqaxeCzLPn0MLH3wxgLOxxTLA6Vsrg3kVS0ZiCeqD/sRIBW9p8NHiCDESEEw0hAyyEYQQCmlHLl99/EgcXyAawEAMdfTiOOXvjl3uE0hEDjuu1F5ISLgEnIUeOSul2m6ZQAcpKCuwtaHN4Ev3ODMu7gC+PLSDFO6eveXrCQy6QAPyKWIuKTP7vmFZOIR5wa3eMwcS6ywxia7HHJ2LTolC9Q2+7/TDl1TFVkSBSZBVUIu3zcCRSC/we0BqUcOAi7sXvW1BJxUXjCeUhkts/ICxVqRrhn52QrT89tKtRmb0mEdnLDhc8p/A5Vzmn6KF/IvS+IPNCRNAC5AS7JYAN8tYn4aQwkcStLMhj5IplRHTOJUtCCAYXSvaOIheBOKpTKk5yIiWWOCAI8wsopmGxbzVbQlRTyEz9T6D0jNoLgr4hM4h7QhseRRHNGGh6V5U/UmTHB+/GfqlKeS5oy07O7mhB9sZljE5BrD3US83XHhlsAVwBITQwM9AE9ZbtIhRoBCkwxGtMub3uFruX08rf+WcO8fppNFXKdKP80qB1aCqW8IkQA0LbHe9zcxDHWBMoZGpm3sY8h7n0om1OpGYpfwsORG8PJo57GbE47edLSdutt2CqUc7HvwP2OouDjD/A+0JTDejm43UjLdLm8Hw3g6u1yIUJARChlEqSjGx/blKQK73J5OcHDLDCUGvxNGAja1JmA1b+7rOs/rQPUMiZeOMlo9Q3ymibYBae9ETq5XCg10p3ZjS0dT65OpCH9Hj2E+0+Pyv4BnVCjSSqohjyfkGGoBxbFCHuRXkUjrqBBISsHBIe5VnsAQo8SgoLKzIyavJLcMyMymDfIaDY/mqPmUdeTxEQvnw3HQlIC8Xd1umpPdLj+M6FNc0GfpQUgi7v6yKF4yWl/H1CDIUWLEoZIY8HkP3tEYqpdGBDJTRTqONfuGuke7fUPMrI4TpWYMsAuUxGyorp5ONEBAEQMgdUkzPrPNOPrKIQzGtctq6ri2t4dwFl1pKd+BgbOWDMiqRhopZ/SFbCNJf+G7Xh5koRs0xTGeo4bZ4GEYKTkHBZHHkE6IEJwNbVkoYHykKnDs2fJJLJcY/YM9q+hmh76DxxoPpDb+Ox9uH0uZ34cY6f8Aw2ptA3KKoV1N1NbwYFcFKUCURMCHHHSDwjgerkxTESdqbuwRVFe9uKZI0qdo5VKlS++u1XkUy4n9X0Nt19PaymnrFUm2FL1KrvZa/KC/TKvi2CV4yRKy5A6+Ey2aj8GuPfqrj1qcZvQep+nj+nFGX+pN0DSjwlBSiisqcGmJAcTWAwWi5KQBBgBgCADXEpUw7cQHIgDXH903c7rakyb6GveiXgAA/y6tXwyAf7cufKL0v3qEJ0vc3dzeWzrpRgHyf08XAEG7uZE2QCjUWcEGowA5m9m2EJSKnR4XhgEJ93ETwP+7nl8bcOQDN6U/REfxjFyH6OQSFA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAASEAA0AAAAAB8QAAAQzAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgVgcMAZgAFQKiBSGVQE2AiQDOAseAAQgBQYHIBsEBgAeibGtg+3aFqpovImH+DXam9m/Jy6IezWJkOiWj1JpNE1iqV9oiB/gaVdNGVU6HUA/5eJhNwFlAnz4y+l/d7sx6WPWYWJppnPh2jy3WBpoUTbt4mwBJRAFGjBkmyn+woC6OEf68O0CbYCUQiXU2oRAizV2qY75hcSA4d3GqhIwvJ9ZUwaGCsyPqXu5VWWgxkcVaUstjqj1KCgmTJizAeMYUrNWkW2RWrHt/1sL37+cU7DNPqnGLP+/Q+eE0CDqoRmt+RZx/K/IkhoCVay8zXWdDSxJJCWAXS/Jjq9AIFewCQDO6tvEDbDyC8g53HTpclQ0HIW7aqrz/6+A8hYThqPZiT2Rn9LcpaJCH7dOFYfU2zRJxV25ClWo6c3rMZWo+rhysXKRcr5ynnIu1A3bgbHJTuIUQDzL65WQDnljmIvk4jVTE+p4vHBYV9dQV9/FSDNzSC7HdCoUyLBMRtVYfFljSCqFJ7YdMqwgI0tXMMMySsdcQ81Fsksrc+aABSKdvPh4VO/Fo5YIAcHLMvX5gTMRFeGGIxcCL0O24DoXb96vMbR341IHFpevSiFpLXbDFaS8fPuGVAoKN8ETqTRu2G5gOuXyBkOxwYktiP0aQ6f38+Dq0xs4bwFypjiMQOZ7Lh8nIfP2nUKG9+zZgOlcv5q1+jRr9+XjmM4TV/4C5h/YuXItWLeLuUsmxg5tA0cvSrW6KuE0MMgm8F9t8eQQgkC9chjTeQQZPgQOUgiRpd52DeFhDk0VftEuSSzHoP78sye59h7WxEiBmBTpgdpyvGnzigY9gzLpsFBHl3s7NIRHODVW+Ea4Jgqcgi1S9BCDllY2zfO72FyzpK7gpJdPGjnSWcXyBU90SpPuYGe+Dhz8kn8CDnZmpppddLWw9eEzeV8nqc4BVpRYh9gCgak7j0chD4+tsiAVCE3cfweRhVi9U1QiHOzMwge6VH0khcR5MEp86QXalIcdd9mopzU13v4HcOuoSi+nxohI54ZKn6ioSh/Hxshwp8YKr6hkOy8xOQJFyRFeqJ2tN0qKQCWkcG8xHPhwJQsftDeRYxue6ydpCgmzaizwjWB9eG/4f66R3UeLcLHEMsIDtZN4o7RIVEKJ8BHCwc5MfLCb9QOaum5jNsUxSEiLtP0PuJp5WuvLwZTC+lGhmY43MclE3/h99uqGXY4fC8Vc9ZlAPa5tLNXe0zMzqZOvw/jrYGjADa8xDtPuV3vUzURTnoRowciBYBo92FU1OiV6bv7c3pTe32KiHTcFYid8iMQYokUPkZgD+AUFDdofgC5sxBvsrfK/gEE6ss/nQlW6jstXNRzuJWB1Pp2iT1orDyk9cHjsrSyB4eMdAanqAIIcdEeuskMdydCXAmvTTVKrsJE5KFVu2oxR8jMb3KPlJ/+BHpVgxv9DEDrsk7qkQH6ftUG1k/+7YAQAAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="208" rx="16" fill="#14151c"/>
+<rect x="24" y="28" width="130" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="89.0" y="50.0" text-anchor="middle" dominant-baseline="central">Client</text>
+<rect x="250" y="24" width="220" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="360.0" y="40.0" text-anchor="middle" dominant-baseline="central">Analytics</text>
+<text class="s" x="360.0" y="61.0" text-anchor="middle" dominant-baseline="central">protocol</text>
+<path d="M154 50 H246" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="250" y="140" width="220" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="360.0" y="162.0" text-anchor="middle" dominant-baseline="central">AnalyticsAdapter</text>
+<path d="M360 140 V80" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="372" y="110" text-anchor="start" dominant-baseline="central">implements</text>
+<rect x="546" y="140" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="621.0" y="162.0" text-anchor="middle" dominant-baseline="central">LegacyLogger</text>
+<path d="M470 162 H542" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

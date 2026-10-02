@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="212" viewBox="0 0 720 212" role="img">
+<title>Observer: one publisher and three subscribers</title>
+<desc>The publisher sends notifications to three subscribers: Subscriber 1, Subscriber 2 and Subscriber 3.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAWsAA0AAAAACXgAAAVcAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbggwcMAZgAHwKilSIVgE2AiQDSAsmAAQgBQYHIBtxB6OibjBOAQR/cZDJ/bE4sl0znSZ2F0DtJiN7q40dv02/l/7blkgkcYPD4EltvW/G9oH9mQJAvJZS7UVKVTNU/VeKBtgDehboVEiFg+mfiMnufwB4zYdjawe+q0S1TKM00VbolGaq/9u19bSw8envnTbGBiqywsz+rE3t96wxB2qBtGkN7/IMukBp+W6/8GMoROFjHo15oNnnKhGgivAUFEUoIpSpQhDAM5KZmMVLV2+m6dCNi6dpOn3g8lmasAAWsvDUkYtnKQGK3NICj+0lzHkWI7qcYyCTISQ4DBkshwGrSNn0HYfU8CKCxaOMxQJzWYvBEfhFFOk7OaGA9pZ4AnlJBY9xukKDrAABlVNWdgo6q+ZCoUHqrEF37Z+Yj2YsvYfdM/RstjpMvuJAc3UDVvFxZC8T+Y0zFm5av2PjJj7WxxVz8f8W2LdiI9VqrX4BfZSTHvgItckpXGo5/ogW6jAU6GMS69nEIY5wgtNc4kpKQR8T6tSD1OO0i+/K0yOPzOrXp0e3Nq0JkU5oAAyGzAp5CjoGqEIqKkU4KZkiFO5Prro8r6mur6esZHkaZjd5tdlVwi5UhGDZ/z/3cIcKQZTcH6ggY8LdT1HQX3PG1sw9grj2jVUPIr2JtCdGhXpWN54fJlMsa05dy7eDxfPlfEfbf5s1v/mtnjcwS2NArLKAkC3PhVkmxCgvxJYUm/tVxyYDC/b1GpI1C2umzSDSLZ4BnOfKFEr3TLngsTEib2DyfZ9Wrt7EXO9WD/0zvNuibYuQcoZZZNjh+OdeOzO2T49YGY/rEGsl98iJe1SMQdy/F6N2TBkUKiyrDl3Lt2NsR+7mUQZM0Gwlz5tSJ/2j8/Li/A4gT5Btk/31OeO+CSMfpDOAUER0vkRKO3ZecJ7PUuzEvSSxo1ZcFgpCvaS2PynTWTiXr9t85P/qfAVxjZUlyxbhQxaxvUjUDnO0M4lMp9mUvDAosPI0sTW2NLKu53AuGqcjHN1FzaPPe6wkETA96W6YimPIyCsTUSPJx+VvFUyhBDVDnIGSuTBELxJh4sJlEkqd+gxVYowUqyhQzMJ6AyV2fmWluUDZKAdTorcch5nTnMbTcEGHoX+WvREk22ATQpq1FTkjzNTLg/6p0x4kqtjqgTSiIQWwx+LV7AyJHBrOPtqQlmZrw8iIM3HU8oAzLUpDz45QdD2yqj0WVLPXI1CRhkB7RLm+hT+EA+4cYw0ZabZ2rPQ4YzttdyzLUtlLUlhaKBsB6H8HlUSiUsKODIx81O3ZfCoLaPyxCIRD90vof4vATxpWznqQaGMgTEijOkEMhfAXEDfQ/MO82lDxt/bDzH/uz2OpQ34KCErwB2owLXCAPfU/xsHMRb9seYWnVuMUxQ1VPeSl5N4HjqQtMz+eAFGCTeaSKKqzJl1f398jHyMO/TddRhplmyRnI1Yq8LwQRvB6aSXK0edik5LSkKEAqGSYiMYlyRvigTBkRkoCxyBYYxn/TwK0vORQ3v543cFO4YMmy0iXTTJCD0dlmVqHwZkGoSDby1AX9Lexvd1VYOvPAS/iXKUtUCRj/8hZqJ64phzidBsK6Rh1VTXzwmlklaWpobXqARW/xsgwH6yBAcZeCouzk3oINSFDIq/+j/WqGKENQEcrXN6OBrb0LO7u3tzdeb+7+zB2KCWgQP1FBGAc8Fzv303zEUBZ+ODv6c19tVrfSsZ8BegfpI93TkrbfuoOvd/KrYbkxC5D6EMRZQtTj0bHNiiUJs1hk9YyRQOZp1hGqQ4aOjGP/sbR5nEl66T/DFJD5kgSzUqhU73oFsvLkLYTP948lDrUJC15eQEzEWm5iUQA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="212" rx="16" fill="#14151c"/>
+<rect x="24" y="84" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="109.0" y="106.0" text-anchor="middle" dominant-baseline="central">Publisher</text>
+<rect x="500" y="24" width="196" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="598.0" y="46.0" text-anchor="middle" dominant-baseline="central">Subscriber 1</text>
+<path d="M194 106 H346 V46 H496" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="500" y="84" width="196" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="598.0" y="106.0" text-anchor="middle" dominant-baseline="central">Subscriber 2</text>
+<path d="M194 106 H346 V106 H496" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="500" y="144" width="196" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="598.0" y="166.0" text-anchor="middle" dominant-baseline="central">Subscriber 3</text>
+<path d="M194 106 H346 V166 H496" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="92" viewBox="0 0 720 92" role="img">
+<title>Proxy: a stand-in between the client and the service</title>
+<desc>The client talks to the Proxy, and the Proxy passes the call to the real service.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAKYAA0AAAAABDQAAAJHAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbIBwqBmAATAqDAIJMATYCJAMOCw4ABCAFBgcgGwsDUZTrwRWIvx1wQ/bxQO1VwnSqw9psPUh4Wxftg6jG4WO8ywg6bE6WRX3/XBPB92OsfR+TZJoYMp5FvbpmSqAUQiFkP0lXwjUjoJ1fd911BXEgySzhwcAGuAEONbEpbT3AgoXu/8Ym4h/X7nZ3uE+97i1phTTzTJ5E+qR6yEseSP7+L6PWnKbQ8nqyUn6CWuSgmFzxPlGzDdYHDhjCUkNNr2+QltdNO9OyNA4kwoyjLiuK3z3824gnONz5/vPEu+GI5jatw3fIDB07ykagEBBClhACIZCvRp3o6RuZkSsT/gME8jVqkiLLinc2T/ZUBKHnzFQkkR5jGJbbsaY5EIk8ZMMrh7rw4nCZ8Xcy/gQRkBrTHxpkISEDJTIESmTqRL5cSTJh35HL/xjBxYp/Ga2+zVLIBoXIwRGeAJmAJAkhNgVcqcqEwIThfXh4f8/n0egwVBx+Pm9+8PUZ1EN9+RJq7kiMBsvz8bCm1NZhIlCs5ASTE9A+u+LFjXeh1+d1zq/t9BKtdncG+ld3dfwQk7A29XfPttc/S7B/Tqakjqy7R5FMLhbPZCNHlA0y6/LO4GPinYYmMzWNT7B3ZoKrEYzRMbptJEy06M9TrtFbV+hRvzRR6q5sTVsmNDieCodQGs1Q5uK5Ndp4hdd2R+svcHf7cePDzv/PHinrOT/LWNpvzo0TiXFtpzkv/MXAjUBqz5T+ut+z+Z1h+Plq8PNHm//3ZeJsqSFYuEkLAaR5RqAK85dLVsza16xDIFuDBAJJtgx8/9OMAAAAAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAATUAA0AAAAACEQAAASDAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgXwcMAZgAIEECog0hmkBNgIkA0ALIgAEIAUGByAbdAYAHoVN2TPWTpL8Tm1uwfDIh2db9T5ggTqVOhFZune9UV08/9/F7rw9IysfbM9JEozyOFkJixJc4gDXRjCD6X8Ae/fzfzm9MW3RPztbJKdndruxbW+agzTAAsonxb2eR5IG0guQextDb9gJNDUtA+jlIAAxAAAoFIKPEJIgCIBlyxt9j4xPh+arp7Uemp+S9kZoYgC4PxbeFa2NEAIDDEqksGJb6hiAYTlnzjxjWgweTmPoeRNhHsTZERkWhQFxfwvFFwOIlo0mIDb9Zo6H/XIED9krx+JOCJMci7XVYhSAzgBAKy/CP7/eniMqJ+Ub4jQTK/IBD6iDygYQp+9Ddrj6BrTEXcnP1DTsgbHO5div08CcJDEOUEXt7xkTQbUZQLNmS/9VjGaALlU0IWNhUpUoU6FGvUbtOqfMIq2f0+yyxjxzzTHTDNNNMTlCCIQqylhLFciDoB8PMTeuRKFo1LQtHweQi5rYXMVYLmIYPXV/LYG45P9Ll4jy8mVu+MWLJuy8S+z/Fy5AYUu44ZfPG3GlCxxPMp28CAU8zT2HzWUpmht+ePt6MnvfJZbN+P/SqXVEuf/0ZY5TrjvF/r9hiS47m8y846DWzCVHDmQOv7yfkMd4d0Cxcuum2lmnjAbN2YqZvWismKIpnnnxJAcNeipv1r6s4RN7DDkex4y1jOWnj+/ZoZXz1m1bNYxJ6HB2OAfvzSXHpVP75NzUrQe54Zs3LyfKZYssFx2y3ETWKdyigtN4csESKJZutNh4cZjZuRaKPScuSCor0izhfggtlmInZ/xldy4nj8vn/b+LKHdzw3dCsaND0DAuL2ZubW3s/HH5DUkdrtH5u6vv5flFJxfH2HVGRDn0lMUkOsfoqyubxMFJBT0uSBuqPgXaEa4WGUE+VikRHjsnaXYMpxcyZWPMn/2YZy2JjNJ2m41HPPNQdc9n1s6J55Kl9kqrXmNbvWOPy+orJu2PVLWIL/Sza0qQ5dChja+vijIdwuS51tr/qZU5FOgbrD0D457SEObZnZTo3dscmeafa+kT+0/VkQM2XsFushR7J3lKsLOHdZjp1Nr/QmJLzGDZ05rCvLuTkn17miOSA3LsfeMM8tU4DXbAyjTkk5O+uL6z+kBoeKFRih/fcJ2t40GxGYKqSgVBo2o/gqqUifFvfSOPzww2r48wq5YaDyhuWDmHuJlkeX1GUJUwcYFut01FqoIyY59YB9MUj1+gu0WM5P2ZX9M10kFPJUyWq6Ou/apsUfdGnzc1TjaiCTFqNh4ZJl4hISW5SjsV85/emho2Se3aidJ/hHf/sHDOvx8vgf4tztQsLkCQlp82pWrKX/l/fXOSedrk49gBadvktZPWth+QImMLl8nSZQZ/ymTlYK4QAPhUvqAAcAJsoq4O/AQBUEL/s3pQVP4fhTT9BAAeTTMzbvNuv3f6kpnU1VXsrwoC10iCGhHQDitzW9yqGnNoZj/sMwNpcYJD7GGXQAIewQkJopJOt/6v+MWstUAvRuA1dQD4vTMCUOWPoopCgOfj+eiD8HtjrgAA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="92" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="109.0" y="46.0" text-anchor="middle" dominant-baseline="central">Client</text>
+<rect x="274" y="24" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="359.0" y="46.0" text-anchor="middle" dominant-baseline="central">Proxy</text>
+<path d="M194 46 H270" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="524" y="24" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="609.0" y="46.0" text-anchor="middle" dominant-baseline="central">Real service</text>
+<path d="M444 46 H520" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>
