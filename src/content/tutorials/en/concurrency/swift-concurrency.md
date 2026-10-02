@@ -267,7 +267,7 @@ show(photos)
 
 ![Two time diagrams. Consecutive awaits: photo1 from 0 to 3, photo2 from 3 to 6, photo3 from 6 to 9. async let: photo1 from 0 to 3, photo2 from 0 to 2, photo3 from 0 to 3, all in parallel.](../../../../assets/tutorials/en/concurrency/06-await-vs-async-let.svg)
 
-The time of the parallel version equals the time of the **longest** task. An example from notes — loading 3 images by id:
+The time of the parallel version equals the time of the **longest** task. An example — loading 3 images by id:
 
 ```swift
 func downloadImageWithImageId(imageId: Int) async throws -> UIImage {

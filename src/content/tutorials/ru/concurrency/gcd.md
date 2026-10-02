@@ -162,7 +162,7 @@ queue.async(execute: workItem)
 // Task completed
 ```
 
-Задача посложнее (пример из заметок). Что напечатается?
+Задача посложнее. Что напечатается?
 
 ```swift
 func run() {
