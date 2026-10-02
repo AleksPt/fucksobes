@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="160" viewBox="0 0 740 160" role="img">
+<title>Object lifecycle in MRC</title>
+<desc>alloc sets the count to 1, retain adds 1, release removes 1. If the count is greater than 0, retain again; if it is 0, dealloc frees the memory.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAQMAA0AAAAABvAAAAO8AAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGiIbIBwqBmAAXAqHbIZKATYCJAM4Cx4ABCAFBgcgG0kFUVRMzkB8eWCTIVtHX5/q4nQkMycSokNc++cOaUt5wyDlkXZpies9C574uezNBLr9k6QEB8CUnMweSWTjTkhCSxpVwfJ2U8Uq5PL2CMlg9/+brP8BQMtmwgFiS2mp7v/5/b1g+6An3vP06QFsDh1yCQppcVFIy2sTmCOp839NvUi7W5RFiTdiVNHepxtnAH7CgUeBNTbBhgPEg3JjKCJgUmMpt88EmxEgwj6jeAiK4BMglBAhCOBoS3tk6vS5SyngA7QKAETfnZ7oYsneTUf3Uw+iHPZ1pVxDAJqnlcCc19WynsEyERRKMVdh4+zJwEts4qjX1ELoRemLqbW7fgEdCVBh8WLVP8ND9bEzgYQCSsgmtrGLvRzgaKtgE1umuP0c/qW757ZbbrqeYBoh4fu2QDnIRJD7gGgTOUFBq+SSKXK/dta+Lml0rqy2MqntVxUty12yMJPsupxt3cewoqFOXF3K5cUQcfkmPZtQ8EEkI+rL3EPnVZCaEF3sHZuneMsyettyMd+J6yORzPCZB7yHSIFdHZJruHRsN+I1YjXiAO+wx0+bGRa4Qs9sgTFvwTBUFZbyq75AYqkJJ5lbvGlvN6Y1L8n68OW+DW5uYyd3szqXK6kMW2ZGq7k4X4lYmxiG0zQbe/Iu2bBiIz2jt2JLyufvSMbPy4Y8jBwEeqy+gDoSTbYMtcUmU32037KWLKVQuK4wcGoZZLI+M8DkzY6SZljGhjW1O7CWia6s5Go1Ki+vIrHalfHT8KpyVKGqz0oe6cowtg4177VsGYoSYXctm5159n79l9W7mOy6sEvjL68ja5fHTyDLKwBHy2gSntHHpI1Fxc11yxOHNrUWwfgOTagtUQJA1BT/ba2AOBrSYRpAZG0NkCDJZdlvL47/KDiRU6MjbT/1xlV1yoT8ZjFr1fex1OCnyGhbV2q8vrfqd/hIhKPmjD5N3uAoboZ5bGhTjWLZogkWYGhzFwSrANA88tWqSiy7k5hnHJDq44hR2lfvS3YPNinqBVBLVFYgEjVnNDaSkjZndSOYjSWVatX7h1kWigMzKU9TqFkbbHFv16/676XopXvnuWO3peLQHJevNdGesXMBL4lvRG5tdOvJtykTqpcX0+dOiyTSiEIRkUrCHITdCYGQuAwfYBloH6/0TBMC6HD/xT+2e0PZ2H8Fz/sF4Ot9ehPg63v1m/at/wN8IsMKgMDxT+tKgGm5PP+QComuZHWKTHLWlqHtE2s7egBd/U8jgO8QIKEfSi0qHZyShnhaWsdgmGAAAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAU8AA0AAAAACTwAAATrAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgVIcMAZgAIECCopEiE8BNgIkA0oLKgAEIAUGByAbMgdRlEzOphA/Ekw390hHnJzwcLwdD6NJGhujyBC/6vI1ePrWyl/VfdR9SCFH4IhQIajs2jDggHB5UYAumaE8a7oQUiQpxCT1lMFB5vNe+zq8jAL4///vnf7ZAByU/TCwMA04kf/ObY1hRWtQVppgQF9bE8c6HlmAGKdzhYFLd74WImBxzIfVCJDLSKIIzN65HByNsZLbvWf/4dRNW75gFnWzpiyaQx15ABdH08wZC+ZQBAkRFpUqjr7mYnrQUvcJS7FT5AWDJQvFnDD5axTHqBNu8CyzLIWV+luUm2IkJ9AaWo5B3Q3RB8uGiRRrjhsDbjjtn1JtippE+EiXLbdaV9aTAbpSOQD9dBqZiJ4/RFk4a/CYocO4SX0mmcf/38HeFkgTaYE+CtWnOG4CDFDaIBztO+YAKKeKXDKpjwIVOtz0ZwSjGcekJJZktTjpwzB8LItvfv3myx1Itt9+6y03tjaWjzFKqKYGsVDKkoYAKgByCLQrNmI5QFzNEigKnxtL/bJqpLi8WXNVVU19naSursTmWpuVNWVlFEk6jv2qMGzg9kZuZRCQehl+VVzP7++icD550Ui8dSOPvw5Gjlws6Yg/9uDFRpVh7ebtpWV7RujZrVZ4xm1nJ2q9cQpfhyeXvL4b3Br1Gb7BqVvPylPNTt17tUsN6kz64NmbtJHz++PQ+wB+fsSpdzExHF183MgQYyKpoE17WBte5UHapXlF0JTTo3KaeuA9U1YafOgI35DZAoiMQTrUcdSNU2GIHH8dOC3NeeGRIji85ZnfnxYA2gAAAAAAwgYn1569a+LtKClnlDThZFzKPD39n7EjpRd9pkofTpKlBfnpwYRxUjxqnjw8lLXRqJXYw7714kpn0Czg9EYhFzTZ5BH0GrfOR3YVgPr8RD9KNzEW000eEEzxP0y3/aDvpHJhe19fdUPEFDThnUwWjA7qLDbCgHAWaRVBXAPi/OwwwjQJJqwTh5FJN6e2xZu7IkW8ogUuPEzKjS2xE4vZ0z5vF6S7pQwPeHGVzi9DA1Yw/i4TZawOQSSEOp1RAzbgg0i9LLrsrkBl2l14DCKWgDq/5c0ezE7p+FlTJ1rdQrqHosLnZy6382lNM1kxVKRl6qAYKfqQ3ETbOH+NIM54sKEkSpfhRYF9iNwYsmG9XJ+BND8zgjBPggnLxBFkNjOcNE9MQMuk4UQmYg8ZRKzZLOJCBrstxDmMhW1/RcpNemvEheWFSb47ZhRyZh5odoZQQdTewkSZbfS2ZdFl1eZeTkkUIPnDRo6ZKKNxY3v4vlr7oi1sxGnZxNFjAPbWNlz4CPMPZ1Bjmuwe9rT09lWhsJMLHxZC6XKsiDjXQ2UjLEg323+60oawV1gExAojA82+3sjsWKx9tss50BJNDHa6B7TMJIjJ4e7/cEHoCOklmfLeWo1wSLIhg8MZNoiz4tBo5Z7iTFgPDnlWOkZ3AI3rCQh/gWYI3u7Ysia+Zgvcsja+dgsIXYFr4ZoczAKDenf7tP3Ttm6pN1QFV6aCHWzOsO19C4AV/z4RQOn6ZkCs86QC558iY74AfN6JCtxjDaA5KdU/+gPIRAEQuCmNhiCgGgq7DaUdtWixERodP2EdkjIHQUEwoAkxZlLvW0xARtOunfEpTUA30UZm0iz5IC/pq2I6EWYwg29au+rnB5okE4O65JzWAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="740" height="160" rx="16" fill="#14151c"/>
+<rect x="24" y="76" width="110" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="79.0" y="94.0" text-anchor="middle" dominant-baseline="central">alloc</text>
+<text class="s" x="79.0" y="115.0" text-anchor="middle" dominant-baseline="central">1</text>
+<rect x="194" y="76" width="110" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="249.0" y="94.0" text-anchor="middle" dominant-baseline="central">retain</text>
+<text class="s" x="249.0" y="115.0" text-anchor="middle" dominant-baseline="central">+1</text>
+<rect x="364" y="76" width="110" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="419.0" y="94.0" text-anchor="middle" dominant-baseline="central">release</text>
+<text class="s" x="419.0" y="115.0" text-anchor="middle" dominant-baseline="central">-1</text>
+<rect x="590" y="76" width="130" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="655.0" y="94.0" text-anchor="middle" dominant-baseline="central">dealloc</text>
+<text class="s" x="655.0" y="115.0" text-anchor="middle" dominant-baseline="central">memory freed</text>
+<path d="M138 104.0 H190" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M308 104.0 H360" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M419 76 V44 H249 V72" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="334" y="30" text-anchor="middle" dominant-baseline="central">count &gt; 0</text>
+<path d="M478 104.0 H586" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="532" y="90.0" text-anchor="middle" dominant-baseline="central">count == 0</text>
+</svg>

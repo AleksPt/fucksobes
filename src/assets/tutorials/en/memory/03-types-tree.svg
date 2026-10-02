@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="356" viewBox="0 0 720 356" role="img">
+<title>Two kinds of types in Swift</title>
+<desc>Swift types are divided into value types (struct, enum, tuple; Int, Double, Bool, String; Array, Dictionary, Set) and reference types (class, actor, functions and closures).</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="356" rx="16" fill="#14151c"/>
+<rect x="260" y="20" width="200" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360.0" y="42.0" text-anchor="middle" dominant-baseline="central">Swift types</text>
+<path d="M343.0 68 L190 106" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="40" y="110" width="300" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="190.0" y="132.0" text-anchor="middle" dominant-baseline="central">Value types</text>
+<line x1="56" y1="154" x2="56" y2="308" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="80" y="176" width="260" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="210.0" y="196.0" text-anchor="middle" dominant-baseline="central">struct, enum, tuple</text>
+<path d="M56 196 H76" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="80" y="232" width="260" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="210.0" y="252.0" text-anchor="middle" dominant-baseline="central">Int, Double, Bool, String</text>
+<path d="M56 252 H76" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="80" y="288" width="260" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="210.0" y="308.0" text-anchor="middle" dominant-baseline="central">Array, Dictionary, Set</text>
+<path d="M56 308 H76" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M377.0 68 L530 106" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="380" y="110" width="300" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="530.0" y="132.0" text-anchor="middle" dominant-baseline="central">Reference types</text>
+<line x1="396" y1="154" x2="396" y2="308" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="420" y="176" width="260" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="550.0" y="196.0" text-anchor="middle" dominant-baseline="central">class</text>
+<path d="M396 196 H416" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="420" y="232" width="260" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="550.0" y="252.0" text-anchor="middle" dominant-baseline="central">actor</text>
+<path d="M396 252 H416" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="420" y="288" width="260" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="550.0" y="308.0" text-anchor="middle" dominant-baseline="central">functions and closures</text>
+<path d="M396 308 H416" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="236" viewBox="0 0 740 236" role="img">
+<title>size and stride of the Point struct</title>
+<desc>Bytes 0–7 x, 8–15 y, 16 isFilled, 17–23 padding. size = 17, stride = 24.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAARoAA0AAAAAB4wAAAQZAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgWgcMAZgAHQKhyCFUAE2AiQDQAsiAAQgBQYHIBu3BSCeB5nblWYnJqby6mubWyEIERT7/fbuK2aVeQnzTKKZJ4+QiIT4YiD9lmmEfP4Tnt+fm0mVSZ/F7FvIbLvmJxNQJqAA/uf/llo397LoG4Z6XFp8alFaVISBFsjnznMDGtBAxxPYwGDAsLfBEGhsyAq1Y/7MAkwCSALCEBUtQmBckCTsJK+kBjYfQ/v1gM1X2wG9YEME6n8E4rNjv17QgkQgqfWCQEsg8UJkIghWCFEjmvqNwIMINkQRiABQv4FlhBGoqBEVQgjRIARIhBFoES1iQQQdTnwEIYyEkwkk5nh9RTgbjI4NXhfI3BAYFyLsqLgb7Zag+m760y9UkK3QADjt5olnRPkL8MODrhqrqnEGHoaxa//dhu6IygAB5IxwHtDQgQQdsIghYEVt7rXAiDxEiREvVUd0xQAM+79AI1KAdsD6vYf6/7Cp4d0rLzv/LCEuWHhNA+YgZoC4AUw+kmz9j6J66R9DS5ZuOtEqxVaS3DjTiKLcdprRSGNNJj794tVA4qJUt+XGhbrpJhONNRqlaXceYMzas1cVdQMd9BizxEZeabjJp18+7szXPHjQvOrcLWnajTMuXMVF9Gq3374sB9M5pNYAxodvnXPjS49edNDDh7fT2G2b/DZd8jvEBzT2/G2TbzB4SssK5MCGLbD1oO9BQx07uRfO3HigX9tjEvGAYLhkzEnOwaOzTHp00IP3JDp8+XZwilL99vv399NYo7VcpPXbLcOYBw9SavTQh0yduTBJ0I4z3t2bXZqz0Dyrqj1FY0/z6SfhhLWqvFNe1NCS0uhhXfMq3W6W+P/Q+Xx7lu+U9f9sc3RWpGdlRKRHWVZYTNwPLpWRPv95DINfr7p3dsKQ8oqkoX1yK1IbQ5KKnRVLbi2N9PfK/C3cSe4xqMuFrJwW98pktcu+oLCLsjfSZzqbmx+2rVicFv3CS2ehae+RWBTqVRn7H1jPt1D/80jpOnhmqKN5tmuTvZXdd+03DTmY+EPX8EDdgkLLwNhaz/jMzLZNY4PNff5NsLEOLB9gV2Y2WftqvG+E8qZED6fjYi/v4lRNtVK9pPOSicrEv8Jd4wIVBN8FtAQqO6uC2gQrWB8+q7jvvxbhxdfh/PTsaFWFw/eeSTnpyVE5QRt7jMgv7eKXmNU5PFnJTg9vW1ZuWDGuvC1WTR1SUf1p5uOqNlVT23/8uy8aHdp2a/uy2rE3Cva1Wt9qHWtZ34JatxxX1xpX5wmurh0grkAEfebfsAB2wa/wqPffIJCyzA8+/K61ecqvWsY+Avwt8/bAudH/n/xXNgqPAH0CIOBzGvmjgJwQB6YJNps+sMn2CM40BN4jHJMeI77mP97RF47JEBwDYJsxcM5h8Iu/acMKyCMUAnVSYFYKgQUBAZXF9rFC6qAB) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="740" height="236" rx="16" fill="#14151c"/>
+<rect x="60" y="56" width="160" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="140.0" y="78.0" text-anchor="middle" dominant-baseline="central">x: Double</text>
+<rect x="220" y="56" width="160" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="300.0" y="78.0" text-anchor="middle" dominant-baseline="central">y: Double</text>
+<rect x="380" y="56" width="20" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="390.0" y="78.0" text-anchor="middle" dominant-baseline="central"></text>
+<rect x="400" y="56" width="140" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45" stroke-dasharray="4 4"/>
+<text class="m" x="470.0" y="78.0" text-anchor="middle" dominant-baseline="central">padding</text>
+<rect x="540" y="56" width="160" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="620.0" y="78.0" text-anchor="middle" dominant-baseline="central">x…</text>
+<text class="ms" x="390.0" y="42" text-anchor="middle" dominant-baseline="central">Bool</text>
+<text class="ms" x="60" y="114" text-anchor="middle" dominant-baseline="central">0</text>
+<text class="ms" x="220" y="114" text-anchor="middle" dominant-baseline="central">8</text>
+<text class="ms" x="380" y="114" text-anchor="middle" dominant-baseline="central">16</text>
+<text class="ms" x="400" y="114" text-anchor="middle" dominant-baseline="central">17</text>
+<text class="ms" x="540" y="114" text-anchor="middle" dominant-baseline="central">24</text>
+<path d="M60 140 V148 H400 V140" fill="none" stroke="#5c5e6a" stroke-width="1.5"/>
+<text class="t" x="230.0" y="166" text-anchor="middle" dominant-baseline="central">size = 17</text>
+<path d="M60 182 V190 H540 V182" fill="none" stroke="#5c5e6a" stroke-width="1.5"/>
+<text class="t" x="300" y="208" text-anchor="middle" dominant-baseline="central">stride = 24</text>
+</svg>
