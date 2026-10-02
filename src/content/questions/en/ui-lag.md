@@ -13,4 +13,4 @@ How to track it:
 - XCTest performance tests with `measure(_:)`;
 - in production: Xcode Organizer and `MetricKit`.
 
-What to do: use the main thread only for UI work and move everything else to the background (Swift concurrency, GCD, `OperationQueue`); keep in mind that a `Task` inherits the actor context, so synchronous heavy work in it still blocks the main actor. In `draw(_:)` don't do I/O or complex computation, and call `setNeedsDisplay()` only when needed. For code in table and collection data sources, Apple advises aiming for a limit of about 5 ms.
+What to do: use the main thread only for UI work and move everything else to the background (Swift concurrency, GCD, `OperationQueue`); keep in mind that a `Task` inherits the actor context, so synchronous heavy work in it still blocks the main actor. In `draw(_:)` don't do I/O or complex computation, and call `setNeedsDisplay()` only when needed. Apple does not name a separate limit for data source code: the guideline is the frame budget of 16.67 ms (60 Hz) or 8.33 ms (120 Hz), of which only a couple of milliseconds are left for the app's own work (layout, for example).

@@ -4,4 +4,4 @@ category: uikit
 order: 27
 ---
 
-In `viewWillAppear` or `viewDidLayoutSubviews`.
+In `viewDidLayoutSubviews`. `viewWillAppear` was used too, but there the geometry and trait collection are not up to date yet (the view has not been added to the hierarchy): this is exactly why `viewIsAppearing` appeared.

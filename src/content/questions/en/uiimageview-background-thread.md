@@ -4,9 +4,9 @@ category: uikit
 order: 154
 ---
 
-Formally, the image **will be set**: the assignment `imageView.image = someImage` from a background thread does not crash and is not ignored; the `image` property is an ordinary property with no protection against writes from off the main thread.
+There are no guarantees. The assignment `imageView.image = someImage` from a background thread may seem to work and not crash right away, but UIKit is not thread-safe, and the `UIView` documentation requires all manipulations of the interface to happen on the main thread: the behavior off it is undefined.
 
-But doing so is **strongly discouraged**. All UI drawing in UIKit must happen on the main thread: once the new `image` value gets into the rendering queue, the system has to redraw the `UIImageView`, and rendering and work with layers (`CALayer`) are not thread-safe. Setting an image from a background thread can lead to:
+So doing so is **strongly discouraged**. All UI drawing in UIKit must happen on the main thread: once the new `image` value gets into the rendering queue, the system has to redraw the `UIImageView`, and rendering and work with layers (`CALayer`) are not thread-safe. Setting an image from a background thread can lead to:
 
 - visual artifacts or a delay in the screen update (the redraw may not happen right away, but out of sync with the rest of the UI);
 - data races, if properties of the same view are being read or changed from the main thread at the same moment;

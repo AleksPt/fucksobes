@@ -26,4 +26,4 @@ UIApplicationMain(
 )
 ```
 
-Starting with iOS 13 and the arrival of `UIScene`, and then with the **`@main`** attribute shared by UIKit and SwiftUI, `@UIApplicationMain` is considered an outdated approach: `@main` works uniformly for any entry point and lets you describe the app's structure declaratively, including through `UIApplicationDelegateAdaptor` in SwiftUI projects.
+Starting with Swift 5.3 (SE-0281), the entry point can be set with the **`@main`** attribute: for UIKit it is supported by `UIApplicationDelegate` (the `main()` method), and Apple's documentation names the `@main` mark as the app's entry point. `@UIApplicationMain` still works, but in the Swift 6 language mode it is marked as deprecated (the compiler suggests `@main`). This choice is unrelated to `UIScene` (iOS 13).

@@ -4,4 +4,4 @@ category: uikit
 order: 34
 ---
 
-`viewDidLayoutSubviews()`
+`viewDidLayoutSubviews()`: this is where the final frames of the subviews are known. The size of the view itself is correct earlier, in `viewIsAppearing(_:)`.

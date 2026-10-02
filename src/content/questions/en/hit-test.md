@@ -11,7 +11,7 @@ order: 54
 How it works:
 
 - **Checking its own `frame`.** First it checks whether the touch point is inside the bounds of the view being called.
-- **Checking `isUserInteractionEnabled` and `isHidden`.** If `isUserInteractionEnabled == false` or `isHidden == true`, the view cannot be a responder.
+- **Checking `isUserInteractionEnabled` and `isHidden`.** If `isUserInteractionEnabled == false` or `isHidden == true`, the view is skipped: `hitTest` does not return it and it receives no touches (the object itself remains a responder, though, and still has a `next`).
 - **Checking `alpha`.** If `alpha` is below a certain threshold (usually 0.01), the view is considered transparent to touches.
 - **A recursive call for subviews.** If the view passes all the checks, `hitTest` is called recursively for each subview, starting with the topmost (the last added), until a suitable responder is found or all subviews have been checked.
 

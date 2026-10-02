@@ -8,7 +8,7 @@ Normally layers are drawn straight into the frame buffer. Offscreen rendering is
 
 Common causes:
 
-- masks (`layer.mask`), as well as `cornerRadius` together with `masksToBounds` for a layer with content or sublayers;
+- masks (`layer.mask`), as well as rounding (`cornerRadius` together with `masksToBounds`) for a layer with content or sublayers: not always, it depends on the iOS version and the content;
 - shadows without `shadowPath`: the system has to compute the shadow's shape from the layer's content;
 - `shouldRasterize` and group opacity (`allowsGroupOpacity`) for complex hierarchies;
 - blurring and some effects (`UIVisualEffectView`).
