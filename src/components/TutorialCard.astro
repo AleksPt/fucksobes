@@ -1,11 +1,15 @@
 ---
+import { pluralize } from '../lib/text';
+
 interface Props {
   title: string;
+  /** Количество тем в туториале; без него бейдж не показывается */
+  total?: number;
   /** Пока ссылки нет — карточка рендерится без перехода */
   href?: string;
 }
 
-const { title, href } = Astro.props;
+const { title, href, total } = Astro.props;
 const Tag = href ? 'a' : 'div';
 ---
 
@@ -13,9 +17,16 @@ const Tag = href ? 'a' : 'div';
   href={href}
   class="group flex h-full flex-col gap-10 rounded-card border border-white/12 bg-white/4 p-6 backdrop-blur-md transition-colors duration-200 hover:border-white/45 hover:bg-white/7 focus-visible:border-white/45 focus-visible:bg-white/7 motion-reduce:transition-none"
 >
-  <div class="flex justify-end">
+  <div class="flex items-center justify-between gap-4">
+    {
+      total !== undefined && (
+        <span class="rounded-full border border-white/45 px-3 py-1 text-sm font-medium tracking-[-0.015em] whitespace-nowrap tabular-nums">
+          {total} {pluralize(total, ['тема', 'темы', 'тем'])}
+        </span>
+      )
+    }
     <span
-      class="grid size-10 place-items-center rounded-input border border-white/12 transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent group-focus-visible:border-accent group-focus-visible:bg-accent group-focus-visible:text-on-accent motion-reduce:transition-none"
+      class="ml-auto grid size-10 place-items-center rounded-input border border-white/12 transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent group-focus-visible:border-accent group-focus-visible:bg-accent group-focus-visible:text-on-accent motion-reduce:transition-none"
       aria-hidden="true"
     >
       <svg class="size-[18px] transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none" viewBox="0 0 20 20" fill="none">
