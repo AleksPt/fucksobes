@@ -31,6 +31,10 @@ Consult these guides before working on related tasks:
 - Do not run `npm run migrate -- generate` — it overwrites all question files.
 - Tests: `npm test` (Vitest), `npm run test:e2e` (Playwright; run `npx astro preview stop` first if a stale preview holds port 4321), `npm run check`.
 
+## Adding new questions
+
+When the user asks to add questions (usually a pasted list of interview questions), read `docs/adding-questions.md` first and follow it. Do not read it for other tasks.
+
 ## Git workflow
 
 GitHub Flow, solo project. `main` is production: every merge deploys to GitHub Pages via Actions.
