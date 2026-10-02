@@ -1,14 +1,16 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import Base from '../../layouts/Base.astro';
-import { tutorials } from '../../lib/tutorials';
+import { getTutorialPages } from '../../lib/content';
+import { sectionsWithLinks, tutorialPageHref, tutorials } from '../../lib/tutorials';
 import { url } from '../../lib/url';
 
 export const getStaticPaths = (() =>
   tutorials.map((tutorial) => ({ params: { slug: tutorial.slug }, props: { tutorial } }))) satisfies GetStaticPaths;
 
 const { tutorial } = Astro.props;
-const { sections } = tutorial;
+const pages = (await getTutorialPages()).map(({ page }) => page);
+const sections = sectionsWithLinks(tutorial, pages, (page) => url(tutorialPageHref(page)));
 
 const rowClass =
   'group flex items-center gap-4 rounded-card border border-white/12 bg-white/4 px-6 py-5 backdrop-blur-md transition-colors duration-200 motion-reduce:transition-none';
