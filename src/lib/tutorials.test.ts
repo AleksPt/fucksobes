@@ -5,15 +5,20 @@ const page = (topic: string, slug: string, order: number): TutorialPage => ({ to
 
 describe('parseTutorialId', () => {
   it('разбирает тему и slug из пути файла', () => {
-    expect(parseTutorialId('swift/structs-classes-enums')).toEqual({ topic: 'swift', slug: 'structs-classes-enums' });
+    expect(parseTutorialId('ru/swift/structs-classes-enums')).toEqual({ locale: 'ru', topic: 'swift', slug: 'structs-classes-enums' });
+    expect(parseTutorialId('en/swift/optional')).toEqual({ locale: 'en', topic: 'swift', slug: 'optional' });
   });
 
   it('падает с понятным текстом, если файл лежит не в папке темы', () => {
-    expect(() => parseTutorialId('structs')).toThrow(/src\/content\/tutorials\/<тема>\/<id>\.md/);
+    expect(() => parseTutorialId('ru/structs')).toThrow(/src\/content\/tutorials\/<локаль>\/<тема>\/<id>\.md/);
+  });
+
+  it('падает, если файл лежит вне папки локали', () => {
+    expect(() => parseTutorialId('swift/optional')).toThrow(/папке локали/);
   });
 
   it('падает на неизвестной теме', () => {
-    expect(() => parseTutorialId('cooking/pasta')).toThrow(/swift/);
+    expect(() => parseTutorialId('ru/cooking/pasta')).toThrow(/swift/);
   });
 });
 

@@ -1,11 +1,11 @@
 ---
 import RandomQuestion from '../../components/RandomQuestion.tsx';
 import Base from '../../layouts/Base.astro';
-import { getQuestions, hasAnswer } from '../../lib/content';
+import { getQuestions, hasAnswer, questionSlug } from '../../lib/content';
 import { url } from '../../lib/url';
 
 // На странице только список id: сам вопрос и ответ RandomQuestion грузит из random/<id>.json.
-const ids = (await getQuestions()).filter(hasAnswer).map((question) => question.id);
+const ids = (await getQuestions()).filter(hasAnswer).map(questionSlug);
 ---
 
 <Base title="Случайный вопрос — FuckSobes">

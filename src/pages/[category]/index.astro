@@ -3,7 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import { render } from 'astro:content';
 import QuestionItem from '../../components/QuestionItem.astro';
 import Base from '../../layouts/Base.astro';
-import { getCategories, getQuestions, hasAnswer } from '../../lib/content';
+import { getCategories, getQuestions, hasAnswer, questionSlug } from '../../lib/content';
 import { pluralize } from '../../lib/text';
 import { url } from '../../lib/url';
 
@@ -32,9 +32,9 @@ const questions = await Promise.all(
     {
       questions.map(({ q, Content }) => (
         <QuestionItem
-          id={q.id}
+          id={questionSlug(q)}
           title={q.data.title}
-          href={url(`${category.id}/${q.id}/`)}
+          href={url(`${category.id}/${questionSlug(q)}/`)}
           answered={hasAnswer(q)}
         >
           <Content />
