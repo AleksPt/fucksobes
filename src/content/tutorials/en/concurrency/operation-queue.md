@@ -59,7 +59,7 @@ queue.addOperation {
 
 - `operation.start()` — runs the operation **on the current thread** and synchronously (if that is main, then on main).
 - `queue.addOperation(op)` — the operation runs on a separate thread as soon as possible.
-- OperationQueue is similar to DispatchQueue, but can work with threads directly as well as through GCD. By default, operations go to global concurrent queues.
+- OperationQueue is similar to DispatchQueue, but can work with threads directly as well as through GCD. Operations are started through Dispatch on separate threads; if `underlyingQueue` is set, they go to that queue, otherwise the system decides.
 
 **Several blocks in one operation.** The blocks inside a BlockOperation run **in parallel**, and the operation itself is considered finished when all of them are done. Additional closures are added via `addExecutionBlock`:
 

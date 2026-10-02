@@ -193,7 +193,7 @@ func synchronize(action: () -> Void) {
 > - A second `lock()` on the same thread → **deadlock**.
 > - Use `defer { lock.unlock() }` or `withLock` so you don't forget to release the lock on `return` or `throw`.
 
-An example from the "no data race" slide and its trap:
+An example from the "no data race" slide:
 
 ```swift
 var result = 0
