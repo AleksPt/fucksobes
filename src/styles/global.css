@@ -224,6 +224,19 @@ body {
 .tutorial img {
   @apply rounded-panel;
 }
+.image-zoom {
+  animation: image-zoom-in 150ms ease-out;
+}
+@keyframes image-zoom-in {
+  from {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .image-zoom {
+    animation: none;
+  }
+}
 
 /* Блоки кода: панель Carbon с тонкой рамкой; тема Shiki задаёт только цвета токенов */
 .astro-code {
