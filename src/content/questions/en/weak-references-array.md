@@ -10,4 +10,4 @@ Options:
 - use `NSPointerArray` or `NSHashTable`;
 - capture the objects weakly in closures and put the closures in the array.
 
-`NSPointerArray` is a special array from **Foundation** that stores objects without incrementing their **reference count**. It supports **weak references** and automatically clears `nil` values, which lets objects be freed when they are no longer needed.
+`NSPointerArray` is a special array from **Foundation** that stores objects without incrementing their **reference count**. It supports **weak references**: objects can be freed when they are no longer needed. But a freed element is not removed from the array: an empty slot (`nil`) stays and counts toward `count`, so you have to remove such slots yourself with `compact()` (in practice it takes effect if you first add a `nil` with `addPointer(nil)`).

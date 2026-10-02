@@ -4,4 +4,4 @@ category: memory
 order: 4
 ---
 
-One heap; each thread has its own stack.
+Each thread has its own stack, while the heap is shared by the process: for Swift code there is one, although the allocator (malloc zones on Apple platforms) may split memory into several zones internally.

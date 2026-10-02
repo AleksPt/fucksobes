@@ -8,12 +8,12 @@ Global variables (declared outside any type or function, at the top level of a f
 
 How it works:
 
-- **Constants whose value is known at compile time** go into the `data` segment (or into a read-only section if it is an immutable value of a primitive type): the binary reserves memory for them in advance, and the value is already "baked into" the executable.
-- **Variables with no initial value, or ones that require computation at startup**, go into the `bss` segment and are initialized by the runtime when the process starts.
-- In Swift, global variables and `static` properties effectively behave like **`lazy`** ones: memory for them is allocated statically, but the initializer runs **lazily**, on first access, and thread-safely, once for the entire lifetime of the process (similar to `dispatch_once` in Objective-C).
+- **Values known at compile time** (for example, literals) are "baked into" the executable: a `var` lives in the `data` segment, while an immutable value of a primitive type may end up in a read-only section.
+- **Values that cannot be computed at compile time** get a zero-filled place in static memory (in a `bss`-like area), and the initializer code writes the value.
+- In Swift, global variables (except those declared in `main.swift`) and `static` properties are **lazy**: the initializer runs on first access, thread-safely, once for the entire lifetime of the process (similar to `dispatch_once` in Objective-C). Top-level variables in `main.swift` are initialized right away, in the order the code executes.
 
 ```swift
-let appConfig = AppConfig() // global variable: its place in static memory
+let appConfig = AppConfig() // in any file except main.swift: its place in static memory
                              // is allocated up front, the initializer runs on first access
 ```
 

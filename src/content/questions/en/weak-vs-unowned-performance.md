@@ -4,11 +4,12 @@ category: memory
 order: 29
 ---
 
-The difference between `weak` and `unowned` is minimal.
+The difference between `weak` and `unowned` is small, but neither reference is free.
 
 - **`weak` is "heavier":**
-    - when the object is deallocated, ARC adds an operation to zero the `weak` reference;
-    - each `weak` reference is tracked through a side table, which requires extra memory and time.
-- **`unowned` is faster:**
-    - it requires no extra memory management and works like a plain reference to the object;
-    - there is no zeroing check, which makes it more performant where objects are freed often.
+    - on the first `weak` reference the object gets a side table, and all `weak` references point to it (extra memory);
+    - every `weak` read goes through the side table and checks whether the object is still alive, returning `nil` otherwise.
+- **`unowned` is lighter:**
+    - no side table is needed, the reference points straight at the object;
+    - but it is counted in a separate unowned count (updated atomically), and on every read the runtime checks that the object is still alive, otherwise it terminates the program (a trap);
+    - only `unowned(unsafe)` works without counting and checks, but then the reference can dangle.

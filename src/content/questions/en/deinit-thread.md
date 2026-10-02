@@ -4,4 +4,4 @@ category: memory
 order: 37
 ---
 
-Most likely on the same thread: an object is deallocated at the end of the run loop, and a run loop is tied to a specific thread.
+Not necessarily the same one: `deinit` is called synchronously on the thread where the last strong reference was dropped. If an object was created on the main thread but the last reference disappeared on a background queue, `deinit` runs there. It is not tied to the run loop.
