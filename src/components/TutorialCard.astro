@@ -3,13 +3,15 @@ import { pluralize } from '../lib/text';
 
 interface Props {
   title: string;
-  /** Количество тем в туториале; без него бейдж не показывается */
+  /** Количество тем в туториале */
   total?: number;
+  /** Текст бейджа вместо количества тем, например «скоро» */
+  badge?: string;
   /** Пока ссылки нет — карточка рендерится без перехода */
   href?: string;
 }
 
-const { title, href, total } = Astro.props;
+const { title, href, total, badge } = Astro.props;
 const Tag = href ? 'a' : 'div';
 ---
 
@@ -19,9 +21,9 @@ const Tag = href ? 'a' : 'div';
 >
   <div class="flex items-center justify-between gap-4">
     {
-      total !== undefined && (
+      (badge ?? total !== undefined) && (
         <span class="rounded-full border border-white/45 px-3 py-1 text-sm font-medium tracking-[-0.015em] whitespace-nowrap tabular-nums">
-          {total} {pluralize(total, ['тема', 'темы', 'тем'])}
+          {badge ?? `${total} ${pluralize(total!, ['тема', 'темы', 'тем'])}`}
         </span>
       )
     }
