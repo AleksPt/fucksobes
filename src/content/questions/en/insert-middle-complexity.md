@@ -1,9 +1,9 @@
 ---
-title: "What is the algorithmic complexity of inserting into the middle of a dictionary and of an array?"
+title: "What is the algorithmic complexity of inserting into a dictionary and into the middle of an array?"
 category: algorithms
 order: 7
 ---
 
-**Dictionary:** O(1) if there are no collisions, otherwise O(n).
+**Dictionary:** it has no "middle" and the order of pairs is undefined, so insertion does not depend on position: amortized O(1), O(n) in the worst case (rehashing on growth or massive collisions).
 
 **Array:** O(n); the same for removal. Inserting at the end is O(1).

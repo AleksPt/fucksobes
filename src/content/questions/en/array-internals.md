@@ -13,6 +13,6 @@ Key points:
 - **Inserting and removing in the middle** is `O(n)`: the elements have to be shifted.
 - **Copy-on-Write**: assignment copies only the reference to the buffer; a real copy is made on the first write to one of the instances, if the buffer is shared.
 - The size of the struct itself is fixed while the buffer is dynamic: an array can be mutated, yet the variable holding it remains a single reference.
-- For types that don't need Objective-C bridging there is `ContiguousArray` (faster on Apple platforms because it doesn't support `NSArray`), and `ArraySlice` is a view into part of an array without copying.
+- `ContiguousArray` is guaranteed to store its elements in a single contiguous buffer without Objective-C bridging (on Apple platforms it can be faster than `Array`; on platforms without Objective-C, `Array` behaves the same way), and `ArraySlice` is a view into part of an array without copying.
 
 If the size is known in advance, `reserveCapacity(_:)` avoids reallocations.
