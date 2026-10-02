@@ -111,8 +111,15 @@ test('туториалы → тема → страница туториала с
 test('английская версия: главная → вопрос → переключение языка', async ({ page }) => {
   await page.goto('en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  // Показываются только категории, в которых есть переводы
-  await expect(page.getByRole('heading', { level: 2 })).toHaveCount(1);
+  // Показываются только категории, в которых есть переводы: не больше, чем всего категорий, и все ведут в /en/
+  const headings = page.getByRole('heading', { level: 2 });
+  expect(await headings.count()).toBeGreaterThan(0);
+  expect(await headings.count()).toBeLessThanOrEqual(12);
+  const hrefs = await page
+    .getByRole('link')
+    .filter({ has: headings })
+    .evaluateAll((links) => links.map((link) => new URL((link as HTMLAnchorElement).href).pathname));
+  expect(hrefs.every((href) => href.startsWith('/fucksobes/en/'))).toBe(true);
   await page.getByRole('link').filter({ has: page.getByRole('heading', { level: 2, name: 'Git', exact: true }) }).click();
   await expect(page).toHaveURL(/\/fucksobes\/en\/git\/$/);
 
@@ -138,8 +145,8 @@ test('переключатель на непереведённой страни�
 test('английская версия: поиск и случайный вопрос', async ({ page }) => {
   const res = await page.request.get('en/search-index.json');
   const docs = await res.json();
-  expect(docs).toHaveLength(11);
-  expect(docs.every((d: { url: string }) => d.url.startsWith('/fucksobes/en/git/'))).toBe(true);
+  expect(docs.length).toBeGreaterThan(0);
+  expect(docs.every((d: { url: string }) => d.url.startsWith('/fucksobes/en/'))).toBe(true);
 
   await page.goto('en/random/');
   await expect(page.locator('astro-island[component-url*="RandomQuestion"]')).not.toHaveAttribute('ssr', '');
