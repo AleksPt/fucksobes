@@ -307,7 +307,7 @@ highPriority.async {
 
 - minimize how long resources are held (put into the critical section only what is really needed);
 - don't share one resource between tasks with very different QoS;
-- use primitives with **priority donation to the owner**: serial queues with `sync`, `os_unfair_lock`, `pthread_mutex`, actor. `DispatchSemaphore` has no owner, so the system can't raise the priority of whoever is "holding" it — a classic source of inversions.
+- use primitives with **priority donation to the owner**: serial queues with `sync`, `os_unfair_lock`, `pthread_mutex` with the `PTHREAD_PRIO_INHERIT` attribute (the default is `PTHREAD_PRIO_NONE`), actor. `DispatchSemaphore` has no owner, so the system can't raise the priority of whoever is "holding" it — a classic source of inversions.
 
 ## Step 6. Starvation, resource contention and fairness
 
@@ -317,7 +317,7 @@ Typical causes:
 
 - **Priorities.** A constant stream of high-priority tasks doesn't let `.background` tasks run.
 - **Unfair locks.** `os_unfair_lock` by definition doesn't guarantee ordering: a thread that has just released the lock may immediately take it again.
-- **Readers and writers.** If reads come continuously, a write may never get its "window" (which is exactly why a barrier in GCD stops accepting new tasks until it completes).
+- **Readers and writers.** If reads come continuously, a write may never get its "window" (which is why a GCD barrier is used for writes: tasks submitted after it will not start until it completes, so new readers cannot overtake the writer).
 - **Long holding.** One thread holds the lock while it processes 500 elements in a row.
 
 How to fight it: split long work and release the lock between chunks; a barrier for writes; fair (FIFO) mechanisms — a serial queue, `NSCondition` with a queue of waiters; adequate QoS.

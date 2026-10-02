@@ -193,7 +193,7 @@ func synchronize(action: () -> Void) {
 > - Повторный `lock()` на том же потоке → **deadlock**.
 > - Берите `defer { lock.unlock() }` или `withLock`, чтобы не забыть отпустить замок при `return` или `throw`.
 
-Пример со слайда «без data race» и его ловушка:
+Пример со слайда «без data race»:
 
 ```swift
 var result = 0
