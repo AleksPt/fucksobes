@@ -12,7 +12,7 @@ order: 11
 > - Вьюхи `unicodeScalars`, `utf8`, `utf16`
 > - Типовые задачи с собеседований на строки
 
-> **Нужно знать заранее:** тутор 10 (Collection, Sequence, сложность), тутор 01 (struct, COW).
+> **Нужно знать заранее:** [тутор 10](../collections-hashable-complexity/) (Collection, Sequence, сложность), [тутор 01](../structs-classes-enums/) (struct, COW).
 
 ## Аналогия: предложение из букв и акцентных наклеек
 

@@ -11,7 +11,7 @@ order: 3
 > - `override`, `super`, `final`, `required`
 > - Пять (и один новый) уровней доступа: `open`, `public`, `package`, `internal`, `fileprivate`, `private`
 
-> **Нужно знать заранее:** тутор 01 — struct, class, `deinit`; тутор 02 — свойства.
+> **Нужно знать заранее:** [тутор 01](../structs-classes-enums/) — struct, class, `deinit`; [тутор 02](../properties-wrappers/) — свойства.
 
 ## Аналогия: сборка дома
 
@@ -180,7 +180,7 @@ class Derived: Base {
 print(Derived().greet())   // base + derived
 ```
 
-`final` ещё и ускоряет вызовы: компилятор может выбрать статическую диспетчеризацию (тутор 09).
+`final` ещё и ускоряет вызовы: компилятор может выбрать статическую диспетчеризацию ([тутор 09](../dispatch-objc-runtime/)).
 
 ## Шаг 5. Уровни доступа
 

@@ -12,7 +12,7 @@ order: 10
 > - `Sequence`, `Collection`, срезы и lazy-коллекции
 > - `count` и `capacity`, `ContiguousArray`, массив со слабыми ссылками, безопасный subscript
 
-> **Нужно знать заранее:** тутор 01 (copy-on-write), тутор 07 (протоколы), тутор 06 (`map`, `filter`).
+> **Нужно знать заранее:** [тутор 01](../structs-classes-enums/) (copy-on-write), [тутор 07](../protocols-extensions-casting/) (протоколы), [тутор 06](../closures-higher-order/) (`map`, `filter`).
 
 ## Аналогия: шкаф с ячейками и адресная книга
 
@@ -21,7 +21,7 @@ order: 10
 
 ## Шаг 1. Array
 
-> **Array** — упорядоченная коллекция элементов одного типа. Элементы лежат **непрерывно** в буфере на куче; сам `Array` — структура со ссылкой на этот буфер (поэтому у него copy-on-write, тутор 01).
+> **Array** — упорядоченная коллекция элементов одного типа. Элементы лежат **непрерывно** в буфере на куче; сам `Array` — структура со ссылкой на этот буфер (поэтому у него copy-on-write, [тутор 01](../structs-classes-enums/)).
 
 ```swift
 var array = Array(repeating: 2.5, count: 3)   // [2.5, 2.5, 2.5]
@@ -246,7 +246,7 @@ print(Countdown(count: 3).map { $0 * 10 })  // [30, 20, 10]
 
 ![Sequence, от него Collection. От Collection наследуются BidirectionalCollection, MutableCollection и RangeReplaceableCollection. От BidirectionalCollection наследуется RandomAccessCollection, его принимает Array.](../../../assets/tutorials/swift/10-sequence-hierarchy.svg)
 
-`Collection` добавляет индексы и многократный обход; `RandomAccessCollection` — доступ по индексу за O(1) (`Array`). `String` — `BidirectionalCollection`, но не `RandomAccessCollection` (тутор 11).
+`Collection` добавляет индексы и многократный обход; `RandomAccessCollection` — доступ по индексу за O(1) (`Array`). `String` — `BidirectionalCollection`, но не `RandomAccessCollection` ([тутор 11](../strings-unicode/)).
 
 ## Шаг 7. Ленивые коллекции
 
