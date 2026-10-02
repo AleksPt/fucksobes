@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="372" viewBox="0 0 720 372" role="img">
+<title>Operation states</title>
+<desc>The Operation state diagram: created and added to a queue, Pending; once dependencies are done, Ready; start() moves it to Executing; when the work is done, Finished; from Pending, Ready and Executing, on cancel() (for Executing, if the operation checks isCancelled), a transition to Cancelled; from Cancelled, leaving main or start leads to Finished; Finished is removed from the queue.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="372" rx="16" fill="#14151c"/>
+<circle cx="110" cy="28" r="6" fill="#fff"/>
+<path d="M110 34 V90" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="124" y="56" text-anchor="start" dominant-baseline="central">created / added to a queue</text>
+<rect x="50" y="90" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="110.0" y="112.0" text-anchor="middle" dominant-baseline="central">Pending</text>
+<rect x="270" y="90" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="330.0" y="112.0" text-anchor="middle" dominant-baseline="central">Ready</text>
+<rect x="500" y="90" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="560.0" y="112.0" text-anchor="middle" dominant-baseline="central">Executing</text>
+<path d="M170 112 H266" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="220" y="84" text-anchor="middle" dominant-baseline="central">dependencies</text>
+<text class="s" x="220" y="100" text-anchor="middle" dominant-baseline="central">done</text>
+<path d="M390 112 H496" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="443" y="100" text-anchor="middle" dominant-baseline="central">start()</text>
+<rect x="270" y="250" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45" stroke-dasharray="4 4"/>
+<text class="m" x="330.0" y="272.0" text-anchor="middle" dominant-baseline="central">Cancelled</text>
+<rect x="500" y="250" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="560.0" y="272.0" text-anchor="middle" dominant-baseline="central">Finished</text>
+<path d="M110 134 V180 H290 V246" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="200" y="168" text-anchor="middle" dominant-baseline="central">cancel()</text>
+<path d="M330 134 V246" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="338" y="156" text-anchor="start" dominant-baseline="central">cancel()</text>
+<path d="M520 134 V180 H370 V246" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="445" y="168" text-anchor="middle" dominant-baseline="central">cancel()</text>
+<text class="s" x="445" y="196" text-anchor="middle" dominant-baseline="central">if the operation checks</text>
+<text class="ms" x="445" y="214" text-anchor="middle" dominant-baseline="central">isCancelled</text>
+<path d="M560 134 V246" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="572" y="192" text-anchor="start" dominant-baseline="central">work completed</text>
+<path d="M390 272 H496" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="443" y="260" text-anchor="middle" dominant-baseline="central">exit from</text>
+<text class="ms" x="443" y="288" text-anchor="middle" dominant-baseline="central">main / start</text>
+<path d="M560 294 V334" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="572" y="316" text-anchor="start" dominant-baseline="central">removed from the queue</text>
+<circle cx="560" cy="342" r="6" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="560" cy="342" r="3" fill="#fff"/>
+</svg>

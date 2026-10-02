@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="306" viewBox="0 0 720 306" role="img">
+<title>RunLoop life cycle</title>
+<desc>The first access to RunLoop.current creates the RunLoop (Created); run() moves it to Running; with no events it goes to Sleeping and returns to Running on an event or a timer; with no sources, a stop or a timeout it moves to Finished, after which the thread ends.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="306" rx="16" fill="#14151c"/>
+<circle cx="105" cy="30" r="6" fill="#a4a6b0"/>
+<path d="M105 36 V60" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="119" y="46" text-anchor="start" dominant-baseline="central">first access to</text>
+<text class="ms" x="239.39999999999998" y="46" text-anchor="start" dominant-baseline="central">RunLoop.current</text>
+<rect x="40" y="60" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="105.0" y="80.0" text-anchor="middle" dominant-baseline="central">Created</text>
+<rect x="300" y="60" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="365.0" y="80.0" text-anchor="middle" dominant-baseline="central">Running</text>
+<rect x="560" y="60" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="625.0" y="80.0" text-anchor="middle" dominant-baseline="central">Sleeping</text>
+<path d="M170 80 H300" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="217.0" y="66" text-anchor="start" dominant-baseline="central">run()</text>
+<path d="M430 72 H560" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="495" y="58" text-anchor="middle" dominant-baseline="central">no events</text>
+<path d="M560 90 H430" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="495" y="108" text-anchor="middle" dominant-baseline="central">event / timer</text>
+<rect x="300" y="190" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="365.0" y="210.0" text-anchor="middle" dominant-baseline="central">Finished</text>
+<path d="M365 100 V190" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="379" y="146" text-anchor="start" dominant-baseline="central">no sources / stop / timeout</text>
+<path d="M365 230 V270" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="379" y="250" text-anchor="start" dominant-baseline="central">the thread ends</text>
+<circle cx="365" cy="282" r="9" fill="none" stroke="#a4a6b0" stroke-width="1.5"/>
+<circle cx="365" cy="282" r="6" fill="#a4a6b0"/>
+</svg>

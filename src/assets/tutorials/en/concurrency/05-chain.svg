@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="100" viewBox="0 0 720 100" role="img">
+<title>A chain of operation dependencies</title>
+<desc>Three operations in a row: DownloadOperation, then SaveOperation, then PDFGeneratorOperation; the arrows show the order of starting.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAU4AA0AAAAACYwAAATnAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGi4bIBwqBmAAgQwKjCSKAAE2AiQDVAssAAQgBQYHIBtXB1GUTM7gED8PY2NW45OzWNmlvUt1iA7jdxWvxTV4nubK9/9kD2aSPSC0VyDOlkiSQtesLZAjlkDuSLjSEaiWFfGkTlMfkEvkOKjElswBUhgKxPsjbowbbb/91Ov4G2L/A/SWzYQDxP+5VL2xMIOCYxEG8d/aWcNic4oehqLRgK3ZFnBM76tAtVwwqG1iorSpbAMyvzOxFPrNEMAHAJQYQipCOhbBJ46QSRZCDjkIAlhKKUfmLVi2jiV4AP8FACRYTyO63Kq9Ow/sZwsQ5bqnG+QMMdBjugHAUnO/bIOSWQCFdGa8cHTJHADdzKPP/PnXA7+ctMJ8Wq9DpUpi/hRggFzW5XJ7HHm5YjIxWOYh48JDihwNNNNOJ930/RfMQ8KZxrN4K9L7F7t2Tzxyxy3XXXPVFZddSpgAwPPQ5h+UgHwEPQP4PABUdDUxnf8vCYt/R3xra7PjQXpLmSuIF/uJjPzAgwrj+TlBhe9i7nhvLxr19NiErO4Xk+yz1sUCfFRVdx7r6wun+/uRqs0nj/UUaL1SFSuOWhkmr2YmhgAXt+GOklVzccwVJqodQAglJiSGIauY4UZwZNrCylR4LF11TpIvJF1qkf2oFVsQbafIqD4jer4TCjA+39XsEuI8ENkiLMuefMOUlPDpYuRphevp2YxLBK4cMbVAHUEB5055UYdzuJjKNiZb0E1LTuiqTlHPrnZYKADgAxWLTTYkAMQcuc60qbIGx1pIOpEqViP3XbvNbbz8oOjMo4qI2+Iz568zN0tk+zG22E0XbuQfvVYY3HOsU5Jd7ngHUfuW2Q4536bbObeGn5S2V8i7Vu6es2TxnBqsP303ieG7xP/5FkZiEEA1LllLx7GFo2PJWo5LUKoYDjOIg5DDjJXheAgRz4SPkk/XkSqeoEB5kSdeS7moWJzzgRJWHAQuYBesKTAWRpeggbWB/msQnX0vZGhNgsOaZIYWDlWMHIKSYmIkGR4C1ZR8tTa0Mqy1sDwrmbQVVfh5epdlk6vJDGl/ogYnuxpBMKxBRmhAWqqyGr/J7FY2OVssRm0oWwv+C2SCNnsm4LuqVb3W1eISLrxE6vIEEi0p72CwYfUnY1TUSMjNUo7LlbXlVe+AQ7It8UuJTItHcJuZDRsKhi+GZ8MN6zawbqXQrmNF5jijY3V6zKPjaBKUw0kVHWf9BB2zNUyfEEMpvxpjwUT/yIaXCN2uYq4QI5ExYRHvXAhC8mLyKlnw9gkBfTVyYbFY/XE803p2n3/PLQKiReGG9QewXRI9qVywM1wPP2l0iEdxUB6XeBzoYSwBDJQ4goPAE9gJMUaHkS5BA2c3OAwi9xq/SRTBk25OXGIrIq5aHe+5rUr/bz26CdAlvRYz0OeDtqJgw8YdKGQL2wL55tje8FbMCAY9ElEc1MsOq8ifIWfOhM/MkTmeNR4n4POjwuhAx8UdNWjHwd6OSOA4GAoUujQzhek1ayYLjTN+o2CTX1Q3Y4sUZgxD8MTu3X1W0xAof6975y6ydy/ZtdPNYFE9DkghNwMqgRCgLSb96PgPBNAJ3gQ77dz21dO+phnzFmD4xZ3TMjn07BPl/23aVsGtkkNf/MJLPqEbAMy/kzMQppqXVMOsRhWaIINcCFUQ7ISPzF0Q0wdF20wt/4b9wCsEyKMFJR/dVg55UzB+/g/KSZgAAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="100" rx="16" fill="#14151c"/>
+<rect x="30" y="28" width="190" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="125.0" y="50.0" text-anchor="middle" dominant-baseline="central">DownloadOperation</text>
+<rect x="280" y="28" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="355.0" y="50.0" text-anchor="middle" dominant-baseline="central">SaveOperation</text>
+<rect x="490" y="28" width="200" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="590.0" y="50.0" text-anchor="middle" dominant-baseline="central">PDFGeneratorOperation</text>
+<path d="M220 50 H276" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M430 50 H486" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

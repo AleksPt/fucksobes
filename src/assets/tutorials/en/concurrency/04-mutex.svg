@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="470" viewBox="0 0 720 470" role="img">
+<title>Mutex: two threads fight for a lock</title>
+<desc>A sequence diagram. Thread 1 calls lock() on the Mutex and acquires it. Thread 2 calls lock(): it's busy, the thread goes to sleep. Thread 1 is in the critical section, then unlock(). The Mutex wakes Thread 2, which acquires the lock, goes through the critical section and calls unlock().</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAR4AA0AAAAAB5gAAAQoAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbggIcMAZgAHwKhxiFYQE2AiQDOAseAAQgBQYHIBvcBSCOwzgW3LnTpIEQBPSd9dU9E02vMUscld3bA5gDqBwRPOgLYPofoB3ixDX1I63snx7wAd9eB9yAUe0dVGgDrMDdbDeKNhqwzvdij7taDD293X4u6osIIAgAkAgEBgIBGORTG628omVHovpPHTeCqBGuCaOIQgf4cbQMHzhuFPYCm0Bi5QgSOxJDNgvC0AGNBEyyEYYgsWAkHYFvW9YEfkeiE5fF2FcbHSinIxo2QCbwMkq678hNpgErfCnFMzakUgKbiYLSo2/RoYWB1pQd8RAHoQOCCFYQ5Al9CYqFFMMpeMoA9usyR/yaBeQy2RVoQScRvanM30EuOKptt/YduIPJFO3p/69CvyFah02RodINmDjsmYAGRKEhBq0z5BIxhKFhxaQyreiIi4EMYRwTmRJQmFRywQOgCb/KfeCCU/bZY5eNNliXAJwghD1JQCiIFBCjgE8PSwmkSsUzCbZnhkaHpzgSIqKjgowUZVHdeijdsHQ1uuvKYohQDL3TMt/Lc2Ku+5VfqbnnXhrLLhyJM3avbFzu9SKNzkce3++83O8Wwqs/ssw5edWVZfdNhz+o5sGTPKF0gZ5n/WKuzye6XnuYs/fuE7sXp5tztkQF7fS+UMsfXU9UezyeHrvuvTSWPb+TpCyK46+eNcxrc/ede+pKeECATsCj+HLFat7jgeCqtZohlFCoiDk3lcK1LKnknPqhV35rukf16K46dVFduxmdO+517eVHrwqUrkSX4+/enRdzfVfRk2Ts95//qjkeT92OwXRwb34+4fGE9e6hFZ9sLP50YwXf9vvMlef6tB+fWzKdEdW/zi1t/bZtSOHcnGlmfvzTL/qPGLjJXRGW1bJ3nYLRrZK7ac5RP7zv6FxUltI9N2ZpeP+iXgmJZ18TaWkzqKLy1JatqkwbWtEu5UXLnB8Hu/trTRKcgfWo4qyU1q60ktnaWVy1+o9J7Spl/m9OI9vSYXRZzSlt2taeOqZx23rdCmu3SOwZriKNmTnpjX4vSQgaMWnIfWd579R2daxJ5/KLHwRl0MA9+P/m/X8yW3ZqmDGycfoQw1w5LiQvx2UPdab9Q4NQl96ifpVP0x1htv5mreZF6e2q/U9C/RbpGS3q2Tr07LBl8JaFPRf+XZJcPa8npmX0hAlTcgenlySUjc8vmhBbVpw+JHfapHGoa0FnxfTpNybfmHxGv+mYtvj2wtvsL1nVYux/YSUtnpHY9eOr7dvG/ZBWu7xBncrl+QdHzGjSakh2Lefgkjo9yxqUuFq38e6Y18YFwOw/EYDE2XLt6P/7hNb9za5pXwJ8vi3DpIdWQQX+1iLlM8CKBEDAV9unDUKhtMjEYeRCZCZRAZs6SCdBsoQi2Z8CWf8WOtJAzDh3LPGyjHoyAiUmEC2rkigiAAGEUKXZWPBWNJQFLlYZAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="470" rx="16" fill="#14151c"/>
+<rect x="60.0" y="24" width="120" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="120" y="42.0" text-anchor="middle" dominant-baseline="central">Thread 1</text>
+<line x1="120" y1="60" x2="120" y2="446" stroke="#fff" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+<rect x="300.0" y="24" width="120" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360" y="42.0" text-anchor="middle" dominant-baseline="central">Mutex</text>
+<line x1="360" y1="60" x2="360" y2="446" stroke="#fff" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+<rect x="540.0" y="24" width="120" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="600" y="42.0" text-anchor="middle" dominant-baseline="central">Thread 2</text>
+<line x1="600" y1="60" x2="600" y2="446" stroke="#fff" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+<path d="M120 110 L356 110" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<text class="s" x="240.0" y="98" text-anchor="middle" dominant-baseline="central">lock(): acquired</text>
+<path d="M600 160 L364 160" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<text class="s" x="480.0" y="148" text-anchor="middle" dominant-baseline="central">lock(): busy, sleeping</text>
+<rect x="40" y="190" width="160" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="s" x="120.0" y="208.0" text-anchor="middle" dominant-baseline="central">critical section</text>
+<path d="M120 265 L356 265" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<text class="s" x="240.0" y="253" text-anchor="middle" dominant-baseline="central">unlock()</text>
+<path d="M360 315 L596 315" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="480.0" y="303" text-anchor="middle" dominant-baseline="central">wake-up, lock(): acquired</text>
+<rect x="520" y="345" width="160" height="36" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="s" x="600.0" y="363.0" text-anchor="middle" dominant-baseline="central">critical section</text>
+<path d="M600 420 L364 420" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<text class="s" x="480.0" y="408" text-anchor="middle" dominant-baseline="central">unlock()</text>
+</svg>

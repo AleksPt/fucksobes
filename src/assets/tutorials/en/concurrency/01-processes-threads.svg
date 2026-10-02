@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="526" viewBox="0 0 720 526" role="img">
+<title>Processes and threads</title>
+<desc>Two processes: app A with three threads and app B with two. The threads of each process are connected to that process's shared memory. Between processes there is only IPC (a dashed link).</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAATQAA0AAAAACDAAAAR9AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgWQcMAZgAIEECohEhwgBNgIkAzwLIAAEIAUGByAbcQYoLgpsIsMHay3FxqaX+PWiNYlfcs6jCKIx2uze3YtJNcM84c00eiXxmdAgZdqHSOgemv/wnvYGJSMzgJlYpoOYGV+CDkZxMG22ATzh/0JycyY2zab+2irU/1Qs3VbczH93gPAdODbthsJdDDBLA05o9mlobM848DmMCmQXPH0wbdDdACXdbVGgD5BC6BcCPVYcUy75M0JB/lllUS7Iv0gqIUFehb8j53laEQmieKwqqanHZfUQ56WYseWIukR1WwBsgJ60/+9q/3+oFti0DLVp1b3dh4g1Fcecw69TQDfy66mh6W6NSO2TUItQtab8TcdHhddsgDE4VhLG19z4usHI9/yRAK5U7cRDsPELFAwT3rwTHALHLHlbLvy7Sv3ERwAsnCEH5cWSbiQKxhSBMNWb308ZUnRZchFVoCQpcuUrUa7yv0wzcpCKn6fZb6c5s8aMGjKgP4ZxYVDnBQwRDwDiM4ZXd8iIDqX10ixXiepSWhKCi7S0q4KEYVIrl8uXPB46ORxtZJaLDDYbDjgcdPJuaqLTbDZqKLBZaXDAZiONygwXX3IRpbdyr+xIOHmVhyJpKjJ27VNGppqSNYnZcy2fY4cT90k+ntHGrnWIjfNX8k0qSAfBjYZGIeEIXO/sa8eq1Fl3XNjY6jjJ/STnSZzyWPGiGa6cwNCRw6fRuXfvGl/j6qrB4hmDPVdO8OVOFb+ugYxeeR5gedjKfv3dHP2Fw9shjl1iS1wQ0saIAIr1ZBxHy8hDNCpGR2OR6MikZR73iP23d/Hxsw6MJEGCs/38hJjODyXY19glInndsf6zWZkBs93xJFFg5Rd2PvJpshs9NJ2wrKMR1o1ZjGAbQs2nJ+E1I7zUEm4dRrH8Z9+JfBvnjEDCN7vcnmh/7dQclMqIYATRg0fhb+4t6//G0FyimCplNGau7FViof5XpTQmpWnaR0qHEeNqTDI0AgS94x56IvI0G4pWvYVqn+xOsgHDnuvAUgvO9rWrZNIdqkhKKB6m6+Q7F/HWU9/MNcBBK9LGTjsywB43oekejhzw8ovVgouHYUOxE08St/7IpU4+Tn/SP6STcHEwWIClXuotq8UM99DL9dMNE9cX9VnATOwouF6S22c4Wki+r0MlwXKsyPcLDSH9HCpYhGMl6RtCc6bY6kQ4OOhEUmyd8Q4wEhBxR5DNKRKPP0SHjx7rUJXuIzvU5FU+pfBucfFrFAvDVyUUGRO7YK14JiuXYyVd4lGjrJjXs2AQIln+e85L25J+nSYB06coulp0Z9VwevhE2EQHvUPGIcnVkA7b5iQTaw81HipuOlR9KIm6ShpX48WC/8RJ7fN63mS4rl2wXzzVQzXZS1qXiHLTz6PohknoifruTjDHfR2xOPx/mBSORRyMwADe/QFGuvCs9vZygpTrd9GiH3z5qKtVTWoLff/liwf/RXRIEPwzpnJlCUKnZGt5GDSYK4zlMVshRLeyTE5rCttpDJspShfddTFZ4JMhYBn/7VEEGsdxZQefkARGcNCpK6tifIdC1P/dnQAAAAA=) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="526" rx="16" fill="#14151c"/>
+<rect x="16" y="16" width="688" height="220" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<text class="h" x="40" y="46" text-anchor="start" dominant-baseline="central">Process: app A</text>
+<rect x="36.0" y="76" width="200" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="136.0" y="94.0" text-anchor="middle" dominant-baseline="central">Main thread</text>
+<text class="s" x="136.0" y="115.0" text-anchor="middle" dominant-baseline="central">own stack</text>
+<line x1="136.0" y1="132" x2="136.0" y2="172" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="260.0" y="76" width="200" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="360.0" y="94.0" text-anchor="middle" dominant-baseline="central">Thread 2</text>
+<text class="s" x="360.0" y="115.0" text-anchor="middle" dominant-baseline="central">own stack</text>
+<line x1="360.0" y1="132" x2="360.0" y2="172" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="484.0" y="76" width="200" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="584.0" y="94.0" text-anchor="middle" dominant-baseline="central">Thread 3</text>
+<text class="s" x="584.0" y="115.0" text-anchor="middle" dominant-baseline="central">own stack</text>
+<line x1="584.0" y1="132" x2="584.0" y2="172" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="36" y="172" width="648" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360.0" y="194.0" text-anchor="middle" dominant-baseline="central">Shared process memory</text>
+<rect x="16" y="290" width="688" height="220" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<text class="h" x="40" y="320" text-anchor="start" dominant-baseline="central">Process: app B</text>
+<rect x="148.0" y="350" width="200" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="248.0" y="378.0" text-anchor="middle" dominant-baseline="central">Main thread</text>
+<line x1="248.0" y1="406" x2="248.0" y2="446" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="372.0" y="350" width="200" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="472.0" y="378.0" text-anchor="middle" dominant-baseline="central">Thread 2</text>
+<line x1="472.0" y1="406" x2="472.0" y2="446" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="36" y="446" width="648" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360.0" y="468.0" text-anchor="middle" dominant-baseline="central">Shared process memory</text>
+<line x1="360" y1="236" x2="360" y2="290" stroke="#fff" stroke-opacity="0.45" stroke-dasharray="4 4"/>
+<text class="s" x="372" y="263" text-anchor="start" dominant-baseline="central">IPC only</text>
+</svg>
