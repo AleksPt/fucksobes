@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="564" viewBox="0 0 720 564" role="img">
+<title>Serial and concurrent queues</title>
+<desc>Two timelines from 0 to 11. Serial: Task 0 from 0 to 3, Task 1 from 3 to 5, Task 2 from 5 to 9, Task 3 from 9 to 11, strictly one after another. Concurrent: Task 0 from 0 to 6, Task 1 from 1 to 4, Task 2 from 2 to 9, Task 3 from 3 to 5, the tasks overlap; they start in order and finish in any order.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAN8AA0AAAAABegAAAMtAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbIBwqBmAAZAqFeIR/ATYCJAMsCxgABCAFBgcgG3QEAB4Hzqkvtr4ZjVziikiPwQPlvb2Z/F9kFmABJoWc7UI+STrJZ1H9DwBbVufGKLXBQENyqDtn6lTNWPoXSixgAQwGcYxVXINytUUBLGEF1sBqLR4qcKnVTfbx2MsCfIraiWoNAqgDAEgkAhsCB5wRCECnDe0QCUkZBThhA/ivABCAjgtuyJjd6vW3hg+kRSTMdZssEfPEDnKGlgDp9/tFFQHCAAnOKLHgaFoccJJcRmh//iGuQnjFMdJF3gIdsC9LQAOawBUD2MixG+hfakAuFj3oQ3+GMeI/LzL0O269NVZaYbFFCYQVKOxmgOvM34AItOveI5D/mfpdLeq1Va10vX4z70Z1rKKmMxbpM3hNaFPmuprZV5GTkVJYNPN671GfAUZdGGQJzpQSU35P2+jRFaQu9OaHQktwfpn8rGKE6FCHdJ6aWe3VlSvlMKtQVwmlcV5XKupmKPaSbXIqhbLPacGU8hD6AiyL00vt1PKDaGaN4QopurYc6TzaUV/huj4jmGzBhVevIraOvtCUfLI7xqvoN+O4mLLVzGRybD7Yd99i20mn+G5BwTWmERdc3brxCVbQ9kycER9emzL85MOfkUmp0UZMUkokuikxRrSncX47F9eWZGTWFhfuCA08H+ZvusWVOSUNyy+uHmAVjC3pU/9dVEViSJKRGxuQtc3b39PnCZ7OZk1gUFXsEiOoEo4pDVQaVlGwaSZEB33pXuaUMDzHNa6raSTGRJuJZls7hXlnpu7Is105lMcov+Surom+b/lhjWM7FXXYm8cgl5I+TdsYpRllGcU9+1d2LGtpxiREhBuJRhWtHMPyOtVPL6swvTyCI7p0fnEtVeXUzUpJSqvMqXLJrk5dU1b6z90l8KlLp0lbUlVJ3Zz0lIyaom54OFcPGWxVlVXFxCaEhhkJMa011rDBeE7rmNu2XV7Hjnnt2ubi4IIdcECvjxNAIUhPzXnUAwQgQ2xBi+q5VNeP+uqkaS8Abl/asmJfvHXhE+3+Z2SoVTYlAAJ+nkiWRFD/Ztd/3DMlSyiDnTPDprAQbgcPQsr+AHiKABTeSJoh65k+2gGN4/8K2CZQAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAXYAA0AAAAACagAAAWJAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgUocMAZgAFQKi3SKBgE2AiQDRAskAAQgBQYHIBuzB1GUTc7aAD8OYzfOZOf+w/JR1RX94AHbfF8Sagl8GxNxPbXXuShtJ3cRZeg93xv7sDkrkaSpkbhNcR2pL1NfVi56/v/P5fTGwkWhBRpZ/W4tbGwbY9MJpuEAuSsbHOZhFvYyCxDSTYb1eyoOz2zqb9AUArCBUWEEOg60RzUlqIFq1KRVJ5CB0yeMAhnVf9IYECyA/8fZkYMnjKEIkAjiglTTwho0bKTFSGYhB1uKvTIqSh6klSVinAtQgGJUoBot0NeChNE4pCII+596ORXtv90N3dpDuET873rtMhbNozsIWE0kpSiDa2ntynDbknnEfAIgZ8rGAFrKh4g+ePkNhQvuate9Q0eOUY5J6ub/e2CdFhAXkqnyUiofEcUUoAA3JyBzFvUMO2fnLKozmC70oP/cPOU0X/cT/mp/hb/MX4CYDZ5uFMh3J+I9yA1+pTtKTvr+N1iVYdNVe36eiFU6s+vqPLWMKlwoLVQoI61Iqt1/ZiIhYsmkmRWPx3MtXu7aa+JxM+vaKZVZ73k9SyT0TM/LZQLGomL+XaeuoUuld527ZfQZUqvYxr0n9dTj+9crKvc9pOO7oLQwI0KnltELxhAQqlQTRL2B7SKZEbFEsKRH9GX0uqDFsWv3ShrLiK67Hj3CxDiTS2+yhpKu1cnxWXmYx6y5M2v31iFk28GbV7UWCubUVvfiTbuu66flet2lpt2ptf2nKx25E/uCI2wx1EiDZoCjvCEX2RVnbljJkEvFdE8Hu9OusBuWkMqv9yKHznse++4xLAkKFCiDZqQtHIaZ79yrevLixiw01p+vduRBNthrty4ZFz23E71w40pPSnqdHvdUK2D2xE3e9sTEptue/ohxX9s9JC9N43UCM3eKMbvMtBNEj58UrVC/BxcYAgvhwT342snGzkhe0VxbVKZoUsIi8oRfmds6tdEOmmqmbRmqZGEpi8PDWE1sGLBVG1QV3qVuUrIZakOss4Ly9UpzVPDo6geaNHAq+WR3k+HKzgMaXQOXgq/S3ehuiEBUCxTxtEmfjSobZhsubrB4RnZG9WCbOJYFOUmmc5Buqx2by2nG0m07h7KFrvFkJ+VojlOOTnZ89oMwlvZi9Sq3dbtOH6x+2heLiz60PrkuN/2h0XqiF6wnZ8f6PgKuxEWgFZ8dbjcurucsVJanfFlib4s5gtDeFGTau8JNGdrdBsLTO+Z0LgCjhKhfLW1x9Wy6fQBXRS9rZP1M4NfkZ3UctJoe/dls9Iz5ZFIvuzWyUbPDFAarWx2wxgEj77WMeOc8e1XL2VhXvay9UTWwYcZousnXES/qFerN6PFQNg/4iuy1a9L402mNN/44pfXkdA4mIDbKC4SgOd9UN35t7SY1H6/OKyNcx1C4PZ9huvQNg5Qk3TFItdQMZgvaqUyXbvGcr7GR5j41c0UL7qSN55ViaQFtezGNoELHcKQ9IyS6dI+moINDMcZqt7AM5rCKZjvjJHBGwEB7Td+Bte+kNUNBUOJuiqRcBIzgKrqQ6DvvscKL8oyjLmK310UYB8p7lW/m9G1BKxk8QsC0qwnigvIhBMCcrzMywpqVfXNiIDpExqM/x2KVB1AyDKfk9QliPCUDWomvuYHlTrSuVduMBwU7nq/e2l+hUgX0f97Fkx298bapVKJLz6gIO9LRHrKxdFYzkm7Vxc81sQmmrTYnxnGY3cFhGGsVakPQQvlBofivkLnkCh0VqwgKCJI2Gj1AJWCbvNL3KAKQNJhxpPnGvqm1voWVegnwfKUpnzxd0b/m/5Df5F03sxIAAf9sXSGQq2C5PgSny1y4sjZleUalg22oKv6emIBGrqC6GIlCViGP7IpBToeQw0jKsUTFL2w5hogcRRD8awggnSaUIw2JgGSdEEQdhX+EChA=) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="564" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="672" height="204" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="40" y="40" width="330" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="205.0" y="54.0" text-anchor="middle" dominant-baseline="central">Serial: tasks strictly one after another</text>
+<text class="m" x="40" y="114.0" text-anchor="start" dominant-baseline="central">serialQueue</text>
+<line x1="150" y1="136" x2="680.0" y2="136" stroke="#fff" stroke-opacity="0.08"/>
+<rect x="150.0" y="92" width="144.54545454545453" height="44" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="222.27272727272725" y="114.0" text-anchor="middle" dominant-baseline="central">Task 0</text>
+<rect x="294.5454545454545" y="92" width="96.36363636363636" height="44" rx="8" fill="#fff" fill-opacity="0.20" stroke="#fff" stroke-opacity="0.30"/>
+<text class="t" x="342.7272727272727" y="114.0" text-anchor="middle" dominant-baseline="central">Task 1</text>
+<rect x="390.9090909090909" y="92" width="192.72727272727272" height="44" rx="8" fill="#fff" fill-opacity="0.30" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="487.27272727272725" y="114.0" text-anchor="middle" dominant-baseline="central">Task 2</text>
+<rect x="583.6363636363636" y="92" width="96.36363636363636" height="44" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="631.8181818181818" y="114.0" text-anchor="middle" dominant-baseline="central">Task 3</text>
+<line x1="150" y1="148" x2="680.0" y2="148" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<line x1="150.0" y1="144" x2="150.0" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="150.0" y="166" text-anchor="middle" dominant-baseline="central">0</text>
+<line x1="198.1818181818182" y1="144" x2="198.1818181818182" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="198.1818181818182" y="166" text-anchor="middle" dominant-baseline="central">1</text>
+<line x1="246.36363636363637" y1="144" x2="246.36363636363637" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="246.36363636363637" y="166" text-anchor="middle" dominant-baseline="central">2</text>
+<line x1="294.5454545454545" y1="144" x2="294.5454545454545" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="294.5454545454545" y="166" text-anchor="middle" dominant-baseline="central">3</text>
+<line x1="342.72727272727275" y1="144" x2="342.72727272727275" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="342.72727272727275" y="166" text-anchor="middle" dominant-baseline="central">4</text>
+<line x1="390.9090909090909" y1="144" x2="390.9090909090909" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="390.9090909090909" y="166" text-anchor="middle" dominant-baseline="central">5</text>
+<line x1="439.09090909090907" y1="144" x2="439.09090909090907" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="439.09090909090907" y="166" text-anchor="middle" dominant-baseline="central">6</text>
+<line x1="487.27272727272725" y1="144" x2="487.27272727272725" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="487.27272727272725" y="166" text-anchor="middle" dominant-baseline="central">7</text>
+<line x1="535.4545454545455" y1="144" x2="535.4545454545455" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="535.4545454545455" y="166" text-anchor="middle" dominant-baseline="central">8</text>
+<line x1="583.6363636363636" y1="144" x2="583.6363636363636" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="583.6363636363636" y="166" text-anchor="middle" dominant-baseline="central">9</text>
+<line x1="631.8181818181818" y1="144" x2="631.8181818181818" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="631.8181818181818" y="166" text-anchor="middle" dominant-baseline="central">10</text>
+<line x1="680.0" y1="144" x2="680.0" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="680.0" y="166" text-anchor="middle" dominant-baseline="central">11</text>
+<text class="s" x="680.0" y="186" text-anchor="end" dominant-baseline="central">time</text>
+<rect x="24" y="244" width="672" height="300" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="40" y="260" width="360" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="220.0" y="274.0" text-anchor="middle" dominant-baseline="central">Concurrent: tasks overlap in time</text>
+<text class="t" x="40" y="326.0" text-anchor="start" dominant-baseline="central">Task 0</text>
+<line x1="150" y1="344" x2="680.0" y2="344" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="40" y="370.0" text-anchor="start" dominant-baseline="central">Task 1</text>
+<line x1="150" y1="388" x2="680.0" y2="388" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="40" y="414.0" text-anchor="start" dominant-baseline="central">Task 2</text>
+<line x1="150" y1="432" x2="680.0" y2="432" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="40" y="458.0" text-anchor="start" dominant-baseline="central">Task 3</text>
+<line x1="150" y1="476" x2="680.0" y2="476" stroke="#fff" stroke-opacity="0.08"/>
+<rect x="150.0" y="308" width="289.09090909090907" height="36" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="198.1818181818182" y="352" width="144.54545454545453" height="36" rx="8" fill="#fff" fill-opacity="0.20" stroke="#fff" stroke-opacity="0.30"/>
+<rect x="246.36363636363637" y="396" width="337.27272727272725" height="36" rx="8" fill="#fff" fill-opacity="0.30" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="294.5454545454545" y="440" width="96.36363636363636" height="36" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<line x1="150" y1="484" x2="680.0" y2="484" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<line x1="150.0" y1="480" x2="150.0" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="150.0" y="502" text-anchor="middle" dominant-baseline="central">0</text>
+<line x1="198.1818181818182" y1="480" x2="198.1818181818182" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="198.1818181818182" y="502" text-anchor="middle" dominant-baseline="central">1</text>
+<line x1="246.36363636363637" y1="480" x2="246.36363636363637" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="246.36363636363637" y="502" text-anchor="middle" dominant-baseline="central">2</text>
+<line x1="294.5454545454545" y1="480" x2="294.5454545454545" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="294.5454545454545" y="502" text-anchor="middle" dominant-baseline="central">3</text>
+<line x1="342.72727272727275" y1="480" x2="342.72727272727275" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="342.72727272727275" y="502" text-anchor="middle" dominant-baseline="central">4</text>
+<line x1="390.9090909090909" y1="480" x2="390.9090909090909" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="390.9090909090909" y="502" text-anchor="middle" dominant-baseline="central">5</text>
+<line x1="439.09090909090907" y1="480" x2="439.09090909090907" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="439.09090909090907" y="502" text-anchor="middle" dominant-baseline="central">6</text>
+<line x1="487.27272727272725" y1="480" x2="487.27272727272725" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="487.27272727272725" y="502" text-anchor="middle" dominant-baseline="central">7</text>
+<line x1="535.4545454545455" y1="480" x2="535.4545454545455" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="535.4545454545455" y="502" text-anchor="middle" dominant-baseline="central">8</text>
+<line x1="583.6363636363636" y1="480" x2="583.6363636363636" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="583.6363636363636" y="502" text-anchor="middle" dominant-baseline="central">9</text>
+<line x1="631.8181818181818" y1="480" x2="631.8181818181818" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="631.8181818181818" y="502" text-anchor="middle" dominant-baseline="central">10</text>
+<line x1="680.0" y1="480" x2="680.0" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="680.0" y="502" text-anchor="middle" dominant-baseline="central">11</text>
+<text class="s" x="680.0" y="522" text-anchor="end" dominant-baseline="central">time</text>
+</svg>

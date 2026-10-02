@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="408" viewBox="0 0 720 408" role="img">
+<title>A map of concurrency problems</title>
+<desc>The root "Concurrency problems" splits into three groups. Uncertainty of parallelism: data race, race condition, actor reentrancy. Side effects of synchronization: deadlock, livelock, resource contention and performance penalty. Thread management mistakes: priority inversion, starvation, thread explosion.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="408" rx="16" fill="#14151c"/>
+<rect x="230" y="24" width="260" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360" y="46" text-anchor="middle" dominant-baseline="central">Concurrency problems</text>
+<path d="M360 68 V92 H128 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="24" y="116" width="208" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="128" y="135" text-anchor="middle" dominant-baseline="central">Uncertainty</text>
+<text class="t" x="128" y="153" text-anchor="middle" dominant-baseline="central">of parallelism</text>
+<path d="M38 172 V230.0 H52" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="52" y="208" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="142" y="230.0" text-anchor="middle" dominant-baseline="central">Data race</text>
+<path d="M38 172 V290.0 H52" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="52" y="268" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="142" y="290.0" text-anchor="middle" dominant-baseline="central">Race condition</text>
+<path d="M38 172 V350.0 H52" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="52" y="328" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="142" y="350.0" text-anchor="middle" dominant-baseline="central">Actor reentrancy</text>
+<path d="M360 68 V92 H360 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="256" y="116" width="208" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360" y="135" text-anchor="middle" dominant-baseline="central">Side effects</text>
+<text class="t" x="360" y="153" text-anchor="middle" dominant-baseline="central">of synchronization</text>
+<path d="M270 172 V230.0 H284" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="284" y="208" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="374" y="230.0" text-anchor="middle" dominant-baseline="central">Deadlock</text>
+<path d="M270 172 V290.0 H284" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="284" y="268" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="374" y="290.0" text-anchor="middle" dominant-baseline="central">Livelock</text>
+<path d="M270 172 V356.0 H284" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="284" y="328" width="180" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="374" y="347.0" text-anchor="middle" dominant-baseline="central">Resource contention</text>
+<text class="t" x="374" y="365.0" text-anchor="middle" dominant-baseline="central">performance penalty</text>
+<path d="M360 68 V92 H592 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="488" y="116" width="208" height="56" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="592" y="135" text-anchor="middle" dominant-baseline="central">Thread management</text>
+<text class="t" x="592" y="153" text-anchor="middle" dominant-baseline="central">mistakes</text>
+<path d="M502 172 V230.0 H516" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="516" y="208" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="606" y="230.0" text-anchor="middle" dominant-baseline="central">Priority inversion</text>
+<path d="M502 172 V290.0 H516" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="516" y="268" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="606" y="290.0" text-anchor="middle" dominant-baseline="central">Starvation</text>
+<path d="M502 172 V350.0 H516" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="516" y="328" width="180" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="606" y="350.0" text-anchor="middle" dominant-baseline="central">Thread explosion</text>
+</svg>

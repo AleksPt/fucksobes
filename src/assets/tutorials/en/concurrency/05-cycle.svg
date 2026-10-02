@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="350" viewBox="0 0 720 350" role="img">
+<title>A cycle in the dependency graph</title>
+<desc>Queue 1 contains the chain Op1, Op2, Op3. Queue 2 contains Op5. Op2 waits for Op5 (an arrow from Op5 to Op2), Op5 waits for Op3 (a dashed arrow from Op3 to Op5). Op2, Op3, Op5 are highlighted: a cycle has formed.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAOQAA0AAAAABhAAAANBAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbIBwqBmAAbAqGLIVLATYCJAMYCxgABCAFBgcgG7QEUZTMySjAj4QyrofZuU4YUUaF8++54IHPq3r/p2qQjIBUO3FbKXjABVi9gK+ATlBhrZOMKlwBYKIHl4skEiauqR+lj79qwiFGBUViF9hwoLMHWhQVrnXnLTybujHG9YJJHHfWM6BCBDCJkBYIwlC5NnMZqCxiCcJv6hhgAiGA/xWARriGdUh6Uw6kjznEPCXIuJAcEZcRBllgcaDdl4sEO4QNEiYS5AVr21zgOZZxrPLPf8VYPrFJR8k18n1yGeHZElCAWSgII0OM/MsMpqEgWcZOInTTS54jOPZ/xTK253/RKyl6wP1ucZXLEgSGQIOYQ+tkEBqIo79Wa1YZcZHJjCnzpry3QB0HzNAWLluZLpTLQjmzUtHGSiXkGcXi0FglGSmrhaLTLaWHZheuUoWDWga7SoSJNJM4o8QK31iqFYtRYbVMHgxraOvO9M1wRrGoFspivTrI8FhFQF0tKhRN1jBXyISiJrTwgBjWQlOxvO9U9F618sa8M4oDA5M5hUV7VKVqVsXwJDGZAWFAOjmk3fzazSu8ukiNuicNnAqujN040U1s35Fw2twdcWJyEzJxp93ZkahweupN12wzN6H6OososAt3P7jvvqtDz03wMnok5dhuJImw56f1totre7XZlmOe++zP+qZWwzabWuoRbjFtIzOejU5qp56wrrH1OEzOTMft9FCE3ds39F9ywQT/mJ617mrHbjQNp9FZHCb64PvB3hmzrL4Wvz9zIHm7tSnas73G6281Z80Sp9x2wu+1tmdfY29ka6udRvMacw82JI88Ip0IEqblV9fYvnl9a/roIwj6XjFevjJ310knX3BHH7HYxz9etDOxyXAb6+yWZisQTk0qt9NzUzt2xh3TObGt88HHO/tY5mb0SNwKDN83TK+5Tjc9z2wPHrp3Xd/ZwQtPabljj0zpVlU8q7N+9MjoxM6g7b9qy/TMZhOPzF573fNB6Moz+tbLnxY9vrUtYo2QOZRtTh95BACnP5cAZFXo83j1WcmpDb9OUJRvAT54+54bAD54/82favp/cpH8EhiHBEDAD+mQIwqChiEIwu1CjhAwQg+DxAgIaKGJQUAAGmuq9QVzHAqj/j92oAQA) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="350" rx="16" fill="#14151c"/>
+<rect x="20" y="20" width="680" height="120" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="44" y="44" text-anchor="start" dominant-baseline="central">Queue 1</text>
+<rect x="20" y="200" width="680" height="130" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="44" y="224" text-anchor="start" dominant-baseline="central">Queue 2</text>
+<rect x="90" y="70" width="100" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="140.0" y="92.0" text-anchor="middle" dominant-baseline="central">Op1</text>
+<rect x="310" y="70" width="100" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="360.0" y="92.0" text-anchor="middle" dominant-baseline="central">Op2</text>
+<rect x="530" y="70" width="100" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="580.0" y="92.0" text-anchor="middle" dominant-baseline="central">Op3</text>
+<rect x="310" y="250" width="100" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="360.0" y="272.0" text-anchor="middle" dominant-baseline="central">Op5</text>
+<path d="M190 92 H306" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M410 92 H526" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M360 250 V118" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="348" y="176" text-anchor="end" dominant-baseline="central">Op2 waits for Op5</text>
+<path d="M580 114 V272 H414" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="497" y="290" text-anchor="middle" dominant-baseline="central">Op5 waits for Op3, CYCLE</text>
+</svg>

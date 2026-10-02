@@ -223,7 +223,7 @@ func bind() {
 }
 ```
 
-> A cycle needs **both directions**: object → closure and closure → object. If the closure isn't stored (it ran and was forgotten), there is no cycle. That is why `[weak self]` isn't required in `map`, `forEach`, `DispatchQueue.main.async` — more in the tutorial «Concurrency → 02 · GCD».
+> A cycle needs **both directions**: object → closure and closure → object. If the closure isn't stored (it ran and was forgotten), there is no cycle. That is why `[weak self]` isn't required in `map`, `forEach`, `DispatchQueue.main.async` — more in the [tutorial «Concurrency → 02 · GCD»](../../concurrency/gcd/).
 
 ## Step 6. How to find a leak
 

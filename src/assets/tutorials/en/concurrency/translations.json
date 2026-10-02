@@ -1,0 +1,415 @@
+{
+  "strings": {
+    "Уровни API для работы с потоками": "API levels for working with threads",
+    "самый низкий уровень, ядро ОС": "lowest level, OS kernel",
+    "C API, стандарт UNIX": "C API, UNIX standard",
+    "Foundation, ООП-обёртка": "Foundation, OOP wrapper",
+    "очереди вместо потоков": "queues instead of threads",
+    "ООП над GCD": "OOP on top of GCD",
+    "Одно ядро и несколько ядер": "One core and several cores",
+    "Одно ядро: потоки чередуются (context switch)": "One core: threads take turns (context switch)",
+    "время": "time",
+    "Несколько ядер: настоящий параллелизм": "Several cores: true parallelism",
+    "Main thread и фоновый поток": "Main thread and a background thread",
+    "Пользователь": "User",
+    "Нажал «Загрузить»": "Taps \"Download\"",
+    "Запусти загрузку": "Start the download",
+    "Свободен: скролл, анимации,": "Free: scrolling, animations,",
+    "реакция на касания": "reacting to touches",
+    "Сетевой запрос и парсинг": "Network request and parsing",
+    "Результат готов": "Result is ready",
+    "Обновлённый экран": "Updated screen",
+    "Процессы и потоки": "Processes and threads",
+    "Процесс: приложение A": "Process: app A",
+    "свой стек": "own stack",
+    "Общая память процесса": "Shared process memory",
+    "Процесс: приложение B": "Process: app B",
+    "только IPC": "IPC only",
+    "Жизненный цикл потока": "Thread life cycle",
+    "планировщик выдал ядро": "scheduler gave a core",
+    "context switch / квант истёк": "context switch / time slice expired",
+    "ждёт I/O, lock, sleep": "waits for I/O, lock, sleep",
+    "событие произошло": "event occurred",
+    "код закончился": "code finished",
+    "Код": "Code",
+    "Фоновые задачи": "Background tasks",
+    "счётчик 5": "count 5",
+    "запуск 5 загрузок": "start 5 downloads",
+    "подписка": "subscribe",
+    "счётчик 4": "count 4",
+    "счётчик 3": "count 3",
+    "счётчик 2": "count 2",
+    "счётчик 1": "count 1",
+    "счётчик 0": "count 0",
+    "вызывает блок": "calls the block",
+    "Архитектура GCD": "GCD architecture",
+    "Ваш код": "Your code",
+    "задачи": "tasks",
+    "Очереди": "Queues",
+    "Пул потоков": "Thread pool",
+    "управляет система": "managed by the system",
+    "задача 1": "task 1",
+    "задача 2": "task 2",
+    "задача 3": "task 3",
+    "Serial и concurrent очереди": "Serial and concurrent queues",
+    "Serial: задачи строго друг за другом": "Serial: tasks strictly one after another",
+    "Concurrent: задачи перекрываются во времени": "Concurrent: tasks overlap in time",
+    "sync и async между очередями": "sync and async between queues",
+    "queue1 - текущая": "queue1 - current",
+    "задачи 1 и 2": "tasks 1 and 2",
+    "заблокирована, ждёт": "blocked, waiting",
+    "задача 3 выполнена": "task 3 is done",
+    "задача 4": "task 4",
+    "сразу задача 4": "task 4 right away",
+    "задача 3 параллельно": "task 3 in parallel",
+    "Data race: потерянный инкремент": "Data race: a lost increment",
+    "read, вернул 0": "read, got 0",
+    "Итог: 1, а не 2.": "Result: 1, not 2.",
+    "«Но вы же 2 раза ко мне прибавили...»": "\"But you added to me twice...\"",
+    "Deadlock: задачи А и Б, ресурсы X и Y": "Deadlock: tasks A and B, resources X and Y",
+    "Задача А (low)": "Task A (low)",
+    "Ресурс X": "Resource X",
+    "Ресурс Y": "Resource Y",
+    "Задача Б (high)": "Task B (high)",
+    "T1: lock X, успех": "T1: lock X, success",
+    "T2: Б вытесняет А": "T2: B preempts A",
+    "T3: lock Y, успех": "T3: lock Y, success",
+    "T4: lock X - занят, Б ждёт": "T4: lock X - busy, B waits",
+    "T5: lock Y - занят, А ждёт": "T5: lock Y - busy, A waits",
+    "А ждёт Б, Б ждёт А - DEADLOCK": "A waits for B, B waits for A - DEADLOCK",
+    "А": "A",
+    "Б": "B",
+    "держит": "holds",
+    "ждёт": "waits",
+    "Цикл ожидания - никто никогда не продолжит": "A wait cycle - nobody will ever continue",
+    "Карта проблем многопоточности": "A map of concurrency problems",
+    "Проблемы многопоточности": "Concurrency problems",
+    "Неопределённость": "Uncertainty",
+    "параллелизма": "of parallelism",
+    "Побочные эффекты": "Side effects",
+    "синхронизации": "of synchronization",
+    "Ошибки менеджмента": "Thread management",
+    "потоков": "mistakes",
+    "Инверсия приоритетов": "Priority inversion",
+    "Инверсия приоритетов: T3-T4 высокий приоритет стоит": "Priority inversion: T3-T4 the high priority waits",
+    "Ждёт ресурс - ИНВЕРСИЯ": "Waits for the resource - INVERSION",
+    "Ресурс получен": "Resource acquired",
+    "Захватил ресурс": "Acquired the resource",
+    "Дорабатывает и освобождает": "Finishes up and releases",
+    "выполняется": "running",
+    "ожидание ресурса": "waiting for the resource",
+    "Вытеснил": "Preempted",
+    "работает": "working",
+    "Deadlock: sync на ту же serial-очередь": "Deadlock: sync onto the same serial queue",
+    "задача A": "task A",
+    "ждёт B": "waits for B",
+    "B не может начаться, пока не закончится A (serial!)": "B can't start until A finishes (serial!)",
+    "A не закончится, пока не выполнится B": "A won't finish until B runs",
+    "Atomic: read-modify-write не атомарен": "Atomic: read-modify-write is not atomic",
+    "каждая операция атомарна,": "each operation is atomic,",
+    "но read-modify-write - нет": "but read-modify-write is not",
+    "задача": "task",
+    "barrier task: выполняется одна, остальные ждут": "barrier task: runs alone, the rest wait",
+    "Mutex: два потока борются за замок": "Mutex: two threads fight for a lock",
+    "lock(): захвачен": "lock(): acquired",
+    "lock(): занято, спим": "lock(): busy, sleeping",
+    "критическая секция": "critical section",
+    "пробуждение, lock(): захвачен": "wake-up, lock(): acquired",
+    "NSRecursiveLock: счётчик захватов": "NSRecursiveLock: acquisition counter",
+    "lock(): счётчик 1": "lock(): count 1",
+    "lock(): счётчик 2, тот же владелец, ОК": "lock(): count 2, same owner, OK",
+    "unlock(): счётчик 1": "unlock(): count 1",
+    "lock(): счётчик 2": "lock(): count 2",
+    "unlock(): счётчик 0, свободен для других": "unlock(): count 0, free for others",
+    "Выбор инструмента синхронизации": "Choosing a synchronization tool",
+    "Нужно защитить общее состояние": "Need to protect shared state",
+    "Новый код на": "New code on",
+    "Чтений намного": "Far more reads",
+    "больше, чем записей?": "than writes?",
+    "Нужно ограничить число": "Need to limit",
+    "одновременных задач до N?": "simultaneous tasks to N?",
+    "Короткая критическая секция,": "Short critical section,",
+    "важна скорость?": "speed matters?",
+    "нет": "no",
+    "да": "yes",
+    "Замок берётся": "Is the lock taken",
+    "рекурсивно?": "recursively?",
+    "Своя асинхронная операция": "A custom asynchronous operation",
+    "Сеть": "Network",
+    "запрос с колбэком": "request with a callback",
+    "start() уже вернул управление,": "start() has already returned,",
+    "но операция ещё НЕ finished": "but the operation is NOT finished yet",
+    "ответ": "response",
+    "можно запускать зависимые операции": "dependent operations can start",
+    "Цепочка зависимостей операций": "A chain of operation dependencies",
+    "Цикл в графе зависимостей": "A cycle in the dependency graph",
+    "Op2 ждёт Op5": "Op2 waits for Op5",
+    "Op5 ждёт Op3, ЦИКЛ": "Op5 waits for Op3, CYCLE",
+    "Жизненный цикл sync и async операции": "Life cycle of a sync and an async operation",
+    "(вся работа в main)": "(all work in main)",
+    "(start вернулся,": "(start returned,",
+    "finish по колбэку)": "finish on the callback)",
+    "Состояния Operation": "Operation states",
+    "создана / добавлена в очередь": "created / added to a queue",
+    "зависимости": "dependencies",
+    "выполнены": "done",
+    "если операция проверяет": "if the operation checks",
+    "работа завершена": "work completed",
+    "выход из": "exit from",
+    "удаляется из очереди": "removed from the queue",
+    "await log - приостановка": "await log - suspension",
+    "guard 100 >= 90 (ok) - актор свободен": "guard 100 >= 90 (ok) - actor is free",
+    "balance = -70 (ошибка)": "balance = -70 (bug)",
+    "await подряд против async let": "Consecutive awaits vs async let",
+    "await подряд": "Consecutive awaits",
+    "Continuations: один поток пула и приостановка на await": "Continuations: one pool thread and suspension at an await",
+    "Один поток пула": "One pool thread",
+    "выполняем до await": "run up to the await",
+    "приостановились - поток свободен": "suspended - the thread is free",
+    "выполняем другую задачу": "run another task",
+    "ещё одна": "one more",
+    "готово": "done",
+    "результат пришёл": "the result arrived",
+    "продолжаем с места остановки": "continue from where we stopped",
+    "GCD + блокировка": "GCD + blocking",
+    "task1  ждёт  task1": "task1  waits  task1",
+    "task2  ждёт  task2": "task2  waits  task2",
+    "task3  ждёт  task3": "task3  waits  task3",
+    "на каждую ожидающую задачу - поток": "a thread for every waiting task",
+    "переключение между continuation": "switching between continuations",
+    "без блокировки потока": "without blocking a thread",
+    "Задачи": "Tasks",
+    "потоков ~ ядер": "threads ~ cores",
+    "вне пула, @MainActor": "outside the pool, @MainActor",
+    "Структурированная и неструктурированная конкурентность": "Structured and unstructured concurrency",
+    "Структурированная конкурентность": "Structured concurrency",
+    "Task - корневая": "Task - the root",
+    "Неструктурированная конкурентность": "Unstructured concurrency",
+    "Task { } из другого места": "Task { } from elsewhere",
+    "Паттерн Event Loop": "The Event Loop pattern",
+    "ждём событие": "wait for an event",
+    "берём из Event Queue": "take from the Event Queue",
+    "обрабатываем": "handle it",
+    "цикл повторяется, пока его не остановят": "the loop repeats until it is stopped",
+    "Одна итерация RunLoop": "One RunLoop iteration",
+    "/ старт потока": "/ thread start",
+    "обработаны готовые источники": "ready sources handled",
+    "таймер / порт / main queue / тайм-аут": "timer / port / main queue / timeout",
+    "stop / нет источников / тайм-аут": "stop / no sources / timeout",
+    "поток спит, CPU около 0": "thread sleeps, CPU near 0",
+    "обработали то, что разбудило": "handled what woke it up",
+    "Жизненный цикл RunLoop": "RunLoop life cycle",
+    "первое обращение к": "first access to",
+    "нет событий": "no events",
+    "событие / таймер": "event / timer",
+    "нет источников / stop / тайм-аут": "no sources / stop / timeout",
+    "поток завершается": "the thread ends",
+    "Источники событий RunLoop": "RunLoop event sources",
+    "касания, порты, custom": "touches, ports, custom",
+    "Вызов обработчиков": "Calling the handlers",
+    "Выбор таймера по потоку": "Choosing a timer by thread",
+    "Нужен таймер": "Need a timer",
+    "На каком потоке?": "Which thread?",
+    "свой": "own",
+    "не важно, фон": "any, background",
+    "— не зависит от RunLoop": "— doesn't depend on RunLoop",
+    "(см. тутор 02)": "(see tutorial 02)",
+    "Таймер замирает при скролле": "The timer freezes while scrolling",
+    "Timer в .default": "Timer in .default",
+    "тик, тик": "tick, tick",
+    "начал скролл": "started scrolling",
+    "режим:": "mode:",
+    "таймер не срабатывает": "the timer doesn't fire",
+    "отпустил палец": "lifted the finger",
+    "тики возобновились": "ticks resumed"
+  },
+  "files": {
+    "01-api-levels.svg": {
+      "strings": {
+        "Снизу вверх: Mach threads (самый низкий уровень, ядро ОС), POSIX threads pthread (C API, стандарт UNIX), NSThread / Thread (Foundation, ООП-обёртка), GCD DispatchQueue (очереди вместо потоков). Над GCD два варианта: Operation / OperationQueue (ООП над GCD) и Swift Concurrency (async/await, Task, actor).": "From bottom to top: Mach threads (the lowest level, the OS kernel), POSIX threads pthread (C API, the UNIX standard), NSThread / Thread (Foundation, an OOP wrapper), GCD DispatchQueue (queues instead of threads). Above GCD there are two options: Operation / OperationQueue (OOP on top of GCD) and Swift Concurrency (async/await, Task, actor)."
+      }
+    },
+    "01-cores.svg": {
+      "strings": {
+        "Верхняя схема: одно ядро Core 1 по очереди выполняет Thread 1, Thread 2, Thread 3, Thread 1, Thread 2 (context switch на границах). Нижняя схема: три ядра работают одновременно, Thread 1 на Core 1 от 0 до 10, Thread 2 на Core 2 от 0 до 7, Thread 3 на Core 3 от 1 до 9.": "Top diagram: a single core, Core 1, runs Thread 1, Thread 2, Thread 3, Thread 1, Thread 2 in turn (context switch at the boundaries). Bottom diagram: three cores work at the same time, Thread 1 on Core 1 from 0 to 10, Thread 2 on Core 2 from 0 to 7, Thread 3 on Core 3 from 1 to 9."
+      }
+    },
+    "01-main-background.svg": {
+      "strings": {
+        "Пользователь нажал Загрузить, Main thread запускает загрузку в фоновом потоке и остаётся свободен для скролла, анимаций и касаний. Фоновый поток делает сетевой запрос и парсинг, возвращает результат в Main thread, а тот обновляет экран пользователя.": "The user taps Download, the main thread starts the download on a background thread and stays free for scrolling, animations and touches. The background thread makes a network request and parses the response, returns the result to the main thread, and the main thread updates the user's screen."
+      }
+    },
+    "01-processes-threads.svg": {
+      "strings": {
+        "Два процесса, приложение A с тремя потоками и приложение B с двумя. Потоки каждого процесса связаны с общей памятью своего процесса. Между процессами только IPC (пунктирная связь).": "Two processes: app A with three threads and app B with two. The threads of each process are connected to that process's shared memory. Between processes there is only IPC (a dashed link)."
+      }
+    },
+    "01-thread-states.svg": {
+      "strings": {
+        "Начальная точка, создание Thread() ведёт в New. start() переводит в Runnable. Планировщик выдал ядро: Runnable в Running; context switch или истёк квант: Running обратно в Runnable. Из Running при ожидании I/O, lock, sleep поток уходит в Blocked, по событию возвращается в Runnable. Когда код закончился, Running переходит в Terminated, затем конец.": "A start point; creating Thread() leads to New. start() moves it to Runnable. The scheduler hands out a core: Runnable to Running; a context switch or an expired time slice: Running back to Runnable. From Running, on waiting for I/O, a lock or sleep, the thread goes to Blocked and returns to Runnable on the event. When the code finishes, Running moves to Terminated, then the end."
+      }
+    },
+    "02-dispatch-group.svg": {
+      "strings": {
+        "Диаграмма последовательности: Код, DispatchGroup, Фоновые задачи. Код вызывает enter() пять раз, счётчик 5; запускает 5 загрузок; подписывается через notify(queue:). Фоновые задачи пять раз вызывают leave(), счётчик убывает 4, 3, 2, 1, 0. Затем DispatchGroup вызывает блок notify в коде.": "A sequence diagram: Code, DispatchGroup, Background tasks. The code calls enter() five times, the counter is 5; starts 5 downloads; subscribes via notify(queue:). The background tasks call leave() five times, the counter goes down 4, 3, 2, 1, 0. Then DispatchGroup calls the notify block in the code."
+      }
+    },
+    "02-gcd-architecture.svg": {
+      "strings": {
+        "Три колонки слева направо: ваш код (задачи 1, 2, 3), очереди DispatchQueue (main serial, global concurrent, custom serial или concurrent) и пул потоков под управлением системы (Main thread и три Thread). Задача 1 идёт в main, задача 2 в global, задача 3 в custom. Main отдаёт работу Main thread, global двум потокам, custom одному потоку.": "Three columns from left to right: your code (tasks 1, 2, 3), DispatchQueue queues (main serial, global concurrent, custom serial or concurrent) and a thread pool managed by the system (the main thread and three Threads). Task 1 goes to main, task 2 to global, task 3 to custom. Main hands the work to the main thread, global to two threads, custom to one thread."
+      }
+    },
+    "02-serial-concurrent.svg": {
+      "strings": {
+        "Две шкалы времени от 0 до 11. Serial: Task 0 с 0 до 3, Task 1 с 3 до 5, Task 2 с 5 до 9, Task 3 с 9 до 11, строго друг за другом. Concurrent: Task 0 с 0 до 6, Task 1 с 1 до 4, Task 2 с 2 до 9, Task 3 с 3 до 5, задачи перекрываются; стартуют по порядку, завершаются в любом порядке.": "Two timelines from 0 to 11. Serial: Task 0 from 0 to 3, Task 1 from 3 to 5, Task 2 from 5 to 9, Task 3 from 9 to 11, strictly one after another. Concurrent: Task 0 from 0 to 6, Task 1 from 1 to 4, Task 2 from 2 to 9, Task 3 from 3 to 5, the tasks overlap; they start in order and finish in any order."
+      }
+    },
+    "02-sync-async.svg": {
+      "strings": {
+        "Диаграмма последовательности для queue1 (текущая) и queue2. Queue1 выполняет задачи 1 и 2. Блок sync: queue1 вызывает queue2.sync с задачей 3, заблокирована и ждёт, queue2 отвечает, что задача 3 выполнена. Затем задача 4 в queue1. Блок async: queue1 вызывает queue2.async с задачей 3 и сразу выполняет задачу 4, а задача 3 идёт в queue2 параллельно.": "A sequence diagram for queue1 (the current one) and queue2. Queue1 runs tasks 1 and 2. The sync block: queue1 calls queue2.sync with task 3, is blocked and waits, queue2 replies that task 3 is done. Then task 4 in queue1. The async block: queue1 calls queue2.async with task 3 and immediately runs task 4, while task 3 goes to queue2 in parallel."
+      }
+    },
+    "03-data-race.svg": {
+      "strings": {
+        "Диаграмма последовательности. Thread 1 и Thread 2 оба читают count = 0, каждый считает 0 + 1 = 1, затем оба записывают 1. Итог: 1, а не 2.": "A sequence diagram. Thread 1 and Thread 2 both read count = 0, each computes 0 + 1 = 1, then both write 1. The result: 1, not 2."
+      }
+    },
+    "03-deadlock.svg": {
+      "strings": {
+        "Диаграмма последовательности: задача А (low) захватывает ресурс X, затем задача Б (high) вытесняет А, захватывает Y, пытается взять X и ждёт, А пытается взять Y и ждёт. А ждёт Б, Б ждёт А: deadlock. Ниже граф ожидания: А держит X и ждёт Y, Б держит Y и ждёт X, цикл ожидания.": "A sequence diagram: task A (low) acquires resource X, then task B (high) preempts A, acquires Y, tries to take X and waits, A tries to take Y and waits. A waits for B, B waits for A: deadlock. Below is the wait-for graph: A holds X and waits for Y, B holds Y and waits for X, a wait cycle."
+      }
+    },
+    "03-map.svg": {
+      "strings": {
+        "Корень «Проблемы многопоточности» делится на три группы. Неопределённость параллелизма: data race, race condition, actor reentrancy. Побочные эффекты синхронизации: deadlock, livelock, resource contention и performance penalty. Ошибки менеджмента потоков: priority inversion, starvation, thread explosion.": "The root \"Concurrency problems\" splits into three groups. Uncertainty of parallelism: data race, race condition, actor reentrancy. Side effects of synchronization: deadlock, livelock, resource contention and performance penalty. Thread management mistakes: priority inversion, starvation, thread explosion."
+      }
+    },
+    "03-priority-inversion.svg": {
+      "strings": {
+        "Диаграмма временных полос. Low захватывает ресурс (0-2). High вытесняет Low и работает (2-3). В T3 High пытается взять занятый ресурс и ждёт (3-6), пока Low дорабатывает и освобождает его. В T4 (6) High получает ресурс и выполняется (6-8). Промежуток T3-T4 и есть инверсия.": "A timeline diagram. Low acquires the resource (0-2). High preempts Low and runs (2-3). At T3 High tries to take the busy resource and waits (3-6) while Low finishes up and releases it. At T4 (6) High gets the resource and runs (6-8). The gap T3-T4 is the inversion."
+      }
+    },
+    "03-serial-sync.svg": {
+      "strings": {
+        "В serialQueue стоят задача A, внутри которой вызван sync с задачей B, и затем сама задача B. A ждёт B, но B не может начаться, пока не закончится A, потому что очередь serial. Итог: deadlock.": "In serialQueue there are task A, inside which sync is called with task B, and then task B itself. A waits for B, but B can't start until A finishes, because the queue is serial. The result: deadlock."
+      }
+    },
+    "04-atomic-trap.svg": {
+      "strings": {
+        "Диаграмма последовательности. Thread 1 делает get и получает 0. Thread 2 делает get и тоже получает 0. Thread 1 делает set 1. Thread 2 делает set 1. Заметка у queue: каждая операция атомарна, но read-modify-write нет.": "A sequence diagram. Thread 1 does get and receives 0. Thread 2 does get and also receives 0. Thread 1 does set 1. Thread 2 does set 1. A note by the queue: each operation is atomic, but read-modify-write is not."
+      }
+    },
+    "04-barrier.svg": {
+      "strings": {
+        "Диаграмма временных полос, ось времени 0-10. До барьера: Task 1 с 0 до 3, Task 2 с 0 до 4, Task 3 с 1 до 4. Barrier task выполняется одна с 4 до 6. После барьера: Task 5 с 6 до 8, Task 6 с 6 до 10, Task 7 с 7 до 9.": "A timeline diagram, time axis 0-10. Before the barrier: Task 1 from 0 to 3, Task 2 from 0 to 4, Task 3 from 1 to 4. The barrier task runs alone from 4 to 6. After the barrier: Task 5 from 6 to 8, Task 6 from 6 to 10, Task 7 from 7 to 9."
+      }
+    },
+    "04-mutex.svg": {
+      "strings": {
+        "Диаграмма последовательности. Thread 1 вызывает lock() у Mutex и захватывает его. Thread 2 вызывает lock(): занято, поток засыпает. Thread 1 в критической секции, затем unlock(). Mutex будит Thread 2, тот захватывает замок, проходит критическую секцию и вызывает unlock().": "A sequence diagram. Thread 1 calls lock() on the Mutex and acquires it. Thread 2 calls lock(): it's busy, the thread goes to sleep. Thread 1 is in the critical section, then unlock(). The Mutex wakes Thread 2, which acquires the lock, goes through the critical section and calls unlock()."
+      }
+    },
+    "04-recursive-lock.svg": {
+      "strings": {
+        "Диаграмма последовательности. Один поток Thread и NSRecursiveLock. lock(): счётчик 1. lock(): счётчик 2, тот же владелец, это нормально. unlock(): счётчик 1. lock(): счётчик 2. unlock(): счётчик 1. unlock(): счётчик 0, замок свободен для других потоков.": "A sequence diagram. One Thread and an NSRecursiveLock. lock(): counter 1. lock(): counter 2, the same owner, that's fine. unlock(): counter 1. lock(): counter 2. unlock(): counter 1. unlock(): counter 0, the lock is free for other threads."
+      }
+    },
+    "04-tool-choice.svg": {
+      "strings": {
+        "Дерево решений. От узла Нужно защитить общее состояние идут вопросы сверху вниз. Новый код на Swift Concurrency: да, actor. Чтений намного больше, чем записей: да, concurrent queue + barrier. Нужно ограничить число задач до N: да, DispatchSemaphore(value: N). Короткая критическая секция и важна скорость: да, os_unfair_lock / NSLock, затем вопрос, берётся ли замок рекурсивно: да, NSRecursiveLock; если на четвёртый вопрос нет, serial DispatchQueue.": "A decision tree. From the node \"Need to protect shared state\" the questions go from top to bottom. New code on Swift Concurrency: yes, actor. Far more reads than writes: yes, concurrent queue + barrier. Need to limit the number of tasks to N: yes, DispatchSemaphore(value: N). Short critical section and speed matters: yes, os_unfair_lock / NSLock, then the question of whether the lock is taken recursively: yes, NSRecursiveLock; if the fourth question is no, serial DispatchQueue."
+      }
+    },
+    "05-async-seq.svg": {
+      "strings": {
+        "Диаграмма последовательности: OperationQueue вызывает start() у AsyncOperation; операция переходит в state executing и шлёт KVO isExecuting; отправляет запрос с колбэком в Сеть; start() уже вернул управление, но операция ещё не finished; Сеть отвечает; операция ставит state finished и шлёт KVO isExecuting и isFinished; затем сообщает очереди, что можно запускать зависимые операции.": "A sequence diagram: OperationQueue calls start() on AsyncOperation; the operation moves to the executing state and sends KVO isExecuting; sends a request with a callback to the Network; start() has already returned, but the operation is not finished yet; the Network responds; the operation sets the state to finished and sends KVO isExecuting and isFinished; then it tells the queue that dependent operations can be started."
+      }
+    },
+    "05-chain.svg": {
+      "strings": {
+        "Три операции подряд: DownloadOperation, затем SaveOperation, затем PDFGeneratorOperation; стрелки показывают порядок запуска.": "Three operations in a row: DownloadOperation, then SaveOperation, then PDFGeneratorOperation; the arrows show the order of starting."
+      }
+    },
+    "05-cycle.svg": {
+      "strings": {
+        "Queue 1 содержит цепочку Op1, Op2, Op3. Queue 2 содержит Op5. Op2 ждёт Op5 (стрелка от Op5 к Op2), Op5 ждёт Op3 (пунктирная стрелка от Op3 к Op5). Op2, Op3, Op5 выделены: получился цикл.": "Queue 1 contains the chain Op1, Op2, Op3. Queue 2 contains Op5. Op2 waits for Op5 (an arrow from Op5 to Op2), Op5 waits for Op3 (a dashed arrow from Op3 to Op5). Op2, Op3, Op5 are highlighted: a cycle has formed."
+      }
+    },
+    "05-lifecycle.svg": {
+      "strings": {
+        "Два ряда. Sync: isReady, isExecuting, isFinished; вся работа в main; пример кода: let op = MdDocumentDownloadOperation(url) и op.start(). Async: isReady, isExecuting, асинхронная задача, isFinished; start вернулся, finish по колбэку; пример: let queue = OperationQueue() и queue.addOperation(MdDocumentDownloadOperation(url: url)).": "Two rows. Sync: isReady, isExecuting, isFinished; all the work in main; example code: let op = MdDocumentDownloadOperation(url) and op.start(). Async: isReady, isExecuting, an asynchronous task, isFinished; start returned, finish on the callback; example: let queue = OperationQueue() and queue.addOperation(MdDocumentDownloadOperation(url: url))."
+      }
+    },
+    "05-states.svg": {
+      "strings": {
+        "Диаграмма состояний Operation: создана и добавлена в очередь, Pending; после выполнения зависимостей Ready; start() переводит в Executing; по завершении работы Finished; из Pending, Ready и Executing по cancel() (для Executing если операция проверяет isCancelled) переход в Cancelled; из Cancelled выход из main или start приводит в Finished; Finished удаляется из очереди.": "The Operation state diagram: created and added to a queue, Pending; once dependencies are done, Ready; start() moves it to Executing; when the work is done, Finished; from Pending, Ready and Executing, on cancel() (for Executing, if the operation checks isCancelled), a transition to Cancelled; from Cancelled, leaving main or start leads to Finished; Finished is removed from the queue."
+      }
+    },
+    "06-actor-reentrancy.svg": {
+      "strings": {
+        "Диаграмма последовательности: withdraw(80) проходит guard 100 >= 80 и приостанавливается на await log; withdraw(90) заходит в свободный актор и тоже проходит guard 100 >= 90 и ждёт await log; затем W1 ставит balance = 20, а W2 ставит balance = -70, это ошибка.": "A sequence diagram: withdraw(80) passes the guard 100 >= 80 and suspends at await log; withdraw(90) enters the free actor and also passes the guard 100 >= 90 and waits at await log; then W1 sets balance = 20, and W2 sets balance = -70, which is a bug."
+      }
+    },
+    "06-await-vs-async-let.svg": {
+      "strings": {
+        "Две диаграммы времени. await подряд: photo1 с 0 до 3, photo2 с 3 до 6, photo3 с 6 до 9. async let: photo1 с 0 до 3, photo2 с 0 до 2, photo3 с 0 до 3, все параллельно.": "Two time diagrams. Consecutive awaits: photo1 from 0 to 3, photo2 from 3 to 6, photo3 from 6 to 9. async let: photo1 from 0 to 3, photo2 from 0 to 2, photo3 from 0 to 3, all in parallel."
+      }
+    },
+    "06-continuations.svg": {
+      "strings": {
+        "Сверху диаграмма последовательности: один поток пула выполняет Continuation 1 до await, она приостанавливается и поток свободен, затем поток выполняет Continuation 2 и 3, и в конце возвращается к Continuation 1 и продолжает с места остановки. Снизу сравнение: в GCD с блокировкой на каждую ожидающую задачу свой поток, в Swift Concurrency один поток по очереди выполняет C1, C2, C3.": "At the top, a sequence diagram: one pool thread runs Continuation 1 up to an await, it suspends and the thread is free, then the thread runs Continuations 2 and 3, and finally returns to Continuation 1 and continues from where it stopped. At the bottom, a comparison: in GCD with blocking, each waiting task has its own thread; in Swift Concurrency one thread runs C1, C2, C3 in turn."
+      }
+    },
+    "06-coop-pool.svg": {
+      "strings": {
+        "Слева задачи Task 1-4 и Task N, справа cooperative pool с числом потоков около числа ядер: Thread 1, 2, 3. Task 1, 2, 3 сплошными стрелками идут в Thread 1, 2, 3; Task 4 пунктиром в Thread 1, Task N пунктиром в Thread 2. Main thread вне пула, это @MainActor.": "On the left, tasks Task 1-4 and Task N; on the right, the cooperative pool with a thread count about equal to the number of cores: Thread 1, 2, 3. Task 1, 2, 3 go with solid arrows to Thread 1, 2, 3; Task 4 with a dashed arrow to Thread 1, Task N with a dashed arrow to Thread 2. The main thread is outside the pool, it is @MainActor."
+      }
+    },
+    "06-structured.svg": {
+      "strings": {
+        "Структурированная: корневая Task порождает async let image1, async let image2 и withTaskGroup; withTaskGroup порождает три group.addTask. Неструктурированные, не связанные с деревом: Task.detached и Task { } из другого места.": "Structured: the root Task spawns async let image1, async let image2 and withTaskGroup; withTaskGroup spawns three group.addTask. Unstructured, not connected to the tree: Task.detached and Task { } from elsewhere."
+      }
+    },
+    "07-event-loop.svg": {
+      "strings": {
+        "Цикл из трёх шагов: wait (ждём событие), get (берём из Event Queue), handle (обрабатываем); после handle цикл возвращается к wait.": "A loop of three steps: wait (wait for an event), get (take it from the Event Queue), handle (handle it); after handle the loop goes back to wait."
+      }
+    },
+    "07-iteration.svg": {
+      "strings": {
+        "Цепочка состояний: Entry, BeforeTimers, BeforeSources, ProcessSources, BeforeWaiting, Sleeping, AfterWaiting, HandleWakeUp; между состояниями observers получают уведомления entry, beforeTimers, beforeSources, beforeWaiting, afterWaiting. После обработки того, что разбудило, цикл возвращается к BeforeTimers либо при stop, отсутствии источников или тайм-ауте идёт в Exit и завершается с уведомлением exit.": "A chain of states: Entry, BeforeTimers, BeforeSources, ProcessSources, BeforeWaiting, Sleeping, AfterWaiting, HandleWakeUp; between the states observers get the notifications entry, beforeTimers, beforeSources, beforeWaiting, afterWaiting. After handling whatever woke it up, the loop returns to BeforeTimers, or on stop, no sources or a timeout goes to Exit and ends with the exit notification."
+      },
+      "edits": [
+        {
+          "find": "x=\"290.7\"",
+          "replace": "x=\"301\"",
+          "count": 6
+        },
+        {
+          "find": "<text class=\"s\" x=\"229.0\" y=\"465.0\" text-anchor=\"start\" dominant-baseline=\"central\">timer / port / main queue / timeout</text>",
+          "replace": "<text class=\"s\" x=\"229.0\" y=\"458.5\" text-anchor=\"start\" dominant-baseline=\"central\">timer / port /</text>\n<text class=\"s\" x=\"229.0\" y=\"472.5\" text-anchor=\"start\" dominant-baseline=\"central\">main queue / timeout</text>",
+          "count": 1
+        }
+      ]
+    },
+    "07-lifecycle.svg": {
+      "strings": {
+        "Первое обращение к RunLoop.current создаёт RunLoop (Created); run() переводит его в Running; при отсутствии событий он уходит в Sleeping и возвращается в Running по событию или таймеру; при отсутствии источников, stop или тайм-ауте переходит в Finished, после чего поток завершается.": "The first access to RunLoop.current creates the RunLoop (Created); run() moves it to Running; with no events it goes to Sleeping and returns to Running on an event or a timer; with no sources, a stop or a timeout it moves to Finished, after which the thread ends."
+      }
+    },
+    "07-sources.svg": {
+      "strings": {
+        "Input sources (касания, порты, custom, performSelector) и Timer sources (Timer, afterDelay) поступают в Run Loop внутри Thread; Run Loop уведомляет observers и вызывает обработчики handlePort, customSrc, mySelector, timerFired.": "Input sources (touches, ports, custom, performSelector) and Timer sources (Timer, afterDelay) arrive at the Run Loop inside a Thread; the Run Loop notifies observers and calls the handlers handlePort, customSrc, mySelector, timerFired."
+      }
+    },
+    "07-timer-choice.svg": {
+      "strings": {
+        "Вопрос «На каком потоке?»: на main используется Timer.scheduledTimer и RunLoop.main.add(timer, forMode: .common); на своём Thread создаётся Timer(timeInterval:repeats:), добавляется в RunLoop.current в режиме .common и вызывается RunLoop.current.run(); если не важно (фон), берут DispatchSourceTimer, он не зависит от RunLoop (см. тутор 02).": "The question \"Which thread?\": on main you use Timer.scheduledTimer and RunLoop.main.add(timer, forMode: .common); on your own Thread you create a Timer(timeInterval:repeats:), add it to RunLoop.current in the .common mode and call RunLoop.current.run(); if it doesn't matter (background), you take a DispatchSourceTimer, which doesn't depend on RunLoop (see tutorial 02)."
+      }
+    },
+    "07-timer-scroll.svg": {
+      "strings": {
+        "Последовательность: RunLoop.main отправляет тики таймеру в режиме .default; пользователь начинает скролл, режим меняется на .tracking, таймер не срабатывает; пользователь отпускает палец, режим возвращается в .default, тики возобновляются.": "A sequence: RunLoop.main sends ticks to the timer in the .default mode; the user starts scrolling, the mode changes to .tracking, the timer doesn't fire; the user lifts the finger, the mode returns to .default, the ticks resume."
+      }
+    }
+  }
+}

@@ -119,7 +119,7 @@ a === a      // true
 | Copies should live independently | You need shared mutable state |
 | A data model: a coordinate, settings, a server response | An entity with identity and a lifecycle: a service, a controller, a connection |
 
-**On multithreading.** Value types help avoid races: if every thread got **its own copy**, there is nothing to share. But this only works when copying happens. One and the same `var` variable that two threads access at once is a data race, even if it holds an `Int` (see tutorial «Concurrency → 03»).
+**On multithreading.** Value types help avoid races: if every thread got **its own copy**, there is nothing to share. But this only works when copying happens. One and the same `var` variable that two threads access at once is a data race, even if it holds an `Int` (see [tutorial «Concurrency → 03»](../../concurrency/concurrency-problems/)).
 
 ## Step 7. Copy-on-Write
 
