@@ -36,6 +36,10 @@ Consult these guides before working on related tasks:
 
 When the user asks to add questions (usually a pasted list of interview questions), read `docs/adding-questions.md` first and follow it. Do not read it for other tasks.
 
+## Adding new tutorials
+
+When the user asks to add tutorials (usually a link to a topic page in Notion), read `docs/adding-tutorials.md` first and follow it. Do not read it for other tasks.
+
 ## Git workflow
 
 GitHub Flow, solo project. `main` is production: every merge deploys to GitHub Pages via Actions.
