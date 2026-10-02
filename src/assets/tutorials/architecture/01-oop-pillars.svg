@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="188" viewBox="0 0 720 188" role="img">
+<title>Четыре столпа ООП</title>
+<desc>От блока ООП отходят четыре стрелки: инкапсуляция, абстракция, наследование и полиморфизм.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAFsAA4AAAAAAswAAAEaAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcMAZgP1NUQVQqAAQRCAoBKgE2AiQDBAsEAAQgBVAHIBv9ASCuCngyntERj6Beoc6qhGNDExfx2H8hgmqN7Nm7R1AAKCQghFnoRGog5b9emAATzO62FrbI44Ao5xd+cMhpFmiLJTDP+LAxhvp/ux4Jy7uU/8+1oIPjIxwMD2IJhoFFNtNANNgYG1cocLgqUKpJi5ieXd5WLIf/AIFSQ0ZkCld/raf3tdz3+UMt+gzy1BtI0huPpVkbpyb8wvvrB5tbPqqO2vif/C1DQKpKX9CmRAjFAvUCTdKrW7efByQBURcAQvynQYAEAIAcAIFkcmNv7vW8X1V2CRdH4OJ1ABRKIAgnUheQXSKRuqL5ABDQZQZkIi+RVHItKFepupMabLrhlhfuu+KpPTfcccttz6244bo7XnggA/5nAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="188" rx="16" fill="#14151c"/>
+<rect x="300" y="24" width="120" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="360.0" y="46.0" text-anchor="middle" dominant-baseline="central">ООП</text>
+<rect x="36" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="111.0" y="142.0" text-anchor="middle" dominant-baseline="central">Инкапсуляция</text>
+<path d="M360 68 V94 H111 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="204" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="279.0" y="142.0" text-anchor="middle" dominant-baseline="central">Абстракция</text>
+<path d="M360 68 V94 H279 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="372" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="447.0" y="142.0" text-anchor="middle" dominant-baseline="central">Наследование</text>
+<path d="M360 68 V94 H447 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="540" y="120" width="150" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="615.0" y="142.0" text-anchor="middle" dominant-baseline="central">Полиморфизм</text>
+<path d="M360 68 V94 H615 V116" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

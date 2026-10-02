@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="92" viewBox="0 0 720 92" role="img">
+<title>Proxy: заместитель между клиентом и сервисом</title>
+<desc>Клиент обращается к Proxy, а Proxy передаёт вызов реальному сервису.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAASYAAsAAAAAB2QAAARLAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAABmAAgQARCAqJOIdIATYCJANACyIABCAFBgcgG48FCI7UTvWHpTaVD+Vm/2aSWgIbKgZUzHRP6kLhq59U6H2AM63zfzm9PYQOT/DQ1qKz0Rq8LFsovUB+/LG2BRzhBvOst6lCZh6TIMTMDYLY2R5gaTf5NQ2ALtNCACm6npTDG3+nFoqdM4uyc3CblbKpzNP/XwX2OkkHQBKqQO81LKGzjjKJwZARVlm0ftsIEjDQZKWsJevJerN+bBAbwoax0WyqWh18PFCJZFMexbe+8M5br730wnNPAwg6GAtgFcQgIGp1QhiXoJaIMUP6efJhHxABSwJKCcNuOiO2PyDMTcRiHVvBQCQy15FIRQYSS21BLIhZgdfgKV/CFxZxxRxV0OqVFUwqFBwHplylIlNKjstbVr48S6buvVLx/NTZl9zy+cMm3C5xl0Ypl3/48f38Ut4jZMamHiZPXHnxoid3MLn9sO2DFUyefq7g8vnVl46RqaMXL3IcsVxKrmK7almprJnq02tWLNdvNhDtWHnBr350TcbvVihKdt59yS0/vy3fuNh0zJgvZzlm/WGDwoLVt87tk+1SqYiY5Rhuu0K+WaE4bXJYwSVK8KS2CYc8q5V3SnXczPLDq84oWf1ObCqWFQrXDsxtMrTidr70u/xqlcUzxTMcEeOXEnD+4gz5ZzUeXTpFK0eQqv+ULV9W5vM7rvCrr1nwkwpFzr3mkAZl8NCvJb/Vj76wb3dAzj11RrdXWGNOZnzLkH/6/BfR06kl8RlxKbFpa/C9hn2Mnv8Pjp7hdzNXuU45tHi6GF/9rqa1fuPbRIl9SmmIc0eaWRET2XryAz7fLco82MlwyPhdWJlUduYzRAifWMdqr7Z1kf71cnLXaHfnf/JidG03Fc3Lf3ghlY2WnDXsSM/UU5w4amLp+KtxK+w1cjpiAgczMoOHOuMyQwqdQ5NlZQzHcGMO1lG/e0hFrf2N96Njyy2yQjTlZ53dH4hsECE09LWUFv4YXSk09IyaDP0YDUmxhY/RABtOS2iB05jQcO48aIyeiInUjpT+nhYjD1luf/LLJ28/R/mLsvBbr6rZlCsljr7pdQleQ2lp3kONcVkOn36i+89mQ/8fZRkeXvLMSE9/rxhP6yxPL8vMWDfYaOS0x/gPZqQHDnfH5wUX2QcmLzQ8vucUEOUjz3LzMM+I9PRzjLHe0rwUlVxpg2vnzpY+Kz17DhFC080u9xSh9hNPN4uoLSn6bq1FURY5Ozvl8jKLGaOqSb7IA+BuGb05Rc8tt8gZQDsqzWThFvsMk1v/gHsTgJzs0kQkFOt/6uDwqX6xh0tkuiVYe2gC0IJA/NQIAEQAVEo/G1eDAKCInlt3TL9CCP1Nm2G+A4BvttpYjvt85diszlBH0nH6NQBNUOBS+NcqpzdCSIabnu+2SagtDOgUcuiwwDzgRp0QQcPhQosQAWY/6NIIRNCK2NU3kI+hQyXxDYQC6gwQABL4gIHF9ZjT0NY1wWwE9YW8gQAA) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAJEAAsAAAAAA7QAAAH6AAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAATBEICoMAgkwBNgIkAw4LDgAEIAUGByAbrQIgrgpsY3pQz+BFWcaiNsjl28eAIGwZD8+PvTv3TUzTPM2jOCpS/zLijb7QgEojQhXLtMn09/PxX1Gld76/itTdaODV5+PCeWkDD3CpdmILTrj9eDE9aVUzRk5qiv/JWzqcjgcywiHuZhuNn5efyiIONKBAus5f8S6MKLdpHb4SFTp2tEN22hUDckiZ3YW1XI8D+mOMRAHS4ZVrJgAfbHI7678ispaiDwGpI31FuxwkZKFalkC1bKMolC9JNrnoiturrODW4upi8u2zQ6wqQ8gFxcjDFbwFyAYkSQhRUlBZWluPL8opWrA9kgoLU1bRQudxrvBw5pmIx63OIXaQY5ARHvlhVrTtscOhULqdivbuwUSfLGvmr+rimMRuJPZ0VTt5Xh2JxnOY5IttbL9rSmMa+77/po7KFHkUKgrjHcuQ1x9qbQ69wWbXDvXmTRwUy3JwhMqykOhOZOEYynIj6NdCaBqZutZq0Jnl58HFjkSTyDAlPSlPvNbJclNUaLBo1CarKQf6PzVeeObcrnUZ6XLm/K55wnxs0N237nOjvzs39mDxNz0+Zx17GC6cjcbzpl64iP+AewJpOPvEYRchX6b7n5+V9Ru+fXk//PzeBfSvrjsqypUKweFV2mWA+ieEEiH+co99truo34hArnYJhMS5ssytHtfPCA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="92" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="109.0" y="46.0" text-anchor="middle" dominant-baseline="central">Клиент</text>
+<rect x="274" y="24" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="359.0" y="46.0" text-anchor="middle" dominant-baseline="central">Proxy</text>
+<path d="M194 46 H270" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="524" y="24" width="170" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="609.0" y="46.0" text-anchor="middle" dominant-baseline="central">Реальный сервис</text>
+<path d="M444 46 H520" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="136" viewBox="0 0 720 136" role="img">
+<title>MVC от Apple: как задумано</title>
+<desc>View передаёт действие пользователя в Controller. Controller изменяет Model и обновляет View. Model уведомляет Controller. View и Model друг с другом не общаются.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAXcAAsAAAAACRQAAAWSAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAABmAAZBEICoxsih4BNgIkA1ALKgAEIAUGByAb2QajomYtTniAfyxkblei+YCd2FZpNKmTTiz9buddPoDb+rfgDjdwGAUjrAQrSSNBsPIqAq4jBt6PTloAIABw7wNkPfz/76f+PB41sGmJDO1H3XfXFE3jSBzOMECiORpohBPg6TYsf6kDnFGq5Qv6BaDJMcSviQDSSTYBqHxnEx1I6+8ggcTZttsduEHraCv16P/ngb5C1AAgrAWOvF3V5ONKUxDYQqIINGwgQ1N3kk6jM+lcWk+b6Sra6vVK43V0Bp1N59PG33rpheeeeequ2xGAIgHCF7keBl7XxQUoAkkD5DoAvgAkBCQi1XIICVJIEDT5BSKKS9AtC5RIghiVT7ZMLpXIZGKNOICTyqRcvdPz7BQx+/bzHpadfeoZ4zxzIJTZLjrpcruBaTjw4E6Dq+c2QagNXo4fvdjt9LzyeIjZPRDReL4nuxFr9uwIPCMISWu2bAk97F+4IFSjH0bM9jxjnG24+ykr0o49vIlvORB11+r0iScC08C6zh8mZh86d45hCLIYLuXP6wnX5eO7Fdt7iM2zCSnJgiEk6EsxswR+w44dcd3OMKzpXnFr1mwIlGx1P2Vd9y8r2B2C0Lrt1jPG+eQGb9p2S8VuvHhXT65P5dzUfqvf5bxzIZTZPdLrT2/iJ3LOuvEbTwRWxJLrD4e0sjRDrTkQ2NToun46HoNBKl3JbBH4DYJwIvSAwFjn6xtrs4lpIQVFsATXCQZB+uvB9PAeym0PN0XatsKZbc9sDB+i/pwXWIohpGDIetfj29oOtrmVbRIEIW7PhTvzE0RPnUwKq1m9f/44l9jGe0NbW2uFlK9r3UPmQOPsXbaj/G81sFsvsq7LanaWIHwlijH7Z30dpyu6ZfNNmh07VJcYcunLvsMGrHtVJoup9GBbfsLIamUzZRh27G22IdmoyosPmhzyurBdrjj5IWJFGbXKddEV/k1pVezs2P5Ws4WLs/tYRnHdo/vtOr3rhN0hLlWMOv6oRlS9y+irKuubnz60tCJv7AhjZYv2G015YoLacj8l2ZgQYYmPV5e/Az33foRF7IpKlP/1rIVPMqUk/FNv9ota37yA//qpXDGt9VTQyBqbv3D0UKgm7teQYfDf8iev1B/KryLb1OJ0+cIzlj/7bx26NfKPphuxRHt8SOs/oYgROUaacyZZbXmTRxXb8psSCioU7RRDMdNjI4y/a+WSYRMG3TFZOtS1+b34UwkpdyWREIliq31NkZuT++ccXRIqbzGo+ctv8R11VQFZz+RBYU/eCQsJy8/pl2swdSp0UcXSFbHxEZ/jh2hTclLb59V+0HMDxw9ta/rR1MUNHDstdPKPJsha1OnBE+kispVsjJ/ODTx9BqTZX0IZxAb579VmPh96bt7Of7aZs4GrjgSojgauhp4b+P4v7w/kBnp+8SBeZB9typtsq82bNNrisI+25E6uteZNHmWyt2WZtGqrTqe2mbRZmWatyqbTqaxmLfTcbW7g6d9OFylyjDBnTbLW5EwZU1Kf1xyTU7Fw4IPb8dnGdL42WauyGnSZceaIjUMWGyu6InH59Km2x22nTsM+K2W+LfiT8Ml7Ds07NHbF4WBTyihd7R7r2Qc66LnB10anVHL93tclq40bKwOShzUb1Y5to3i+XT03uBsq5+ORhsr8NKVxQpVM+yE38PLQyZc+9ds9XLH3Q1+58sYH83jAYW8rQ2lLwAexsR8EtGgTDaU1mugY9AbQGwHL9MKsAH0g5eSHM2f+CAIACZOEc9WdXMFvYor6EgA+3xSpCcDnnyaJvFZvmAXkZwB6gQQAEMAZnyPvWlBWy3MSioGinne0SFYBrXjotSJAERKJEa4Z+hSZCT93oaeHOj0Y21RSaO/Bp+hLynJ/JFTBa/1TzJMXBXXkme/LpF6gFoL3bGkB) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAPYAAsAAAAABqQAAAOMAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAfBEICogEhjwBNgIkAzwLIAAEIAUGByAb+wQgHoPjbrPEslhKyeVlMPxegid/Ld/Mvz36B1gHwPEEilDXmCa7rkC68SgckHCEFlVdK3v/v93bTTx/AugDGn1HnLyArLIAZuN67aINVFQLl3uS/74APv2p+l+25kLBhCIcCuLs3joWtZRqAGNY3bpoTOqViku06sY8RgSZ6L1+ewW1Az6d8ruIA7qqUwAM1cWyABqhABRCVKOwcrATgEu6mDL//++hlKXOTdYK3ROLcKYrYIAMBsmij8VT80hg8NNFEdV00EM/Q4wyzlROLNHt3OC/sKfuWrHoDs4tN11PaKYoklNcEuIo6CVAOpS6A0TCAKcQNWERMyndk4vywxNjKWFePC8VkZDODGs5vbUlxnvatmsPm4S9R97qPaj7gK89+Vn3fsM6dvzWw2RuPbMGDwz77vlUyPLQ4ubmA2oX8NrVzWRuO7cOr285veUnHlUPamy1H2BIwrXuRvWZFGaCE5GTOhGCVa8y8S0965eNWjgx/ahaogDbHPO5Z7jFOipZFWWgYePd3q4fa5B7H9UBMmMlwksNja6SR21HGAmray0PJNxaFdZTI+Mr1PPQ7bWEqytJbN/pd37eBb52Bu6pEmOa1bpGOp/RNaR1GKZJo22gEUExVitDEwUEk96JYghEaRubNDD8Olnw9X6Bijrc7vsyucdiMmcIG+f1Gif6myb73VhnyGjQiBqDn5OXhrmfn5OswRDFfp79WfdmF2xopH2gcbWpbaDCWeYj4uL85lfQHuqJiSPLvPwiE+kirhNaazLTDuo65QVpiG7W6hpJW9U1NGvpBzRQLdV6mnbadf/aUahzvFTI8GnKRdhpF50eBOMjnxcOywM3jkZgqsnDF7qU3/c7xZI51Vn3y6G+AvXE5tFFbldFSwc7irqtPwwmykE1gjTANL0GXKaaBLUue4WeNLOHLrHSNHWZ0nWrhRmb8gIwVMH2xKdRtYWosKazvyEbJdOE02KmXFQjdPcVF7gcXDnHIe6g/MBB2q6Xw9wkv9RwjN8aFbXAtx2rtl3Uwm+YjhXW8dssc9YbmZlTBfY5kC5nl6VnlGdnl2ekl0FwBQHATyyOAowDWmuwpUME0A5fxfOox02Rtt9QY74B3m53dwD4fK8LgoLcn7YbjMQ5mgj8GLI65SD8n/P/THtxnQIkMVahEBq9KmSgHlUYgnGQC3wQThKnHCUPpY9MSX6MQq4DTZDQAAAA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+.s,.b{font-weight:500}</style></defs>
+<rect width="720" height="136" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="120" height="88" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="84.0" y="68.0" text-anchor="middle" dominant-baseline="central">View</text>
+<rect x="300" y="24" width="120" height="88" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="360.0" y="68.0" text-anchor="middle" dominant-baseline="central">Controller</text>
+<rect x="576" y="24" width="120" height="88" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="636.0" y="68.0" text-anchor="middle" dominant-baseline="central">Model</text>
+<path d="M148 56 H296" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="222" y="44" text-anchor="middle" dominant-baseline="central">действие пользователя</text>
+<path d="M296 84 H148" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="222" y="72" text-anchor="middle" dominant-baseline="central">обновляет</text>
+<path d="M424 56 H572" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="498" y="44" text-anchor="middle" dominant-baseline="central">изменяет</text>
+<path d="M572 84 H424" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="s" x="498" y="72" text-anchor="middle" dominant-baseline="central">уведомляет</text>
+</svg>
