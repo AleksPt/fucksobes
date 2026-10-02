@@ -95,3 +95,42 @@ export const tutorials: Tutorial[] = [
 ];
 
 export const tutorialHref = (slug: string): string => `tutorials/${slug}/`;
+
+/** Страница туториала: файл `src/content/tutorials/<тема>/<slug>.md`, `order` — номер раздела в теме (с 1) */
+export interface TutorialPage {
+  topic: string;
+  slug: string;
+  order: number;
+  title: string;
+}
+
+export function parseTutorialId(id: string): { topic: string; slug: string } {
+  const [topic, ...rest] = id.split('/');
+  const slug = rest.join('/');
+  if (!topic || !slug || !tutorials.some((t) => t.slug === topic)) {
+    const known = tutorials.map((t) => t.slug).join(', ');
+    throw new Error(`Туториал «${id}» должен лежать в src/content/tutorials/<тема>/<id>.md, тема — одна из: ${known}`);
+  }
+  return { topic, slug };
+}
+
+export const tutorialPageHref = ({ topic, slug }: Pick<TutorialPage, 'topic' | 'slug'>): string => `tutorials/${topic}/${slug}/`;
+
+/** Раздел получает ссылку, если для него (тема + номер) есть страница */
+export function sectionsWithLinks(
+  tutorial: Tutorial,
+  pages: TutorialPage[],
+  hrefOf: (page: TutorialPage) => string,
+): TutorialSection[] {
+  return tutorial.sections.map((section, i) => {
+    const page = pages.find((p) => p.topic === tutorial.slug && p.order === i + 1);
+    return page ? { ...section, href: hrefOf(page) } : section;
+  });
+}
+
+/** Соседние опубликованные страницы той же темы */
+export function neighbours(pages: TutorialPage[], current: TutorialPage): { prev?: TutorialPage; next?: TutorialPage } {
+  const topicPages = pages.filter((p) => p.topic === current.topic).sort((a, b) => a.order - b.order);
+  const i = topicPages.findIndex((p) => p.slug === current.slug);
+  return { prev: topicPages[i - 1], next: topicPages[i + 1] };
+}

@@ -21,4 +21,14 @@ const questions = defineCollection({
   }),
 });
 
-export const collections = { categories, questions };
+// Туториалы лежат в папке темы: `<тема>/<id>.md`, где тема — slug из src/lib/tutorials.ts.
+// `order` — номер раздела в теме (с 1), по нему страница привязывается к кнопке на странице темы.
+const tutorials = defineCollection({
+  loader: glob({ base: './src/content/tutorials', pattern: '**/*.md' }),
+  schema: z.object({
+    title: z.string(),
+    order: z.number().int().positive(),
+  }),
+});
+
+export const collections = { categories, questions, tutorials };
