@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="296" viewBox="0 0 760 296" role="img">
+<title>A layer inside a view</title>
+<desc>A view tree (UIView, UILabel, UIImageView) and a layer tree (three CALayers); dashed layer arrows lead from each view to its layer.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAATMAA0AAAAACIgAAAR6AAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGigbIBwqBmAAgRQKiiyIEgE2AiQDTAsoAAQgBQYHIBtjBhGVnNwQXxTYxiTxqc1i/yjmIBaPZRS+9sXW/FUTRg/v4JGfy5ffHiUDQjuhCCWxGyt2re0NQW3GkxFjpckH8vRf2xFI3ExI6W0f1tEn2yf2PwAwS1et3XwpSSVpFAtRgY3Zg8vxtXVsGwsTDDSx8NdqUJvGxLFB0sIEA5rbwrcoX0Bpnm4yPEWnDlnTT/8K6kGADNBHOnyEBEIKQ8gkEyGbXAQBlAqqkO7e4RG88AH+BQDF3kQLbryAtcXNDaKIwGHfTcixi4GLvAnAEFwtc5RIO3CQQn2FjYOdgBc6GOX9/AFaVEYzuyb3ra4h1ukADygQXja1T3CfCnLwyKADnkZaUGPHRTe96MdgRjDqXxD0KmyKvv/BXVazSatWKRUSAT9BLUI+3zcBRSDHDpcAMj5BWA6Z8/uXXJJM1WTE8zIrrTirTKuzNLulCIiYYfM2q2M6Mm1jDyo6R81ipHfxQvuwNN/QUBoBF9BzgYkFeDWxmEom6huGynw0iBWMs3DZBpuzyXuW3ln9tM2MMuaGZibhpxEqNHknTkWLA4xFVYtGD8GbaV6rojFjxFpCYhASPhEV4BNUSJIMBm66q+0V0zyPzFGx9FUa1+YATjwCXTI0mUxvUKdyov4uTyXTGZnZMTPrB4c9XgUrCf/odJu14IBOvXDQqMOpwZEZBzU3516C6qZQVeU0njmjU7dl0XleMjE6TjEnhVfZpUur0SnhZemDYG97THVv7+C96cJjj64TWP+9lU//B6vi4tYN/yj05qzFZWa2iSsz4Ws4zlJSamL1FMPV1nIs1UxxGLFLlJ4pNff2oJc4v2K+OB1cjyH39TObROR6d/UZaAvRhxA1AknUCoT1JPbeA/D5wL3ZMV9OBGsrKoK0J0Z/MRy8x+/UuEPb0urQqNZXlp6uKmazOL1X3RCFxtLPphyt7RX4mTAKFXVMJ13Stja/OLfgJZq95Z0NdFhIL/19/VLJ2LAwSmzkFY5+lmXm3WtgazXLMwsYz+pKRqAWUO3I9WatpWVmuiNSZsIca5dMjE1dXrfIybKfzikv+dCOTC6dDbmdZAU23h1LxS05rqw6iSMkgGgXeJWtv3mo2dZPxZcLiIDgXrqaJr2qMy2tihaoXtTds6qa4plezEVQiScmrxfdbu4TMaKoPj1TKPzURA+lU9RJW0RwGe1cyJ0C95yCYp5alZNZkJ5TVtXKLFesSDkVF/syZWXDitSXcXE7sbgYkKHtFR7H6Fr0LZquvqZkfTRLyWuqGYExY4wmvaNiWro9KGhyOjFNTYhk8idVTWsxpDtqxtQuTEwc0UyOwbaOWxdkzgkK62GaPtwxQmELuIfcmcmd8QlicrKYEN8Jjwz4AfBASCAQBEAFSHNl3hO+PIUEgLTC7Xn1gemWQOKXlyd7CwAPrq9eUtvvX/1Owv8WVx6BZwlKfyQ8fn9xSLUE1b95IyCBlkOlWuiFLTlBC736h7iBBWNQRQmqCiQABwMg9RcqAbyCBEAo8iFFBKTD0S6tB2RW/HdRMkwCBQAAAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAQUAA0AAAAABqgAAAPCAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgWAcMAZgAHwKhVCEQwE2AiQDNAscAAQgBQYHIBseBVFUTYZB/KGAG0Owga+LqBVQrGpsrVXJECv6WGEEZYBLMfreprFym+GJxWKUYRujmfkP44HvkP27xpqUFtja26JeVuAJRhM4LU6w8z/m9v6byvXd2jDpYhIiEbq3RgiBoXF5T2EU8xznvKS0uGaEQjbQfxhn748+iFGMIEIxklElh3SOt7rBmwMa2PXZwKYD+mHpuXg1hb5Fh7wEWP9vZ1j2/wkoolAvPtPffK19nkUZBhrZ3Bq9i8rW+UAt4LEwCjCyPJL+/wAydZsICUXPNHUSHb1LARQCiEhohMEmBOQrcIP1DYzNoe+W3Jyhn2XcXaCDA0mDQDjdv7mABgEEKjKR7QIiBgeZEnqhokGoBKkcCiYy2FQ2DZGSyEzkpClIITQgYHgeQw4cdHCD0qEjqUEzcIVlPAeVdYWBBJBBpT2Rq8SICklhBeuZ0Yb+siA+MeIBo8cmYYPVN2EHL4+p5ZlZy2jVk3Hxf0vmG4UCAhBLGIdohQERZIBKMAIqwV0B1chgdKl4mUpUqNGqXZeeNJSu6l5+6olHH7r7rjtuR4QOPN31gELwDaEo9AppZUFMR+YACNlcS2nCVxVa4kzksIUsMbxDhThfhEsyRt6bBXo4vH0VCr8Lh4LWpVm2YDQz2fb8jCg4zV5Hsc/fIVGV1xiYXirp0l+G9Ura82z66aOLhp+vhW2nmwbCsaenpJflRtB6tWd4k+DAceE+rTNtOLWGUNQPmLY4BkISbOPOUSpO5+3YYU12CQn4nJeetuIr0e/qSDBTDj/jiztp41GFUH9Cit26A3nYTb6VbWAr7bBwp7cEKDgHd7/5P/k38MUfwjKA6ny0rSWehhfzGptSsZaz+5F1VjG5hpQq4gt9uqYEQQ5MNr6982MNYcJcNXNYnmUo4PIW79DGjmoKc3cnJXt7miOSA3L03jhePgWnFFSopCHv9PHFndXrAX2FohQf0nDB3nlDZIG2NI/k/3YGXAXazswtGTdL7Ik1SFMc//R94qSyuABUVH7adNw35Tf8jJyafDA9Sbxtm2knup6JdCKfhI8lHU0H+M/jJr633fqzJPaUsKwoGzv51WyZG6hsiJZWY1nlKLJ3XuudbL+H6oYl/rACKTgahwsE6QJen5ERMBvwNiBBNvcGHGgHvELf7+8RQNT7mh6cI5LXPw/G/IS/AQu6tgrN9grYLL4jGwEB/kWQMUuAtsTGOm6iKFqCHofS4gqE0QWG2ILOLdrdojM8BIU7TsYeJiYJDgoA0jYCRZqgQlACaorKprSSlrkTAAAA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="760" height="296" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="232" height="248" rx="16" fill="none" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="40" y="46" text-anchor="start" dominant-baseline="central">View tree</text>
+<rect x="504" y="24" width="232" height="248" rx="16" fill="none" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="520" y="46" text-anchor="start" dominant-baseline="central">Layer tree</text>
+<rect x="56" y="72" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="mm" x="121" y="92" text-anchor="middle" dominant-baseline="central">UIView</text>
+<rect x="550" y="72" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="mm" x="615" y="92" text-anchor="middle" dominant-baseline="central">CALayer</text>
+<path d="M186 92 H546" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="ms" x="368.0" y="80" text-anchor="middle" dominant-baseline="central">layer</text>
+<rect x="88" y="140" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="153" y="160" text-anchor="middle" dominant-baseline="central">UILabel</text>
+<rect x="518" y="140" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="583" y="160" text-anchor="middle" dominant-baseline="central">CALayer</text>
+<path d="M218 160 H514" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="ms" x="368.0" y="148" text-anchor="middle" dominant-baseline="central">layer</text>
+<rect x="88" y="208" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="153" y="228" text-anchor="middle" dominant-baseline="central">UIImageView</text>
+<rect x="518" y="208" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="583" y="228" text-anchor="middle" dominant-baseline="central">CALayer</text>
+<path d="M218 228 H514" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text class="ms" x="368.0" y="216" text-anchor="middle" dominant-baseline="central">layer</text>
+<path d="M72 112 V160 H88" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M72 160 V228 H88" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M680 92 H696 V160 H652" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M696 160 V228 H652" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

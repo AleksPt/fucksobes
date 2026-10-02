@@ -1,0 +1,227 @@
+{
+  "strings": {
+    "Твой код": "Your code",
+    "да": "yes",
+    "нет": "no",
+    "Система координат UIKit": "The UIKit coordinate system",
+    "Иерархия классов UIKit": "The UIKit class hierarchy",
+    "Иерархия представлений": "The view hierarchy",
+    "Путь от приложения до subviews": "The path from the app to the subviews",
+    "Points и pixels": "Points and pixels",
+    "Как кадр попадает на экран": "How a frame reaches the screen",
+    "Слой внутри view": "A layer inside a view",
+    "Порядок методов UIViewController при первом показе": "UIViewController method order on first presentation",
+    "Порядок колбэков UIView при добавлении": "UIView callback order when adding a view",
+    "Как constraints превращаются в раскладку": "How constraints turn into a layout",
+    "Content hugging: кто растягивается в строке": "Content hugging: who stretches in a row",
+    "Цикл Auto Layout: три фазы": "The Auto Layout cycle: three phases",
+    "setNeedsLayout и layoutIfNeeded по времени": "setNeedsLayout and layoutIfNeeded over time",
+    "Алгоритм hitTest": "The hitTest algorithm",
+    "Путь касания от пальца до view": "The touch path from the finger to the view",
+    "Состояния жеста": "Gesture states",
+    "Жест и касания: кто получает раньше": "Gesture and touches: who receives first",
+    "Reuse ячеек": "Cell reuse",
+    "Два направления передачи данных": "Two directions of data passing",
+    "Путь кадра от главного потока до экрана": "A frame's path from the main thread to the screen",
+    "внутри child своё (0, 0)": "inside, child has its own (0, 0)",
+    "левый верхний угол": "top-left corner",
+    "frame и bounds": "frame and bounds",
+    "корневая view контроллера": "controller's root view",
+    "UIView - карточка": "UIView - card",
+    "Приложение (main thread)": "App (main thread)",
+    "layout (layoutSubviews, констрейнты)": "layout (layoutSubviews, constraints)",
+    "display (draw, если переопределён)": "display (draw, if overridden)",
+    "prepare (декодирование изображений)": "prepare (image decoding)",
+    "commit (отправка дерева слоёв)": "commit (sending the layer tree)",
+    "анимации и рендеринг": "animations and rendering",
+    "готовый кадр": "finished frame",
+    "Дерево view": "View tree",
+    "Дерево слоёв": "Layer tree",
+    "одна транзакция": "one transaction",
+    "layout view в superview, обновлены traits": "view laid out in superview, traits updated",
+    "init (создание объекта)": "init (creating the object)",
+    "view запрошена (loadView, если нужно)": "view requested (loadView, if needed)",
+    "viewDidLoad (один раз)": "viewDidLoad (once)",
+    "view добавлена в иерархию": "view added to the hierarchy",
+    "анимация перехода": "transition animation",
+    "если переопределён": "if overridden",
+    "правила": "rules",
+    "решение системы": "solving the system",
+    "каждой view": "of each view",
+    "применяет результат": "applies the result",
+    "До: оба hugging 250, неоднозначно: может растянуться любая": "Before: both hugging 250, ambiguous: either can stretch",
+    "Имя:": "Name:",
+    "поле": "field",
+    "или": "or",
+    "После: подпись 251, поле 250": "After: label 251, field 250",
+    "подпись держит свой размер, поле растягивается": "the label keeps its size, the field stretches",
+    "снизу вверх": "bottom-up",
+    "сверху вниз": "top-down",
+    "Система (run loop)": "System (run loop)",
+    "флаг «нужен layout», возврат сразу": "\"layout needed\" flag, returns at once",
+    "setNeedsLayout() ещё раз, схлопывается": "setNeedsLayout() again, collapses",
+    "следующий цикл обновления": "next update cycle",
+    "layoutSubviews() один раз": "layoutSubviews() once",
+    "если флаг стоит, layoutSubviews() сразу": "if the flag is set, layoutSubviews() at once",
+    "hitTest на view": "hitTest on a view",
+    "скрыта, userInteraction": "hidden, userInteraction",
+    "выключен, alpha меньше 0.01?": "off, alpha below 0.01?",
+    "вернуть nil": "return nil",
+    "точка в bounds?": "point in bounds?",
+    "обойти subviews от верхней к нижней": "traverse subviews top to bottom",
+    "кто-то вернул view?": "did anyone return a view?",
+    "вернуть эту глубокую view": "return that deep view",
+    "вернуть self": "return self",
+    "Палец": "Finger",
+    "Система": "System",
+    "касание": "touch",
+    "UIEvent с UITouch": "UIEvent with UITouch",
+    "hitTest: поиск самой глубокой view": "hitTest: find the deepest view",
+    "view найдена": "view found",
+    "Дискретный жест": "Discrete gesture",
+    "Непрерывный жест": "Continuous gesture",
+    "changed - много раз": "changed - many times",
+    "касания раньше view": "touches before the view",
+    "жест распознан": "gesture recognized",
+    "жест не распознан - failed": "gesture not recognized - failed",
+    "остальные касания отменены - touchesCancelled": "remaining touches cancelled - touchesCancelled",
+    "касания доставляются view": "touches are delivered to the view",
+    "если UIResponder": "if UIResponder",
+    "Ячейка уходит": "A cell goes",
+    "за край экрана": "off the screen edge",
+    "Нужна ячейка": "A cell is needed",
+    "для новой строки": "for a new row",
+    "Очередь": "Reuse",
+    "для reuse": "queue",
+    "В очереди есть": "Is there",
+    "ячейка": "a cell",
+    "нужного типа?": "of the right type?",
+    "Взять её и вызвать": "Take it and call",
+    "Создать новую": "Create a new one",
+    "Настроить": "Configure",
+    "содержимое в": "content in",
+    "Экран A": "Screen A",
+    "Экран B": "Screen B",
+    "вперёд: init, свойство, segue": "forward: init, property, segue",
+    "назад: делегат, замыкание, notification": "back: delegate, closure, notification",
+    "Главный поток": "Main thread",
+    "событие,": "event,",
+    "обновление UI": "UI update",
+    "CPU готовит работу": "CPU prepares the work",
+    "GPU рисует кадр": "GPU draws the frame",
+    "Экран на": "Screen on",
+    "следующем vsync": "the next vsync"
+  },
+  "files": {
+    "01-axes.svg": {
+      "strings": {
+        "Начало координат (0, 0) в левом верхнем углу, ось x вправо, ось y вниз; внутри прямоугольник view.": "The origin (0, 0) in the top-left corner, the x axis to the right, the y axis down; a view rectangle inside."
+      }
+    },
+    "01-classes.svg": {
+      "strings": {
+        "Дерево наследования: NSObject, UIResponder, затем UIView, UIViewController и UIApplication, ниже UIWindow, UIControl, UIScrollView и их потомки.": "The inheritance tree: NSObject, UIResponder, then UIView, UIViewController and UIApplication, below them UIWindow, UIControl, UIScrollView and their descendants."
+      }
+    },
+    "01-frame-bounds.svg": {
+      "strings": {
+        "Вложенная view child внутри superview: frame (20, 30, 100, 100) в координатах родителя, bounds (0, 0, 100, 100) в собственных, у child свой левый верхний угол (0, 0).": "A nested view child inside a superview: frame (20, 30, 100, 100) in the parent's coordinates, bounds (0, 0, 100, 100) in its own, and the child has its own top-left corner (0, 0)."
+      }
+    },
+    "01-hierarchy.svg": {
+      "strings": {
+        "Дерево view: UIWindow содержит корневую view контроллера, в ней UILabel и карточка UIView, а в карточке UIImageView и UIButton.": "The view tree: UIWindow contains the view controller's root view, which holds a UILabel and a UIView card, and the card holds a UIImageView and a UIButton."
+      }
+    },
+    "01-path.svg": {
+      "strings": {
+        "UIApplication содержит UIWindowScene, затем UIWindow, rootViewController, его view и subviews.": "UIApplication contains UIWindowScene, then UIWindow, rootViewController, its view and subviews."
+      }
+    },
+    "01-scale.svg": {
+      "strings": {
+        "Один point на разных экранах: при scale 1.0 это один пиксель, при 2.0 сетка 2 на 2, при 3.0 сетка 3 на 3 пикселя.": "One point on different screens: at scale 1.0 it is one pixel, at 2.0 a 2-by-2 grid, at 3.0 a 3-by-3 grid of pixels."
+      }
+    },
+    "02-frame-pipeline.svg": {
+      "strings": {
+        "Приложение на главном потоке выполняет layout, display и prepare, затем commit отправляет дерево слоёв в Render Server; тот через GPU рендерит кадр и получает готовый кадр обратно.": "The app on the main thread performs layout, display and prepare, then commit sends the layer tree to the Render Server; it renders the frame through the GPU and gets the finished frame back."
+      }
+    },
+    "02-layer-in-view.svg": {
+      "strings": {
+        "Дерево view (UIView, UILabel, UIImageView) и дерево слоёв (три CALayer); пунктирные стрелки layer ведут от каждой view к её слою.": "A view tree (UIView, UILabel, UIImageView) and a layer tree (three CALayers); dashed layer arrows lead from each view to its layer."
+      }
+    },
+    "03-vc-lifecycle.svg": {
+      "strings": {
+        "Линия жизни контроллера: init, запрос view с loadView, viewDidLoad один раз; группа одной транзакции с viewWillAppear; группа layout с viewIsAppearing, viewWillLayoutSubviews и viewDidLayoutSubviews; анимация перехода и viewDidAppear.": "A controller's timeline: init, the view request with loadView, viewDidLoad once; a single-transaction group with viewWillAppear; a layout group with viewIsAppearing, viewWillLayoutSubviews and viewDidLayoutSubviews; the transition animation and viewDidAppear."
+      }
+    },
+    "03-view-callbacks.svg": {
+      "strings": {
+        "Цепочка при добавлении view в показанный superview: init, addSubview, willMove toSuperview, willMove toWindow, didMoveToSuperview, didMoveToWindow, layoutSubviews и draw, если он переопределён.": "The chain when adding a view to a displayed superview: init, addSubview, willMove toSuperview, willMove toWindow, didMoveToSuperview, didMoveToWindow, layoutSubviews and draw, if it is overridden."
+      }
+    },
+    "04-constraints-flow.svg": {
+      "strings": {
+        "Constraints задают правила, Auto Layout решает систему, получается frame каждой view, и layoutSubviews применяет результат.": "Constraints set the rules, Auto Layout solves the system, which gives each view's frame, and layoutSubviews applies the result."
+      }
+    },
+    "05-hugging.svg": {
+      "strings": {
+        "До: у подписи и поля hugging 250, растянуться может любая из двух view, два варианта. После: у подписи 251, у поля 250; подпись держит свой размер, поле растягивается.": "Before: the label and the field both have hugging 250, either view can stretch, two outcomes. After: the label has 251, the field 250; the label keeps its size, the field stretches."
+      }
+    },
+    "05-layout-cycle.svg": {
+      "strings": {
+        "Три фазы подряд: update constraints снизу вверх, layout сверху вниз, display сверху вниз.": "Three phases in a row: update constraints bottom-up, layout top-down, display top-down."
+      }
+    },
+    "05-setneedslayout-seq.svg": {
+      "strings": {
+        "Твой код дважды вызывает setNeedsLayout: view ставит флаг и возвращается сразу, повторный вызов схлопывается. В следующем цикле run loop вызывает layoutSubviews один раз. layoutIfNeeded вызывает layoutSubviews сразу, если флаг стоит.": "Your code calls setNeedsLayout twice: the view sets a flag and returns immediately, the repeated call collapses. In the next cycle the run loop calls layoutSubviews once. layoutIfNeeded calls layoutSubviews immediately if the flag is set."
+      }
+    },
+    "06-hittest-flow.svg": {
+      "strings": {
+        "Схема: view проверяется на скрытость, отключённое взаимодействие и alpha меньше 0.01, затем на попадание точки в bounds; если проверки пройдены, обходятся subviews от верхней к нижней. Если кто-то вернул view, возвращается эта глубокая view, иначе self; при провале проверок возвращается nil.": "A diagram: the view is checked for being hidden, interaction disabled and alpha below 0.01, then for the point falling within bounds; if the checks pass, the subviews are traversed from top to bottom. If one returned a view, that deep view is returned, otherwise self; if the checks fail, nil is returned."
+      }
+    },
+    "06-touch-path.svg": {
+      "strings": {
+        "Палец касается экрана, система передаёт UIApplication событие UIEvent с UITouch, UIApplication вызывает sendEvent у UIWindow, окно запускает hitTest и получает найденную view, затем отправляет ей touchesBegan, touchesMoved и touchesEnded.": "A finger touches the screen, the system passes UIApplication a UIEvent with a UITouch, UIApplication calls sendEvent on UIWindow, the window starts hitTest and gets the found view, then sends it touchesBegan, touchesMoved and touchesEnded."
+      }
+    },
+    "07-gesture-states.svg": {
+      "strings": {
+        "Дискретный жест: possible переходит в recognized или failed. Непрерывный: possible, began, changed много раз, затем ended или cancelled; из began можно сразу в ended.": "A discrete gesture: possible goes to recognized or failed. A continuous one: possible, began, changed many times, then ended or cancelled; from began you can go straight to ended."
+      }
+    },
+    "07-gesture-vs-view.svg": {
+      "strings": {
+        "Окно сначала отправляет касания распознавателю жестов. Если жест распознан, остальные касания view отменяются через touchesCancelled; если не распознан (failed), касания доставляются view.": "The window first sends touches to the gesture recognizer. If the gesture is recognized, the remaining touches to the view are cancelled via touchesCancelled; if not recognized (failed), the touches are delivered to the view."
+      }
+    },
+    "07-responder-chain.svg": {
+      "strings": {
+        "Цепочка респондеров идёт вверх: UIButton, superview, корневая view контроллера, UIViewController, UIWindow, UIApplication и AppDelegate, если он UIResponder.": "The responder chain goes upward: UIButton, superview, the controller's root view, UIViewController, UIWindow, UIApplication and AppDelegate if it is a UIResponder."
+      }
+    },
+    "08-reuse-flow.svg": {
+      "strings": {
+        "Ячейка, ушедшая за край экрана, попадает в очередь для reuse. Когда нужна ячейка для новой строки, проверяется, есть ли в очереди ячейка нужного типа: если да, её берут и вызывают prepareForReuse, если нет, создают новую. Затем содержимое настраивается в cellForRowAt.": "A cell that went off the screen edge goes into the reuse queue. When a cell is needed for a new row, it checks whether the queue has a cell of the needed type: if so, it is taken and prepareForReuse is called, if not, a new one is created. Then the content is configured in cellForRowAt."
+      }
+    },
+    "09-directions.svg": {
+      "strings": {
+        "Экран A передаёт данные вперёд на экран B через init, свойство или segue. Экран B возвращает данные назад на экран A через делегат, замыкание или notification.": "Screen A passes data forward to screen B via init, a property or a segue. Screen B returns data back to screen A via a delegate, a closure or a notification."
+      }
+    },
+    "10-frame-pipeline.svg": {
+      "strings": {
+        "Главный поток обрабатывает событие и обновляет UI, затем идёт Core Animation commit, потом render server: CPU готовит работу, GPU рисует кадр, и кадр попадает на экран на следующем vsync.": "The main thread handles an event and updates the UI, then comes the Core Animation commit, then the render server: the CPU prepares work, the GPU draws the frame, and the frame reaches the screen on the next vsync."
+      }
+    }
+  }
+}

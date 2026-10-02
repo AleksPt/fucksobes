@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="875" height="88" viewBox="0 0 875 88" role="img">
+<title>The path from the app to the subviews</title>
+<desc>UIApplication contains UIWindowScene, then UIWindow, rootViewController, its view and subviews.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="875" height="88" rx="16" fill="#14151c"/>
+<rect x="24.0" y="24.0" width="129.39999999999998" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="88.69999999999999" y="44" text-anchor="middle" dominant-baseline="central">UIApplication</text>
+<path d="M153.39999999999998 44 H185.39999999999998" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="185.39999999999998" y="24.0" width="129.39999999999998" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="250.09999999999997" y="44" text-anchor="middle" dominant-baseline="central">UIWindowScene</text>
+<path d="M314.79999999999995 44 H346.79999999999995" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="346.79999999999995" y="24.0" width="90.4" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="391.99999999999994" y="44" text-anchor="middle" dominant-baseline="central">UIWindow</text>
+<path d="M437.19999999999993 44 H469.19999999999993" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="469.2" y="24.0" width="168.4" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="553.4" y="44" text-anchor="middle" dominant-baseline="central">rootViewController</text>
+<path d="M637.5999999999999 44 H669.5999999999999" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="669.5999999999999" y="24.0" width="59.2" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="699.1999999999999" y="44" text-anchor="middle" dominant-baseline="central">view</text>
+<path d="M728.8 44 H760.8" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="760.8" y="24.0" width="90.4" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="806.0" y="44" text-anchor="middle" dominant-baseline="central">subviews</text>
+</svg>

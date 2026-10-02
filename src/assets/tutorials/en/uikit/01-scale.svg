@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="240" viewBox="0 0 780 240" role="img">
+<title>Points and pixels</title>
+<desc>One point on different screens: at scale 1.0 it is one pixel, at 2.0 a 2-by-2 grid, at 3.0 a 3-by-3 grid of pixels.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAANEAA0AAAAABZQAAAL1AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgSIcMAZgAFwKhDSDYQE2AiQDJAsUAAQgBQYHIBtIBCAeg+NuCcoUk1Lmn7fLh4uXeHjY7925d271p3laNvG0hbw2NFEJSTxDy3iFyDPIDpu9u2g35AWwurzQvSvIAVg+XLr/Ac5rT9463+vDqWzAE1r0vJ49PwbUhZR4+J93eWBpRoFYl24TJYmuBjNyCPU5AvWAFEKZEKjVzws/PRuTAtWrzqYaqN4VttRBlQCFAnF701QHaaRAqjQPTrVUq4ToJiDUS1n8iS/+Sc2ATtqIFEJIdpOqhXn1ElarsVDhNTUpD7IDIhEDGC9PMQ6jgnzGZYAlOhynnPwCUXi19cykZLxgoIOf+D8L5V9JHAjIJu41KJFBogzteIF2gnlAo2qpUokzXw1oQcd/UeJ49LhbNOmIg/YVNAVqolZI7n8GvwGUPyCKq2d7s5osFYcFIbWCpX5cZfuWlzGwtERHJp5ZcdnPV1fJ4MoKHVlawsDystzIygrhKWGEoU5tDrxkDHVHhyx1j2Uc0LRtJkHJ/dFZayYwkv52cVFAj0KXXlhV3+OTIoeLkZWVBZGdml5m+0Ynb5PBWxPvKCU5fXw9fDVR1hp7oknPvJ7WdMQ3nrjcpeYSquyQw/X6S5NPpxPL4l7lWLsllIY5dMbGOnaWhyZafP+uhvOc15SLmO7qJqaHOnu5RLiYZri6G6dHOkJrOMLYINpLOy067VTqqQPRB5TcCn3MoyH/RfYWKXsYHRwt/iw8kyl9MXZoDBf9D3s3bcF+ZBLiwt7T4mEfgxDTgOjQAOdoq/u5J8PCSozdgkrsPbKCAh0K4+Le3jpZEQ+jKqttxQhT+7qsm60h8gZd6ZY/rSzmNEf1Q+Isjbd+XzVyHPxhrHt2qW8v+2mAeZySpW2c8iOjUCfT3i92o7NiiHWwfXK0TboiIh7HHY87xsURAO4HEEiTJq82tvKbfP5K8/x74NtLYwM61RnyxWTa5iSolCD4lWEeX6AajcIuqprUpernBJMmesmjMapppRsx0xmGPGS3SBDUGBbudV6pjKpYQwA=) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAATQAA0AAAAAB9AAAAR/AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgXYcMAZgAGwKh3iGWgE2AiQDMAsaAAQgBQYHIBsxBlGUDM4egp8JmVwdu0nEoEXjQG9rhg21StR35XsmHv45xnvf+5FJFXl8a4qk0XwgI44y+mCL/uE97WVzMplpB6ad5EzWQex2kP+AKlxFeAB4gScAfZ7L8c3CZUVniWZpwIl0v3ljWWvYGFsoCzjQsa0D6nmJUY+xdWA9aEc/XxSoBKQQioRAuSFLCnb23H2g8W5hVgo0PozMSYNGhfB79D24n5UGpb0gsRd7KpRy9JQOte3SBdqZEAVCcowGoZBIqHYalJVKoZ2uEByIAir3CgQiFY64G0rROWisUqxUhbDj/3fY/28FVjWGWkcoLhbY+TkOg8pQ/v/J6v1HjFHdbPfaLF6mavzCSr5mCsCxeUjcMOUX4hvMXQR6ecOX5Lxgvvw3QOEHxJOUkzVMZ6Te2XGJAqVx/TgDjJiuV7uf7/QaM+023IX78BBe/Jcqr4m7zmN7xo0Z1a/T3kpcoZK11XIVcUW83e/YTQGPKVvwicEauW5OFqtGoRuiMlZcvo171zcR8syNfQwjN6+jjdvzYuhY/t0mBgOYUL/5i2f9mvbPIEidIByDlUORjXt7CLkvTMqjo20Ld+9CRZEH1rQvi42vyUYZchX9QlwjjGt+6sIRSUgGj55u2X71pBTGirE0ab1+WgYbOHROvThwYAkhF2dVZs+r7F4/PbXQSOJgNjo9Dws7yjsM2nVsA05eHQ4QgQRU3CWGX1O+gZA1MDkAD3dZUeTAhRuaGAuG+C/dubMl4zEjhU71AK9s5cMN/VYUsIFrjDnPryHk6uHzKIrk6scvt61dPCqGjo1LXKutH1XauTZ+wrfxOP5BT2BNx+DoG1YlXMDkg5qe520ajxapWiSnIX75bXRKbO8ZRz5l9zBLzXQP6UBmPO3rfU4/bYpMkJpIA3+0dqiE5MZNkGOlp1JMCghPs6IMR2+rIBVz17r4i2fVTe0MpelaujJ0Oz1jNYrCQFKDvWukIqiweqdTzAoImkVhhgPNOlDLwk0yhB8TREtVFez/6EpwpeQlnMWpYbJ0SzapTQ2dc1yKYHsm/gwwsyq7cP88GpKY36ItzkuRDhIVEPkSPVuwY/4tUVeds9uFX93YV97U3j4yiNTkVfprJiSoTuSIePLUcTyvUtYLeenODW4l7okm9lEyle7u0pV4VJKpGy3J0i5OgnRwkCRtY5MtPSNMKXqKBFewpgZXiCKB65uaUfUVCSxYUxMLViCoejCl2+qW+ZdP1+0KSAY8PuRFE/sqb0G1tTSgasyklDh5JKiY4/G6liEUW91IT4IxXElEggq7tr+gq7qBQ2TympIdr7yI6oVjSoqDc/7SziHaciX1BTIaVh0KUhFdyQlhWjiuSRfQ0qYJPFRyNFRMvvpvfkyKqoHrertrBwpAFadMrKxsnrR0nKwsMBbg1U0I0lbry+WjcF6rr6UFzO8CrjfQa5qdhqb/f/JuXgkUSxD8EXq+EVkNoPU6+V1lKmlMXaOpZThtDLvONv5RzD6YjRxNaaQjQ3SFAFEC6wKVVkbaaruLFQj0f6cpAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="780" height="240" rx="16" fill="#14151c"/>
+<text class="t" x="150" y="32" text-anchor="middle" dominant-baseline="central">scale 1.0</text>
+<text class="s" x="150" y="56" text-anchor="middle" dominant-baseline="central">1 pt = 1 px</text>
+<rect x="102.0" y="100.0" width="96.0" height="96.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="102.0" y="100" width="96" height="96" rx="2" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="402" y="32" text-anchor="middle" dominant-baseline="central">scale 2.0</text>
+<text class="s" x="402" y="56" text-anchor="middle" dominant-baseline="central">1 pt = 2x2 px</text>
+<rect x="354.0" y="100.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="402.0" y="100.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="354.0" y="148.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="402.0" y="148.0" width="48.0" height="48.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="354.0" y="100" width="96" height="96" rx="2" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="654" y="32" text-anchor="middle" dominant-baseline="central">scale 3.0</text>
+<text class="s" x="654" y="56" text-anchor="middle" dominant-baseline="central">1 pt = 3x3 px</text>
+<rect x="606.0" y="100.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="638.0" y="100.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="670.0" y="100.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="606.0" y="132.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="638.0" y="132.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="670.0" y="132.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="606.0" y="164.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="638.0" y="164.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="670.0" y="164.0" width="32.0" height="32.0" rx="2" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="606.0" y="100" width="96" height="96" rx="2" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+</svg>

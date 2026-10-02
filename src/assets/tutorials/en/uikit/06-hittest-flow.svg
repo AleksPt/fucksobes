@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img">
+<title>The hitTest algorithm</title>
+<desc>A diagram: the view is checked for being hidden, interaction disabled and alpha below 0.01, then for the point falling within bounds; if the checks pass, the subviews are traversed from top to bottom. If one returned a view, that deep view is returned, otherwise self; if the checks fail, nil is returned.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAANQAA0AAAAABVgAAAL/AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbcBwwBmAATAqETIQEATYCJAMYCw4ABCAFBgcgGx0EIC4KbJc1K41iEimK80q/TUavw+CJt/v3zCyeWH3cDzgSKnNfFXep08UV7F5qhemPve9HZHKsEiiaosDGuwENE3y4nf+fbv4VbqESK8SI5tAsW1P3H+vdmf385wRoGKUvbNPffG0sTLtQ0oAT2fP8AaZrAEUaUOdZf9I/XwKfPqhO3SYeUV+CW9MiogciQBgAUATBQRAgSCXtWH365esgPXtvfQbS8yebC5DGBvg4KvPmri+AHyaDjW4V/ChxALIwCIpgmSyCkOVqmrElv5pa1JCm4+u2GrlADug2egIwOJwj02jkF8YVdhwxsVoDl9Bc1lh3/k+wz1HDQMZoTK9uyScAKGABaSwkpG3adyaIH0WZyyKWsea/YC4L4ZPM59CTQ6AuHH7dB1xFiAMA2NdPK3IVE+DEyX7V5OgFlgwhoe0Az3N2xenwA0Bo+zZlh55/v8m7X+Dgtt8vJ4QIjT30UFhAg1YGl3eWJlAixCPDcdthKpnEEI+WJNnHFRO6Wa73xe7kIcnkB0v3rvIJXkROVfOMd27w9sFsq4/txztwuuQ4SHuWw3iXbs/SgTr+9fkAhJL9DBTMY7FC6kFxm5ba2wjZ3u/1rNSpL4g79ool9+48UQ62jZ4Cpy9EQ/yblZJMQmvn5l+2jT/Ss0dPOHThFb3DCoMlqpHF3KB3bJQ1PGcrShUXmiH5LCFr4Ev8sT2m0p72yCeBf8qd2qK4c69Ycu2uJOq1RcK5Wyq69hbxWtabtklbTqe0nbZ5PRBuQ60/BtQpHkB4mUwad3vJyIpfazuz05y/2eQXHY8G1Kp+lw+gaO1V8bBQmv0Q3wwdspnzyz2lo4mrfmY9C0y5DyMUf+5YKHkv7rVoyuzVxDAT4k4jZFmxE1DM07IGodgfPz69xhN3CQee5Vixw7TexhsAsB4BlF6LT+Z+Kdblq9+yPiDgXVqUH+7aBMr+p1WuDMBFARB4qKGOFVCUqYldB67mYJcEqNMSvXU0dbKkTBv0RgCXLsVGnXWxEPrf1AgAAAA=) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="800" height="600" rx="16" fill="#14151c"/>
+<rect x="200.0" y="24.0" width="200" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="300" y="44" text-anchor="middle" dominant-baseline="central">hitTest on a view</text>
+<path d="M300 64 V92" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<polygon points="300 92.0 450.0 142 300 192.0 150.0 142" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12" stroke-linejoin="round"/>
+<text class="t" x="300" y="133.0" text-anchor="middle" dominant-baseline="central">hidden, userInteraction</text>
+<text class="t" x="300" y="151.0" text-anchor="middle" dominant-baseline="central">off, alpha below 0.01?</text>
+<rect x="535.0" y="122.0" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="600" y="142" text-anchor="middle" dominant-baseline="central">return nil</text>
+<path d="M450 142 H535" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="492" y="130" text-anchor="middle" dominant-baseline="central">yes</text>
+<path d="M300 192 V220" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="312" y="206" text-anchor="start" dominant-baseline="central">no</text>
+<polygon points="300 220.0 420.0 264 300 308.0 180.0 264" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12" stroke-linejoin="round"/>
+<text class="t" x="300" y="255.0" text-anchor="middle" dominant-baseline="central">point inside:</text>
+<text class="t" x="300" y="273.0" text-anchor="middle" dominant-baseline="central">point in bounds?</text>
+<path d="M420 264 H600 V164" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="500" y="252" text-anchor="middle" dominant-baseline="central">no</text>
+<path d="M300 308 V336" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="312" y="322" text-anchor="start" dominant-baseline="central">yes</text>
+<rect x="145.0" y="336.0" width="310" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="300" y="356" text-anchor="middle" dominant-baseline="central">traverse subviews top to bottom</text>
+<path d="M300 376 V404" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<polygon points="300 404.0 420.0 444 300 484.0 180.0 444" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12" stroke-linejoin="round"/>
+<text class="t" x="300" y="444.0" text-anchor="middle" dominant-baseline="central">did anyone return a view?</text>
+<path d="M420 444 H530" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="475" y="432" text-anchor="middle" dominant-baseline="central">yes</text>
+<rect x="530.0" y="424.0" width="220" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="640" y="444" text-anchor="middle" dominant-baseline="central">return that deep view</text>
+<path d="M300 484 V520" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="s" x="312" y="502" text-anchor="start" dominant-baseline="central">no</text>
+<rect x="220.0" y="520.0" width="160" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="300" y="540" text-anchor="middle" dominant-baseline="central">return self</text>
+</svg>

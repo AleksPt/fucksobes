@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="240" viewBox="0 0 380 240" role="img">
+<title>The UIKit coordinate system</title>
+<desc>The origin (0, 0) in the top-left corner, the x axis to the right, the y axis down; a view rectangle inside.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAOkAA0AAAAABkAAAANWAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGiAbIBwqBmAAZAqGOIUFATYCJAM4Cx4ABCAFBgcgG4oECB6DbbvxMca6aqwxnHH56uhyQlcGb2c/bzc5BSdqkwPs8kNq3Rl14v///r59PgZmM9fLIyjNn2g3NjIK944UopooYOdlBZ5jBslUZjzgvc9zTb1/rfeO7iiS8BCPFk0VGInt4+GAxgOq1MLhcO9EZ9O2xiEcUskNnOkUwb7dCQKACwAACAgkQUAiDldkoEXnLv/A8HhIgQUAYjEAgKabMEMtxy/Pqa+EmgzcZlHJpAtSgBoVxQMIqw+TTDiMIIACpAFugpOhIQBuwkKL+EfEgCdNrFSJMhHdC3rY2ykANAAlNEgSWIhuypFDl+3mrNgpQAla/uuwZjwaf9PXe0/dNtZKkwggE/BR0ILG5FuAeALgBtClxCEu0iC+AoiGkhJP14CvpabCUtTmZow+vybqublRbuUc4KKbK7eemSszlkSya6UWBvA4hEPLEB7FASeTk7BxSn3tjG4aJ5nyKzv8nmaQvJYsk7i6qzK/rZbMSUrlxCysKC+tqSZx4lNkYhdX+41lpfiEpPXQhoW3LJr/DVY8LupmLLb1BYlP8PgdPK7lOpHtclq30bSVkMSJzzm7Goe7bJBAjYfHkBvIEvUI2QjisAh0s6LllZbSwdmOTpm+i4xbBokIaC2DyUl0zh/w93b6fxKlwuqjTYXGAibAx1sQINBmIyHyTvNcrIStR+LXqm16S822lh2jNd1YkXafRluccbTLgHGunFyvsddAol8me7/RbSA8yTjPo81zSVe3Kcy7DQ6v0YpMYflJ6YGn/aPCkpOSFc6+YWHDmdJjwet7Y+0ZzC9G8yNxdldc9nVf3+vRdXE5/Ds4r9BcJ+dsASN0zvKsn39OcWQJGYFzdr8w3Cs43JvxDr4CZMDzpzGZGEMT374J9iejPHp7XPC+rt1g41n/Uq6wOViRpJIgSol27Ig6G+HSkRkrQmVdCsNPiU3ZiLNR795IjygmWWWgYiabu7Qw7RM4X/0YbZ1Yff1YHe0YSJiABiABniz0AEgAKEuxYtZ/EADKRTLMvNOzZP2+J01/BoA3l1MjqLfdn3/AunDKXSxsGqcAAAT4RykqWeL/Zw4IoM6nkpFq0wkBVxjCAa6IxgEuoe6fAOADCAAfVmiooPYH2qIEaBXiAjjMIgA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="380" height="240" rx="16" fill="#14151c"/>
+<text class="ms" x="24" y="28" text-anchor="start" dominant-baseline="central">(0, 0)</text>
+<path d="M24 50 H340" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="354" y="50" text-anchor="start" dominant-baseline="central">x</text>
+<path d="M24 54 V200" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<text class="ms" x="24" y="216" text-anchor="middle" dominant-baseline="central">y</text>
+<rect x="92" y="84" width="170" height="86" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="mm" x="177" y="127" text-anchor="middle" dominant-baseline="central">view</text>
+</svg>
