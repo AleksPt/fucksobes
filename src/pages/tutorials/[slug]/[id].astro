@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { render } from 'astro:content';
+import ImageZoom from '../../../components/ImageZoom';
 import QuestionTitle from '../../../components/QuestionTitle.astro';
 import Base from '../../../layouts/Base.astro';
 import { getTutorialPages } from '../../../lib/content';
@@ -34,6 +35,7 @@ const navClass =
     <div class="prose tutorial mt-8 max-w-none break-words">
       <Content />
     </div>
+    <ImageZoom client:idle />
     {
       (prev || next) && (
         <nav class="mt-16 grid gap-4 sm:grid-cols-2" aria-label="Соседние туториалы">
