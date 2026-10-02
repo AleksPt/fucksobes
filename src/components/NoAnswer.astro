@@ -1,1 +1,8 @@
-<p class="text-fog italic">Ответа пока нет — скоро добавим.</p>
+---
+import { ui } from '../i18n';
+import { toLocale } from '../lib/locale';
+
+const locale = toLocale(Astro.currentLocale);
+---
+
+<p class="text-fog italic">{ui[locale].noAnswer}</p>

@@ -1,3 +1,5 @@
+import { ui } from '../i18n';
+import type { Locale } from '../lib/locale';
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 interface Zoomed {
@@ -29,7 +31,7 @@ function transformTo(from: DOMRect, to: { left: number; top: number; width: numb
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /** Остров без разметки: делает картинки туториала кликабельными и увеличивает их из исходного места на затемнённый фон. */
-export default function ImageZoom() {
+export default function ImageZoom({ locale }: { locale: Locale }) {
   const [zoomed, setZoomed] = useState<Zoomed>();
   const backdropRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -128,7 +130,7 @@ export default function ImageZoom() {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={zoomed.alt || 'Увеличенное изображение'}
+      aria-label={zoomed.alt || ui[locale].zoomedImage}
       className="fixed inset-0 z-50 cursor-zoom-out"
       onClick={() => close()}
     >

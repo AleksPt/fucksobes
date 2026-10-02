@@ -1,11 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
+import { ui } from '../i18n';
 import { url } from '../lib/url';
+
+// GitHub Pages отдаёт один 404.html на весь сайт, поэтому страница двуязычная
 ---
 
-<Base title="Страница не найдена — FuckSobes">
-  <h1 class="font-display text-6xl leading-[0.9] font-semibold tracking-[-0.02em] uppercase">Страница не найдена</h1>
+<Base title={`${ui.ru.notFound} — FuckSobes`} alt={null}>
+  <h1 class="font-display text-6xl leading-[0.9] font-semibold tracking-[-0.02em] uppercase">{ui.ru.notFound}</h1>
   <p class="mt-4 text-ash">
-    <a href={url()} class="text-accent underline underline-offset-4">Вернуться к категориям</a>
+    <a href={url()} class="text-accent underline underline-offset-4">{ui.ru.notFoundBack}</a>
+  </p>
+  <p class="mt-8 text-fog">{ui.en.notFound}</p>
+  <p class="mt-2 text-ash">
+    <a href={url('', 'en')} class="text-accent underline underline-offset-4">{ui.en.notFoundBack}</a>
   </p>
 </Base>

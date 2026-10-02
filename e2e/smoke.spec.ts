@@ -107,3 +107,42 @@ test('туториалы → тема → страница туториала с
   await page.getByRole('link', { name: 'Swift', exact: true }).click();
   await expect(page).toHaveURL(/\/fucksobes\/tutorials\/swift\/$/);
 });
+
+test('английская версия: главная → вопрос → переключение языка', async ({ page }) => {
+  await page.goto('en/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  // Показываются только категории, в которых есть переводы
+  await expect(page.getByRole('heading', { level: 2 })).toHaveCount(1);
+  await page.getByRole('link').filter({ has: page.getByRole('heading', { level: 2, name: 'Git', exact: true }) }).click();
+  await expect(page).toHaveURL(/\/fucksobes\/en\/git\/$/);
+
+  await page.locator('details.question').first().locator('summary').click();
+  await page.getByRole('link', { name: 'Open separately →' }).first().click();
+  await expect(page).toHaveURL(/\/fucksobes\/en\/git\/[a-z0-9-]+\/$/);
+  const enUrl = page.url();
+
+  // Переключатель ведёт на тот же вопрос по-русски, а обратно — на перевод
+  await page.getByRole('navigation', { name: 'Language' }).getByRole('link', { name: 'ru' }).click();
+  await expect(page).toHaveURL(enUrl.replace('/en/', '/'));
+  await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+  await page.getByRole('navigation', { name: 'Язык' }).getByRole('link', { name: 'en' }).click();
+  await expect(page).toHaveURL(enUrl);
+});
+
+test('переключатель на непереведённой странице ведёт на главную английской версии', async ({ page }) => {
+  await page.goto('memory/');
+  const link = page.getByRole('navigation', { name: 'Язык' }).getByRole('link', { name: 'en' });
+  await expect(link).toHaveAttribute('href', '/fucksobes/en/');
+});
+
+test('английская версия: поиск и случайный вопрос', async ({ page }) => {
+  const res = await page.request.get('en/search-index.json');
+  const docs = await res.json();
+  expect(docs).toHaveLength(11);
+  expect(docs.every((d: { url: string }) => d.url.startsWith('/fucksobes/en/git/'))).toBe(true);
+
+  await page.goto('en/random/');
+  await expect(page.locator('astro-island[component-url*="RandomQuestion"]')).not.toHaveAttribute('ssr', '');
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Next question' })).toBeVisible();
+});

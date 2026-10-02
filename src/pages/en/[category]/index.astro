@@ -1,0 +1,8 @@
+---
+import View from '../../../views/Category.astro';
+import { categoryPaths } from '../../../lib/paths';
+
+export const getStaticPaths = () => categoryPaths('en');
+---
+
+<View {...Astro.props} />

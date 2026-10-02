@@ -6,6 +6,13 @@ export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }
 
+/** Локаль страницы из `Astro.currentLocale`; вне известных локалей — по умолчанию. */
+export function toLocale(value: string | undefined): Locale {
+  return value && isLocale(value) ? value : defaultLocale;
+}
+
+export const otherLocale = (locale: Locale): Locale => (locale === 'ru' ? 'en' : 'ru');
+
 /**
  * Id записи контента вида `<локаль>/<путь>`: файл лежит в `src/content/<коллекция>/<локаль>/…`.
  * Одинаковый `<путь>` у файлов разных локалей связывает перевод с оригиналом.

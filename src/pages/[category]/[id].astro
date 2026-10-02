@@ -1,44 +1,8 @@
 ---
-import type { GetStaticPaths } from 'astro';
-import { getEntry, render } from 'astro:content';
-import NoAnswer from '../../components/NoAnswer.astro';
-import QuestionTitle from '../../components/QuestionTitle.astro';
-import Base from '../../layouts/Base.astro';
-import { getQuestions, hasAnswer, questionSlug } from '../../lib/content';
-import { plainTitle } from '../../lib/text';
-import { url } from '../../lib/url';
+import View from '../../views/Question.astro';
+import { questionPaths } from '../../lib/paths';
 
-export const getStaticPaths = (async () => {
-  const questions = await getQuestions();
-  return questions.map((question) => ({
-    params: { category: question.data.category.id, id: questionSlug(question) },
-    props: { question },
-  }));
-}) satisfies GetStaticPaths;
-
-const { question } = Astro.props;
-const category = await getEntry(question.data.category);
-const { Content } = await render(question);
+export const getStaticPaths = () => questionPaths('ru');
 ---
 
-<Base title={`${plainTitle(question.data.title)} — FuckSobes`}>
-  <div class="mx-auto max-w-3xl">
-  <nav class="text-sm text-fog">
-    <a href={url()} class="hover:text-accent">Категории</a>
-    <span class="mx-1 text-steel">/</span>
-    <a href={url(`${category.id}/`)} class="hover:text-accent">{category.data.title}</a>
-  </nav>
-  <h1 class="mt-4 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]"><QuestionTitle title={question.data.title} /></h1>
-  <div class="mt-6">
-    {
-      hasAnswer(question) ? (
-        <div class="prose max-w-none break-words">
-          <Content />
-        </div>
-      ) : (
-        <NoAnswer />
-      )
-    }
-  </div>
-  </div>
-</Base>
+<View {...Astro.props} />

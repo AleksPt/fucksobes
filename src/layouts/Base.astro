@@ -2,7 +2,9 @@
 import { ClientRouter } from 'astro:transitions';
 import Aurora from '../components/Aurora.astro';
 import Header from '../components/Header.astro';
-import { url } from '../lib/url';
+import { ui } from '../i18n';
+import { locales, otherLocale, toLocale } from '../lib/locale';
+import { parsePathname, url } from '../lib/url';
 import '../styles/global.css';
 
 interface Props {
@@ -10,12 +12,24 @@ interface Props {
   description?: string;
   /** Полное свечение героя — только на главной */
   hero?: boolean;
+  /**
+   * Путь этой же страницы в другой локали (без base и префикса локали), куда ведёт переключатель языка.
+   * Не задан — тот же путь, `null` — у страницы нет перевода, переключатель ведёт на главную другой локали.
+   */
+  alt?: string | null;
 }
 
-const { title, description = 'Вопросы и ответы для подготовки к iOS-собеседованиям', hero = false } = Astro.props;
+const locale = toLocale(Astro.currentLocale);
+const { title, description = ui[locale].defaultDescription, hero = false, alt } = Astro.props;
+
+const here = parsePathname(Astro.url.pathname).path;
+const altPath = alt === undefined ? here : alt;
+const switchHref = url(altPath ?? '', otherLocale(locale));
+// hreflang только у страниц, существующих в обеих локалях
+const alternates = altPath === null ? [] : locales.map((l) => ({ locale: l, href: new URL(url(l === locale ? here : altPath, l), Astro.site).href }));
 ---
 
-<html lang="ru">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
@@ -26,12 +40,13 @@ const { title, description = 'Вопросы и ответы для подгот
     <meta name="theme-color" content="#14151c" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.locale} href={a.href} />)}
     <title>{title}</title>
     <ClientRouter />
   </head>
   <body class="min-h-dvh bg-ink font-sans text-paper antialiased">
     <Aurora variant={hero ? 'hero' : 'page'} />
-    <Header />
+    <Header switchHref={switchHref} />
     <main class="mx-auto max-w-page px-4 pt-16 pb-24 sm:px-6">
       <slot />
     </main>

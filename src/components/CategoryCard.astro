@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { pluralize } from '../lib/text';
+import { plural, ui } from '../i18n';
+import { categoryText } from '../lib/content';
+import { toLocale } from '../lib/locale';
 import { url } from '../lib/url';
 
 interface Props {
@@ -8,16 +10,18 @@ interface Props {
   total: number;
 }
 
+const locale = toLocale(Astro.currentLocale);
 const { category, total } = Astro.props;
+const { title, description } = categoryText(category, locale);
 ---
 
 <a
-  href={url(`${category.id}/`)}
+  href={url(`${category.id}/`, locale)}
   class="group flex h-full flex-col gap-10 rounded-card border border-white/12 bg-white/4 p-6 backdrop-blur-md transition-colors duration-200 hover:border-white/45 hover:bg-white/7 focus-visible:border-white/45 focus-visible:bg-white/7 motion-reduce:transition-none"
 >
   <div class="flex items-center justify-between gap-4">
     <span class="rounded-full border border-white/45 px-3 py-1 text-sm font-medium tracking-[-0.015em] whitespace-nowrap tabular-nums">
-      {total} {pluralize(total, ['вопрос', 'вопроса', 'вопросов'])}
+      {total} {plural(locale, total, ui[locale].question)}
     </span>
     <span
       class="grid size-10 place-items-center rounded-input border border-white/12 transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent group-focus-visible:border-accent group-focus-visible:bg-accent group-focus-visible:text-on-accent motion-reduce:transition-none"
@@ -31,8 +35,8 @@ const { category, total } = Astro.props;
   </div>
   <div class="mt-auto flex flex-col gap-2">
     <h2 class="text-[1.75rem] leading-[1.1] font-medium tracking-[-0.02em] text-balance" transition:name={`category-${category.id}`}>
-      {category.data.title}
+      {title}
     </h2>
-    <p class="max-w-[44ch] text-sm text-fog">{category.data.description}</p>
+    <p class="max-w-[44ch] text-sm text-fog">{description}</p>
   </div>
 </a>

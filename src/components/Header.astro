@@ -1,12 +1,41 @@
 ---
+import { ui } from '../i18n';
+import { locales, toLocale } from '../lib/locale';
 import { url } from '../lib/url';
 import Logo from './Logo.astro';
+
+interface Props {
+  /** Ссылка переключателя языка на эту же страницу в другой локали */
+  switchHref: string;
+}
+
+const locale = toLocale(Astro.currentLocale);
+const { switchHref } = Astro.props;
+const itemClass = 'rounded-input px-2.5 py-1 uppercase';
 ---
 
 <header class="relative z-20 px-4 pt-4 sm:px-6">
-  <div class="mx-auto flex max-w-page justify-center py-2">
-    <a href={url()} class="rounded-input text-accent" aria-label="FuckSobes, на главную">
+  <div class="mx-auto grid max-w-page grid-cols-[1fr_auto_1fr] items-center py-2">
+    <a href={url('', locale)} class="col-start-2 rounded-input text-accent" aria-label={ui[locale].homeLabel}>
       <Logo class="h-6 w-auto sm:h-8" />
     </a>
+    <nav
+      class="col-start-3 inline-flex justify-self-end rounded-input border border-white/12 p-0.5 text-sm font-medium"
+      aria-label={ui[locale].languageLabel}
+    >
+      {
+        locales.map((l) =>
+          l === locale ? (
+            <span class:list={[itemClass, 'bg-accent text-on-accent']} aria-current="true">
+              {l}
+            </span>
+          ) : (
+            <a href={switchHref} hreflang={l} lang={l} class:list={[itemClass, 'text-fog transition-colors hover:text-paper motion-reduce:transition-none']}>
+              {l}
+            </a>
+          ),
+        )
+      }
+    </nav>
   </div>
 </header>

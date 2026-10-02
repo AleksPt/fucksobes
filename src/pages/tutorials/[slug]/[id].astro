@@ -1,60 +1,8 @@
 ---
-import type { GetStaticPaths } from 'astro';
-import { render } from 'astro:content';
-import ImageZoom from '../../../components/ImageZoom';
-import QuestionTitle from '../../../components/QuestionTitle.astro';
-import Base from '../../../layouts/Base.astro';
-import { getTutorialPages } from '../../../lib/content';
-import { plainTitle } from '../../../lib/text';
-import { neighbours, tutorialPageHref, tutorials } from '../../../lib/tutorials';
-import { url } from '../../../lib/url';
+import View from '../../../views/TutorialPage.astro';
+import { tutorialPagePaths } from '../../../lib/paths';
 
-export const getStaticPaths = (async () => {
-  const items = await getTutorialPages();
-  return items.map(({ entry, page }) => ({ params: { slug: page.topic, id: page.slug }, props: { entry, page } }));
-}) satisfies GetStaticPaths;
-
-const { entry, page } = Astro.props;
-const topic = tutorials.find((t) => t.slug === page.topic)!;
-const { prev, next } = neighbours((await getTutorialPages()).map((item) => item.page), page);
-const { Content } = await render(entry);
-
-const navClass =
-  'group flex flex-col gap-1 rounded-card border border-white/12 bg-white/4 px-6 py-5 backdrop-blur-md transition-colors duration-200 hover:border-white/45 hover:bg-white/7 focus-visible:border-white/45 focus-visible:bg-white/7 motion-reduce:transition-none';
+export const getStaticPaths = () => tutorialPagePaths('ru');
 ---
 
-<Base title={`${plainTitle(page.title)} — ${topic.title} — Туториалы — FuckSobes`}>
-  <div class="mx-auto max-w-3xl">
-    <nav class="text-sm text-fog">
-      <a href={url('tutorials/')} class="hover:text-accent">Туториалы</a>
-      <span class="mx-1 text-steel">/</span>
-      <a href={url(`tutorials/${topic.slug}/`)} class="hover:text-accent">{topic.title}</a>
-    </nav>
-    <p class="mt-6 text-sm font-medium text-fog tabular-nums">{String(page.order).padStart(2, '0')}</p>
-    <h1 class="mt-2 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]"><QuestionTitle title={page.title} /></h1>
-    <div class="prose tutorial mt-8 max-w-none break-words">
-      <Content />
-    </div>
-    <ImageZoom client:idle />
-    {
-      (prev || next) && (
-        <nav class="mt-16 grid gap-4 sm:grid-cols-2" aria-label="Соседние туториалы">
-          {prev ? (
-            <a href={url(tutorialPageHref(prev))} class={navClass}>
-              <span class="text-sm text-fog">← Предыдущий</span>
-              <span class="text-lg leading-tight font-medium tracking-[-0.015em] text-balance">{prev.title}</span>
-            </a>
-          ) : (
-            <span />
-          )}
-          {next && (
-            <a href={url(tutorialPageHref(next))} class:list={[navClass, 'sm:col-start-2 sm:text-right']}>
-              <span class="text-sm text-fog">Следующий →</span>
-              <span class="text-lg leading-tight font-medium tracking-[-0.015em] text-balance">{next.title}</span>
-            </a>
-          )}
-        </nav>
-      )
-    }
-  </div>
-</Base>
+<View {...Astro.props} />

@@ -1,4 +1,5 @@
 import { splitLocaleId, type Locale } from './locale';
+import { tutorialsEn } from './tutorials.en';
 
 export interface TutorialSection {
   title: string;
@@ -95,6 +96,14 @@ export const tutorials: Tutorial[] = [
     ]),
   },
 ];
+
+/** Туториал с названиями на нужном языке (ссылки у разделов не затрагиваются). */
+export function localizeTutorial(tutorial: Tutorial, locale: Locale): Tutorial {
+  if (locale === 'ru') return tutorial;
+  const en = tutorialsEn[tutorial.slug];
+  if (!en) throw new Error(`Нет английских названий для туториала «${tutorial.slug}» в tutorials.en.ts`);
+  return { ...tutorial, title: en.title, sections: tutorial.sections.map((section, i) => ({ ...section, title: en.sections[i] })) };
+}
 
 export const tutorialHref = (slug: string): string => `tutorials/${slug}/`;
 

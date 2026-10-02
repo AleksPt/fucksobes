@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isLocale, splitLocaleId } from './locale';
+import { isLocale, splitLocaleId, toLocale } from './locale';
 
 describe('splitLocaleId', () => {
   it('отделяет локаль от пути', () => {
@@ -17,5 +17,13 @@ describe('isLocale', () => {
   it('узнаёт только поддерживаемые локали', () => {
     expect(isLocale('en')).toBe(true);
     expect(isLocale('de')).toBe(false);
+  });
+});
+
+describe('toLocale', () => {
+  it('известную локаль возвращает, остальное сводит к русской', () => {
+    expect(toLocale('en')).toBe('en');
+    expect(toLocale('de')).toBe('ru');
+    expect(toLocale(undefined)).toBe('ru');
   });
 });

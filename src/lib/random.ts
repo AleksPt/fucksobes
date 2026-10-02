@@ -1,3 +1,4 @@
+import type { Locale } from './locale';
 import { url } from './url';
 
 /** Случайный элемент списка, отличный от `exclude` (если есть из чего выбирать). */
@@ -15,8 +16,8 @@ export interface RandomQuestionData {
   html: string;
 }
 
-export function randomQuestionUrl(id: string): string {
-  return url(`random/${id}.json`);
+export function randomQuestionUrl(id: string, locale: Locale): string {
+  return url(`random/${id}.json`, locale);
 }
 
 async function fetchQuestion(path: string): Promise<RandomQuestionData> {
@@ -28,12 +29,13 @@ async function fetchQuestion(path: string): Promise<RandomQuestionData> {
 /** Загрузчик вопросов с кэшем: повторный запрос того же id не идёт в сеть, неудачный — повторяется. */
 export function createQuestionLoader(load: (path: string) => Promise<RandomQuestionData> = fetchQuestion) {
   const cache = new Map<string, Promise<RandomQuestionData>>();
-  return (id: string): Promise<RandomQuestionData> => {
-    let promise = cache.get(id);
+  return (id: string, locale: Locale): Promise<RandomQuestionData> => {
+    const key = `${locale}/${id}`;
+    let promise = cache.get(key);
     if (!promise) {
-      promise = load(randomQuestionUrl(id));
-      promise.catch(() => cache.delete(id));
-      cache.set(id, promise);
+      promise = load(randomQuestionUrl(id, locale));
+      promise.catch(() => cache.delete(key));
+      cache.set(key, promise);
     }
     return promise;
   };
