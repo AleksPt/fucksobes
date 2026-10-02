@@ -9,7 +9,7 @@ Logging records the progress of a program: it helps you understand what happened
 On Apple platforms this is `os.Logger` (unified logging) with these levels:
 
 - `debug`: verbose messages for development, not persisted in release builds;
-- `info`: auxiliary information, stored only in memory;
+- `info`: auxiliary information; normally stored only in memory and written to disk only when collected with the `log` tool;
 - `notice` (the default level): important events, persisted to disk;
 - `error`: an error after which the app keeps working;
 - `fault`: a critical error or programmer error after which work is impossible.

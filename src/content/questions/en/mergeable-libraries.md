@@ -15,7 +15,7 @@ Mergeable libraries let you keep frameworks dynamic during development (fast inc
 
 It is enabled in the target settings:
 
-- on the framework target: `MERGEABLE_LIBRARY = YES` ("Create Mergeable Library" in Build Settings);
-- on the app target: `MERGE_LINKED_LIBRARIES = YES` ("Merge Mergeable Libraries" / "Automatically Merge Libraries"), or explicitly through the linker flags `-make_mergeable` and `-merge_framework`.
+- on the app target: `MERGED_BINARY_TYPE` ("Create Merged Binary") set to `automatic`: Xcode itself builds the direct framework dependencies as mergeable and merges them in release builds;
+- manually: `MERGED_BINARY_TYPE = manual` on the app and `MERGEABLE_LIBRARY = YES` ("Build Mergeable Library") only on the frameworks that should be merged. Xcode passes the linker flags (`-make_mergeable`, `-merge_framework`) itself.
 
-You can also control this by configuration: for example, merge libraries only for Release builds and archives, leaving Debug dynamic for fast development iteration. This is exactly the behavior the Xcode templates set by default.
+Configurations are told apart automatically: in Debug (an unoptimized build) the libraries stay ordinary dynamic ones and are linked via reexport, for fast iteration; merging happens in Release and archives. Only direct dependencies are merged, and the merged frameworks are removed from the bundle, so everything that referenced them (extensions, tests) must be pointed at the resulting binary.
