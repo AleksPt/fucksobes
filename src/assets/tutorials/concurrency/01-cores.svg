@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="456" viewBox="0 0 720 456" role="img">
+<title>Одно ядро и несколько ядер</title>
+<desc>Верхняя схема: одно ядро Core 1 по очереди выполняет Thread 1, Thread 2, Thread 3, Thread 1, Thread 2 (context switch на границах). Нижняя схема: три ядра работают одновременно, Thread 1 на Core 1 от 0 до 10, Thread 2 на Core 2 от 0 до 7, Thread 3 на Core 3 от 1 до 9.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAANAAA8AAAAABYAAAALoAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhobXBwwBmA/U1RBVC4AVBEICoN0gzYBNgIkAxgLDgAEIAU4ByAbLwQAHoPjbolHPsVisZTxfLzRj+D5/b7NOf+uSlRNW8WbWDOJu12xaKHRoFSWUgnFKgnqM8iOnD08bh8SK7tk58A+FGVSpoQaYB9w7+St872gwwFOcDizh9bznX+AXfwjBh4OLE7zMOIBBeLpNp1iV1RYOOmIbhZoBYRUBAiBZjNCsJtJGQUwuBnt64DBXe1AFwxw8HuMbhv7uqDGZIpMAmKrgtANoq6r/tdX53gBK2K1Gv6SrWQddeRHpgSwFe/HOfz8Aildtn+Ul4+Hxa9ks6//faC8kCxAQHYwT8AQdXHjb6IXQR/mvrllgACphpSxDvkCSNTQixXoxVkFrRqlUvxKYIkoMVz2/4qTd33oXS962nVBHxCiqnQg1INWNOML+AEogJoUUva2alg1aRp06mhSni5Jrx7hO0cOzyT84ltRKKJLLx6QifPXnwsC6fzFHTJxu6tdlOVWKQpLW89me9xAYzc2OefvmNMDUSzfk2VhURQtKE9LyyknsCVCGVPI08IL1uGiiIPXt91Q/klRyARjiEsSLX5e231ww/zHRCgoJ8Li05tneHfvlUTjtd/aJ6gt2rub/fq7cu9ET5fXjnF6TgepK9blOtY2D9/6GnenpBvEe2lbjC8PmHTDqa6gMyFwNCs7ZKQzMSe8xCMs3axSV02vcS7SMTXRLcAs48Ji8eXYmHKrqmANx40YR0/fOFf7+BDEd/SdqB6q9mgXXLrlanLb9RLWv7/LZXNOKtyDchqTfEYzM31HmxNzXb5XPX+/ZthGgFVxYJBVcaJ/WEBKgGNJYLB9caov7N5/WItNifQxjylK1/EVtQufjI49/qFxo9fK0M7PypaPieVsAa8QpPUFdraiWjviXyPLfgP+fLa3Afjz82sq7Kq4HGEMQb0Ewcss81sG5W51uwSkPi0YpL34jOSdd7CRJYhPI3YI6s1hQRBfGsCKoo7Uzj5sBFq1O9So2aAOtfoUa9SqWYsBLFBdMw8AAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAATYAA4AAAAAB/AAAASDAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAG4EUHDAGYD9TVEFULgA0EQgKiFyHUQE2AiQDLAsYAAQgBTgHIBtcBlGUTc4CBB+H6dZZRt55kozqLMGqQYQ69P7lkOSw0rILADw1WcsrwUiEKyB4Hj2/nFk5SVMzLtMvazpP/91Ie7J8+Msd3rXx6YGlJxZohPeai8amsQZFmgb00zYFeCwBakvdrhNT8WMAAlgqUh/Tum3n3vhRC2ZOxk8eMXsqngD+CWlt0piZU0mGqBKgEcHeBdcTKEl5alKfjgjRCoYEkrENE39CZTBdZuK3IC4Na5WKv4+FzsLD0aYE8WruVKaqObJHe8njQCNZQQLoIk0DOtWXyFBq8hvsKnzVfUDPXpykOg3M5f83IDgqDFTVdD3TKU4K8thH4BGgCDpv3PjZMYOp1lRWgB5lLIIsesziRkBxoKMBAjR4RLA61sS3EICQjEXSOxE38iAfkAEyBzQkKQZwTERsTOWHBvXeRo2dKVM6I6l0VkbZ9BGL7lNI3gO4xfdA7l30XfwAkncfdtFdkHvvpkuwcuDC1UoucNJvy52bMF0U+HbzBmS1xr1T2dbpduTWXrs9f+HiHunfffmM9XrTcXBH8vSFpSMXDxWw68/I0GXe3nm09r5rx99IlVDGOXVYRqaaDeXTWHnsUuzBvjuwHZRK2HvL3kfukStht4Nnjt29y44bgvciIyObdpNCSWX8GmdX6x0+veIjuhtO2vfd+hBcuHgmcnrzQS7Sd/z86cz5A/b14dubtaWTNt+e9HX1ftl06ZbkDgcfK2ecnjyLODIuVGZFC4QDkYhgoBaW2cKxCre3lNtHEHnSW9ITMYwrYIQSpxTodVgAJQVMLnfQBCbhpE6P/8xgYtAIrPctcTU8AnSei4Aw+Oxw4aBbTCj8YdJvCiN7s4cpqkhmxYp09gwM1eczzOkdw+NjgHQckjQ9oNDVZGxvJqaKWanKzwh8jX1WRDBK2aM/m6WG/k8y/rJbPamZh/0QM0OpYWYekJJGRfc77dmrQkKF6xLD6tTpwIaFuS3Sv3a/SIwlLqx+yFoKmMar42ah8NP5aRt/nIoMEZEGswRToxRCCc5niIbWdk+f9Xh1lOsgSmz2IjKElTfYAXpcoMTqzxG04THhPKy80h0xpUlR4lOmDypgLSo9zw1OioEFFwOzQarE7ijCKE95lZNmNAQIYUq1AscgjTIoV2NaBMYoCCgSNLTE3QkIOgDrOH3GbFqHMA6Yh8Y8DUsfc4wgiWkSZqvVCbMxDUgauW+GG7JRLgY7ECagS5+tY9jtCABpX4dYiDLM+qaFAGc7iwR/DkBTmv0sCPazkxBkyM8ChONMWRKcOJE3J04OWyk1HJ2RZx4zeQz4P+phb4nRXUDTnvIaZ5ApQZ3VrAE0LOhBc8vNRLqKkm1VaSGCgNQaAoJwJRXH4AFY+BABlJZDlo3cPyy98bdkY14CPF9VqjjA8ycvOhDGP3SEXgESUQAEfqakrgQ5yO9dvE8bTovgidENZBIFtS6R9qOELqCijqepTqOh/CLUqTTQydRFAEdbzCHHk6wSkXUJUlDSoFcVCOWP6skYxjGHyYxgJv0YwwTGMZ7ZGACI91ETCg==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="456" rx="16" fill="#14151c"/>
+<text class="h" x="16" y="24" text-anchor="start" dominant-baseline="central">Одно ядро: потоки чередуются (context switch)</text>
+<text class="t" x="16" y="78.0" text-anchor="start" dominant-baseline="central">Core 1</text>
+<line x1="96" y1="100" x2="704.0" y2="100" stroke="#fff" stroke-opacity="0.08"/>
+<rect x="96.0" y="56" width="121.6" height="44" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="156.8" y="78.0" text-anchor="middle" dominant-baseline="central">Thread 1</text>
+<rect x="217.6" y="56" width="121.6" height="44" rx="8" fill="#fff" fill-opacity="0.20" stroke="#fff" stroke-opacity="0.30"/>
+<text class="t" x="278.4" y="78.0" text-anchor="middle" dominant-baseline="central">Thread 2</text>
+<rect x="339.2" y="56" width="121.6" height="44" rx="8" fill="#fff" fill-opacity="0.30" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="400.0" y="78.0" text-anchor="middle" dominant-baseline="central">Thread 3</text>
+<rect x="460.79999999999995" y="56" width="121.6" height="44" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="521.5999999999999" y="78.0" text-anchor="middle" dominant-baseline="central">Thread 1</text>
+<rect x="582.4" y="56" width="121.6" height="44" rx="8" fill="#fff" fill-opacity="0.20" stroke="#fff" stroke-opacity="0.30"/>
+<text class="t" x="643.1999999999999" y="78.0" text-anchor="middle" dominant-baseline="central">Thread 2</text>
+<line x1="96" y1="112" x2="704.0" y2="112" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<line x1="96.0" y1="108" x2="96.0" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="96.0" y="130" text-anchor="middle" dominant-baseline="central">0</text>
+<line x1="156.8" y1="108" x2="156.8" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="156.8" y="130" text-anchor="middle" dominant-baseline="central">1</text>
+<line x1="217.6" y1="108" x2="217.6" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="217.6" y="130" text-anchor="middle" dominant-baseline="central">2</text>
+<line x1="278.4" y1="108" x2="278.4" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="278.4" y="130" text-anchor="middle" dominant-baseline="central">3</text>
+<line x1="339.2" y1="108" x2="339.2" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="339.2" y="130" text-anchor="middle" dominant-baseline="central">4</text>
+<line x1="400.0" y1="108" x2="400.0" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="400.0" y="130" text-anchor="middle" dominant-baseline="central">5</text>
+<line x1="460.79999999999995" y1="108" x2="460.79999999999995" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="460.79999999999995" y="130" text-anchor="middle" dominant-baseline="central">6</text>
+<line x1="521.5999999999999" y1="108" x2="521.5999999999999" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="521.5999999999999" y="130" text-anchor="middle" dominant-baseline="central">7</text>
+<line x1="582.4" y1="108" x2="582.4" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="582.4" y="130" text-anchor="middle" dominant-baseline="central">8</text>
+<line x1="643.1999999999999" y1="108" x2="643.1999999999999" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="643.1999999999999" y="130" text-anchor="middle" dominant-baseline="central">9</text>
+<line x1="704.0" y1="108" x2="704.0" y2="116" stroke="#a4a6b0"/>
+<text class="s" x="704.0" y="130" text-anchor="middle" dominant-baseline="central">10</text>
+<text class="s" x="704.0" y="150" text-anchor="end" dominant-baseline="central">время</text>
+<text class="h" x="16" y="192" text-anchor="start" dominant-baseline="central">Несколько ядер: настоящий параллелизм</text>
+<text class="t" x="16" y="246.0" text-anchor="start" dominant-baseline="central">Core 1</text>
+<line x1="96" y1="268" x2="704.0" y2="268" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="16" y="302.0" text-anchor="start" dominant-baseline="central">Core 2</text>
+<line x1="96" y1="324" x2="704.0" y2="324" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="16" y="358.0" text-anchor="start" dominant-baseline="central">Core 3</text>
+<line x1="96" y1="380" x2="704.0" y2="380" stroke="#fff" stroke-opacity="0.08"/>
+<rect x="96.0" y="224" width="608.0" height="44" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="400.0" y="246.0" text-anchor="middle" dominant-baseline="central">Thread 1</text>
+<rect x="96.0" y="280" width="425.59999999999997" height="44" rx="8" fill="#fff" fill-opacity="0.20" stroke="#fff" stroke-opacity="0.30"/>
+<text class="t" x="308.79999999999995" y="302.0" text-anchor="middle" dominant-baseline="central">Thread 2</text>
+<rect x="156.8" y="336" width="486.4" height="44" rx="8" fill="#fff" fill-opacity="0.30" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="400.0" y="358.0" text-anchor="middle" dominant-baseline="central">Thread 3</text>
+<line x1="96" y1="392" x2="704.0" y2="392" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<line x1="96.0" y1="388" x2="96.0" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="96.0" y="410" text-anchor="middle" dominant-baseline="central">0</text>
+<line x1="156.8" y1="388" x2="156.8" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="156.8" y="410" text-anchor="middle" dominant-baseline="central">1</text>
+<line x1="217.6" y1="388" x2="217.6" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="217.6" y="410" text-anchor="middle" dominant-baseline="central">2</text>
+<line x1="278.4" y1="388" x2="278.4" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="278.4" y="410" text-anchor="middle" dominant-baseline="central">3</text>
+<line x1="339.2" y1="388" x2="339.2" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="339.2" y="410" text-anchor="middle" dominant-baseline="central">4</text>
+<line x1="400.0" y1="388" x2="400.0" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="400.0" y="410" text-anchor="middle" dominant-baseline="central">5</text>
+<line x1="460.79999999999995" y1="388" x2="460.79999999999995" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="460.79999999999995" y="410" text-anchor="middle" dominant-baseline="central">6</text>
+<line x1="521.5999999999999" y1="388" x2="521.5999999999999" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="521.5999999999999" y="410" text-anchor="middle" dominant-baseline="central">7</text>
+<line x1="582.4" y1="388" x2="582.4" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="582.4" y="410" text-anchor="middle" dominant-baseline="central">8</text>
+<line x1="643.1999999999999" y1="388" x2="643.1999999999999" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="643.1999999999999" y="410" text-anchor="middle" dominant-baseline="central">9</text>
+<line x1="704.0" y1="388" x2="704.0" y2="396" stroke="#a4a6b0"/>
+<text class="s" x="704.0" y="410" text-anchor="middle" dominant-baseline="central">10</text>
+<text class="s" x="704.0" y="430" text-anchor="end" dominant-baseline="central">время</text>
+</svg>

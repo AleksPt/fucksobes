@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="564" viewBox="0 0 720 564" role="img">
+<title>Serial и concurrent очереди</title>
+<desc>Две шкалы времени от 0 до 11. Serial: Task 0 с 0 до 3, Task 1 с 3 до 5, Task 2 с 5 до 9, Task 3 с 9 до 11, строго друг за другом. Concurrent: Task 0 с 0 до 6, Task 1 с 1 до 4, Task 2 с 2 до 9, Task 3 с 3 до 5, задачи перекрываются; стартуют по порядку, завершаются в любом порядке.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAANAAA8AAAAABYAAAALoAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhobXBwwBmA/U1RBVC4AVBEICoN0gzYBNgIkAxgLDgAEIAU4ByAbLwQAHoPjbolHPsVisZTxfLzRj+D5/b7NOf+uSlRNW8WbWDOJu12xaKHRoFSWUgnFKgnqM8iOnD08bh8SK7tk58A+FGVSpoQaYB9w7+St872gwwFOcDizh9bznX+AXfwjBh4OLE7zMOIBBeLpNp1iV1RYOOmIbhZoBYRUBAiBZjNCsJtJGQUwuBnt64DBXe1AFwxw8HuMbhv7uqDGZIpMAmKrgtANoq6r/tdX53gBK2K1Gv6SrWQddeRHpgSwFe/HOfz8Aildtn+Ul4+Hxa9ks6//faC8kCxAQHYwT8AQdXHjb6IXQR/mvrllgACphpSxDvkCSNTQixXoxVkFrRqlUvxKYIkoMVz2/4qTd33oXS962nVBHxCiqnQg1INWNOML+AEogJoUUva2alg1aRp06mhSni5Jrx7hO0cOzyT84ltRKKJLLx6QifPXnwsC6fzFHTJxu6tdlOVWKQpLW89me9xAYzc2OefvmNMDUSzfk2VhURQtKE9LyyknsCVCGVPI08IL1uGiiIPXt91Q/klRyARjiEsSLX5e231ww/zHRCgoJ8Li05tneHfvlUTjtd/aJ6gt2rub/fq7cu9ET5fXjnF6TgepK9blOtY2D9/6GnenpBvEe2lbjC8PmHTDqa6gMyFwNCs7ZKQzMSe8xCMs3axSV02vcS7SMTXRLcAs48Ji8eXYmHKrqmANx40YR0/fOFf7+BDEd/SdqB6q9mgXXLrlanLb9RLWv7/LZXNOKtyDchqTfEYzM31HmxNzXb5XPX+/ZthGgFVxYJBVcaJ/WEBKgGNJYLB9caov7N5/WItNifQxjylK1/EVtQufjI49/qFxo9fK0M7PypaPieVsAa8QpPUFdrasWjviXyPLfgP+fLa3Afjz82sa7Kq4HGEMQb0Ewcss81sG5W51uwSkPi0YpL34jOSdd7CRJYhPI3YI6s1hQRBfGsCKoo7Uzj5sBFq1O9So2aAOtfoUa9SqWYsBLFBdMw8AAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAATYAA4AAAAAB/AAAASDAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAG4EUHDAGYD9TVEFULgA0EQgKiFyHUQE2AiQDLAsYAAQgBTgHIBtcBlGUTc4CBB+H6dZZRt55kozqLMGqQYQ69P7lkOSw0rILADw1WcsrwUiEKyB4Hj2/nFk5SVMzLtMvazpP/91Ie7J8+Msd3rXx6YGlJxZohPeai8amsQZFmgb00zYFeCwBakvdrhNT8WMAAlgqUh/Tum3n3vhRC2ZOxk8eMXsqngD+CWlt0piZU0mGqBKgEcHeBdcTKEl5alKfjgjRCoYEkrENE39CZTBdZuK3IC4Na5WKv4+FzsLD0aYE8WruVKaqObJHe8njQCNZQQLoIk0DOtWXyFBq8hvsKnzVfUDPXpykOg3M5f83IDgqDFTVdD3TKU4K8thH4BGgCDpv3PjZMYOp1lRWgB5lLIIsesziRkBxoKMBAjR4RLA61sS3EICQjEXSOxE38iAfkAEyBzQkKQZwTERsTOWHBvXeRo2dKVM6I6l0VkbZ9BGL7lNI3gO4xfdA7l30XfwAkncfdtFdkHvvpkuwcuDC1UoucNJvy52bMF0U+HbzBmS1xr1T2dbpduTWXrs9f+HiHunfffmM9XrTcXBH8vSFpSMXDxWw68/I0GXe3nm09r5rx99IlVDGOXVYRqaaDeXTWHnsUuzBvjuwHZRK2HvL3kfukStht4Nnjt29y44bgvciIyObdpNCSWX8GmdX6x0+veIjuhtO2vfd+hBcuHgmcnrzQS7Sd/z86cz5A/b14dubtaWTNt+e9HX1ftl06ZbkDgcfK2ecnjyLODIuVGZFC4QDkYhgoBaW2cKxCre3lNtHEHnSW9ITMYwrYIQSpxTodVgAJQVMLnfQBCbhpE6P/8xgYtAIrPctcTU8AnSei4Aw+Oxw4aBbTCj8YdJvCiN7s4cpqkhmxYp09gwM1eczzOkdw+NjgHQckjQ9oNDVZGxvJqaKWanKzwh8jX1WRDBK2aM/m6WG/k8y/rJbPamZh/0QM0OpYWYekJJGRfc77dmrQkKF6xLD6tTpwIaFuS3Sv3a/SIwlLqx+yFoKmMar42ah8NP5aRt/nIoMEZEGswRToxRCCc5niIbWdk+f9Xh1lOsgSmz2IjKElTfYAXpcoMTqzxG04THhPKy80h0xpUlR4lOmDypgLSo9zw1OioEFFwOzQarE7ijCKE95lZNmNAQIYUq1AscgjTIoV2NaBMYoCCgSNLTE3QkIOgDrOH3GbFqHMA6Yh8Y8DUsfc4wgiWkSZqvVCbMxDUgauW+GG7JRLgY7ECagS5+tY9jtCABpX4dYiDLM+qaFAGc7iwR/DkBTmv0sCPazkxBkyM8ChONMWRKcOJE3J04OWyk1HJ2RZx4zeQz4P+phb4nRXUDTnvIaZ5ApQZ3VrAE0LOhBc8vNRLqKkm1VaSGCgNQaAoJwJRXH4AFY+BABlJZDlo3cOyy98bdkY14CPF9VqjjA8ycvOhLGP3SEXgESUQAEfqakrgQ5yO9dvE8bTovgidENZBIFtS6R9qOELqCijqepTqOh/CLUqTTQydRFAEdbzCHHk6wSkXUJUlDSoFcVCOWP6skYxjGHyYxgJv0YwwTGMZ7ZGACI91ETCg==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAbMAA8AAAAAC8QAAAZ0AAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbgkIcMAZgP1NUQVQqAHQRCAqNIIpAATYCJANYCy4ABCAFUAcgGy8JUZQwUjnEFwc2nbLwlb1saGzP8dmLCpagaFZXf6yPRWMO4+Frv9dz79sXoA2TynyV8dTWsSWQja8EG6ErK1QloBMVDnh/wNP+FQMrpXRKpT0WHpWOyA7Ah4R75n53s/e52xDVCCl8c1JhdauoyqRFElAgIPcfAP5nbdb74NEkEcVShNbuPvoRlSXRePRpXIl7S2ssiiezurYUCbXMdssksZrSVzCn9YD1NQuBCeAeOrNIBFoShJSQ87ljDnhRLq1NlYD9mJibAPZZ/8IUsFHhh2XNk+G5KahNLxdpMKcxr2iXTmLCkYSCOcehS+BIsWLvapIJqfuj0tuNGDdpSjWNhWS+/U4U7SdSexPNJrLiEM3FyIhcAwUYMgmDy78SMfptypiOjazAGNRjQDQTwvtkgQHn7h4r2+/iMTkKAQIiPm8i7mQ64lmQUeFtoveARSiRSnh4dsk50q9k8lxoA3BZ3D/ugd3fwDMDPvnGzUIRHgRZyVKe/v8CQHmHGQABWcmPANvqhDAiMI+EdeSneGUh0p+wJObiV2Cq0gXHKUlVqgcYpW/K6dsFLa7iLf4Sp66jJqnZxaBDYS8eYZDJzFb7Nt6Pb18+fXj15KGAOTDjf7MqoBAG460gi7v4bmC8iHg0cTwEPvFNIN5aANg/X1WVAqrM6M7WNDU725OfXe3JK8zSpMJsuqHPcD53Ub/7cpn13U8y9peLaeo+1rRtmPzLz/d+071D9LLVAmycsHynlxswvlz/YIPtd4v8bB6tob56eEiEKlY6hQ9lWQNV8KF5tjVXNuXimI6awECoQq9IfVb58PR0c8pwHNTdt663q/uH89UJ+wNPfDor42nLikzefpLxfl0eueC2kkdOHtx09b7AxSyhusS4Py6muYHu9nEDtnsObHD9brHMwtBaUYQlEvuX84OmI4AD7A2Rn+DO+AJOU5DCAqFhDxJMax6wLL+pplA3p8iAFAA2nLTEEgm+VvRtBR5OxuNpK0TMvzIx3LCGJj+HqZhu1SIXsEioAU4z3+664hyKcNDidc3zx/ek4X6PI6SQk2QzJ3NPTcjSXHGlzE7M2v/609FWHaVkllJJHT8BBW7UXUUm8DgzPHxcdcYbOWXB8jf24IE95atec5Hp/lqHhh/ONZteaMdRI+/uLwcnRk5/eT1dk+wKGKbT4nZKdOL6txtazDGJX88heK+EuoWimz6ESH1/N1F7qN4o/Ov5DsSEWQz/lOMM1Rnte5GvnxOKNnfezJnO5JivXnc1X6b7lXcGkTrbVX8LMF/+iWxErg6kyF3SWsfqvlsTfw6fN36e8o+2B7Wkbj2v8x8+TV+cjntXsjk/MbMmF2gzBDeKuin1lPotWkXsd+tq48RS5VEs0SPNB6qR1wbLY41KVb32ajOmPMc87L3uMF/YEZUi97yF9JRSLPfzQo7g2XcEPEHAO+SLYr0iVLWm6XiTXvE5/KDGzKauz9MMiFR8cbyr7UesT9bPb+YTaD3mnbaTby9d+9ft8yvH3xx46zpp98w/5//ZWfGT17Ik17FPCWu9/8v7+HOV1395HfR9YRbzE7m8f2U2USx0LR+Rzz7TZ7BClxuzSrMoKs2J89yuuFWSU1OSLPzPIFIfqfgtv90i/PGFAWryrk6dMzO8zkak03aisiav/eB9xj9nLrh/FF232pBcFHXb4qgij9pkuYQZlH1xKu5eyWa8q3Nry/52jXfjPvzJR/SemAPJm62SbBR16eKKs8YOxDb2KeGeW27ueqbr5lug8NyyJ8f9RE5cevXuq+ePX8PFLDNo/tLsbU+iMPOl/Ikg2WZR967fjq/q//zftnrbqT9WaHBcR+9vtyZpQ++jFhl2ZpJpLrUbpMXz+sSisPQSzsaJP2ijNPjZzxKrdUM9b+M0/O2e6phvuOJNFmYS3pV81kNMx0ud7ugG4HrmO2NWJGdDO7Z8GZCcPzMdTQbs4thSim79kIbfM07c/SnjkknRZR82Czce/GA3AoBn7U+IdOHNjkuf7KUFv9VSKF8Cvp6tlImXffLFRqhrgn9LLjD02Yr5fKS69QCZYUyc5Lsupgo7rcypF4lHRbITWBlmzFrYyXYT8Tt4DCJUclEMoXehiTHeUyfOb04eXd6H8g6ZGSVJMIHAIg8KCHxW5wBFlDpIU6gOJDBhCljHryoYhls0od+cVqJRGlcsSCMNYX3R5KsOpN3GjgEA) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAQAAA8AAAAABywAAAOpAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbIBxaBmA/U1RBVF4AZBEICoYQhRUBNgIkAzALGgAEIAVyByAbkAUgnoWxe6LZikHpi/pYX8wRRHb//9WzezXzAPgzVHruj0DEiuAghCM5g/ence8b5bsP+b48qm59cREOdQ5tC4ls0rkxSm0w0JAc6n5IKU3V+T+XLkp0z9dgoxEP8DosMp9/4BM70ORIjPSjI5zo0dlmm9SO6mXq5eYg6mMEegCSJNRCuywEshFGiQ0Mngyi1dA0gEC2wDqhKZMTryZjfshOpOOAhFuso5AYuTpg8UI0CKpde2dhNO1Sq9ORkDuljXSzHgGwXZbHKWiNNQCJLqoMf2LbOgBv22u8+vd/UP0bMxCQJqXPMEabEDolDFBhgnS9wzkWgiuuId6Q3kK7YaZJSFHHnSJOAcS7qGh/ep2CA+yzIDg5qwL2cLWt7QH66KPCXoSNi9eo8aYhkZG+5oXmqebx5pGbuvub+wRQJJtG70DaAwyh/DMxnwIHvFxrGmIL44RLDek1sgzLufegmanxZxUZK/fmm/ujqLrn43ILP5Ra2HJQsfoxGe98M+DhwRxLIF9KdP/NPyIn10g58uBTB0ugcLXe2bmIyOmhRWmt0eWDD47HfNP1LFGqHD1T0XOALuyrW1mK0mb8B5ZnhxjrW84i996o8tARzy1Fp9aiQ1erWeEWjs0Pe843h5YtPHj5od2a8xNRlVTYPv6puOrmN6N7l1tSK557+coX7qvf7lxvbu8wYUTpMLYYlUba3VUoiNpjYY0dffHX8k3sATTIYPVJjDWIBoi3w0/XYYuKx7co5TuL518smYurKZroTaNSpdFHZDMqV9KvK07QOxlIPNQq2Jo5t67x2vSutaa2dsPQ2poFerHhK6dHRNFxnJM20P594Vj0hjFRFaUCI/rgAKbjgggH953e8L76g1eYnMOsqKI3vfQv6z9Uqig+3CcwSeXKyEdqnoantHv1JZocPEjr7UF0ZIDcjiX7SpO2a3S4vrajt7zs/qOtZU/CLhaDoxcZKoVG9vqxo/9TJ7XdTBq3uLG1HEnYw2XxTAoz1HadHg4Sg8YwOETr6ka0waYtGQ1C3Y1j9xYUSkpKJIUFYoicpA3tSu++NMNBkKZXXe4Nr30XSIvqf+a9VJ9OWvFbZ1V9D5+/93zw7VffbVPY7Bgopl0Cw3frSUcSqP9vGyNovkc6AhqxigyM5eRwIRxANGngmz9cYaZkEEBqpIRt1gkTdVeoFyEj6KEXWD+Ce+PDfqQ+skn2sXEY50WMULJxcXAawzaG8HKxkAjwIfzCgOaiVgQFAA==) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="720" height="564" rx="16" fill="#14151c"/>
+<rect x="24" y="24" width="672" height="204" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="40" y="40" width="330" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="205.0" y="54.0" text-anchor="middle" dominant-baseline="central">Serial: задачи строго друг за другом</text>
+<text class="m" x="40" y="114.0" text-anchor="start" dominant-baseline="central">serialQueue</text>
+<line x1="150" y1="136" x2="680.0" y2="136" stroke="#fff" stroke-opacity="0.08"/>
+<rect x="150.0" y="92" width="144.54545454545453" height="44" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="222.27272727272725" y="114.0" text-anchor="middle" dominant-baseline="central">Task 0</text>
+<rect x="294.5454545454545" y="92" width="96.36363636363636" height="44" rx="8" fill="#fff" fill-opacity="0.20" stroke="#fff" stroke-opacity="0.30"/>
+<text class="t" x="342.7272727272727" y="114.0" text-anchor="middle" dominant-baseline="central">Task 1</text>
+<rect x="390.9090909090909" y="92" width="192.72727272727272" height="44" rx="8" fill="#fff" fill-opacity="0.30" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="487.27272727272725" y="114.0" text-anchor="middle" dominant-baseline="central">Task 2</text>
+<rect x="583.6363636363636" y="92" width="96.36363636363636" height="44" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="631.8181818181818" y="114.0" text-anchor="middle" dominant-baseline="central">Task 3</text>
+<line x1="150" y1="148" x2="680.0" y2="148" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<line x1="150.0" y1="144" x2="150.0" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="150.0" y="166" text-anchor="middle" dominant-baseline="central">0</text>
+<line x1="198.1818181818182" y1="144" x2="198.1818181818182" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="198.1818181818182" y="166" text-anchor="middle" dominant-baseline="central">1</text>
+<line x1="246.36363636363637" y1="144" x2="246.36363636363637" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="246.36363636363637" y="166" text-anchor="middle" dominant-baseline="central">2</text>
+<line x1="294.5454545454545" y1="144" x2="294.5454545454545" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="294.5454545454545" y="166" text-anchor="middle" dominant-baseline="central">3</text>
+<line x1="342.72727272727275" y1="144" x2="342.72727272727275" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="342.72727272727275" y="166" text-anchor="middle" dominant-baseline="central">4</text>
+<line x1="390.9090909090909" y1="144" x2="390.9090909090909" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="390.9090909090909" y="166" text-anchor="middle" dominant-baseline="central">5</text>
+<line x1="439.09090909090907" y1="144" x2="439.09090909090907" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="439.09090909090907" y="166" text-anchor="middle" dominant-baseline="central">6</text>
+<line x1="487.27272727272725" y1="144" x2="487.27272727272725" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="487.27272727272725" y="166" text-anchor="middle" dominant-baseline="central">7</text>
+<line x1="535.4545454545455" y1="144" x2="535.4545454545455" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="535.4545454545455" y="166" text-anchor="middle" dominant-baseline="central">8</text>
+<line x1="583.6363636363636" y1="144" x2="583.6363636363636" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="583.6363636363636" y="166" text-anchor="middle" dominant-baseline="central">9</text>
+<line x1="631.8181818181818" y1="144" x2="631.8181818181818" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="631.8181818181818" y="166" text-anchor="middle" dominant-baseline="central">10</text>
+<line x1="680.0" y1="144" x2="680.0" y2="152" stroke="#a4a6b0"/>
+<text class="s" x="680.0" y="166" text-anchor="middle" dominant-baseline="central">11</text>
+<text class="s" x="680.0" y="186" text-anchor="end" dominant-baseline="central">время</text>
+<rect x="24" y="244" width="672" height="300" rx="24" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="40" y="260" width="360" height="28" rx="14" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="220.0" y="274.0" text-anchor="middle" dominant-baseline="central">Concurrent: задачи перекрываются во времени</text>
+<text class="t" x="40" y="326.0" text-anchor="start" dominant-baseline="central">Task 0</text>
+<line x1="150" y1="344" x2="680.0" y2="344" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="40" y="370.0" text-anchor="start" dominant-baseline="central">Task 1</text>
+<line x1="150" y1="388" x2="680.0" y2="388" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="40" y="414.0" text-anchor="start" dominant-baseline="central">Task 2</text>
+<line x1="150" y1="432" x2="680.0" y2="432" stroke="#fff" stroke-opacity="0.08"/>
+<text class="t" x="40" y="458.0" text-anchor="start" dominant-baseline="central">Task 3</text>
+<line x1="150" y1="476" x2="680.0" y2="476" stroke="#fff" stroke-opacity="0.08"/>
+<rect x="150.0" y="308" width="289.09090909090907" height="36" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<rect x="198.1818181818182" y="352" width="144.54545454545453" height="36" rx="8" fill="#fff" fill-opacity="0.20" stroke="#fff" stroke-opacity="0.30"/>
+<rect x="246.36363636363637" y="396" width="337.27272727272725" height="36" rx="8" fill="#fff" fill-opacity="0.30" stroke="#fff" stroke-opacity="0.45"/>
+<rect x="294.5454545454545" y="440" width="96.36363636363636" height="36" rx="8" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.12"/>
+<line x1="150" y1="484" x2="680.0" y2="484" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" marker-end="url(#a)"/>
+<line x1="150.0" y1="480" x2="150.0" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="150.0" y="502" text-anchor="middle" dominant-baseline="central">0</text>
+<line x1="198.1818181818182" y1="480" x2="198.1818181818182" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="198.1818181818182" y="502" text-anchor="middle" dominant-baseline="central">1</text>
+<line x1="246.36363636363637" y1="480" x2="246.36363636363637" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="246.36363636363637" y="502" text-anchor="middle" dominant-baseline="central">2</text>
+<line x1="294.5454545454545" y1="480" x2="294.5454545454545" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="294.5454545454545" y="502" text-anchor="middle" dominant-baseline="central">3</text>
+<line x1="342.72727272727275" y1="480" x2="342.72727272727275" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="342.72727272727275" y="502" text-anchor="middle" dominant-baseline="central">4</text>
+<line x1="390.9090909090909" y1="480" x2="390.9090909090909" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="390.9090909090909" y="502" text-anchor="middle" dominant-baseline="central">5</text>
+<line x1="439.09090909090907" y1="480" x2="439.09090909090907" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="439.09090909090907" y="502" text-anchor="middle" dominant-baseline="central">6</text>
+<line x1="487.27272727272725" y1="480" x2="487.27272727272725" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="487.27272727272725" y="502" text-anchor="middle" dominant-baseline="central">7</text>
+<line x1="535.4545454545455" y1="480" x2="535.4545454545455" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="535.4545454545455" y="502" text-anchor="middle" dominant-baseline="central">8</text>
+<line x1="583.6363636363636" y1="480" x2="583.6363636363636" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="583.6363636363636" y="502" text-anchor="middle" dominant-baseline="central">9</text>
+<line x1="631.8181818181818" y1="480" x2="631.8181818181818" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="631.8181818181818" y="502" text-anchor="middle" dominant-baseline="central">10</text>
+<line x1="680.0" y1="480" x2="680.0" y2="488" stroke="#a4a6b0"/>
+<text class="s" x="680.0" y="502" text-anchor="middle" dominant-baseline="central">11</text>
+<text class="s" x="680.0" y="522" text-anchor="end" dominant-baseline="central">время</text>
+</svg>
