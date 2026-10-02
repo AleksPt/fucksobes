@@ -31,7 +31,7 @@ for (index, value) in array.enumerated() {     // index and value
 }
 ```
 
-**`count` and `capacity`.** `count` is how many elements there are now, `capacity` is how many fit without reallocating memory. When `count` hits `capacity`, the array allocates a larger buffer (typically twice as large) and copies the elements. If you know the size in advance, `reserveCapacity` creates the buffer right away:
+**`count` and `capacity`.** `count` is how many elements there are now, `capacity` is how many fit without reallocating memory. When `count` hits `capacity`, the array allocates a larger buffer (typically several times larger) and copies the elements. If you know the size in advance, `reserveCapacity` creates the buffer right away:
 
 ```swift
 var numbers = [Int]()

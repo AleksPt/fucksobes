@@ -9,7 +9,7 @@ order: 3
 > - Как устроена двухфазная инициализация и 4 проверки безопасности
 > - Правила делегирования и наследования инициализаторов
 > - `override`, `super`, `final`, `required`
-> - Пять (и один новый) уровней доступа: `open`, `public`, `package`, `internal`, `fileprivate`, `private`
+> - 6 уровней доступа: `open`, `public`, `package`, `internal`, `fileprivate`, `private`
 
 > **Нужно знать заранее:** [тутор 01](../structs-classes-enums/) — struct, class, `deinit`; [тутор 02](../properties-wrappers/) — свойства.
 
