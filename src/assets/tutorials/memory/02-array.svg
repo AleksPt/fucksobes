@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="280" viewBox="0 0 740 280" role="img">
+<title>Массив: шапка в стеке, элементы в куче</title>
+<desc>numbers указывает на буфер count=3 с элементами 1, 2, 3. people указывает на буфер count=2 с двумя ссылками на объекты Person Alice и Person Bob.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAHAAA8AAAAAA5AAAAFsAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhQbahwwBmA/U1RBVC4ANBEICjRMATYCJAMICwYABCAFOAcgG50CAC4KbGPa4A0RLGKoSTnYRVxowrH6L0YUrWX13D5wSIU1ggQLZIx4I4I+36n/soYd5kUgHA6FxrQ9WuEGscNKVC0BcLmrba8Sx3t6GySOJtFYJAvjtO8RkshL+f9c+/S0LQgw0UgzDyQwDLi2QBL5djzYBQ923aHtmB0dKUrUCKaA6O8ZO3CnyzhuANqcHhPoqH5bQDX4J8iwPhZICKIpQzFUNjRs2hWFhYioa/rICZpkTgBo0Z5cetSqcoCnOkwFli/IQXrPez6eHo6Lff/TjskCAhUwH+wbiRgKNgTbatx2NwKUDqUiF3UEhQ4bOsGGZh9NEzyEYrHwKiASskAUaChMsAZogEqz6qj2SqQFsZ4pwnvZe1du9x7B0h7gHkF57Pz7F9XA/g079gfLDfuw/Dy/xtS6HugrEP7hdZiAsW2mAKioYQNXgjJRIFJVdnUSl1Hm9G8jMDX3qda6m+QOsVqv1blhgf9cAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAOcAA8AAAAABnAAAANCAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgWQcMAZgP1NUQVQuAGQRCAqEQINbATYCJAMkCxQABCAFOAcgG/QEUVRMVkL8SKgqe4dwlq3H6tSpy9cew3gVU4fxu3j+cez13Jd8SgFVWRKo8sACC6Nn7YTnw7qqenqZrAC/7KPIE8/J/m6DWSqJJElYkhQ27oU4iAMZ2AS76W++1j5PJcQxgaNe1MUbQyzAPc4DTTShBRYI/2HzUlh+hTKHzZ8hWAaUiLkIhlN32tHKwQM4LrlpCcBxC81IAg4d/v8X5BqZlgR0CKIrc2V4Ees6mh3HLkUzNTPXpOeUYWaIeb+JWb8p1zpefEelY9KP8P+jtZ4DDPh/zrGYiDIxM39CNlCgLVAlMDThDOcun4kKkUKyrdAjlBYT6l0+AN5No+QMan4hepz088nNHfa94TH+/ufpa5wABOpAOYwji+u/s23BnnpGx2QQUBpKDS3UCgoN25pgW/cZWLeu4Q1zlmzYc+HRBiH3Y/vtXne73c2udlnwVSP9bw2xAJsY+IGfgP6BoAjOljO5RJSBgZGR3pgOx+NY5MXg4c3oF1p37RpRev06rr96VRSNXUN1V67AIkzIuH5ZGI80C6ZmhGUDk2MwhZHEVIhkoCQf9sc+vsgPMQfhg+XKFYSgbTeJ0msIweteePAinnI4qM1uSq2WBL2pzdkxovT63uljgSca2q1VR9anoWRmQ3Ljqu3kyZ0FMO7wKkQww+iI5lAh9aEg7e5+Dx7PJFqbIYM2sSXAaiw2xnqsJSjJKUXF0vOkz+MwQ3uPKCflIjsn1dJYBzc1J37z1uCXDl6ZyuB9+LZzxbtAl8DnFc4+8DbJN1FVPV+dPgWrmGeWEX+D/odH31VMUQLvw1+dktX0ol2cLOKyNZ0aXurUuEY4eDu42rv1gSeteZaEuweTlf+dh65ssrJWXIdlRaJr1uzdmV04RWQVqh4KKfKb/v1twyBpGCdh5Uqx9LS9b84uJVD7YlOUTxrpfM5gE70pKC0moiftYqnqxwkfMx47Czo/zgB4lQCBeMvK+/5JMLPBV7pGvgDsfeIiAOyPH7wmGf2RrjqNqQLhN/tqM4x0bQyazyICtjO07N93nTDwzqbwHX4MfdxH16pg4RVwwFBt5UCTiR7KKi4gwLI81FeRomVKECqNt0ixosXIQAL/V9xiAAAA) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="740" height="280" rx="16" fill="#14151c"/>
+<text class="s" x="40" y="28" text-anchor="start" dominant-baseline="central">STACK</text>
+<text class="s" x="300" y="28" text-anchor="start" dominant-baseline="central">HEAP</text>
+<rect x="40" y="50" width="150" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="115.0" y="70.0" text-anchor="middle" dominant-baseline="central">numbers</text>
+<path d="M194 70 H296" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="300" y="50" width="90" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="345.0" y="70.0" text-anchor="middle" dominant-baseline="central">count=3</text>
+<rect x="390" y="50" width="50" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="415.0" y="70.0" text-anchor="middle" dominant-baseline="central">1</text>
+<rect x="440" y="50" width="50" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="465.0" y="70.0" text-anchor="middle" dominant-baseline="central">2</text>
+<rect x="490" y="50" width="50" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="515.0" y="70.0" text-anchor="middle" dominant-baseline="central">3</text>
+<rect x="40" y="130" width="150" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="115.0" y="150.0" text-anchor="middle" dominant-baseline="central">people</text>
+<path d="M194 150 H296" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="300" y="130" width="90" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="345.0" y="150.0" text-anchor="middle" dominant-baseline="central">count=2</text>
+<rect x="390" y="130" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="455.0" y="150.0" text-anchor="middle" dominant-baseline="central">ref</text>
+<rect x="520" y="130" width="130" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="585.0" y="150.0" text-anchor="middle" dominant-baseline="central">ref</text>
+<rect x="395" y="220" width="120" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="455.0" y="240.0" text-anchor="middle" dominant-baseline="central">Person Alice</text>
+<rect x="525" y="220" width="120" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="585.0" y="240.0" text-anchor="middle" dominant-baseline="central">Person Bob</text>
+<path d="M455 172 V216" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M585 172 V216" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>

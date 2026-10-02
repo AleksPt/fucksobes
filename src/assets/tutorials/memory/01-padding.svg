@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="236" viewBox="0 0 740 236" role="img">
+<title>size и stride структуры Point</title>
+<desc>Байты 0–7 x, 8–15 y, 16 isFilled, 17–23 выравнивание. size = 17, stride = 24.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0400-04FF;src:url(data:font/woff2;base64,d09GMgABAAAAAAFsAA4AAAAAAwQAAAEXAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcMAZgP1NUQVQqADQRCAoBLAE2AiQDCAsGAAQgBVAHIBszAqCeB7aNan2CY8mnGhYjHp72R3/uzFsiCQnMmwB8UKH+mKGUoCynhDJ9A2g+j8t/71o3OA4hokR1DGxdKNJxEB06Y03+xLGyVoFKbTrE9OzytnIF/AcIVBo0LM+55lMPbl7WcfnE7as6Tj0o0s34ooT0MO1jyd6Ko8b9AgAEAKwf2NzyjC5duX9RPIpVBKS69BJdKoRQLtAs0CbdO3f+dkASEE0xSMholgWaFbpQKAS6/tNi/18JEOI/dSCBAgCo5gLJ5OqnuvZjdRNfy3P+CO/t7YL3DwClEgjeTKQ+IH+EkVKf5oBAAiJUWb8sigpJLZGCarVoOqnFpjPOueOyE27ac8YF55x324ozTrvgjisy8D/jAAAAAA==) format('woff2')}@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAATsAA8AAAAACJQAAASUAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgWocfAZgP1NUQVQqAHQRCAqHOIVnATYCJANECyQABCAFUAcgG5wGUVRrDqD4eWAbkxt9iRpLja+mt14bFUI5OSn8NQ+6mLFdDP6fxn3nvplPrtHkZicIuWzdFjdkG4SXzSbHbE2kV1APEjxPXO3tlp+kgVyWnTe2HnjIi1HETRj2GxDiJeD8X1Mvkkqvn7fQodaa/rR1o6JI1AF9WlklD2EiRUTDWTcK8UhplLE9PpIc93NGIA4AjBFHAiJEIKrdIDeOmF0lf+u8uyBfFT5ckecB//8RoHvp3RVhYARM0A0TZqLqSZwHkiUSIuH8MGp50K6T8QAA+P8GVBPHBIVIkIhImAgAGHFMmIRJmgdOuUbtxImJSzAxKfF8EHF5TlRePC/yqglErTu4F6+m61EsAQgMcsZq1Y9SVoMwCd4W58GrbMrM2Gukqn7/IieFepRc+CbcdnF8aakvhLCnbQJmaBod0ekL/PKgxc3yCh+MvDXe//Pga80DBLAWcxioFXmbAXkarWSP8pMH+TI36ukLwCA4kOfGCt4O3ZvmeLU6desz4tCpB28JUKujhh5gd8+Zb27mRq7lUuZmVqZkPEG7KKHI3gyAegC1ojEFlKJ5FJexBAlHqGUxrzKvurKBVJD1U+e4asqGvI/vjrp2jQy8fp2OPnrSmlAfXV9x5kjG6OvXycBr17hRF65gwMKDJ3vTV3Gm0YAZanJzr56lo4/v1qULrlzJnXfoHDfqzAE9Kox5VV1bff54iz6aghsFgBmN5w4Z0Jk7jxro9u2rycBVyyyWHbPYVtLJwMPnr9euXjXmZkXIliUrYOVW861Xk669G+HAmSvy+6tsVDGHsD6HAXsphZJjOZKgRB5UGNX78fO2vlMbqy9f3kwGXtNFPW7xwasw4MoVvzR5yJO4jimzpl5E2di5zVfkhiD7nxSO2kcG7qej98IeVWFiWYRLZ1y8a1dlRLLB2TjLD+WHi9lInZD/5bqGOBsnOzkbJYQ4uHl80Et2Nvtn1AWLQGp9qFdHYpJPZ0N4kn+2nU+sLq9MVbleS5Pgb9eRq2mrOBISJjNM9hXpbbJxOCpnisBUuSICU4WC2ADX+yZSJXGxkXeMvUmy+z+wwqZo+c81X9k+1l5bMVQ/R1NF413xso6t3h8qHa2lU6KVrd3TjT2DgwtzBtoqmv31UlO1TmzRSFAYLnk42NyJfxwnD53RWBPTWH9xKp86o3zGUH7or+t7WPOwXbWSWfNrU2wKbHksdhwX2/g3x9jT0N28uzMlSeu9sU9YoK9LmM3Smp7I+AoL75ByR18+NNCxMCHx6pxBiYWYN7IjKfXl2FspBSkji1/8bkS2VmFV4YNU7XpEbcpbnLeIlS2WId0gTF8/TV93iL5+CQQWEAAQQelOmKkGAEeAbcxNurb6LwwAg5De7efi8hX9vkqc+wSAZ7NMjWj3x/f+Z29+2RZzE4AIDACAAD8dMF09yJ5wdBIwZTODmhXD1gIynWdwJBtIjHreR/+YqhHaxmKrFqibG3StCxb6TZEUKmB9pvC/l0DGMJNmBLHodto5akqLSQgmAuKSqOpXKrfs0LFHF3bd2XDo1LETD+YcOnDq0SUHgP+tOgEA) format('woff2')}@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,d09GMgABAAAAAAW0AA8AAAAAClQAAAVaAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGiIbIBwqBmA/U1RBVF4AgRwRCAqMHIl7ATYCJAMqCyoABCAFcgcgG/4HUZROzkAAXxzwZHgmL1gbEMRiZNAW2LR5+TbbJxD6uuqhx6D/2q+3z51ZmjcPPiCHWCK4VFSMzK4LkJRxkZ9IBtDG0U959b0MVCOowaTSoD8I34TdPS4Pn7e33Qa7iYwC7LxLIAooDzzgCKPMo85//n8D5H8Z09+PzcrHKxGqeahESqPEh4pMpa7tKGm3kNSbaCROrC6FhbLZXKIBsEmpjRM81L322ntAIAIA44gRr0JqakQg6NVPq1RthgQe8B8AwNDHTbL1pR6BYQMgH4nYyOeHxDsq7PLSAFyp22uHznQBwFDTydchB15eAHjP4Bh3f/5t4YmoGRzVJju47aASkSoDrRwYZWfPXsMI4I8w2xA5UtZtupQseb07wVqgF3Bxlz0xpGwBnAiZxe1g0vhv9p6BfgUnM2jZESeccolYUEQ/Aw03eoz/BwYtOuIYBo0C/SV+B1575aWLLthso9VWWmLRv0A6CVGQo0mrEybBAPSB3RSL56Bj5qILyeJIHQc+2KGl1WLoyLpD3pw1d+rGWUx6Ynus9fTGmNXtk1Lycpv61pZUH7Yde9L9aPeuGjshyFEBY9tgCKPTvsdzdjQVCLWBu32ysYuzgxjuY5AaXmxBfbuBQsi4i1CoIYbB61oduC56tuUCOlNS+UF0UOrr5xEiTbXqHBonohNzlKdROld+hlxOZFm+Omfl2jwbsjuSrCvW5C5blW222LzIsXr9XGljkQv1WpsYTTB8NMauYptzgZh8Ec09D5POISIp3SVsKCYB6cFTqFo8YXcFkE3N5hRIUdQTFIYMk+0A0tXlQvacvUDVLmoBmYj6JkOSUtzwgM12FoB5gh65OJYktTi5VtD07Yyn1lje84zL7X59YM4egmjsVftuUNldydJo2J43D8ODQo7OBoW6Tp+2yNzSauEJu1y+dtF0/ThSTnP5ciU5TjuCSwsYDCzgjgT3m/OyHgx2QFQlYgedTWRBXYhWKugqPLhaCFSJYoOczM7s7Xzj3ESMy84WGhUiU6i/b7O3SAzScLCIWkFxcliURLhC2A9Nidjf1e0lZ+zdHjLiwOU8VMDKwFgs6P4v7EwQD9PX0TU45ykEWIJLYmFku6ymTtL287Qxi6y0lh80QlM87evo9uIldD6wkWYOD16Ku71xrONhsi+hBkEel2YYXAIaE32DBwW8Tq+QFLPYlFjYnklg6CDovFJ4IqlPv919brPqbvfpv7v3CXS5q8/wo33uydk/xow4CoeP6p/fjQ5PNPkvkOQF/UhTIPU1M4miYDfDjyma4SO/SBxoHD6awgx/P63my9UCSiC/tTSC96uIKC6Coo9vVkyA03hDcH1peNuYsbO2GMHt/vBjXpe3WUBLuJRcRjoJzPaHu0S0v7PLg4V4tFJz9LTGCGs2KeeX7wvWX6z/c8S5DZoTpb24nN5SVmnvTydqww9UnU24pIFvY7VFpFJO7x5cqY7SmBuYhXq3hdMxM7P7OS/ctP/f+A7DbGXYeFjqUVf7W4+1iRraPzOZX9rrW0VT/S26apmXdozoFdYJpEJGU4tkm69VVytzkOwOg6uJJAnoCmxSZjfW+1qnNosbmVISmlbXvKqsfFVTe6uuvlWzNbApfK/lni+QFpzPzdtvK/cvNemd74AJ4Gl8SsBmr/HkxaP8zO+EaPcN4HBjxxrgy8ePQH9k4/YZKDMAws+K3TYE2fIApDNotuDk4TaDBQdtM6dOx93kJL8oYvrSa84gn97qODdY6E4quSSaSg2TwRcSRNlyP4dyQvf/WxCMuy2ip+H6CRjCJqK3nnoZRmGYgH56CzEaqL+AAaIB8H86TwUAAAA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="740" height="236" rx="16" fill="#14151c"/>
+<rect x="60" y="56" width="160" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="140.0" y="78.0" text-anchor="middle" dominant-baseline="central">x: Double</text>
+<rect x="220" y="56" width="160" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="300.0" y="78.0" text-anchor="middle" dominant-baseline="central">y: Double</text>
+<rect x="380" y="56" width="20" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="m" x="390.0" y="78.0" text-anchor="middle" dominant-baseline="central"></text>
+<rect x="400" y="56" width="140" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45" stroke-dasharray="4 4"/>
+<text class="m" x="470.0" y="78.0" text-anchor="middle" dominant-baseline="central">пусто</text>
+<rect x="540" y="56" width="160" height="44" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="m" x="620.0" y="78.0" text-anchor="middle" dominant-baseline="central">x…</text>
+<text class="ms" x="390.0" y="42" text-anchor="middle" dominant-baseline="central">Bool</text>
+<text class="ms" x="60" y="114" text-anchor="middle" dominant-baseline="central">0</text>
+<text class="ms" x="220" y="114" text-anchor="middle" dominant-baseline="central">8</text>
+<text class="ms" x="380" y="114" text-anchor="middle" dominant-baseline="central">16</text>
+<text class="ms" x="400" y="114" text-anchor="middle" dominant-baseline="central">17</text>
+<text class="ms" x="540" y="114" text-anchor="middle" dominant-baseline="central">24</text>
+<path d="M60 140 V148 H400 V140" fill="none" stroke="#5c5e6a" stroke-width="1.5"/>
+<text class="t" x="230.0" y="166" text-anchor="middle" dominant-baseline="central">size = 17</text>
+<path d="M60 182 V190 H540 V182" fill="none" stroke="#5c5e6a" stroke-width="1.5"/>
+<text class="t" x="300" y="208" text-anchor="middle" dominant-baseline="central">stride = 24</text>
+</svg>
