@@ -15,7 +15,7 @@ In VIPER (View, Interactor, Presenter, Entity, Router), a module consists of sev
 
 Dependencies are injected in two places:
 
-1. **When the module is assembled.** This is usually done by an `Assembly`/`Builder` (often also the module's composition root): it creates all the parts, connects them, and returns a ready `UIViewController`. The parts receive each other through an initializer or properties, and the back references (for example, `view` in the presenter) are made `weak` to avoid a retain cycle.
+1. **When the module is assembled.** This is done by an `Assembly`/`Builder` (often also the module's composition root) or, as in classic VIPER, by the `Router` (Wireframe) itself; both options are acceptable. The assembler creates all the parts, connects them, and returns a ready `UIViewController`. The parts receive each other through an initializer or properties, and the back references (for example, `view` in the presenter) are made `weak` to avoid a retain cycle.
 2. **For services.** The Interactor accepts service protocols (`NetworkClient`, `Storage`) through `init`, and their implementations come from a shared DI container or from the parent assembly.
 
 ```swift

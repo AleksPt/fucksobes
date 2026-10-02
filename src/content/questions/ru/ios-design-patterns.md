@@ -21,6 +21,6 @@ order: 71
 
 - **Порождающие (Creational):** Singleton, Factory Method, Abstract Factory, Builder, Prototype.
 - **Структурные (Structural):** Adapter, Decorator, Facade, Composite, Proxy, Bridge, Flyweight.
-- **Поведенческие (Behavioral):** Observer, Strategy, Command, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor, Iterator.
+- **Поведенческие (Behavioral):** Observer, Strategy, Command, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor, Iterator, Interpreter.
 
-В iOS многие из них скрыты за архитектурными подходами: MVC/MVVM используют Observer и Delegate, DI-контейнеры — Factory, а Coordinator — по сути Mediator для навигации.
+В iOS многие из них скрыты за архитектурными подходами: MVC/MVVM используют Observer и Delegate, DI-контейнеры — Factory, а Coordinator берёт на себя навигацию между экранами (по духу близок к Mediator, но это не отдельный паттерн GoF).
