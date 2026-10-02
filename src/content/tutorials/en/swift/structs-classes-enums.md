@@ -164,7 +164,7 @@ After `var b = a`, two structs point to a single `Storage`, so `isKnownUniquelyR
 
 </details>
 
-> COW by itself does not make code thread-safe: mutating one variable from two threads at the same time is a data race (see the concurrency tutorial, chapter «Concurrency problems»).
+> COW by itself does not make code thread-safe: mutating one variable from two threads at the same time is a data race (see the concurrency tutorial, [chapter «Concurrency problems»](../../concurrency/concurrency-problems/)).
 
 ## Step 5. The deinitializer
 

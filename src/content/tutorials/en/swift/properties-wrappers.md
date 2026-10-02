@@ -89,7 +89,7 @@ print(manager.importer.filename)     // heavy initialization → data.txt
 - Useful when the value is expensive or depends on state that is unknown during initialization. Inside the initializer closure you can refer to `self`.
 - **It doesn't always save memory:** once created, the value stays alive, and the "has it been created" check is performed on every access.
 
-> `lazy` is **not thread-safe**: if several threads access a not-yet-initialized property at the same time, there is no guarantee that initialization runs only once. Synchronization is needed (tutorial «Thread safety» in the concurrency topic).
+> `lazy` is **not thread-safe**: if several threads access a not-yet-initialized property at the same time, there is no guarantee that initialization runs only once. Synchronization is needed ([tutorial «Thread safety»](../../concurrency/thread-safety-synchronization/) in the concurrency topic).
 
 ## Step 4. Type properties: static and class
 

@@ -173,7 +173,7 @@ vm = nil                  // deinit will fire
 
 Since Swift 5.3 (SE-0269) in an `@escaping` closure you can omit `self.` if `self` is in the capture list (`[self]`) or if `self` is a value type. Since Swift 5.8 (SE-0365) this also works after `[weak self]` + `guard let self`.
 
-> GCD closures (`DispatchQueue.async`) do not create a retain cycle: the queue holds the closure only until it runs, and the object does not store the queue-closure pair. `[weak self]` is needed there only if you don't want to extend the object's lifetime (tutorial «GCD» in the «Concurrency» topic).
+> GCD closures (`DispatchQueue.async`) do not create a retain cycle: the queue holds the closure only until it runs, and the object does not store the queue-closure pair. `[weak self]` is needed there only if you don't want to extend the object's lifetime ([tutorial «GCD»](../../concurrency/gcd/) in the «Concurrency» topic).
 
 ## Step 6. @autoclosure
 
@@ -255,7 +255,7 @@ extension Sequence {
 print([1, 2, 3].myMap { $0 * $0 })   // [1, 4, 9]
 ```
 
-**`@Sendable`.** A closure that is passed between threads/actors (`Task`, `DispatchQueue`) is marked `@Sendable`: the compiler forbids capturing mutable shared data without protection (tutorial «Swift Concurrency» in the «Concurrency» topic).
+**`@Sendable`.** A closure that is passed between threads/actors (`Task`, `DispatchQueue`) is marked `@Sendable`: the compiler forbids capturing mutable shared data without protection ([tutorial «Swift Concurrency»](../../concurrency/swift-concurrency/) in the «Concurrency» topic).
 
 ## Common mistakes
 
