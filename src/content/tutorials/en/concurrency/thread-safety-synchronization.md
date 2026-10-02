@@ -452,7 +452,7 @@ let counter = Atomic(0)
 counter.mutate { $0 += 1 }                   // safe
 ```
 
-An example from the Alamofire sources — a common protocol for any lock, with an `around` method:
+An example — a common protocol for any lock, with an `around` method:
 
 ```swift
 private protocol Lock {

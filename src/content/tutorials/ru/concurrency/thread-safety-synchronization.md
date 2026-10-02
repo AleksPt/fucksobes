@@ -452,7 +452,7 @@ let counter = Atomic(0)
 counter.mutate { $0 += 1 }                   // безопасно
 ```
 
-Пример из исходников Alamofire — общий протокол для любого замка с методом `around`:
+Пример — общий протокол для любого замка с методом `around`:
 
 ```swift
 private protocol Lock {
