@@ -288,7 +288,6 @@ struct ExampleService: ExampleProtocol {
 struct ProfilingExampleService: ExampleProtocol {
     private let service: ExampleProtocol
 
-    // ⚠️ Исправлено: явный init, т.к. memberwise init для private-свойства недоступен снаружи
     init(service: ExampleProtocol) { self.service = service }
 
     func performAction() {
