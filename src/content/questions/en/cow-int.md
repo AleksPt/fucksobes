@@ -4,4 +4,4 @@ category: memory
 order: 56
 ---
 
-No, because `Int` is immutable.
+No. It is not about mutability (`var x = 1; x += 1` works): COW is needed by types with a shared buffer on the heap, while `Int` stores its value directly in the variable, so there is nothing to share when it is copied.

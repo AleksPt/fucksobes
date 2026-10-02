@@ -4,4 +4,6 @@ category: memory
 order: 49
 ---
 
-Zombie objects are a problem that existed before the side table appeared: objects that stay in memory until removal but that nobody accesses. The side table helped solve this problem: if an object has weak references but no strong references, the object itself is removed from memory, and only its side table remains.
+A zombie object is an already deallocated object that is still being sent messages, that is, it is accessed through a dangling reference. Without diagnostics this is undefined behavior, usually a crash (`EXC_BAD_ACCESS`). If you enable the Zombie Objects option in the Xcode scheme (`NSZombieEnabled`), the object is turned into a special `_NSZombie_` instead of being freed: when it is accessed, the class and selector are printed to the console and the program terminates.
+
+In safe Swift this is only possible with `unowned(unsafe)` and `Unmanaged`: a `weak` reference becomes `nil`, and reading a regular `unowned` reference to a deallocated object terminates the program. The side table has nothing to do with zombies: it only holds the counts while `weak` references point to it.

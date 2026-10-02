@@ -4,7 +4,7 @@ category: memory
 order: 43
 ---
 
-**Not always.** You need to look at whether we reference the object strongly. If the reference is weak, for example in a short animation, `weak self` is not required.
+**Not always.** `weak self` is needed only if a retain cycle can arise: the closure holds `self`, and `self` (directly or through a chain) holds the closure. If the closure is not stored anywhere by `self`, for example in a short animation, there is no cycle and `weak self` is not required: the closure only extends the life of `self` briefly.
 
 1. You **need** `weak self` if:
     - the closure is stored and runs later (for example, in a network request);
