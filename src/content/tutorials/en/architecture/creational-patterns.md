@@ -30,7 +30,7 @@ A **design pattern** is a description of the interaction of objects and classes,
 
 > **The full GoF classification**. The "Gang of Four" book has 23 patterns. *Creational:* Singleton, Factory Method, Abstract Factory, Builder, Prototype. *Structural:* Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. *Behavioral:* Visitor, Chain of Responsibility, Template Method, Command, Strategy, Iterator, State, Mediator, Observer, Memento. This tutorial covers in detail the ones most often met in iOS; Object Pool and Reactor are not in the GoF list, they are later additions.
 
-> **Why patterns are useful**. *Speed:* you take a ready solution instead of reinventing the wheel. *Proven:* the code is built from standard blocks whose problems have long been known. *A shared vocabulary:* it is enough to name the pattern instead of explaining the structure for an hour. A typical example from the source ("Case #1"): in different places of the app you need access to device resources (camera, gallery, geolocation); the request algorithm is similar but the code differs, and such a task is solved through a common interface with different implementations (for example, Strategy or a factory).
+> **Why patterns are useful**. *Speed:* you take a ready solution instead of reinventing the wheel. *Proven:* the code is built from standard blocks whose problems have long been known. *A shared vocabulary:* it is enough to name the pattern instead of explaining the structure for an hour. A typical example: in different places of the app you need access to device resources (camera, gallery, geolocation); the request algorithm is similar but the code differs, and such a task is solved through a common interface with different implementations (for example, Strategy or a factory).
 
 > A pattern is not a goal. Apply it when the *problem it solves* has arisen; otherwise you get over-complication (see KISS in chapter [03](../kiss-dry-yagni/)).
 
@@ -126,8 +126,6 @@ final class RegionalFactory: CarFactory {
 let car = RegionalFactory().makeCar(type: .tesla)
 ```
 
-In the source, an unsupported brand ends in `fatalError(...)`, which will crash the app at runtime. It is safer to return `nil` or throw an error (`throws`), as above.
-
 ## Step 3. Abstract Factory
 
 **Idea.** Creates a **family** of related objects without being tied to concrete classes. The difference from Factory Method is exactly the family: one factory hands out a consistent set of products.
@@ -165,8 +163,6 @@ func buildScreen(with factory: ThemeFactory) {
 buildScreen(with: DarkThemeFactory())
 ```
 
-> The original note shows the same idea with the example of a "set of devices from one manufacturer" (phone + laptop + tablet). The principle is the same: factory = manufacturer, products = its lineup.
-
 ## Step 4. Singleton
 
 **Idea.** Guarantees a single instance of a class for the whole app and provides a global access point to it. It is everywhere in iOS: `URLSession.shared`, `UserDefaults.standard`, `FileManager.default`, `NotificationCenter.default`.
@@ -182,7 +178,7 @@ final class NetworkManager {
 print(NetworkManager.shared.baseURL)
 ```
 
-If setup is needed at creation, it is done in an initializer closure (as shown in the source): `static let shared: Singleton = { let instance = Singleton(); /* setup */ return instance }()`. The closure is also executed lazily and exactly once.
+If setup is needed at creation, it is done in an initializer closure: `static let shared: Singleton = { let instance = Singleton(); /* setup */ return instance }()`. The closure is also executed lazily and exactly once.
 
 ### Thread safety
 
@@ -304,8 +300,6 @@ let url = try URLBuilder()
     .with(queryItems: ["page": "0"])
     .build()
 ```
-
-In the source, the login/password pair check is written as two mirror-image `if`s; I merged them into one condition with the same behavior. The `systemError` error is marked in the original with the comment "Impossible?"; in practice `components.url` returns `nil` only for invalid characters in the components.
 
 | Pros | Cons |
 | --- | --- |
@@ -431,14 +425,7 @@ The dependency is hidden inside the code, it can't be replaced, and state lives 
 </details>
 
 <details>
-<summary>4. What is wrong with HouseBuilder from the original note?</summary>
-
-`house` is `nil`, so all the `house?.…` assignments were never executed and the result is always `nil`.
-
-</details>
-
-<details>
-<summary>5. Where does UIKit have an Object Pool?</summary>
+<summary>4. Where does UIKit have an Object Pool?</summary>
 
 In the reuse of table and collection cells (`dequeueReusableCell`).
 

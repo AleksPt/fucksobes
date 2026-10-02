@@ -27,7 +27,7 @@ order: 3
 
 ![The root "Concurrency problems" splits into three groups. Uncertainty of parallelism: data race, race condition, actor reentrancy. Side effects of synchronization: deadlock, livelock, resource contention and performance penalty. Thread management mistakes: priority inversion, starvation, thread explosion.](../../../../assets/tutorials/en/concurrency/03-map.svg)
 
-> The logic of the map (from the slides): a **race condition** forces us to turn to synchronization mechanisms → along with synchronization come **deadlock, livelock and a drop in performance** → and unskilled thread management adds **priority inversion and starvation**.
+> The logic of the map: a **race condition** forces us to turn to synchronization mechanisms → along with synchronization come **deadlock, livelock and a drop in performance** → and unskilled thread management adds **priority inversion and starvation**.
 
 ## Step 1. Data race
 
@@ -345,7 +345,7 @@ func gcdThreadPoolTest() {
 ```
 
 ```swift
-// An example from a slide: 50,000 tasks, each waits for a serial queue
+// An example: 50,000 tasks, each waits for a serial queue
 func calculateValues() {
     let group = DispatchGroup()
     for _ in 0..<50000 {

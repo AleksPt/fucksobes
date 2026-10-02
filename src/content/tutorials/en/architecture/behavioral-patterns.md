@@ -65,7 +65,7 @@ extension DownloaderDelegate {
 }
 ```
 
-**An analogy from the source: a manager and an assistant**. The manager doesn't care what type the assistant is, as long as it performs the list of tasks from the protocol:
+**An analogy: a manager and an assistant**. The manager doesn't care what type the assistant is, as long as it performs the list of tasks from the protocol:
 
 ```swift
 protocol ManagerDelegate: AnyObject {
@@ -89,7 +89,7 @@ final class Manager {
 }
 ```
 
-A helper class that adopts the protocol won't compile until it implements all the requirements. (The `Clothes` and `Weekday` types here are hypothetical; the source also had a joke method `whatBearIsBest`, which I left out.)
+A helper class that adopts the protocol won't compile until it implements all the requirements. (The `Clothes` and `Weekday` types here are hypothetical.)
 
 **Delegate or closure?** If there are many related events (a set of 3–5 methods, like `UITableViewDelegate`), use a delegate. If there is a single one-off event, a callback closure (`completion`) is simpler.
 
@@ -293,7 +293,7 @@ struct CustomTextField: View {
 }
 ```
 
-A new field (email, price) is a new strategy, and `CustomTextField` doesn't change. The source shows the same with formatters (`BoldTextFormatter`, `PhoneTextFormatter`, `MoneyTextFormatter` behind a common protocol): small, atomic strategies are easy to test, store, extend, and hide data and logic behind. (The two-parameter `onChange(of:)` signature is iOS 17+; in older versions the closure takes no arguments.)
+A new field (email, price) is a new strategy, and `CustomTextField` doesn't change. Small, atomic strategies are easy to test, store, extend, and hide data and logic behind. (The two-parameter `onChange(of:)` signature is iOS 17+; in older versions the closure takes no arguments.)
 
 | Use when | Don't need when |
 | --- | --- |
@@ -336,7 +336,7 @@ connection.send("GET /profile")          // online
 
 > In Swift, states are often expressed with an `enum` with associated values: `enum LoadState { case idle, loading, loaded([Item]), failed(Error) }`. The screen switches the UI with a `switch` on the state, which is State in a light form. Full-blown state classes are needed when each state has complex behavior.
 
-**A second example from the source: authorization.** The `Context` holds the current state and passes questions to it; changing the state is just a new object:
+**A second example: authorization.** The `Context` holds the current state and passes questions to it; changing the state is just a new object:
 
 ```swift
 protocol State {
@@ -368,7 +368,7 @@ final class Context {
 }
 ```
 
-The client simply asks `context.isAuthorized`, and there are no `if user == nil` branches in the code. (`AuthorizedState` was written by me; only `UnauthorizedState` is visible in the screenshot.)
+The client simply asks `context.isAuthorized`, and there are no `if user == nil` branches in the code.
 
 **Strategy vs State.** The structure is almost identical (an object delegates work to a swappable helper). The difference is in **who changes it** and **why**: the strategy is chosen by the client from outside and usually doesn't change by itself; states switch each other as the work proceeds.
 
@@ -382,7 +382,7 @@ The key detail is **synchrony**: if the handling of operation completions is asy
 
 ## Step 7. Template Method
 
-Defines the **skeleton of an algorithm** in a base type and leaves the specific steps to subclasses: the order of actions is fixed, the details are overridden. An example from the source is requesting access to a resource (photos, camera, geolocation): the order "checked → requested → reported the result" is the same, while what exactly to check and do is different for each resource.
+Defines the **skeleton of an algorithm** in a base type and leaves the specific steps to subclasses: the order of actions is fixed, the details are overridden. An example is requesting access to a resource (photos, camera, geolocation): the order "checked → requested → reported the result" is the same, while what exactly to check and do is different for each resource.
 
 ```swift
 class PermissionAccessor {
@@ -460,12 +460,6 @@ final class SignUpFormMediator: FormMediator {
 | Unified handling of events from many sources | Reactor (event loop) |
 | A fixed order of steps, different details | Template Method |
 | Many objects that talk "everyone to everyone" | Mediator |
-
-> **Case tasks**
->
-> In the designers' UIKit there are phone, email and price input fields: they look the same, while the formatting and validation differ → one template field (`CustomTextField`) receives a `TextFieldFormatStrategy` through `let formatStrategy`, and `onChange` runs the text through `format(_:)`; this is Strategy (in the source, `applyPhoneMask` brings the number to the form +7 (XXX) XXX-XX-XX).
->
-> A form with fields, checkboxes and toggles that affect each other (a checkbox opens some fields and blocks others; entering a phone or email changes the set of fields and the button title) → the form's state is moved into State: each state knows which fields to show and how to name the button. Template Method (`PermissionAccessor` with the steps `hasAccess`, `didReceiveAccess`, `didRejectAccess`, which `PhotoPermissionAccessor` overrides) is covered above.
 
 ## Common mistakes
 

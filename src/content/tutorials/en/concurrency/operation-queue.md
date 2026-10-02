@@ -102,7 +102,7 @@ thirdOperation.cancel()                                  // cancellation
 queue.maxConcurrentOperationCount = 2
 ```
 
-**The OperationQueue API (from a slide):**
+**The OperationQueue API:**
 
 ```swift
 class OperationQueue: NSObject, ProgressReporting {
@@ -155,7 +155,7 @@ In terms of properties: `isReady → isExecuting → isFinished` or `isExecuting
 
 > **An operation is single-use.** If it is in the finished or cancelled state, it can't be started again — create a new one. OperationQueue automatically removes an operation when it becomes finished (both after execution and after cancellation).
 
-**The Operation API (from a slide):**
+**The Operation API:**
 
 ```swift
 open class Operation: NSObject {
@@ -369,7 +369,7 @@ final class LoadUserOperation: AsyncOperation {
 }
 ```
 
-**The sync vs async life cycle** (from a slide):
+**The sync vs async life cycle**:
 
 ![Two rows. Sync: isReady, isExecuting, isFinished; all the work in main; example code: let op = MdDocumentDownloadOperation(url) and op.start(). Async: isReady, isExecuting, an asynchronous task, isFinished; start returned, finish on the callback; example: let queue = OperationQueue() and queue.addOperation(MdDocumentDownloadOperation(url: url)).](../../../../assets/tutorials/en/concurrency/05-lifecycle.svg)
 

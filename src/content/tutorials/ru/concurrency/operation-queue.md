@@ -102,7 +102,7 @@ thirdOperation.cancel()                                  // отмена
 queue.maxConcurrentOperationCount = 2
 ```
 
-**API OperationQueue (со слайда):**
+**API OperationQueue:**
 
 ```swift
 class OperationQueue: NSObject, ProgressReporting {
@@ -155,7 +155,7 @@ class OperationQueue: NSObject, ProgressReporting {
 
 > **Операция одноразовая.** Если она в состоянии finished или cancelled, запустить её повторно нельзя — создавайте новую. OperationQueue автоматически удаляет операцию, когда та становится finished (и после выполнения, и после отмены).
 
-**API Operation (со слайда):**
+**API Operation:**
 
 ```swift
 open class Operation: NSObject {
@@ -369,7 +369,7 @@ final class LoadUserOperation: AsyncOperation {
 }
 ```
 
-**Жизненный цикл sync vs async** (со слайда):
+**Жизненный цикл sync vs async**:
 
 ![Два ряда. Sync: isReady, isExecuting, isFinished; вся работа в main; пример кода: let op = MdDocumentDownloadOperation(url) и op.start(). Async: isReady, isExecuting, асинхронная задача, isFinished; start вернулся, finish по колбэку; пример: let queue = OperationQueue() и queue.addOperation(MdDocumentDownloadOperation(url: url)).](../../../../assets/tutorials/concurrency/05-lifecycle.svg)
 

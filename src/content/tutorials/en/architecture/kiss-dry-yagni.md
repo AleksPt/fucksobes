@@ -158,7 +158,7 @@ class ViewControllerB: BaseViewController {
 }
 ```
 
-The problems listed in the source: an SRP violation; the base class has many methods, most of which the screen doesn't need, and everything is tightly coupled; they can't be reused in classes that don't inherit from the `UIViewController` base; it is hard to test. The solution is composition: each capability is extracted into a protocol and a component, and the screen receives only the ones it needs through `init`:
+The problems: an SRP violation; the base class has many methods, most of which the screen doesn't need, and everything is tightly coupled; they can't be reused in classes that don't inherit from the `UIViewController` base; it is hard to test. The solution is composition: each capability is extracted into a protocol and a component, and the screen receives only the ones it needs through `init`:
 
 ```swift
 protocol Functionality1Protocol { func doSomething() }
@@ -201,7 +201,7 @@ final class ViewControllerB: UIViewController {
 }
 ```
 
-Each screen takes only what it needs, and the components can be swapped in tests. The code in the screenshots was shown small, so I reconstructed it by meaning; the exact names may differ.
+Each screen takes only what it needs, and the components can be swapped in tests.
 
 ### When inheritance is still appropriate
 

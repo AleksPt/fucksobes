@@ -161,7 +161,7 @@ Each decorator can be switched on and off independently, and the order of wrappi
 
 > **A caching case**.
 >
-> A team was building an online app, and the customer asked to cache the data: if there is a cache, return it, otherwise request from the server and write to the cache. In the source this is solved exactly with a **decorator**, not inheritance: `CachedRepository` wraps `Repository`, and then one more layer is added on top of it, a cache reset after 30 seconds. Below is a corrected version. The same idea can also be called a caching Proxy (see Step 5): the structure is the same, the difference is in the intent. Here we *add a responsibility* rather than control access.
+> A team was building an online app, and the customer asked to cache the data: if there is a cache, return it, otherwise request from the server and write to the cache. This is solved with a **decorator**, not inheritance: `CachedRepository` wraps `Repository`, and then one more layer is added on top of it, a cache reset after 30 seconds. The same idea can also be called a caching Proxy (see Step 5): the structure is the same, the difference is in the intent. Here we *add a responsibility* rather than control access.
 
 ```swift
 import Foundation
@@ -302,7 +302,7 @@ let profiled: ExampleProtocol = ProfilingExampleService(service: service)
 profiled.performAction()
 ```
 
-**Example 2. A caching proxy.** Instead of the cache of "download tasks" from the original note, we show a cache of results, so the point of the pattern is visible:
+**Example 2. A caching proxy.**
 
 ```swift
 import Foundation

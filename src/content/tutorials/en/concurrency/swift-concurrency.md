@@ -125,7 +125,7 @@ func someSyncFunction() {
 }
 ```
 
-**A comparison from a slide — loading photos:**
+**A comparison — loading photos:**
 
 **Swift Concurrency**
 

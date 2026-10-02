@@ -27,7 +27,7 @@ order: 3
 
 ![Корень «Проблемы многопоточности» делится на три группы. Неопределённость параллелизма: data race, race condition, actor reentrancy. Побочные эффекты синхронизации: deadlock, livelock, resource contention и performance penalty. Ошибки менеджмента потоков: priority inversion, starvation, thread explosion.](../../../../assets/tutorials/concurrency/03-map.svg)
 
-> Логика карты (со слайдов): **race condition** заставляет нас обращаться к механизмам синхронизации → вместе с синхронизацией приходят **deadlock, livelock и падение производительности** → а неумелое управление потоками добавляет **priority inversion и starvation**.
+> Логика карты: **race condition** заставляет нас обращаться к механизмам синхронизации → вместе с синхронизацией приходят **deadlock, livelock и падение производительности** → а неумелое управление потоками добавляет **priority inversion и starvation**.
 
 ## Шаг 1. Data race
 
@@ -345,7 +345,7 @@ func gcdThreadPoolTest() {
 ```
 
 ```swift
-// Пример со слайда: 50 000 задач, каждая ждёт serial-очередь
+// Пример: 50 000 задач, каждая ждёт serial-очередь
 func calculateValues() {
     let group = DispatchGroup()
     for _ in 0..<50000 {

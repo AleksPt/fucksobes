@@ -284,10 +284,6 @@ final class CounterReducerTests: XCTestCase {
 }
 ```
 
-### What MVI looks like in the original notes
-
-The original example (the Home module) uses a "heavier" version: a generic `MVIContainer<Intent, Model>` combines Intent and Model and forwards `objectWillChange` from the model to the View; `HomeIntent` accepts actions and calls the model's methods through the `HomeModelActionsProtocol` protocol, `HomeModel` stores the `@Published` state, and `HomeAssembler` assembles the module. The idea is the same, but the form is built on `ObservableObject` and Combine.
-
 ### Two screen states and side effects
 
 Usually the state also stores "loading in progress" and the error:
