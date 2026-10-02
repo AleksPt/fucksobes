@@ -89,3 +89,21 @@ test('главная → случайный вопрос → следующий 
   await expect(item).toBeVisible();
   await expect(item).not.toHaveAttribute('open', '');
 });
+
+test('туториалы → тема → страница туториала с соседней навигацией', async ({ page }) => {
+  await page.goto('tutorials/');
+  await page.getByRole('link', { name: 'Swift' }).click();
+  await expect(page).toHaveURL(/\/fucksobes\/tutorials\/swift\/$/);
+
+  // Ссылку получают только разделы, для которых есть страница
+  await page.getByRole('link', { name: /Структуры, классы и enum/ }).click();
+  await expect(page).toHaveURL(/\/fucksobes\/tutorials\/swift\/structs-classes-enums\/$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'Структуры, классы и enum' })).toBeVisible();
+
+  const first = page.locator('.tutorial details').first();
+  await first.locator('summary').click();
+  await expect(first).toHaveAttribute('open', '');
+
+  await page.getByRole('link', { name: 'Swift', exact: true }).click();
+  await expect(page).toHaveURL(/\/fucksobes\/tutorials\/swift\/$/);
+});

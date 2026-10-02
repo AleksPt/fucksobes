@@ -191,6 +191,40 @@ body {
   @apply rounded-md bg-smoke px-1.5 py-0.5 font-mono text-[0.9em] font-normal;
 }
 
+/* Туториалы: цитаты как врезки, раскрывающиеся блоки, таблицы и картинки */
+.tutorial blockquote {
+  @apply rounded-panel border border-white/12 bg-white/4 px-5 py-4 font-normal not-italic;
+  quotes: none;
+}
+.tutorial blockquote p::before,
+.tutorial blockquote p::after {
+  content: none;
+}
+.tutorial blockquote > :first-child {
+  margin-top: 0;
+}
+.tutorial blockquote > :last-child {
+  margin-bottom: 0;
+}
+.tutorial details {
+  @apply my-3 rounded-input border border-white/12 bg-white/4 px-5 py-3;
+}
+.tutorial summary {
+  @apply cursor-pointer font-medium text-paper;
+}
+.tutorial details[open] > summary {
+  @apply mb-3;
+}
+.tutorial details > :last-child {
+  margin-bottom: 0;
+}
+.tutorial table {
+  @apply block overflow-x-auto;
+}
+.tutorial img {
+  @apply rounded-panel;
+}
+
 /* Блоки кода: панель Carbon с тонкой рамкой; тема Shiki задаёт только цвета токенов */
 .astro-code {
   background-color: var(--color-carbon) !important;
