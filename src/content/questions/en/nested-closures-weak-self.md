@@ -1,7 +1,7 @@
 ---
 title: "If there are several nested closures, do you have to write [weak self] in each one?"
 category: memory
-order: 72
+order: 80
 ---
 
 No, not necessarily. `[weak self]` is needed where a closure creates a **strong reference cycle**: `self` stores the closure (directly or through a chain of objects), and the closure strongly captures `self`. If there is no cycle, a weak reference is not needed.

@@ -6,7 +6,7 @@ order: 115
 
 An actor is a serial executor (an isolated context) that handles calls one at a time: all requests to its isolated methods go into the actor's queue, but the order in which they actually execute is not always intuitive, especially where methods contain an `await` at which the actor can switch to handling another request (see reentrancy).
 
-One typical hang scenario is an actor recursively calling itself through `await` when there is no way to make progress between the call and its completion:
+One typical hang scenario is infinite recursion: an actor calls itself through `await`, and the call chain never completes:
 
 ```swift
 actor Logger {
@@ -21,7 +21,7 @@ actor Logger {
 }
 ```
 
-Here `log` waits for `flush`, and `flush` calls `log` again. Tasks are queued on the actor one after another, none of them completes, and the result is an effective hang (not a classic deadlock in the sense of a blocked thread, but an endlessly growing queue of tasks waiting for each other).
+Here `log` calls `flush`, and `flush` calls `log` again. A call on `self` is already inside the actor's isolation, so it is not enqueued and no suspension happens: this is plain infinite recursion, not a queue of waiting tasks and not a classic deadlock. A real hang occurs when the actor's thread is blocked synchronously (for example, `DispatchSemaphore.wait()` in a synchronous method) while the awaited work itself needs that actor.
 
 How to debug it:
 

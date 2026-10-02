@@ -32,7 +32,7 @@ If a closure captured, for example, `self` of a `UIViewController` type without 
 
 How to use it safely:
 
-- make closures `@Sendable`-compatible wherever they are passed to `Task.detached`, `addTask`, `AsyncSequence.makeAsyncIterator()`, and similar APIs;
+- make closures `@Sendable`-compatible wherever they are passed to `Task.detached`, `addTask`, and similar APIs;
 - avoid capturing `self` without `weak`/`unowned` if the type is not inherently thread-safe;
 - use `@unchecked Sendable` only if you manually vouch for the type's thread safety, which the compiler cannot verify on its own:
 

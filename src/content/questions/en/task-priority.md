@@ -13,7 +13,7 @@ let current = Task.currentPriority
 
 Inheritance rules:
 
-- an unstructured `Task { }` inherits the priority and actor of the current context; if it is created from the main thread, it gets high priority;
+- an unstructured `Task { }` inherits the priority and actor of the current context; if there is no current task (synchronous code, for example the UI thread), the thread's priority is used: `.userInitiated` for the UI thread;
 - child tasks (`async let`, `TaskGroup`) inherit the parent's priority;
 - `Task.detached` does not inherit the creator's priority: if no priority is specified, the default is used.
 

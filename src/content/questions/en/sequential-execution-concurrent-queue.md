@@ -1,7 +1,7 @@
 ---
 title: "Can you make tasks run sequentially in a concurrent queue?"
 category: concurrency
-order: 105
+order: 123
 ---
 
 Yes, in several ways, although by default a concurrent queue runs tasks in parallel, with no guarantee about the order of completion.

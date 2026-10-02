@@ -1,7 +1,7 @@
 ---
 title: "What happens if several network requests simultaneously save their result into one variable via the main thread?"
 category: concurrency
-order: 106
+order: 124
 ---
 
 If the assignment is always performed on the main thread (`DispatchQueue.main.async`), there is no simultaneous write: the main queue is serial, and blocks run one at a time. **There will be no data race on the variable itself.**
