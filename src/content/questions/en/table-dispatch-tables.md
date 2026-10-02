@@ -4,7 +4,8 @@ category: swift
 order: 77
 ---
 
-The table stores references to memory where **classes** or **their implementations** are located.
+The tables store pointers to **method implementations**, not to the classes themselves.
 
-- Classes that support inheritance use a virtual function table to store method addresses.
-- If a method is overridden in a subclass, the virtual function table will contain a reference to that overridden method.
+- A class has a virtual function table (vtable): for each method, including inherited ones, it holds the address of the implementation for that class.
+- If a method is overridden in a subclass, the entry in the subclass's vtable points to the overriding implementation.
+- Protocols use a witness table: for each conformance of a type to a protocol, it holds the implementations of the protocol's requirements.

@@ -9,7 +9,7 @@ order: 6
 3. **Deinitialization.** Classes have `deinit`, structs do not.
 4. **Mutating methods.** In structs they require the `mutating` keyword.
 5. **ARC.** Classes are managed by ARC (Automatic Reference Counting); structs do not need it.
-6. **Allocation.** Struct instances are usually created on the stack, and class instances on the heap.
+6. **Allocation.** As a rule, struct instances are created on the stack, and class instances on the heap. This is a simplification: a struct can end up on the heap (a class field, capture by an escaping closure), and the optimizer sometimes places a class object on the stack.
 7. **Type casting.** For classes, `is`, `as?`, and `as!` work at runtime (checking and casting along the inheritance hierarchy); structs have no such capability.
 8. **Constants.** If a class instance is declared with `let`, you can still change its `var` properties (the constant holds the reference); for a struct instance declared with `let`, the properties cannot be changed.
 

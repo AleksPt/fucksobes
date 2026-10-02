@@ -4,7 +4,7 @@ category: swift
 order: 152
 ---
 
-Yes. In Swift, functions are first-class values, so a function can be returned from another function regardless of whether it has parameters. The restriction "only if the function has no parameters" is incorrect.
+Yes. In Swift, functions are first-class values, so a function can be returned from another function; the returned function can have any parameters.
 
 ```swift
 func makeAdder(_ n: Int) -> (Int) -> Int {

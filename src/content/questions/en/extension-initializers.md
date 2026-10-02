@@ -6,7 +6,10 @@ order: 64
 
 In an extension you can add new initializers to existing types, with restrictions for classes: an extension can add convenience initializers, while designated initializers and deinitializers must be in the original implementation of the class.
 
-There are two useful points for structs. If a value type provides default values for all stored properties and does not define any initializers of its own, then from an initializer in an extension you can call its default initializer and its memberwise initializer. If the struct is declared in another module, the new initializer must delegate to an initializer from the defining module before accessing `self`.
+Two points matter for structs.
+
+- An initializer in an extension does not disable the automatic initializers (default and memberwise); an initializer declared in the struct's body does. So if the body has no initializers of its own, an extension can call `self.init(...)` with the memberwise initializer (and `self.init()` if all properties have default values).
+- If the struct is declared in another module, the new initializer must delegate to an initializer from the defining module before accessing `self`.
 
 ```swift
 extension Rect {

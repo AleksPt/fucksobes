@@ -10,6 +10,6 @@ The container is not created, or is eliminated, if:
 
 - the protocol is used as a generic constraint (`<T: Drawable>`) and the compiler specializes the function for the concrete type;
 - an opaque type `some Drawable` is used (the concrete type is known to the compiler, so no wrapper is needed);
-- the compiler optimizes the code (devirtualization, specialization, unwrapping of redundant `any`).
+- the compiler optimizes the code (devirtualization, specialization, elimination of redundant `any`).
 
-If a container is still created, on a 64-bit platform it has 3 words for the value, a pointer to the metadata, and pointers to witness tables (40 bytes for an ordinary protocol). Values larger than the buffer are allocated on the heap. For class-constrained protocols (`AnyObject`), the container is smaller: a pointer to the object plus a witness table.
+If a container is still created, on a 64-bit platform it has 3 words for the value, a pointer to the metadata, and pointers to witness tables (40 bytes for an ordinary protocol, 32 for `Any`, which has no witness table). Values larger than the buffer are allocated on the heap. For class-constrained protocols (`AnyObject`), the container is smaller: a pointer to the object plus a witness table (16 bytes).

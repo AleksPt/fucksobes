@@ -8,19 +8,15 @@ order: 3
 
 **A reference type** stores a reference (a pointer) to the memory region where the value lives. When passed or copied, the reference is passed, so several variables can refer to the same object, and changes affect the original object. These are classes, functions, closures, and actors. Memory is managed with reference counting (ARC); value types do not need it.
 
-**Stack and heap.** As a rule, value types are stored on the stack and reference types on the heap. But there are exceptions.
+**Stack and heap.** As a rule, value types are stored on the stack and class instances on the heap, but this is a simplification: where a value lives depends not on "value or reference" but on its size, lifetime, and compiler optimizations.
 
-**A value type on the heap:**
+**A value type may use the heap:**
 
-- when the struct is a property of a class;
-- when the struct has an `Any` field;
-- when the struct is very large and does not fit on the stack;
-- when a value object is captured in an `@escaping` closure: it is moved to the heap to keep it alive;
-- when a protocol type is expected for the struct (and the struct does not fit in 3 machine words);
-- when the struct has a generic type: if the generic is a reference type, an instance of `MyStruct<T>` is stored on the heap;
-- `indirect enum`: its final size cannot be determined at compile time.
+- when the struct is a property of a class: it lives inside the object on the heap;
+- when the value is captured by an `@escaping` closure: it is moved to the heap to outlive the call;
+- when a value in a variable of a protocol type does not fit in the existential container's buffer (three machine words);
+- when the type stores its data indirectly: `Array`, `String`, `Dictionary`, `indirect enum`.
 
-**A reference type on the stack:**
+A struct with a class field, or a generic `MyStruct<T>` where `T` is a class, remains a value type: it holds a reference inside itself, while the class instance itself lives on the heap. An `Any` field does not by itself mean the heap: small values are stored in a buffer inside the container.
 
-- when a class instance is declared as a local variable inside a function;
-- when the size of the class is known in advance: then it can be moved to the stack as an optimization.
+**A class instance on the stack:** the reference variable lies on the stack, while the object itself is usually on the heap. But the optimizer may place the object on the stack if it proves that the object does not leave the function.
