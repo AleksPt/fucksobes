@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1054" height="170" viewBox="0 0 1054 170" role="img">
+<title>A frame's path from the main thread to the screen</title>
+<desc>The main thread handles an event and updates the UI, then comes the Core Animation commit, then the render server: the CPU prepares work, the GPU draws the frame, and the frame reaches the screen on the next vsync.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Onest';font-weight:500;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAmYAA0AAAAAENgAAAlGAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbhRgcMAZgAIE0CpUMkFoBNgIkA4EMC0gABCAFBgcgG30No6J2cFKBAfzFgW1Ma+iZ0Fq2MY7YxlDGgJfLWcdZFM3C4pHFKybY8h1lhPnY9sN32v+ZyQREQxWxJip4c1MrXXX3wvjSo7uPUEP/1AHb+ydZFmBEaeNJ0kxSlGCAEcf+7lt73Ul4JnGEJXKtrVEfWOmsvXv+IxI8fOfAT8Bz02g73BtQJEZ/XR8Mz3r06dda/f/E0u5e2muQrDTSRShR+593+k9EE2ISEokSSJBoC+kkIdZI1gidksiUSC8eCjbCaYymnaLH+2QFIAAYgHGUHhrBgeBRQSAAaKxGEF6y5RYIPnq76yD47uxvggAGAH5/rPha2N0ECigFmkhalFPkTNoJAsKQ85FnSsJd9rj3ed8B+JSv+Jl/AOQJEEwIEjIqOiYWIREJOSUNAmqQN1EiokOqoGgIaChoaK3ogRGYQRgkQZNDQgvEwSmQyG9PQEfDosogavmxWHollVu8FOBe/4JCmmhqEOtIE6H5nCApZYiaI8dnUZfHC+OE3u6SyeQ23fuL1v6OTVYRiPdXnE7lQgex1DVQaQRdjqAIKDOBBxfvMzVQREgcdxpB4SJCLGI0XsLOtSdQTgYri0HOCQAi0ChCKZ2pAABoXlgDXjSGU2TAsCYpwjUyr65bmz3tnGqVXhXEhrGZkL/VLKO/B+O+kn4Y5B28/sOYNeJa+FujCR+h0bufOZ8D7B+qOBl9RM+8mj60oAAIXsFIQBcxz3MDxouN0XtkNyIhJaegAtfU1rFoxZptvfoAqW6IXcuVDbuxs/+tX9aoXlFeUlRYkM2kafBVEgIYVq2nWWIxEF6N2BtlaDl5FLL7UNsKumc/Yuvhg4wX9EDQmjAmk8plxEQGtkbIVVFFMozpkHI4Ag4vLBSQmQwTj8lk0NfoK7RRRmuMOdm5c7cDvt+TuN1+wBd3KGw27PRsQ+J+/Ur+DchOVSnt2Rk5afL+EyJMOH2V6ZiOyaUTU3SMRhynTTqQhHAZEQjwFPCdxSKUaaMpf5W0SRr6mtIvs06DvfVCdRUZWaeFT64Dj5W++pxMLizVUsD381YYaiOhU4goRItfstt/3mE1uTlbmz+kg9bZTHa4pZHzzFLA2/M9EU/NUMgE7tDuQhMnoygLDDqyK90GCDNCyduMi7Vtxi6dA9cp3eEPoCOUBSbloJvu3Wdviw07dTaHy7dv74arC+t22mPP49lEbWvNUJg0nugQgbBLiKFQsDDQ1xzQMbHwfNzO4UPuSo0y8hsGg738gOQkUaIMneUPfrkP3/cnXM8SbLFSrhBxOIgNbUPZXUi9pR4GocWOiXN2ydl/Lk0OxhHHo9Ar/WRqcY2zV0D6RZFYyZNnrRcyFru3Yj4fBh7yffX1vuYCmBXHIHtM34s9AXYazH7JbgWm1NKYbC5tAxQm9hhm71WiQu3TTKbaeYR0S8+nUfGqhyoFqVUklZNCiTJJXua/vDiD8wACkw4ulYozOaReeOGd0Vvpw/FbXw3MdRKb7HSz+KwWasDDYRKr7LSicKiOffVL4RRbd5y3du3Td09DPOfo7xi3bMOBjQenCi+srhZfenB6o3bgzU9/ePknU6E8fkPBdpjJOXrdQtVdkPGubjHitZmeBw5tZt33iys18831zom/XjtyV6eY8e1r7LzUGW5a/HnxXDDvOOrkapExqwenfncm5T+X3HdbFZqtnin1Hvvc/qf2Hzpbyf7gEecPH8l6///6tV1PZLmJZ9d6weqtP0leK09la5lSuvIANOMMz4gy3oF2bNhUzwQ++Kjg4C7CK1j3fsNv/veimZnNiXzPQVumZ2pOMAsbn362zDUNxPnPDCiai6/+OstMc79/x+8kOYNblXIkZQW6Pr5myo6i2aXAa38xyIZevUUh8eeXn+tyPvTvi8ejhpClkfPMiGDd/GU8dM/svav3hbTdWiidqYTU3dB9a/fOhO69hMMvjg1JXvA3Znf1KzjLftV0orFKP/PL7vrCo2dZzkB5NmTbqignCMnNP36bOupIqSbNoju4XceMTP7WL4GGWN9IBY9r1aGT7WwzPGkcLt629KnrlsG4T1m3u1T1uDtgTumeWL0jUezogU+sLWa9vXLFd7KSras+Xzb9aemsS8jJkn2O2pf0aOtuj6aadPqDf1LUPYZzzQkYic2t1NBxDR/pbWfwyIR9pCSf5tL5tEsmXeIfLhlj/XD5ejI9q66HSIq3WZ0fZ+hh+63pViCsKxb1kczUsNrwLaX1juk73g6xs6XzYvfPmnI7rt/I6JZpmnt2WRZTh8JOav8LMfYSG1bnvvZD39l/7T/v5/ce+dbMt0PfbGdG+rmIPJC2DVj/9oA2lPdq2kPtZbskZrVq1Hfd+4pctewQx/5TVDtQbl6rhBj7RqwQ3v2TqjwaN6xn9MsszaXT75ncCZ92bPCfYCE2dpIjPbweOt5JNxo76eFevTbS2042poJJlxp3u9V40h0MpNwq3O1R1VIuiH74izdixfdMmAO1haznpFz19pYzuPGPfxCcPy4M/klec3kUeNwd9KTcunHM4GlH2z8rrBT1/VBH5ZC7muGiQ1cPnAPheKDA/GsxvXJ0j0PKTiknxTzRH7qvHr9z+E8rLgv14QLXEmhrBxOJzuRVG9vw/yEB31LbF1VZt1F+fNOAe/qnZSY8REs6fSlCbk43H196/JbpW/7jUgYt06Ahbu3vH5uXdC5Zas/q2BennLpl88nhLnymw9p77K2PvnX/Oguiblth78Xei1d7L+68uEe1buo9ePwg0EuMtyIXLnzgiP/db8E+SD257cO3fBh0vx/Z1vzKXA+Paf311FjOJ8H/oK1MRo0bed0yTXv5QaU1+DPpqO9/S/+IKjrh1IwOouPf+hxefatHybom021bDdpM8zdwTapcUAtVf+arRtWafcWMcl4tUv2Jr2qr1QfQXlqpbCnlNyuV83GAPQMXAInuBwBOAQCAC8C79u0r/SvnAwQAKjlkeHGOHf475RJ+BQDwiz+9Rl/p65eJW0T/WJgRhUz7/1lhwieCFDi2slr6GUCw1xh5Z2Df115tDgead9G4y/Tp+vexwL4D1bnAMTvY1pUkeuLZB8VaEPMLLinEJjTcqGktGzYdOxf3u57Tnx2QLgWRqYF4m0AdD+ibgvjhAUh2EHIV9Muecr09guJAbxdzfZpJCEeCfshrBwA=) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="1054" height="170" rx="16" fill="#14151c"/>
+<rect x="30.0" y="45.0" width="170" height="80" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="115.0" y="67.0" text-anchor="middle" dominant-baseline="central">Main thread</text>
+<text class="t" x="115.0" y="85.0" text-anchor="middle" dominant-baseline="central">event,</text>
+<text class="t" x="115.0" y="103.0" text-anchor="middle" dominant-baseline="central">UI update</text>
+<path d="M200.0 85.0 H232.0" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="236.0" y="45.0" width="170" height="80" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="321.0" y="76.0" text-anchor="middle" dominant-baseline="central">Core Animation</text>
+<text class="t" x="321.0" y="94.0" text-anchor="middle" dominant-baseline="central">commit</text>
+<path d="M406.0 85.0 H438.0" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="442.0" y="45.0" width="170" height="80" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="527.0" y="76.0" text-anchor="middle" dominant-baseline="central">Render server:</text>
+<text class="t" x="527.0" y="94.0" text-anchor="middle" dominant-baseline="central">CPU prepares the work</text>
+<path d="M612.0 85.0 H644.0" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="648.0" y="45.0" width="170" height="80" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="t" x="733.0" y="76.0" text-anchor="middle" dominant-baseline="central">Render server:</text>
+<text class="t" x="733.0" y="94.0" text-anchor="middle" dominant-baseline="central">GPU draws the frame</text>
+<path d="M818.0 85.0 H850.0" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="854.0" y="45.0" width="170" height="80" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45"/>
+<text class="t" x="939.0" y="76.0" text-anchor="middle" dominant-baseline="central">Screen on</text>
+<text class="t" x="939.0" y="94.0" text-anchor="middle" dominant-baseline="central">the next vsync</text>
+</svg>

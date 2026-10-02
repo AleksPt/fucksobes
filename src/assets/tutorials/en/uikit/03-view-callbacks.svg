@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="774" height="200" viewBox="0 0 774 200" role="img">
+<title>UIView callback order when adding a view</title>
+<desc>The chain when adding a view to a displayed superview: init, addSubview, willMove toSuperview, willMove toWindow, didMoveToSuperview, didMoveToWindow, layoutSubviews and draw, if it is overridden.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><style>@font-face{font-family:'FS Mono';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:'FS Onest';font-weight:400;unicode-range:U+0000-03FF,U+2000-206F;src:url(data:font/woff2;base64,d09GMgABAAAAAAN4AA0AAAAABigAAAMmAAIAQgAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgTgcMAZgAFwKhRyEOAE2AiQDMAsaAAQgBQYHIBvHBCCuBmxjKPapTauIiGwhapw5meXwxe2zePj/ucj7fjKYWQBkt+tIoWQqCbuuCLa+p8IA5+BY3i8qPqJi4AVSYAMqsJFF4nZ4bRvBk6Vrkfzb6KPiIv/VAdr+uPZ/dhrrD11Of0ycBC/2+qZj0eDfthbOwkATLNAwnASXSGCBBaTpNsEnP0dzqAUFnEALkCQhF6oaQqBppOmyxUvtftg5NOnWYed0pt+EHTmULxCnjnSbsEAAKpfUJU3ThfZyZIbrabiQSTI1mShJJbWSkJUkveUYaqwkAyjRPFJTFwaHkRgIQ7q6fLSxKJJE7uB6nvrGlaiQbqjtwCp6SuzF9TdIA/Drd3h98Ky/89lX/7+Qv5NrgYDULn2M/hpIyNBZJtBZbjnQVl1S1d9RFS1dw1L0d1hFU/q48ch9d90quBTa8ruT1J8SHdb+49LlhZB+Ibp0QC7u5YftN7bmVw7cIIorzMXNcR0Ry3lz6/sHbL3JHFeImjcAXMb2y0IL0el9+37n1jW9VNyc817FHcCup9Wj3sV0Mwp3C1qaPIbmqagU+eZv+egeMZGa2RXSX80/4EddhtMd7PX9gvxHpWJvsWPX8u7KjSiuxMXN1OWkS8V1xMgZ2+2cs5LJg3q9OON3y8cbsrV98prNPavAJCBEBCJ8wMQRSfQ8ZFhE3tDrH8TQiv+MXjBxusTjhsGtDDMljsM4cgFRv2oOsRio/CP7vbdNu04MmRStEBapCQyOloLTieH8J1tXBcUytNWMk8ttPHzpdeDY81XhIBa129LOonYbs3W9B9ottCOowtcNuMDKkLrujTGSb5bgM4oPwyu+c3rhxOkSjVsGv69pEI5dTtGkqfdZpWYeNiQUYsNmnlSSwmEopI59acNcg3qLOL9aW99PaedjwkIE/PRV2/1vipfvDtC3sKfnW48efz32WQeHKMiHqqCqOGMBJuM99d2FHwSShQsZzaPU+uzf6ln2K/zycFB/euuk/5wGpw9UJRB8di/tLoBSGveRtVJvnS3BSooQRRPazyYzi9I6e5NsD+hXuqtFWygr0DJM0l4SYEhcVXaWck0EAAAA) format('woff2')}
+text{font-family:'FS Onest','Onest Variable',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.t{font-size:14px;font-weight:500;fill:#ffffff}
+.s{font-size:12px;font-weight:400;fill:#a4a6b0}
+.b{font-size:14px;font-weight:400;fill:#a4a6b0}
+.h{font-size:22px;font-weight:500;fill:#ffffff;letter-spacing:-0.44px}
+.m,.mm,.mv,.ms,.ma{font-family:'FS Mono','JetBrains Mono Variable',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:400}
+.m{font-size:14px;fill:#ffffff}
+.mm{font-size:13px;fill:#ffffff}
+.mv{font-size:16px;fill:#ffffff}
+.ms{font-size:12px;fill:#a4a6b0}
+.ma{font-size:14px;fill:#d4d5da}
+</style></defs>
+<rect width="774" height="200" rx="16" fill="#14151c"/>
+<rect x="24.0" y="30.0" width="59.2" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="53.6" y="50" text-anchor="middle" dominant-baseline="central">init</text>
+<path d="M83.2 50 H115.2" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="115.19999999999999" y="30.0" width="106.0" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="168.2" y="50" text-anchor="middle" dominant-baseline="central">addSubview</text>
+<path d="M221.2 50 H253.2" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="253.2" y="30.0" width="184.0" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="345.2" y="50" text-anchor="middle" dominant-baseline="central">willMove toSuperview</text>
+<path d="M437.2 50 H469.2" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="469.2" y="30.0" width="160.6" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="549.5" y="50" text-anchor="middle" dominant-baseline="central">willMove toWindow</text>
+<rect x="24.0" y="130.0" width="168.4" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="108.2" y="150" text-anchor="middle" dominant-baseline="central">didMoveToSuperview</text>
+<path d="M192.4 150 H224.4" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="224.39999999999998" y="130.0" width="145.0" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="296.9" y="150" text-anchor="middle" dominant-baseline="central">didMoveToWindow</text>
+<path d="M369.4 150 H401.4" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="401.4" y="130.0" width="137.2" height="40" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.12"/>
+<text class="mm" x="470.0" y="150" text-anchor="middle" dominant-baseline="central">layoutSubviews</text>
+<path d="M538.5999999999999 150 H570.5999999999999" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="570.5999999999999" y="124.0" width="180" height="52" rx="8" fill="#1b1c24" stroke="#fff" stroke-opacity="0.45" stroke-dasharray="4 4"/>
+<text class="m" x="660.5999999999999" y="140.0" text-anchor="middle" dominant-baseline="central">draw</text>
+<text class="s" x="660.5999999999999" y="161.0" text-anchor="middle" dominant-baseline="central">if overridden</text>
+<path d="M549.5 70 V100.0 H108.2 V130" fill="none" stroke="#a4a6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a)"/>
+</svg>
