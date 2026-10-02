@@ -284,10 +284,6 @@ final class CounterReducerTests: XCTestCase {
 }
 ```
 
-### Как выглядит MVI из исходных заметок
-
-В исходном примере (Home-модуль) сделана более «тяжёлая» версия: универсальный `MVIContainer<Intent, Model>` объединяет Intent и Model и пересылает `objectWillChange` из модели во View; `HomeIntent` принимает действия и вызывает методы модели через протокол `HomeModelActionsProtocol`, `HomeModel` хранит `@Published` состояние, а `HomeAssembler` собирает модуль. Идея та же, но форма — на `ObservableObject` и Combine.
-
 ### Два состояния экрана и побочные эффекты
 
 Обычно в состоянии хранят и «в процессе загрузки», и ошибку:

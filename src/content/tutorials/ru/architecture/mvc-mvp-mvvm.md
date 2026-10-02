@@ -178,7 +178,7 @@ viewController.presenter = GreetingPresenter(view: viewController,
                                               person: Person(name: "Tom", surname: "Leader"))
 ```
 
-> **`weak` у view в Presenter.** Контроллер владеет presenter'ом (`var presenter`), а presenter ссылается на контроллер — без `weak` получится retain cycle. В исходных материалах используется `unowned let view`; `weak` безопаснее: `unowned` упадёт, если view вдруг освободится раньше presenter'а.
+> **`weak` у view в Presenter.** Контроллер владеет presenter'ом (`var presenter`), а presenter ссылается на контроллер — без `weak` получится retain cycle. `weak` безопаснее: `unowned` упадёт, если view вдруг освободится раньше presenter'а.
 
 Тест Presenter'а не требует UIKit:
 

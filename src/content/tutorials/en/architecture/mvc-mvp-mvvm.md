@@ -178,7 +178,7 @@ viewController.presenter = GreetingPresenter(view: viewController,
                                               person: Person(name: "Tom", surname: "Leader"))
 ```
 
-> **`weak` for the view in the Presenter.** The controller owns the presenter (`var presenter`), and the presenter refers to the controller: without `weak` you get a retain cycle. The source materials use `unowned let view`; `weak` is safer: `unowned` crashes if the view is suddenly released before the presenter.
+> **`weak` for the view in the Presenter.** The controller owns the presenter (`var presenter`), and the presenter refers to the controller: without `weak` you get a retain cycle. `weak` is safer: `unowned` crashes if the view is suddenly released before the presenter.
 
 Testing the Presenter doesn't require UIKit:
 

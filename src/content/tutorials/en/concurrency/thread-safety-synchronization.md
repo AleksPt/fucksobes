@@ -157,7 +157,7 @@ lock.withLock {
 }
 ```
 
-An example from the "Using NSLock" slide:
+An example:
 
 ```swift
 let lock = NSLock()
