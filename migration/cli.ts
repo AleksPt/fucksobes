@@ -12,7 +12,7 @@ const paths = {
   mapping: join(root, 'migration/mapping.json'),
   review: join(root, 'migration/review.md'),
   categories: join(root, 'src/content/categories.yaml'),
-  content: join(root, 'src/content/questions'),
+  content: join(root, 'src/content/questions/ru'),
 };
 
 const readJson = <T>(path: string): T => JSON.parse(readFileSync(path, 'utf8')) as T;

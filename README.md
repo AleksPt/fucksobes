@@ -25,11 +25,11 @@ npm run check      # типы и .astro-файлы (astro check)
 ## Контент
 
 - `src/content/categories.yaml` — список категорий (`id`, `title`, `description`, `order`). Значения с `: ` внутри брать в кавычки.
-- `src/content/questions/*.md` — один вопрос на файл. Имя файла — id вопроса и часть URL.
+- `src/content/questions/<локаль>/*.md` — один вопрос на файл. Локаль — `ru` (оригинал) или `en` (переводы, пока пусто). Имя файла — id вопроса и часть URL; одинаковое имя в `ru/` и `en/` связывает перевод с оригиналом.
 
 ### Как добавить или изменить вопрос
 
-Каждый вопрос — файл `src/content/questions/<id>.md`:
+Каждый вопрос — файл `src/content/questions/ru/<id>.md`:
 
 ```md
 ---
@@ -54,7 +54,7 @@ order: 12         # порядок внутри категории
 - `parse` разбирает локальный `migration/notion-export.md` в `migration/questions.json`. Этого файла нет в репозитории (он в `.gitignore`: в экспорте были id страниц Notion), а результат разбора — `migration/questions.json` — закоммичен;
 - `check` валидирует `migration/mapping.json`;
 - `review` пишет `migration/review.md`;
-- `generate` создаёт файлы вопросов в `src/content/questions/`.
+- `generate` создаёт файлы вопросов в `src/content/questions/ru/`.
 
 `migration/mapping.json` — разметка: какие исходные вопросы слиты в один итоговый (id, категория, заголовок, номера источников). `migration/review.md` — читаемый отчёт по этой разметке (итоговые вопросы по категориям и слитые дубли) для ручной проверки.
 

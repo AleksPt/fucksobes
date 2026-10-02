@@ -23,10 +23,10 @@ Consult these guides before working on related tasks:
 
 ## Project
 
-- Content: one Markdown file per question in `src/content/questions/<id>.md` (frontmatter `title`, `category`, `order`; empty body = no answer). `<id>` is kebab-case latin, unique, and becomes the URL `/<category>/<id>/`. Categories: `src/content/categories.yaml`.
+- Content: one Markdown file per question in `src/content/questions/<locale>/<id>.md` (`<locale>` is `ru` or `en`; frontmatter `title`, `category`, `order`; empty body = no answer). `<id>` is kebab-case latin, unique within the locale, and becomes the URL `/<category>/<id>/`. The same `<id>` in `ru/` and `en/` links a translation to its original (`en/` is empty until translations are added; the site is Russian-only for now). Russian is the source: new content is written in `ru/`. Categories: `src/content/categories.yaml`.
 - Always build internal links with `url()` from `src/lib/url.ts` (site is served under `/fucksobes/`).
 - Interactive UI only as React islands (`.tsx`); keep logic in `src/lib/*.ts` with unit tests.
-- Tutorials (second flow, `/tutorials/`): topics and the numbered section list live in `src/lib/tutorials.ts`; a tutorial page is `src/content/tutorials/<topic>/<id>.md` (frontmatter `title`, `order` = section number in the topic, from 1). A section button gets its link automatically when a file with that topic and `order` exists. Cross-references to other tutorials ("тутор 03") are relative links (`[тутор 03](../init-inheritance-access/)`) once the target page exists, and plain text until then; never link from inside code blocks.
+- Tutorials (second flow, `/tutorials/`): topics and the numbered section list live in `src/lib/tutorials.ts`; a tutorial page is `src/content/tutorials/<locale>/<topic>/<id>.md` (frontmatter `title`, `order` = section number in the topic, from 1). A section button gets its link automatically when a file with that topic and `order` exists. Cross-references to other tutorials ("тутор 03") are relative links (`[тутор 03](../init-inheritance-access/)`) once the target page exists, and plain text until then; never link from inside code blocks.
 - Search indexes question titles only (`src/lib/search.ts`, `src/pages/search-index.json.ts`).
 - Design system: `docs/design-system.md`, tokens in `@theme` in `src/styles/global.css`. Dark only, one lime accent; use token utilities (`bg-carbon`, `text-fog`, `rounded-card`), no `dark:` classes and no color literals.
 - Do not run `npm run migrate -- generate` — it overwrites all question files.

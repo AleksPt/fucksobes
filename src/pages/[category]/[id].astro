@@ -4,14 +4,14 @@ import { getEntry, render } from 'astro:content';
 import NoAnswer from '../../components/NoAnswer.astro';
 import QuestionTitle from '../../components/QuestionTitle.astro';
 import Base from '../../layouts/Base.astro';
-import { getQuestions, hasAnswer } from '../../lib/content';
+import { getQuestions, hasAnswer, questionSlug } from '../../lib/content';
 import { plainTitle } from '../../lib/text';
 import { url } from '../../lib/url';
 
 export const getStaticPaths = (async () => {
   const questions = await getQuestions();
   return questions.map((question) => ({
-    params: { category: question.data.category.id, id: question.id },
+    params: { category: question.data.category.id, id: questionSlug(question) },
     props: { question },
   }));
 }) satisfies GetStaticPaths;
