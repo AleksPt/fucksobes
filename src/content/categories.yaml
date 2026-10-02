@@ -2,47 +2,83 @@
   title: Swift
   description: "Язык: типы, протоколы, дженерики, замыкания, опционалы."
   order: 1
+  en:
+    title: Swift
+    description: "The language: types, protocols, generics, closures, optionals."
 - id: memory
   title: Память
   description: "ARC, retain cycles, weak и unowned, стек и куча."
   order: 2
+  en:
+    title: Memory
+    description: "ARC, retain cycles, weak and unowned, stack and heap."
 - id: concurrency
   title: Многопоточность
   description: "GCD, OperationQueue, async/await, акторы, гонки данных."
   order: 3
+  en:
+    title: Concurrency
+    description: "GCD, OperationQueue, async/await, actors, data races."
 - id: uikit
   title: UIKit
   description: "Жизненный цикл, вёрстка, таблицы и коллекции, рендеринг."
   order: 4
+  en:
+    title: UIKit
+    description: "Lifecycle, layout, tables and collections, rendering."
 - id: swiftui
   title: SwiftUI
   description: "Состояние, обновление view, модификаторы, навигация."
   order: 5
+  en:
+    title: SwiftUI
+    description: "State, view updates, modifiers, navigation."
 - id: architecture
   title: Архитектура и паттерны
   description: "MVC, MVVM, VIPER, DI, SOLID, паттерны проектирования."
   order: 6
+  en:
+    title: Architecture and Patterns
+    description: "MVC, MVVM, VIPER, DI, SOLID, design patterns."
 - id: algorithms
   title: Алгоритмы и структуры данных
   description: "Сложность, коллекции, сортировки, типовые задачи."
   order: 7
+  en:
+    title: Algorithms and Data Structures
+    description: "Complexity, collections, sorting, common problems."
 - id: networking
   title: Сеть
   description: "URLSession, HTTP, REST, загрузка файлов, кэширование."
   order: 8
+  en:
+    title: Networking
+    description: "URLSession, HTTP, REST, file downloads, caching."
 - id: data-storage
   title: Хранение данных
   description: "Core Data, UserDefaults, Keychain, файловая система."
   order: 9
+  en:
+    title: Data Storage
+    description: "Core Data, UserDefaults, Keychain, the file system."
 - id: tooling
   title: Инструменты и сборка
   description: "Xcode, Instruments, SPM, CI, подпись и публикация."
   order: 10
+  en:
+    title: Tools and Build
+    description: "Xcode, Instruments, SPM, CI, signing and distribution."
 - id: git
   title: Git
   description: "Ветки, merge и rebase, откат изменений, поиск бага по истории."
   order: 11
+  en:
+    title: Git
+    description: "Branches, merge and rebase, undoing changes, finding a bug in history."
 - id: testing
   title: Тестирование
   description: "Unit, интеграционные и UI-тесты, моки, TDD, snapshot-тесты."
   order: 12
+  en:
+    title: Testing
+    description: "Unit, integration and UI tests, mocks, TDD, snapshot tests."

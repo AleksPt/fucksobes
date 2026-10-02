@@ -8,6 +8,8 @@ const categories = defineCollection({
     title: z.string(),
     description: z.string(),
     order: z.number().int(),
+    // Название и описание английской версии (русские — в `title` и `description`).
+    en: z.object({ title: z.string(), description: z.string() }),
   }),
 });
 

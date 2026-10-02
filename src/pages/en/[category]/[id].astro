@@ -1,0 +1,8 @@
+---
+import View from '../../../views/Question.astro';
+import { questionPaths } from '../../../lib/paths';
+
+export const getStaticPaths = () => questionPaths('en');
+---
+
+<View {...Astro.props} />

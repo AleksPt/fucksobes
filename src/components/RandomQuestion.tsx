@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { ui } from '../i18n';
+import type { Locale } from '../lib/locale';
 import { createQuestionLoader, pickRandom, type RandomQuestionData } from '../lib/random';
 import { splitInlineCode } from '../lib/text';
 import { url } from '../lib/url';
@@ -6,6 +8,7 @@ import { url } from '../lib/url';
 interface Props {
   /** id вопросов с ответами; сами ответы грузятся по одному из `random/<id>.json`. */
   ids: string[];
+  locale: Locale;
 }
 
 const loadQuestion = createQuestionLoader();
@@ -15,7 +18,8 @@ function fromHash(ids: string[]): string | undefined {
   return ids.includes(id) ? id : undefined;
 }
 
-export default function RandomQuestion({ ids }: Props) {
+export default function RandomQuestion({ ids, locale }: Props) {
+  const t = ui[locale];
   const [currentId, setCurrentId] = useState<string>();
   const [nextId, setNextId] = useState<string>();
   const [question, setQuestion] = useState<RandomQuestionData>();
@@ -30,18 +34,18 @@ export default function RandomQuestion({ ids }: Props) {
     let cancelled = false;
     setFailed(false);
     window.history.replaceState(null, '', `#${currentId}`);
-    loadQuestion(currentId).then(
+    loadQuestion(currentId, locale).then(
       (loaded) => !cancelled && setQuestion(loaded),
       () => !cancelled && setFailed(true),
     );
     // Следующий вопрос грузим заранее, чтобы кнопка срабатывала мгновенно.
     const next = pickRandom(ids, currentId);
     setNextId(next);
-    if (next) loadQuestion(next).catch(() => {});
+    if (next) loadQuestion(next, locale).catch(() => {});
     return () => {
       cancelled = true;
     };
-  }, [currentId, ids]);
+  }, [currentId, ids, locale]);
 
   const loading = !failed && question?.id !== currentId;
 
@@ -51,7 +55,7 @@ export default function RandomQuestion({ ids }: Props) {
         {question && (
           // key пересоздаёт <details>, поэтому новый вопрос открывается со свёрнутым ответом.
           <article key={question.id}>
-            <a href={url(`${question.category.id}/`)} className="mt-4 inline-block text-sm text-fog hover:text-accent">
+            <a href={url(`${question.category.id}/`, locale)} className="mt-4 inline-block text-sm text-fog hover:text-accent">
               {question.category.title}
             </a>
             <h1 className="mt-2 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]">
@@ -70,14 +74,14 @@ export default function RandomQuestion({ ids }: Props) {
                 <svg className="chevron size-4 shrink-0 text-steel" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                Ответ
+                {t.answer}
               </summary>
               <div className="prose max-w-none pt-2 pb-6 pl-7 break-words" dangerouslySetInnerHTML={{ __html: question.html }} />
             </details>
           </article>
         )}
-        {!question && !failed && <p className="mt-4 text-fog">Загружаем вопрос…</p>}
-        {failed && <p className="mt-4 text-fog">Не удалось загрузить вопрос. Попробуйте следующий.</p>}
+        {!question && !failed && <p className="mt-4 text-fog">{t.randomLoading}</p>}
+        {failed && <p className="mt-4 text-fog">{t.randomFailed}</p>}
       </div>
       <div className="mt-10">
         <button
@@ -86,7 +90,7 @@ export default function RandomQuestion({ ids }: Props) {
           disabled={loading}
           className="inline-flex cursor-pointer items-center rounded-input bg-accent px-6 py-3 text-base font-medium text-on-accent transition-opacity hover:opacity-90 disabled:opacity-50 motion-reduce:transition-none"
         >
-          Следующий вопрос
+          {t.randomNext}
         </button>
       </div>
     </>

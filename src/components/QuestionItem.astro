@@ -1,4 +1,6 @@
 ---
+import { ui } from '../i18n';
+import { toLocale } from '../lib/locale';
 import NoAnswer from './NoAnswer.astro';
 import QuestionTitle from './QuestionTitle.astro';
 
@@ -9,6 +11,7 @@ interface Props {
   answered: boolean;
 }
 
+const t = ui[toLocale(Astro.currentLocale)];
 const { id, title, href, answered } = Astro.props;
 ---
 
@@ -24,7 +27,7 @@ const { id, title, href, answered } = Astro.props;
     {
       !answered && (
         <span class="mt-0.5 shrink-0 rounded-full border border-white/20 px-2.5 py-0.5 text-xs font-normal text-fog">
-          без ответа
+          {t.noAnswerBadge}
         </span>
       )
     }
@@ -40,7 +43,7 @@ const { id, title, href, answered } = Astro.props;
       )
     }
     <a href={href} class="mt-4 inline-block text-sm text-fog hover:text-accent">
-      Открыть отдельно →
+      {t.openSeparately}
     </a>
   </div>
 </details>

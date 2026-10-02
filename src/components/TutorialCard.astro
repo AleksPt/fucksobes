@@ -1,5 +1,6 @@
 ---
-import { pluralize } from '../lib/text';
+import { plural, ui } from '../i18n';
+import { toLocale } from '../lib/locale';
 
 interface Props {
   title: string;
@@ -11,6 +12,7 @@ interface Props {
   href?: string;
 }
 
+const locale = toLocale(Astro.currentLocale);
 const { title, href, total, badge } = Astro.props;
 const Tag = href ? 'a' : 'div';
 ---
@@ -23,7 +25,7 @@ const Tag = href ? 'a' : 'div';
     {
       (badge ?? total !== undefined) && (
         <span class="rounded-full border border-white/45 px-3 py-1 text-sm font-medium tracking-[-0.015em] whitespace-nowrap tabular-nums">
-          {badge ?? `${total} ${pluralize(total!, ['тема', 'темы', 'тем'])}`}
+          {badge ?? `${total} ${plural(locale, total!, ui[locale].topic)}`}
         </span>
       )
     }

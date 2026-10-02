@@ -1,0 +1,8 @@
+---
+import View from '../../../views/TutorialTopic.astro';
+import { tutorialTopicPaths } from '../../../lib/paths';
+
+export const getStaticPaths = () => tutorialTopicPaths('en');
+---
+
+<View {...Astro.props} />

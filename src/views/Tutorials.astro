@@ -1,0 +1,38 @@
+---
+import TutorialCard from '../components/TutorialCard.astro';
+import Base from '../layouts/Base.astro';
+import { ui } from '../i18n';
+import { getTutorialPages } from '../lib/content';
+import { toLocale } from '../lib/locale';
+import { localizeTutorial, tutorialHref, tutorials } from '../lib/tutorials';
+import { url } from '../lib/url';
+
+const locale = toLocale(Astro.currentLocale);
+const t = ui[locale];
+const pages = await getTutorialPages(locale);
+// На английском показываем только темы, у которых уже есть переведённые страницы
+const topics = tutorials.filter((tutorial) => locale === 'ru' || pages.some(({ page }) => page.topic === tutorial.slug));
+
+// Ссылки на остальные туториалы добавим позже (поле `href`)
+const cards: { title: string; href?: string; total?: number; badge?: string }[] = [
+  ...topics.map((tutorial) => {
+    const { slug, title, sections } = localizeTutorial(tutorial, locale);
+    return { title, href: url(tutorialHref(slug), locale), total: sections.length };
+  }),
+  { title: 'SwiftUI', badge: t.soon },
+];
+---
+
+<Base title={`${t.tutorials} — FuckSobes`}>
+  <a href={url('', locale)} class="text-sm text-fog hover:text-accent">{t.allCategories}</a>
+  <h1 class="mt-6 mb-10 font-display text-5xl leading-[0.9] font-semibold tracking-[-0.02em] text-balance uppercase sm:text-7xl">{t.tutorials}</h1>
+  <ul class="flex flex-wrap gap-4 [&>li]:grow [&>li]:basis-[20rem]">
+    {
+      cards.map(({ title, href, total, badge }) => (
+        <li>
+          <TutorialCard title={title} href={href} total={total} badge={badge} />
+        </li>
+      ))
+    }
+  </ul>
+</Base>

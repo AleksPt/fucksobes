@@ -1,24 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { plainTitle, pluralize, splitInlineCode } from './text';
-
-const forms: [string, string, string] = ['вопрос', 'вопроса', 'вопросов'];
-
-describe('pluralize', () => {
-  it.each([
-    [1, 'вопрос'],
-    [21, 'вопрос'],
-    [2, 'вопроса'],
-    [34, 'вопроса'],
-    [5, 'вопросов'],
-    [11, 'вопросов'],
-    [12, 'вопросов'],
-    [14, 'вопросов'],
-    [111, 'вопросов'],
-    [0, 'вопросов'],
-  ])('%i → %s', (n, expected) => {
-    expect(pluralize(n, forms)).toBe(expected);
-  });
-});
+import { plainTitle, splitInlineCode } from './text';
 
 describe('splitInlineCode', () => {
   it('разбивает по обратным кавычкам', () => {

@@ -1,0 +1,60 @@
+---
+import CategoryCard from '../components/CategoryCard.astro';
+import Search from '../components/Search.tsx';
+import Base from '../layouts/Base.astro';
+import { plural, ui } from '../i18n';
+import { getCategoriesWithQuestions, getQuestions, getTutorialPages } from '../lib/content';
+import { toLocale } from '../lib/locale';
+import { url } from '../lib/url';
+
+const locale = toLocale(Astro.currentLocale);
+const t = ui[locale];
+const categories = await getCategoriesWithQuestions(locale);
+const questions = await getQuestions(undefined, locale);
+const stats = categories.map((category) => ({
+  category,
+  total: questions.filter((q) => q.data.category.id === category.id).length,
+}));
+// Кнопку «Туториалы» не показываем, пока на этом языке нет ни одной страницы
+const hasTutorials = (await getTutorialPages(locale)).length > 0;
+---
+
+<Base title={t.siteTitle} hero>
+  <h1 class="pt-12 text-center sm:pt-20">
+    <span class="block font-display text-[clamp(4.5rem,14vw,11.25rem)] leading-[0.85] font-semibold tracking-[-0.02em] text-balance uppercase"
+      >{`${questions.length} ${plural(locale, questions.length, t.question)}`}</span
+    >
+    <span class="mt-6 block text-[clamp(1.375rem,3vw,1.75rem)] leading-tight font-medium tracking-[-0.02em] text-balance text-paper/85 sm:whitespace-nowrap"
+      >{t.heroSubtitle}</span
+    >
+  </h1>
+  <div class="relative z-30 pt-10">
+    <Search client:idle indexUrl={url('search-index.json', locale)} locale={locale} />
+  </div>
+  <p class="flex flex-wrap items-center justify-center gap-3 pt-6 pb-16 sm:pb-24">
+    <a
+      href={url('random/', locale)}
+      class="inline-flex items-center rounded-input bg-accent px-6 py-3 text-base font-medium text-on-accent transition-opacity hover:opacity-90 motion-reduce:transition-none"
+      >{t.randomQuestion}</a
+    >
+    {
+      hasTutorials && (
+        <a
+          href={url('tutorials/', locale)}
+          class="inline-flex items-center rounded-input border border-white/45 px-6 py-3 text-base font-medium transition-colors hover:border-accent hover:text-accent motion-reduce:transition-none"
+        >
+          {t.tutorials}
+        </a>
+      )
+    }
+  </p>
+  <ul class="flex flex-wrap gap-4 [&>li]:grow [&>li]:basis-[20rem]">
+    {
+      stats.map(({ category, total }) => (
+        <li>
+          <CategoryCard category={category} total={total} />
+        </li>
+      ))
+    }
+  </ul>
+</Base>

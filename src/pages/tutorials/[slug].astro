@@ -1,53 +1,8 @@
 ---
-import type { GetStaticPaths } from 'astro';
-import Base from '../../layouts/Base.astro';
-import { getTutorialPages } from '../../lib/content';
-import { sectionsWithLinks, tutorialPageHref, tutorials } from '../../lib/tutorials';
-import { url } from '../../lib/url';
+import View from '../../views/TutorialTopic.astro';
+import { tutorialTopicPaths } from '../../lib/paths';
 
-export const getStaticPaths = (() =>
-  tutorials.map((tutorial) => ({ params: { slug: tutorial.slug }, props: { tutorial } }))) satisfies GetStaticPaths;
-
-const { tutorial } = Astro.props;
-const pages = (await getTutorialPages()).map(({ page }) => page);
-const sections = sectionsWithLinks(tutorial, pages, (page) => url(tutorialPageHref(page)));
-
-const rowClass =
-  'group flex items-center gap-4 rounded-card border border-white/12 bg-white/4 px-6 py-5 backdrop-blur-md transition-colors duration-200 motion-reduce:transition-none';
+export const getStaticPaths = () => tutorialTopicPaths('ru');
 ---
 
-<Base title={`${tutorial.title} — Туториалы — FuckSobes`}>
-  <div class="mx-auto max-w-3xl">
-    <a href={url('tutorials/')} class="text-sm text-fog hover:text-accent">← Туториалы</a>
-    <h1 class="mt-6 mb-10 font-display text-5xl leading-[0.9] font-semibold tracking-[-0.02em] text-balance uppercase sm:text-7xl">{tutorial.title}</h1>
-    <ol class="flex flex-col gap-3">
-      {
-        sections.map(({ title, href }, i) => {
-          const Tag = href ? 'a' : 'div';
-          const number = String(i + 1).padStart(2, '0');
-          return (
-            <li>
-              <Tag
-                href={href}
-                class:list={[rowClass, href && 'hover:border-white/45 hover:bg-white/7 focus-visible:border-white/45 focus-visible:bg-white/7']}
-              >
-                <span class="text-sm font-medium text-fog tabular-nums">{number}</span>
-                <span class="text-lg leading-tight font-medium tracking-[-0.015em] text-balance">{title}</span>
-                {href && (
-                  <span
-                    class="ml-auto grid size-10 shrink-0 place-items-center rounded-input border border-white/12 transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent group-focus-visible:border-accent group-focus-visible:bg-accent group-focus-visible:text-on-accent motion-reduce:transition-none"
-                    aria-hidden="true"
-                  >
-                    <svg class="size-[18px]" viewBox="0 0 20 20" fill="none">
-                      <path d="M4 10h11M10 4.5 15.5 10 10 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                )}
-              </Tag>
-            </li>
-          );
-        })
-      }
-    </ol>
-  </div>
-</Base>
+<View {...Astro.props} />

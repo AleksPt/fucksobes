@@ -1,12 +1,16 @@
 import { navigate } from 'astro:transitions/client';
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react';
+import { ui } from '../i18n';
+import type { Locale } from '../lib/locale';
 import { createSearch, stepIndex, type SearchDoc } from '../lib/search';
 
 interface Props {
   indexUrl: string;
+  locale: Locale;
 }
 
-export default function Search({ indexUrl }: Props) {
+export default function Search({ indexUrl, locale }: Props) {
+  const t = ui[locale];
   const [docs, setDocs] = useState<SearchDoc[] | null>(null);
   const [failed, setFailed] = useState(false);
   const [query, setQuery] = useState('');
@@ -72,7 +76,7 @@ export default function Search({ indexUrl }: Props) {
     }
   }
 
-  const status = failed ? 'Не удалось загрузить поиск' : !docs ? 'Загрузка…' : hits.length === 0 ? 'Ничего не найдено' : null;
+  const status = failed ? t.searchFailed : !docs ? t.searchLoading : hits.length === 0 ? t.searchEmpty : null;
 
   return (
     <div className="relative mx-auto w-full max-w-xl text-left">
@@ -80,12 +84,12 @@ export default function Search({ indexUrl }: Props) {
         ref={inputRef}
         type="search"
         role="combobox"
-        aria-label="Поиск по вопросам"
+        aria-label={t.searchLabel}
         aria-expanded={open}
         aria-controls="search-results"
         aria-autocomplete="list"
         aria-activedescendant={open && hits[active] ? `search-hit-${active}` : undefined}
-        placeholder="Поиск по вопросам"
+        placeholder={t.searchLabel}
         value={query}
         onFocus={() => {
           setFocused(true);

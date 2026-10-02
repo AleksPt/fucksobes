@@ -1,0 +1,41 @@
+---
+import { getEntry, render } from 'astro:content';
+import NoAnswer from '../components/NoAnswer.astro';
+import QuestionTitle from '../components/QuestionTitle.astro';
+import Base from '../layouts/Base.astro';
+import { ui } from '../i18n';
+import { categoryText, getCategory, hasAnswer, questionSlug } from '../lib/content';
+import { otherLocale, toLocale } from '../lib/locale';
+import { plainTitle } from '../lib/text';
+import { url } from '../lib/url';
+
+const locale = toLocale(Astro.currentLocale);
+const t = ui[locale];
+const { question } = Astro.props;
+const category = await getCategory(question.data.category.id);
+const { Content } = await render(question);
+// Переключатель ведёт на перевод вопроса, если он есть
+const alt = (await getEntry('questions', `${otherLocale(locale)}/${questionSlug(question)}`)) ? undefined : null;
+---
+
+<Base title={`${plainTitle(question.data.title)} — FuckSobes`} alt={alt}>
+  <div class="mx-auto max-w-3xl">
+  <nav class="text-sm text-fog">
+    <a href={url('', locale)} class="hover:text-accent">{t.categories}</a>
+    <span class="mx-1 text-steel">/</span>
+    <a href={url(`${category.id}/`, locale)} class="hover:text-accent">{categoryText(category, locale).title}</a>
+  </nav>
+  <h1 class="mt-4 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]"><QuestionTitle title={question.data.title} /></h1>
+  <div class="mt-6">
+    {
+      hasAnswer(question) ? (
+        <div class="prose max-w-none break-words">
+          <Content />
+        </div>
+      ) : (
+        <NoAnswer />
+      )
+    }
+  </div>
+  </div>
+</Base>

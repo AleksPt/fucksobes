@@ -1,26 +1,5 @@
 ---
-import TutorialCard from '../../components/TutorialCard.astro';
-import Base from '../../layouts/Base.astro';
-import { tutorialHref, tutorials } from '../../lib/tutorials';
-import { url } from '../../lib/url';
-
-// Ссылки на остальные туториалы добавим позже (поле `href`)
-const cards: { title: string; href?: string; total?: number; badge?: string }[] = [
-  ...tutorials.map(({ slug, title, sections }) => ({ title, href: url(tutorialHref(slug)), total: sections.length })),
-  { title: 'SwiftUI', badge: 'скоро' },
-];
+import View from '../../views/Tutorials.astro';
 ---
 
-<Base title="Туториалы — FuckSobes">
-  <a href={url()} class="text-sm text-fog hover:text-accent">← Все категории</a>
-  <h1 class="mt-6 mb-10 font-display text-5xl leading-[0.9] font-semibold tracking-[-0.02em] text-balance uppercase sm:text-7xl">Туториалы</h1>
-  <ul class="flex flex-wrap gap-4 [&>li]:grow [&>li]:basis-[20rem]">
-    {
-      cards.map(({ title, href, total, badge }) => (
-        <li>
-          <TutorialCard title={title} href={href} total={total} badge={badge} />
-        </li>
-      ))
-    }
-  </ul>
-</Base>
+<View {...Astro.props} />

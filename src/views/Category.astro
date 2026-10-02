@@ -1,0 +1,46 @@
+---
+import { render } from 'astro:content';
+import QuestionItem from '../components/QuestionItem.astro';
+import Base from '../layouts/Base.astro';
+import { plural, ui } from '../i18n';
+import { categoryText, getQuestions, hasAnswer, questionSlug } from '../lib/content';
+import { otherLocale, toLocale } from '../lib/locale';
+import { url } from '../lib/url';
+
+const locale = toLocale(Astro.currentLocale);
+const t = ui[locale];
+const { category } = Astro.props;
+const { title, description } = categoryText(category, locale);
+const questions = await Promise.all(
+  (await getQuestions(category.id, locale)).map(async (q) => ({ q, Content: (await render(q)).Content })),
+);
+// Переключатель ведёт на ту же категорию, если в другой локали в ней есть вопросы
+const alt = (await getQuestions(category.id, otherLocale(locale))).length > 0 ? undefined : null;
+---
+
+<Base title={`${title} — FuckSobes`} description={description} alt={alt}>
+  <div class="mx-auto max-w-3xl">
+  <a href={url('', locale)} class="text-sm text-fog hover:text-accent">{t.allCategories}</a>
+  <h1 class="mt-6 font-display text-5xl leading-[0.9] font-semibold tracking-[-0.02em] text-balance uppercase sm:text-7xl" transition:name={`category-${category.id}`}>
+    {title}
+  </h1>
+  <p class="mt-5 text-fog">{description}</p>
+  <p class="mt-4 inline-block rounded-full border border-white/45 px-3 py-1 text-sm font-medium tabular-nums">
+    {`${questions.length} ${plural(locale, questions.length, t.question)}`}
+  </p>
+  <div class="mt-10 divide-y divide-smoke border-y border-smoke">
+    {
+      questions.map(({ q, Content }) => (
+        <QuestionItem
+          id={questionSlug(q)}
+          title={q.data.title}
+          href={url(`${category.id}/${questionSlug(q)}/`, locale)}
+          answered={hasAnswer(q)}
+        >
+          <Content />
+        </QuestionItem>
+      ))
+    }
+  </div>
+  </div>
+</Base>

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { neighbours, parseTutorialId, sectionsWithLinks, tutorialPageHref, tutorials, type TutorialPage } from './tutorials';
+import { localizeTutorial, neighbours, parseTutorialId, sectionsWithLinks, tutorialPageHref, tutorials, type TutorialPage } from './tutorials';
 
 const page = (topic: string, slug: string, order: number): TutorialPage => ({ topic, slug, order, title: slug });
 
@@ -66,5 +66,20 @@ describe('neighbours', () => {
   it('пропускает неопубликованные номера', () => {
     const { prev, next } = neighbours([page('swift', 'a', 1), page('swift', 'd', 4)], page('swift', 'a', 1));
     expect([prev, next?.slug]).toEqual([undefined, 'd']);
+  });
+});
+
+describe('localizeTutorial', () => {
+  it('русский возвращает как есть', () => {
+    expect(localizeTutorial(tutorials[0], 'ru')).toBe(tutorials[0]);
+  });
+
+  it('у каждого туториала английские названия темы и всех разделов', () => {
+    for (const tutorial of tutorials) {
+      const en = localizeTutorial(tutorial, 'en');
+      expect(en.title, tutorial.slug).toBeTruthy();
+      expect(en.sections).toHaveLength(tutorial.sections.length);
+      expect(en.sections.every((section) => /^[\x20-\x7E]+$/.test(section.title)), tutorial.slug).toBe(true);
+    }
   });
 });

@@ -1,0 +1,63 @@
+---
+import { render } from 'astro:content';
+import ImageZoom from '../components/ImageZoom';
+import QuestionTitle from '../components/QuestionTitle.astro';
+import Base from '../layouts/Base.astro';
+import { ui } from '../i18n';
+import { getTutorialPages } from '../lib/content';
+import { otherLocale, toLocale } from '../lib/locale';
+import { plainTitle } from '../lib/text';
+import { localizeTutorial, neighbours, tutorialPageHref, tutorials } from '../lib/tutorials';
+import { url } from '../lib/url';
+
+const locale = toLocale(Astro.currentLocale);
+const t = ui[locale];
+const { entry, page } = Astro.props;
+const topic = localizeTutorial(tutorials.find((tutorial) => tutorial.slug === page.topic)!, locale);
+const { prev, next } = neighbours((await getTutorialPages(locale)).map((item) => item.page), page);
+// Переключатель ведёт на перевод этой страницы, если он есть
+const hasOther = (await getTutorialPages(otherLocale(locale))).some(
+  (item) => item.page.topic === page.topic && item.page.slug === page.slug,
+);
+const alt = hasOther ? undefined : null;
+const { Content } = await render(entry);
+
+const navClass =
+  'group flex flex-col gap-1 rounded-card border border-white/12 bg-white/4 px-6 py-5 backdrop-blur-md transition-colors duration-200 hover:border-white/45 hover:bg-white/7 focus-visible:border-white/45 focus-visible:bg-white/7 motion-reduce:transition-none';
+---
+
+<Base title={`${plainTitle(page.title)} — ${topic.title} — ${t.tutorials} — FuckSobes`} alt={alt}>
+  <div class="mx-auto max-w-3xl">
+    <nav class="text-sm text-fog">
+      <a href={url('tutorials/', locale)} class="hover:text-accent">{t.tutorials}</a>
+      <span class="mx-1 text-steel">/</span>
+      <a href={url(`tutorials/${topic.slug}/`, locale)} class="hover:text-accent">{topic.title}</a>
+    </nav>
+    <p class="mt-6 text-sm font-medium text-fog tabular-nums">{String(page.order).padStart(2, '0')}</p>
+    <h1 class="mt-2 text-3xl leading-[1.1] font-medium tracking-[-0.02em] text-balance sm:text-[2.5rem]"><QuestionTitle title={page.title} /></h1>
+    <div class="prose tutorial mt-8 max-w-none break-words">
+      <Content />
+    </div>
+    <ImageZoom client:idle locale={locale} />
+    {
+      (prev || next) && (
+        <nav class="mt-16 grid gap-4 sm:grid-cols-2" aria-label={t.adjacentTutorials}>
+          {prev ? (
+            <a href={url(tutorialPageHref(prev), locale)} class={navClass}>
+              <span class="text-sm text-fog">{t.previous}</span>
+              <span class="text-lg leading-tight font-medium tracking-[-0.015em] text-balance">{prev.title}</span>
+            </a>
+          ) : (
+            <span />
+          )}
+          {next && (
+            <a href={url(tutorialPageHref(next), locale)} class:list={[navClass, 'sm:col-start-2 sm:text-right']}>
+              <span class="text-sm text-fog">{t.next}</span>
+              <span class="text-lg leading-tight font-medium tracking-[-0.015em] text-balance">{next.title}</span>
+            </a>
+          )}
+        </nav>
+      )
+    }
+  </div>
+</Base>
