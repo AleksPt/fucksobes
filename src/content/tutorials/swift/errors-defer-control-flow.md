@@ -11,7 +11,7 @@ order: 5
 > - Как работает `defer` и в каком порядке он выполняется
 > - Операторы передачи управления: `break`, `continue`, `fallthrough`, `return`, `throw`
 
-> **Нужно знать заранее:** тутор 01 (enum), тутор 04 (Optional, `guard`).
+> **Нужно знать заранее:** [тутор 01](../structs-classes-enums/) (enum), [тутор 04](../optional/) (Optional, `guard`).
 
 ## Аналогия: почта с «не доставлено»
 

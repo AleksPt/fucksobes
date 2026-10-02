@@ -12,7 +12,7 @@ order: 9
 > - Method swizzling, KVC и KVO
 > - Разбор задач с собеседований на диспетчеризацию
 
-> **Нужно знать заранее:** тутор 01 (struct/class), тутор 03 (`final`, `override`), тутор 07 (протоколы, extension), тутор 08 (existential container).
+> **Нужно знать заранее:** [тутор 01](../structs-classes-enums/) (struct/class), [тутор 03](../init-inheritance-access/) (`final`, `override`), [тутор 07](../protocols-extensions-casting/) (протоколы, extension), [тутор 08](../generics-any-some/) (existential container).
 
 ## Аналогия: кто ответит на звонок
 
