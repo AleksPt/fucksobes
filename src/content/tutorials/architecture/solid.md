@@ -124,7 +124,7 @@ final class NetworkData: DataProtocol {
     func getData() -> Data? { nil }   // URLSession
 }
 
-final class SQLData: DataProtocol {   // ⚠️ Исправлено: в исходнике класс не подписан на протокол
+final class SQLData: DataProtocol {
     func getData() -> Data? { nil }   // база данных
 }
 ```
@@ -272,7 +272,6 @@ protocol LoginInteractorProtocol {
     func login(userID: Int)
 }
 
-// ⚠️ Исправлено: в исходнике LoginInteractor не подписан на протокол, а login() вызывался без аргумента
 final class LoginInteractor: LoginInteractorProtocol {
     func login(userID: Int) { /* реальный вход */ }
 }

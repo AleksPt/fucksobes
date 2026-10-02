@@ -74,7 +74,7 @@ import UIKit
 
 enum Flow { case onboarding, authorization, main }
 
-protocol CoordinatorFinishDelegate: AnyObject {        // ⚠️ Исправлено: AnyObject, чтобы можно было weak
+protocol CoordinatorFinishDelegate: AnyObject {
     func didFinish(_ coordinator: CoordinatorProtocol)
 }
 
@@ -95,7 +95,7 @@ extension CoordinatorProtocol {
 }
 
 final class AppCoordinator: CoordinatorProtocol, CoordinatorFinishDelegate {
-    weak var finishDelegate: CoordinatorFinishDelegate?  // ⚠️ Исправлено: weak
+    weak var finishDelegate: CoordinatorFinishDelegate?
     let navigationController: UINavigationController
     var childCoordinators: [CoordinatorProtocol] = []
 
@@ -113,7 +113,7 @@ final class AppCoordinator: CoordinatorProtocol, CoordinatorFinishDelegate {
 
     func showAuthorizationFlow() {
         let coordinator = AuthorizationCoordinator(navigationController: navigationController)
-        coordinator.finishDelegate = self               // ⚠️ Исправлено: родитель узнаёт о завершении
+        coordinator.finishDelegate = self
         childCoordinators.append(coordinator)
         coordinator.start()
     }
@@ -148,7 +148,7 @@ final class AuthorizationCoordinator: CoordinatorProtocol {
 // Точка входа
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    private var appCoordinator: AppCoordinator?          // ⚠️ Исправлено: координатор нужно хранить
+    private var appCoordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {

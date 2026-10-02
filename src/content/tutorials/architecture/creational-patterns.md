@@ -238,7 +238,7 @@ struct House {
 }
 
 final class HouseBuilder {
-    private var house = House()          // ⚠️ Исправлено: в исходнике house был nil
+    private var house = House()
 
     @discardableResult
     func setWalls(_ walls: Walls) -> Self { house.walls = walls; return self }
