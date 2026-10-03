@@ -30,7 +30,7 @@ const itemClass = 'rounded-input px-2.5 py-1 uppercase';
               {l}
             </span>
           ) : (
-            <a href={switchHref} hreflang={l} lang={l} class:list={[itemClass, 'text-fog transition-colors hover:text-paper motion-reduce:transition-none']}>
+            <a href={switchHref} data-locale-switch={l} hreflang={l} lang={l} class:list={[itemClass, 'text-fog transition-colors hover:text-paper motion-reduce:transition-none']}>
               {l}
             </a>
           ),
@@ -39,3 +39,31 @@ const itemClass = 'rounded-input px-2.5 py-1 uppercase';
     </nav>
   </div>
 </header>
+
+<script>
+  import { isLocale } from '../lib/locale';
+  import { REDIRECT_DONE_KEY, saveLocalePreference } from '../lib/locale-preference';
+
+  // Модульный скрипт выполняется один раз и переживает переходы ClientRouter: один делегированный обработчик.
+  // Сохраняем синхронно в клике, до навигации; auxclick — средняя кнопка (новая вкладка).
+  const remember = (event: MouseEvent) => {
+    const link = (event.target as Element | null)?.closest<HTMLElement>('a[data-locale-switch]');
+    const locale = link?.dataset.localeSwitch;
+    if (!locale || !isLocale(locale)) return;
+    let storage: Storage | undefined;
+    try {
+      storage = localStorage; // само обращение к свойству бросает при заблокированном хранилище
+    } catch {
+      storage = undefined;
+    }
+    saveLocalePreference(storage, locale);
+    // осознанный выбор языка снимает защиту «один редирект за вкладку»
+    try {
+      sessionStorage.removeItem(REDIRECT_DONE_KEY);
+    } catch {
+      // нет sessionStorage — нечего сбрасывать
+    }
+  };
+  document.addEventListener('click', remember);
+  document.addEventListener('auxclick', remember);
+</script>

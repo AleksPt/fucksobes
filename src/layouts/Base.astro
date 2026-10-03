@@ -3,7 +3,8 @@ import { ClientRouter } from 'astro:transitions';
 import Aurora from '../components/Aurora.astro';
 import Header from '../components/Header.astro';
 import { ui } from '../i18n';
-import { locales, otherLocale, toLocale } from '../lib/locale';
+import { defaultLocale, locales, otherLocale, toLocale } from '../lib/locale';
+import { LOCALE_STORAGE_KEY, REDIRECT_DONE_KEY } from '../lib/locale-preference';
 import { parsePathname, url } from '../lib/url';
 import '../styles/global.css';
 
@@ -24,6 +25,8 @@ const { title, description = ui[locale].defaultDescription, hero = false, alt } 
 
 const here = parsePathname(Astro.url.pathname).path;
 const altPath = alt === undefined ? here : alt;
+// Редирект на сохранённый язык — только с корня русской главной
+const redirectToEn = locale === defaultLocale && here === '' ? url('', 'en') : undefined;
 const switchHref = url(altPath ?? '', otherLocale(locale));
 // hreflang только у страниц, существующих в обеих локалях
 const alternates = altPath === null ? [] : locales.map((l) => ({ locale: l, href: new URL(url(l === locale ? here : altPath, l), Astro.site).href }));
@@ -32,6 +35,25 @@ const alternates = altPath === null ? [] : locales.map((l) => ({ locale: l, href
 <html lang={locale}>
   <head>
     <meta charset="utf-8" />
+    {
+      redirectToEn && (
+        <script is:inline define:vars={{ storageKey: LOCALE_STORAGE_KEY, doneKey: REDIRECT_DONE_KEY, target: redirectToEn }}>
+          // Блокирующий скрипт: перебрасывает до первой отрисовки. Условия повторяют shouldRedirectToPreferred
+          // в src/lib/locale-preference.ts — держать синхронно (поведение проверяет e2e).
+          // readyState === 'loading' только при разборе загружаемого документа; ClientRouter при подмене страницы
+          // вставляет и выполняет этот скрипт уже в загруженном документе, поэтому клиентские переходы не трогаем.
+          // Флаг в sessionStorage ставится до перехода: повторно в этой вкладке и петли не будет.
+          (function () {
+            if (document.readyState !== 'loading') return;
+            try {
+              if (localStorage.getItem(storageKey) !== 'en' || sessionStorage.getItem(doneKey)) return;
+              sessionStorage.setItem(doneKey, '1');
+              location.replace(target);
+            } catch (e) {}
+          })();
+        </script>
+      )
+    }
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="icon" href={url('favicon.ico')} />
     <link rel="apple-touch-icon" href={url('apple-touch-icon.png')} />

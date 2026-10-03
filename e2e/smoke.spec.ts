@@ -165,3 +165,96 @@ test('английская версия: поиск и случайный воп
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Next question' })).toBeVisible();
 });
+
+test.describe('запоминание языка', () => {
+  const KEY = 'fucksobes:locale';
+  const saved = (page: import('@playwright/test').Page, value: string) =>
+    page.addInitScript(([k, v]) => localStorage.setItem(k, v), [KEY, value]);
+  const ruNav = (page: import('@playwright/test').Page, lang: 'ru' | 'en') =>
+    page.getByRole('navigation', { name: lang === 'ru' ? 'Язык' : 'Language' });
+
+  test('сохранён en → русский корень перебрасывает на /en/ без петли', async ({ page }) => {
+    await saved(page, 'en');
+    await page.goto('./');
+    await expect(page).toHaveURL(/\/fucksobes\/en\/$/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+    // location.replace: русской главной в истории нет
+    await page.goBack();
+    await expect(page).not.toHaveURL(/\/fucksobes\/(en\/)?$/);
+  });
+
+  test('ничего не сохранено или сохранён ru → остаётся русской', async ({ page, context }) => {
+    await page.goto('./');
+    await expect(page).toHaveURL(/\/fucksobes\/$/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+
+    const other = await context.newPage();
+    await saved(other, 'ru');
+    await other.goto('./');
+    await expect(other).toHaveURL(/\/fucksobes\/$/);
+    await expect(other.locator('html')).toHaveAttribute('lang', 'ru');
+  });
+
+  test('сохранён en → страница категории и вопроса не перебрасываются', async ({ page }) => {
+    await page.goto('./');
+    const category = await page
+      .getByRole('link')
+      .filter({ has: page.getByRole('heading', { level: 2 }) })
+      .first()
+      .evaluate((link) => new URL((link as HTMLAnchorElement).href).pathname);
+    await saved(page, 'en');
+    await page.goto(category);
+    await expect(page).toHaveURL(new RegExp(`${category}$`));
+    await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+
+    const question = await page.locator('details.question a[href]').first().evaluate((a) => new URL((a as HTMLAnchorElement).href).pathname);
+    await page.goto(question);
+    await expect(page).toHaveURL(new RegExp(`${question}$`));
+    await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+    await page.goto('random/');
+    await expect(page).toHaveURL(/\/fucksobes\/random\/(#[a-z0-9-]+)?$/);
+  });
+
+  test('сохранён en → клиентский переход на русскую главную не перебрасывает', async ({ page }) => {
+    await page.goto('./');
+    const category = await page
+      .getByRole('link')
+      .filter({ has: page.getByRole('heading', { level: 2 }) })
+      .first()
+      .evaluate((link) => new URL((link as HTMLAnchorElement).href).pathname);
+    await saved(page, 'en');
+    await page.goto(category);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+
+    // ClientRouter подменяет страницу без загрузки документа
+    await page.evaluate(() => ((window as unknown as { __marker: number }).__marker = 1));
+    await page.getByRole('link', { name: 'FuckSobes, на главную' }).first().click();
+    await expect(page).toHaveURL(/\/fucksobes\/$/);
+    await expect(page.getByRole('heading', { level: 2 })).toHaveCount(12);
+    expect(await page.evaluate(() => (window as unknown as { __marker?: number }).__marker)).toBe(1);
+    await page.waitForTimeout(300);
+    await expect(page).toHaveURL(/\/fucksobes\/$/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+  });
+
+  test('клик по переключателю сохраняет язык; ru после этого не перебрасывает', async ({ page }) => {
+    await page.goto('./');
+    expect(await page.evaluate((k) => localStorage.getItem(k), KEY)).toBeNull();
+    await ruNav(page, 'ru').getByRole('link', { name: 'en' }).click();
+    await expect(page).toHaveURL(/\/fucksobes\/en\/$/);
+    expect(await page.evaluate((k) => localStorage.getItem(k), KEY)).toBe('en');
+
+    // Сама по себе загрузка страницы язык не сохраняет, клик по RU — сохраняет ru
+    await ruNav(page, 'en').getByRole('link', { name: 'ru' }).click();
+    await expect(page).toHaveURL(/\/fucksobes\/$/);
+    expect(await page.evaluate((k) => localStorage.getItem(k), KEY)).toBe('ru');
+    await page.reload();
+    await expect(page).toHaveURL(/\/fucksobes\/$/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+  });
+
+  test('открытие страницы без клика по переключателю ничего не сохраняет', async ({ page }) => {
+    await page.goto('en/');
+    expect(await page.evaluate((k) => localStorage.getItem(k), KEY)).toBeNull();
+  });
+});
