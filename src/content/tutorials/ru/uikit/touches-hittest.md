@@ -35,7 +35,7 @@ order: 6
 
 ![Палец касается экрана, система передаёт UIApplication событие UIEvent с UITouch, UIApplication вызывает sendEvent у UIWindow, окно запускает hitTest и получает найденную view, затем отправляет ей touchesBegan, touchesMoved и touchesEnded.](../../../../assets/tutorials/uikit/06-touch-path.svg)
 
-`UIApplication.sendEvent(_:)` можно переопределить в подклассе `UIApplication`, чтобы перехватывать все входящие события (например, для логирования или таймера бездействия). Каждое перехваченное событие нужно потом отправить дальше вызовом `super.sendEvent(event)` (требование Apple), иначе интерфейс перестанет реагировать. Доставка события из системы в приложение идёт через run loop главного потока (подробности — в туторе по RunLoop из темы «Многопоточность», глава 07).
+`UIApplication.sendEvent(_:)` можно переопределить в подклассе `UIApplication`, чтобы перехватывать все входящие события (например, для логирования или таймера бездействия). Каждое перехваченное событие нужно потом отправить дальше вызовом `super.sendEvent(event)` (требование Apple), иначе интерфейс перестанет реагировать. Доставка события из системы в приложение идёт через run loop главного потока (подробности — в [туторе по RunLoop](../../concurrency/runloop/) из темы «Многопоточность», глава 07).
 
 ## Шаг 2. UIEvent
 
@@ -245,8 +245,6 @@ final class CustomTabBarContainer: UIView {
     }
 }
 ```
-
-Тема кастомного tab bar с `CAShapeLayer` и responder chain есть в заметках, как ссылка (тутор [11](../layout-keyboard-animations/)).
 
 ## Шаг 8. Что дальше: жесты и responder chain
 
