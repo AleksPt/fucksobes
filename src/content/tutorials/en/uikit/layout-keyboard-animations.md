@@ -309,7 +309,7 @@ The link with tutorial [09](../data-passing-appearance/): instead of struggling 
 
 ## Step 8. Hiding the tab bar
 
-In the notes there is a `setTabBarHidden` function that shifts `tabBar.frame` down by the bar's height in an animation and then sets `isHidden`. It is a workable solution for simple cases, but it has limitations, and for modern iOS versions there is a standard way.
+There is a `setTabBarHidden` function that shifts `tabBar.frame` down by the bar's height in an animation and then sets `isHidden`. It is a workable solution for simple cases, but it has limitations, and for modern iOS versions there is a standard way.
 
 ```swift
 // iOS 18+: the standard way

@@ -382,8 +382,8 @@ height.identifier = "header.height"   // это имя появится в ло�
 height.isActive = true
 ```
 
-- Расшифровать лог помогает сервис WTF Auto Layout (в заметках): он визуализирует конфликтующие constraints из лога.
-- Найти проблемную view помогает View Debugger в Xcode (в заметках — статья, как найти view в View Debugger).
+- Расшифровать лог помогает сервис WTF Auto Layout: он визуализирует конфликтующие constraints из лога.
+- Найти проблемную view помогает View Debugger в Xcode.
 
 **Типичные причины конфликтов:**
 

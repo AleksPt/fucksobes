@@ -292,7 +292,7 @@ NSLayoutConstraint.activate([maxWidth, preferred])
 - Менять constraint внутри блока анимации вместо того, чтобы менять его до блока, а layout — внутри.
 
 <details>
-<summary>Какую view сожмёт Auto Layout, если места мало и у всех view compression resistance равен?</summary>
+<summary>Какую view сожмёт Auto Layout, если места мало и у всех view compression resistance равен друг другу?</summary>
 
 Точно не сказать: раскладка неоднозначна, система выберет один из вариантов, и он может меняться от предупреждения к предупреждению. Всегда разни приоритеты у соседних view на одной оси.
 

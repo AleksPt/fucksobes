@@ -382,8 +382,8 @@ height.identifier = "header.height"   // this name will appear in the conflict l
 height.isActive = true
 ```
 
-- The WTF Auto Layout service helps decipher the log (in the notes): it visualizes the conflicting constraints from the log.
-- The View Debugger in Xcode helps find the problematic view (in the notes — an article on how to find a view in the View Debugger).
+- The WTF Auto Layout service helps decipher the log: it visualizes the conflicting constraints from the log.
+- The View Debugger in Xcode helps find the problematic view.
 
 **Typical causes of conflicts:**
 

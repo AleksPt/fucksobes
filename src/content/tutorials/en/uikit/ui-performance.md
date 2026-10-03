@@ -12,7 +12,7 @@ order: 10
 > - Smooth lists: cell prefetching, data prefetching, `reconfigureItems`
 > - What to measure with: Instruments, the simulator's debug options, `CADisplayLink`
 
-> **Prerequisites:** tutorial [02](../calayer-drawing/) — `CALayer`, `draw(_:)`; tutorial [08](../lists/) — reuse, tables and collections; the "Concurrency" topic — the main thread and queues.
+> **Prerequisites:** tutorial [02](../calayer-drawing/) — `CALayer`, `draw(_:)`; tutorial [08](../lists/) — reuse, tables and collections; the "Concurrency" topic ([RunLoop tutorial](../../concurrency/runloop/)) — the main thread and queues.
 
 ## Analogy: a kitchen with a conveyor of frames
 
@@ -94,7 +94,7 @@ final class FeedViewController: UIViewController {
 
 Main Thread Checker (per Apple) has minimal overhead: about 1–2% CPU and no more than 100 ms added to launch time, which is why Xcode enables it by default in development schemes. It substitutes only system APIs with known thread requirements, not all of them.
 
-**A timer freezes during scrolling.** Timers are serviced by the run loop, and during scrolling UIKit switches it to the tracking mode (`UITrackingRunLoopMode`), giving priority to rendering. A timer created in the default mode stops firing while the user scrolls a list (this is how the article "How UI works in iOS" describes it). The solution is to add the timer to the run loop in `.common` mode. More about the run loop — in the "Concurrency" topic.
+**A timer freezes during scrolling.** Timers are serviced by the run loop, and during scrolling UIKit switches it to the tracking mode (`UITrackingRunLoopMode`), giving priority to rendering. A timer created in the default mode stops firing while the user scrolls a list (this is how the article "How UI works in iOS" describes it). The solution is to add the timer to the run loop in `.common` mode. More about the run loop — in the [RunLoop tutorial](../../concurrency/runloop/) of the "Concurrency" topic.
 
 ```swift
 let timer = Timer(timeInterval: 1.0, repeats: true) { _ in tick() }

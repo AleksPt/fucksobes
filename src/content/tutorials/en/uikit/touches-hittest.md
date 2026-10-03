@@ -35,7 +35,7 @@ A courier brings a parcel addressed "a point on the facade" and doesn't know who
 
 ![A finger touches the screen, the system passes UIApplication a UIEvent with a UITouch, UIApplication calls sendEvent on UIWindow, the window starts hitTest and gets the found view, then sends it touchesBegan, touchesMoved and touchesEnded.](../../../../assets/tutorials/en/uikit/06-touch-path.svg)
 
-`UIApplication.sendEvent(_:)` can be overridden in a `UIApplication` subclass to intercept all incoming events (for example, for logging or an inactivity timer). Each intercepted event must then be passed on by calling `super.sendEvent(event)` (an Apple requirement), otherwise the interface stops responding. Event delivery from the system to the app goes through the main thread's run loop (details — in the RunLoop tutorial from the "Concurrency" topic, chapter 07).
+`UIApplication.sendEvent(_:)` can be overridden in a `UIApplication` subclass to intercept all incoming events (for example, for logging or an inactivity timer). Each intercepted event must then be passed on by calling `super.sendEvent(event)` (an Apple requirement), otherwise the interface stops responding. Event delivery from the system to the app goes through the main thread's run loop (details — in the [RunLoop tutorial](../../concurrency/runloop/) from the "Concurrency" topic, chapter 07).
 
 ## Step 2. UIEvent
 
@@ -245,8 +245,6 @@ final class CustomTabBarContainer: UIView {
     }
 }
 ```
-
-The topic of a custom tab bar with `CAShapeLayer` and the responder chain is in the notes, as a link (tutorial [11](../layout-keyboard-animations/)).
 
 ## Step 8. What's next: gestures and the responder chain
 

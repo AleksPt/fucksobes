@@ -26,7 +26,7 @@ You give a colleague a task and want them to report the result.
 
 ## Step 1. Two directions and an overview of the ways
 
-In the notes the ways are listed in one list, but they solve different tasks. First you need to understand the direction:
+First you need to understand the direction:
 
 ![Screen A passes data forward to screen B via init, a property or a segue. Screen B returns data back to screen A via a delegate, a closure or a notification.](../../../../assets/tutorials/en/uikit/09-directions.svg)
 
@@ -237,7 +237,7 @@ deinit {
 }
 ```
 
-**When it fits:** the screens aren't connected to each other; many screens need to respond to one notification (for example, "the profile changed", "signed out") or one screen to several. It doesn't fit an ordinary "from B to A" result: the link is implicit, and the data flow is hard to trace. The notes also contain a fair summarizing conclusion: some consider this way wrong, others a panacea: every way is good for its own task.
+**When it fits:** the screens aren't connected to each other; many screens need to respond to one notification (for example, "the profile changed", "signed out") or one screen to several. It doesn't fit an ordinary "from B to A" result: the link is implicit, and the data flow is hard to trace.
 
 **Modern ways of receiving.** Per Apple's documentation, besides `addObserver` there are:
 
