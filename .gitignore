@@ -28,3 +28,6 @@ playwright-report/
 
 # raw Notion export contains Notion page ids — keep it local, never commit
 migration/notion-export.md
+
+# локальные симлинки на скиллы
+.claude/skills/
